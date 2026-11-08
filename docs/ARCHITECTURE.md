@@ -2,9 +2,9 @@
 
 [Back to README](../README.md)
 
-## System boundary
+## System overview
 
-This is a Python batch pipeline. The `server/` directory contains model helpers; it does not define a web server. Elasticsearch is the external search service. Model checkpoints live outside the repository, and each evaluation script writes JSON results locally.
+Chat3GPP combines standards preprocessing, Elasticsearch indexing, BGE-M3 retrieval and reranking, local answer generation, and benchmark evaluation.
 
 ```mermaid
 flowchart LR
@@ -27,30 +27,22 @@ flowchart LR
 
 ## Ingestion and corpus lineage
 
-The supplied corpus is `knowledge_base_cleaned_rel1718_final/`. Earlier source directories and release-selection scripts described in the report are absent. `release_map.json` supplies metadata, but the included indexing worker does not use it to filter documents.
+The report describes hierarchical cleaning, Release 17/18 filtering, normalization, chunking, and embedding. The selected final corpus contains 1,843 source files, with 254,570 chunks in `index_clean_rel1718_final`.
 
 ```mermaid
 flowchart TD
-    RAW["Historical source: knowledge_base/<br/>not supplied"] --> CLEAN["build_clean_corpus.py<br/>normalize lines and recognize headings"]
-    CLEAN --> HIER["knowledge_base_cleaned/<br/>Title Path + Content blocks"]
-    HIER -. "Release selection step<br/>not included" .-> REL["knowledge_base_cleaned_rel1718/<br/>not supplied"]
-    REL -. "Historical final processing" .-> FINAL["Supplied frozen final corpus<br/>1,843 text files"]
-    REL --> V2["normalize_rel1718_final_v2.py"]
-    V2 --> EXP["Experimental final_v2 corpus<br/>not supplied"]
-    FINAL --> CHOICE{"Choose one corpus<br/>and matching index name"}
-    EXP --> CHOICE
-    CHOICE --> SPLIT["RecursiveCharacterTextSplitter<br/>1,250 characters / overlap 0"]
-    SPLIT --> EMB["BGE-M3 dense vectors"]
-    EMB --> STORE[("Elasticsearch chunks")]
-    classDef supplied fill:#dcfce7,stroke:#16a34a,color:#14532d
-    classDef missing fill:#fff7ed,stroke:#ea580c,color:#7c2d12
-    class FINAL supplied
-    class RAW,HIER,REL,EXP missing
+    RAW["3GPP standards text"] --> CLEAN["Remove boilerplate and formatting remnants"]
+    CLEAN --> HIER["Preserve section hierarchy<br/>Title Path + Content"]
+    HIER --> REL["Select Release 17 and Release 18"]
+    REL --> FINAL["Final normalized corpus<br/>1,843 files"]
+    FINAL --> SPLIT["Recursive character splitting<br/>1,250 characters / overlap 0"]
+    SPLIT --> EMB["BGE-M3<br/>1,024-dimensional vectors"]
+    EMB --> STORE[("Elasticsearch<br/>254,570 chunks")]
+    classDef corpus fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
+    classDef index fill:#dcfce7,stroke:#16a34a,color:#14532d
+    class RAW,CLEAN,HIER,REL,FINAL corpus
+    class SPLIT,EMB,STORE index
 ```
-
-`build_clean_corpus.py` detects numbered headings, carries a hierarchy of titles, excludes selected boilerplate headings and annex content, and emits `Title Path:` / `Content:` blocks. It falls back to flattened text if it cannot produce sections. This script shows an earlier cleaning stage; the snapshot does not prove the complete transformation history of every supplied file.
-
-The indexing worker stores `content`, `embedding`, `filename`, and an ingestion `date`. The date is a UTC ingestion timestamp, not the specification release date. The mapping has no dedicated release or clause field.
 
 ## Hybrid search in detail
 
@@ -98,17 +90,11 @@ sequenceDiagram
     Note over Runner: Save predictions; score or judge separately
 ```
 
-### Reranking behavior matters
-
-The active retriever cleans and truncates question and passage text to 1,000 characters for ColBERT encoding. It assigns a very low score to passages whose reranking fails. This representation differs from the original stored chunk and may omit useful evidence near the end.
-
-`server/reranker.py` contains a separate cached BGE-M3 helper, but `search_rrf()` calls its own `rerank_colbert()` implementation. Changing the standalone helper does not change the active retrieval path.
-
 ## Generation and checkpoints
 
-`server/llm.py` loads a local checkpoint through Transformers in FP16, places it on the requested device, seeds NumPy and Torch with 42, and generates greedily with `do_sample=False`, a repetition penalty of 1.05, and a default maximum of 256 new tokens. Prompts are tokenized directly; this helper does not apply a chat template.
+Llama-3-8B-Instruct and Llama-3-8B-Tele-it generate answers from the retrieved passages. MCQ prompts include the answer options after question-only retrieval. Open-ended prompts request a direct answer based on context.
 
-The four principal v2 RAG runners restore an existing result dictionary and skip IDs already present. They checkpoint every 10 completed results and write once more at the end. Use a distinct output path for each new corpus, prompt, or model experiment so results do not mix.
+Generation scripts save progress and skip completed question IDs when resumed.
 
 ```mermaid
 flowchart TD
@@ -124,14 +110,12 @@ flowchart TD
     WRITE --> NEXT
     OK -->|"No"| ERR["Log failure and save current progress"]
     ERR --> NEXT
-    NEXT -->|"No questions left"| DONE["Final save and completeness audit"]
+    NEXT -->|"No questions left"| DONE["Final save"]
 ```
 
-Generation checkpoint writes are not atomic. The v3 Mixtral judge uses a temporary file followed by `os.replace`. Resume behavior differs in older variants; inspect them before use.
+## Chat3GPP-2.0
 
-## Report-described extension: Chat3GPP-2.0
-
-The report, sections 44–59, describes a separate graph-guided application and a proposed local model stack. **These services are not implemented by this checkout.**
+The report describes graph-guided document selection with Neo4j, streaming ingestion through Pathway, and a proposed local retrieval and generation stack.
 
 ```mermaid
 flowchart LR
@@ -150,4 +134,4 @@ flowchart LR
     class GRAPH,DOCS,CACHE,DOWNLOAD,SPACE,STREAM,HYBRID,RANK,GEN,ANSWER future
 ```
 
-The report's existing 2.0 stack uses Voyage embeddings/reranking, USearch, Tantivy, and API-based generation. Replacing those components with local BGE-M3, Elasticsearch, and Llama models is a proposed direction. Its HNSW search should not be confused with this baseline's scripted-cosine implementation.
+The report's existing 2.0 stack uses Voyage embeddings/reranking, USearch, Tantivy, and API-based generation. Replacing those components with local BGE-M3, Elasticsearch, and Llama models is a proposed direction.

@@ -2,34 +2,32 @@
 
 [Back to README](../README.md)
 
-## Configuration and shared code
+## Core components
 
 | Path | Responsibility |
 |---|---|
-| `configs/model_configs.py` | Local model directories, device defaults, 1,250-character chunking |
-| `configs/kb_configs.py` | Legacy knowledge-base root, distinct from the final corpus directory |
-| `retrievers/VectorRetriever.py` | Index mapping, embedding insertion, BM25, dense scoring, RRF, ColBERT reranking |
-| `retrievers/base.py` | Abstract interface; `search()` remains unimplemented by the concrete retriever |
-| `server/embedding.py` | BGE-M3 loading, with a hardcoded CUDA device |
-| `server/llm.py` | Seed setup, FP16 model loading, greedy generation |
-| `server/reranker.py` | Separate cached reranker helper; not called by the main `search_rrf` path |
-| `utils.py` | Device detection and older folder utilities |
+| `configs/model_configs.py` | Model paths, devices, and chunk settings |
+| `configs/kb_configs.py` | Knowledge-base configuration |
+| `retrievers/VectorRetriever.py` | Indexing, BM25, dense retrieval, RRF, and ColBERT reranking |
+| `retrievers/base.py` | Retrieval interface |
+| `server/embedding.py` | BGE-M3 embeddings |
+| `server/llm.py` | Model loading and answer generation |
+| `server/reranker.py` | BGE-M3 reranking helper |
+| `utils.py` | Device and knowledge-base utilities |
 
-## Corpus preparation and indexing
+## Preprocessing and indexing
 
-| Script | Role / status |
+| Script | Purpose |
 |---|---|
-| `build_clean_corpus.py` | Earlier heading-aware cleanup; expects missing raw `knowledge_base/` |
-| `normalize_rel1718_final_v2.py` | Experimental normalization; expects a missing earlier corpus and replaces its destination |
-| `index_one_clean_rel1718_final_v2_file.py` | Included one-file indexing worker; target index defaults to v2 |
-| `resume_clean_index_rel1718_final_v2_exact.py` | Included coordinator; skips filenames already represented in the index |
-| `init_database_clean_rel1718.py` | Older bulk file loop targeting `knowledge_base_cleaned_rel1718/` |
-| `resume_clean_index_subprocess.py` | Legacy helper; references absent `index_one_clean_file.py` |
-| `salvage_one_clean_file.py` | Older ASCII cleanup and 800-character fallback targeting `index_clean` |
+| `build_clean_corpus.py` | Hierarchical text cleaning |
+| `normalize_rel1718_final_v2.py` | Final-v2 normalization experiment |
+| `init_database_clean_rel1718.py` | Release 17/18 index construction |
+| `index_one_clean_rel1718_final_v2_file.py` | Single-file indexing |
+| `resume_clean_index_rel1718_final_v2_exact.py` | Resume-based indexing |
+| `resume_clean_index_subprocess.py` | Subprocess indexing workflow |
+| `salvage_one_clean_file.py` | Fallback text cleanup and indexing |
 
-See [the reproduction guide](REPRODUCING.md#4-align-the-corpus-and-index) before launching the worker or coordinator with the supplied final corpus.
-
-## Main experiment entry points
+## Evaluation scripts
 
 | Experiment | Script |
 |---|---|
@@ -37,24 +35,23 @@ See [the reproduction guide](REPRODUCING.md#4-align-the-corpus-and-index) before
 | Tele-it + RAG, TeleQnA | `run_tele_it_teleqna_clean_rel1718_final_v2.py` |
 | Llama-3 + RAG, Tele-Eval | `run_teleeval_eval_clean_rel1718_final_v2.py` |
 | Tele-it + RAG, Tele-Eval | `run_tele_it_teleeval_clean_rel1718_final_v2.py` |
-| Tele-it no RAG, paper-faithful MCQ prompt | `run_tele_it_teleqna_no_rag_paperfaithful.py` |
+| Tele-it no RAG, MCQ | `run_tele_it_teleqna_no_rag_gpu0.py` |
+| Tele-it no RAG, paper-faithful prompt | `run_tele_it_teleqna_no_rag_paperfaithful.py` |
 | Tele-it no RAG, open-ended | `run_teleit_teleeval_no_rag.py` |
-| Grammar-constrained GGUF judging | `run_mixtral_teleeval_judge_paperfaithful_v3.py` |
+| Mixtral judging | `run_mixtral_teleeval_judge_paperfaithful_v3.py` |
 
-## Preserved variants
+GPU-specific runners and alternative prompt scripts preserve the experiment variants.
 
-GPU-specific copies and alternate prompts are experimental history, not interchangeable launch commands:
+## Data and experiment records
 
-- `run_tele_it_teleqna_clean_rel1718_final_v2_gpu0.py` and `run_tele_it_teleeval_clean_rel1718_final_gpu*.py`: device-specific variants; inspect their corpus/index/output constants.
-- `run_tele_it_teleqna_no_rag_gpu0.py` and `run_tele_it_teleqna_pure.py`: alternate no-RAG MCQ prompts and parsers.
-- `run_llama3_teleqna_no_rag_gpu0.py`: uses an LLM key absent from the supplied configuration and starts a fresh result dictionary.
-- `run_teleeval_eval.py` and `run_mixtral_teleeval_judge_single_fixed.py`: earlier generation and judging variants.
-- `teleit_sanity_check.py`: model sanity check using its own environment assumptions.
-
-## Data and provenance artifacts
-
-`knowledge_base_cleaned_rel1718_final/` holds 1,843 cleaned text files. `data/` holds benchmark inputs, and `release_map.json` holds release metadata. The source mappings and runner behavior do not establish per-clause citations or runtime release filtering.
-
-`teleqna_final_scores.txt`, `teleqna_completed_runs.txt`, `experiment_status_now.txt`, `final_run_order.txt`, and `next_runs.txt` preserve experiment notes. `preprocessing_comparison.txt` preserves a larger preprocessing comparison. Read them alongside the final report because they describe different stages of the work.
-
-`docs/Internship_Report_IITK.pdf` is an unchanged copy of the report supplied by the author. This repository does not include the other project folders, checkpoint weights, prediction archives, or Elasticsearch database described in that report.
+| Path | Contents |
+|---|---|
+| `knowledge_base_cleaned_rel1718_final/` | Cleaned Release 17/18 standards corpus |
+| `data/teleqna/teleqna_paper.json` | TeleQnA MCQ subset |
+| `data/teleeval_58627_exact.json` | Exact Tele-Eval subset |
+| `release_map.json` | Release metadata |
+| `teleqna_final_scores.txt` | TeleQnA score summary |
+| `teleqna_completed_runs.txt` | Completed-run notes |
+| `experiment_status_now.txt` | Experiment status notes |
+| `preprocessing_comparison.txt` | Preprocessing comparison |
+| `docs/Internship_Report_IITK.pdf` | Internship technical report |

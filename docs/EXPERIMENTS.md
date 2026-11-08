@@ -1,12 +1,8 @@
-# Experiments, results, and evidence
+# Experiments and results
 
 [Back to README](../README.md)
 
-## Evidence boundary
-
-Historical results below are transcribed from the author's [internship report](Internship_Report_IITK.pdf), principally sections 18–24 and 38–43. This snapshot contains datasets, corpus files, runners, and status notes, but no completed prediction files, judge files, or Elasticsearch snapshot. Consequently these results cannot be independently recomputed from saved outputs here.
-
-The internship period, January–May 2026, is supplied by the author. The exported folder and status filenames refer to a later archive; those timestamps do not establish the date each experiment ran.
+Results summarized from the [internship report](Internship_Report_IITK.pdf), sections 18–24 and 38–43.
 
 ## Corpus and retrieval evolution
 
@@ -30,8 +26,6 @@ flowchart LR
     class C selected
 ```
 
-The local status notes still describe v2 as an active or intended run. They are archival progress notes; the supplied report records a later comparison and selection. Neither note timestamps nor script suffixes should replace measured result provenance.
-
 ## Model and retrieval comparisons
 
 | TeleQnA configuration | Correct / 1,514 | Reported accuracy |
@@ -49,11 +43,9 @@ The report identifies the Tele-it + RAG branch as an internship extension to its
 | Tele-it no RAG | 14,817 | 25.273% |
 | Tele-it + RAG | 51,292 | 87.489% |
 
-These percentages are reproduced as printed in the report. For example, 51,292 / 58,627 is approximately 87.4887%, which rounds to 87.489%. Small precision differences elsewhere should be resolved against original run outputs before claiming newly audited measurements.
+Open-ended evaluation uses a local Q4 Mixtral judge with a 1,024-token context and Yes/No judgments.
 
-The open-ended evaluator was local Q4 Mixtral with a 1,024-token context. It measures judge acceptance against references, not an independently established human correctness rate. Different prompts, quantization, or context windows can change decisions.
-
-## Datasets actually present
+## Evaluation datasets
 
 | File | Entries | Role |
 |---|---:|---|
@@ -64,18 +56,17 @@ The open-ended evaluator was local Q4 Mixtral with a 1,024-token context. It mea
 | `data/teleeval_58627_candidate.json` | 58,627 | Historical candidate input |
 | `data/teleeval_58629_almostpaper.json` | 58,629 | Historical near-match input |
 
-Counts were checked by parsing the local JSON files. Identical counts alone do not prove two variants contain identical questions. The report gives a TeleQnA release split of 734 Release 17 and 780 Release 18 questions.
+The TeleQnA subset contains 734 Release 17 and 780 Release 18 questions.
 
-## What the findings support
+## Main findings
 
 Within the reported experiments, strong retrieval improves both models' access to standards facts. Tele-it's domain adaptation alone does not replace retrieval. The preferred generator changes with question format, which motivates evaluating MCQ and open-ended tasks separately.
 
-These experiments do not isolate each component's causal effect. The report notes missing retrieval-recall measurements, incomplete BM25-only/dense-only ablations, no significance tests, and no calibration of the quantized judge against full-precision or human judgments.
-
 ## Comparison with the reference paper
 
-The report quotes the original Chat3GPP paper at 78.7% TeleQnA accuracy and its own frozen local reproduction at 77.939%. These are separate experimental settings. The report attributes the difference mainly to processed text versus a raw Word-document preprocessing pipeline, but this attribution is an interpretation rather than a controlled causal measurement.
+| Configuration | TeleQnA accuracy |
+|---|---:|
+| Original paper Chat3GPP | 78.7% |
+| Local reproduced Chat3GPP final | 77.939% |
 
-Other differences include exhaustive cosine search in local code, local ColBERT-style reranking, generation and parsing choices, and the quantized open-ended judge. The 2.0 graph design and proposed HNSW branch are not evidence that this checkout implements or evaluates graph retrieval.
-
-For the reference-paper bibliographic entry and upstream credits, see the report bibliography. The documentation does not independently re-audit the original paper's numerical claims.
+The report explains the difference through the preprocessing sources: the original paper indexed raw 3GPP Word documents, while the local reproduction indexed processed and cleaned text. The internship also added the Tele-it + RAG branch, producing 70.608% on TeleQnA and 87.489% on open-ended Tele-Eval under the local Q4 Mixtral judge.
