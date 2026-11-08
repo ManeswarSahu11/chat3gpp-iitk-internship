@@ -40,18 +40,11 @@
 | Tele-it no RAG, open-ended | `run_teleit_teleeval_no_rag.py` |
 | Mixtral judging | `run_mixtral_teleeval_judge_paperfaithful_v3.py` |
 
-GPU-specific runners and alternative prompt scripts preserve the experiment variants.
-
-## Data and experiment records
+## Data
 
 | Path | Contents |
 |---|---|
-| `knowledge_base_cleaned_rel1718_final/` | Cleaned Release 17/18 standards corpus |
-| `data/teleqna/teleqna_paper.json` | TeleQnA MCQ subset |
-| `data/teleeval_58627_exact.json` | Exact Tele-Eval subset |
+| `knowledge_base_cleaned_rel1718_final/` | Cleaned standards corpus |
+| `data/teleqna/teleqna_paper.json` | TeleQnA subset |
+| `data/teleeval_58627_exact.json` | Tele-Eval subset |
 | `release_map.json` | Release metadata |
-| `teleqna_final_scores.txt` | TeleQnA score summary |
-| `teleqna_completed_runs.txt` | Completed-run notes |
-| `experiment_status_now.txt` | Experiment status notes |
-| `preprocessing_comparison.txt` | Preprocessing comparison |
-| `docs/Internship_Report_IITK.pdf` | Internship technical report |

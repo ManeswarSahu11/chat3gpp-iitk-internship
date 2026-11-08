@@ -19,15 +19,7 @@ pip install llama-cpp-python
 
 ## Model configuration
 
-Configure local checkpoint paths in `configs/model_configs.py` and the embedding setup in `server/embedding.py`.
-
-| Component | Model |
-|---|---|
-| Embedding | BAAI BGE-M3 |
-| Reranking | BGE-M3 ColBERT-style late interaction |
-| General generator | Llama-3-8B-Instruct |
-| Telecom-adapted generator | Llama-3-8B-Tele-it |
-| Open-ended evaluator | Quantized Mixtral-8x7B-Instruct GGUF |
+Set local BGE-M3, Llama-3-Instruct, and Tele-it checkpoint paths in `configs/model_configs.py` and the embedding setup in `server/embedding.py`. Use a local quantized Mixtral GGUF checkpoint for judging.
 
 ## Corpus and index
 
@@ -73,10 +65,8 @@ Generate open-ended answers, then evaluate them using the local quantized Mixtra
 | CPU threads | 8 |
 | Checkpoint interval | 100 examples |
 
-## Resume and monitoring
+## Resume
 
-Generation scripts load existing result files and skip completed question IDs. Use a separate output filename for each experiment and preserve partial results to resume interrupted runs.
+Generation scripts load saved results and skip completed question IDs. The expected counts are 1,514 for TeleQnA and 58,627 for Tele-Eval.
 
-Expected completed counts are **1,514** for TeleQnA and **58,627** for Tele-Eval. The report describes monitoring logs, checking JSON result counts, and computing accuracy from completed result files.
-
-See the [full report](Internship_Report_IITK.pdf) for the original server commands and the [project map](PROJECT_MAP.md) for the script names in this project.
+Full server commands are in the [internship report](Internship_Report_IITK.pdf), sections 25–37.
