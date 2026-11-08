@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the Solution Set definitions for the IRP whose semantics are specified in Software Management IRP Information Service (3GPP TS 32.532 ). This Solution Set definitions specification is related to 3GPP TS 32.532 V14.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TS 32.101 , TS 32.102 , 3GPP TS 32.331 , 3GPP TS 32.150 and TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TS 32.532 , TS 32.531 , 3GPP TS 32.331 , 3GPP TS 32.150 , TS 32.101 , TS 32.102 and TS 21.905 , in that order.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 , TS 32.531 , 3GPP TS 32.331 , 3GPP TS 32.150 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TS 32.532 , TS 32.531 , 3GPP TS 32.331 , 3GPP TS 32.150 , TS 32.101 , TS 32.102 and TS 21.905 , in that order. Integration Reference Point Information Service Notification Log Network Resource Model Software Management Unified Modelling Language Web Service Description Language eXtensible Markup Language
+Title Path: Solution Set definitions
+Content: This specification defines the following 3GPP Software management IRP Solution Set definitions: 3GPP Software management IRP CORBA SS (Annex A) 3GPP Software management IRP XML definitions (Annex B) 3GPP Software management IRP SOAP Solution Set (Annex C)

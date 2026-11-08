@@ -1,0 +1,42 @@
+Title Path: Scope
+Content: The present document describes the signalling requirements and procedures used at network elements related to the GLR for GTP within the 3GPP system at the application level. The present document gives the description of the systems needed only in the network utilising GLR as the delta document against 3GPP TS 29.060.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply. [Gateway Location Register:]this entity handles location management of roaming subscriber in visited network without involving HLR [Intermediate GSN:]this entity is used as serving GSN towards home network and relay some PDU notification messages between serving GSN and Gateway GSN [MM context:]information sets held in MS and GSNs for a GPRS subscriber related to mobility management (MM) [MM Context ID:]IMSI or equivalent for use in conjunction with Anonymous Access (please refer to section GTP Header) [Path:]UDP/IP path and TCP/IP path are examples of paths that may be used to multiplex GTP tunnels [Path Protocol:]path Protocol is the protocol(s) used as a bearer of GTP between GSNs [PDP:]packet Data Protocol (PDP) is a network protocol used by an external packet data network interfacing to GPRS [PDP Context:]information sets held in MS and GSNs for a PDP address [Signalling message:]GTP signalling messages are exchanged between GSN pairs in a path. The signalling messages are used to transfer GSN capability information between GSN pairs and to create, update and delete GTP tunnels [T-PDU:]original packet, for example an IP datagram, from an MS or a network node in an external packet data network. A T-PDU is the payload that is tunnelled in the GTP tunnel [Tunnel Endpoint Identifier (TEID):]this field unambiguously identifies a tunnel endpoint in the receiving GTP-U or GTP-C protocol entity. The receiving end side of a GTP tunnel locally assigns the TEID value the transmitting side has to use. The TEID values are exchanged between tunnel endpoints using GTP-C messages
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Gateway GPRS support node Gateway Location Register General Packet Radio Service GPRS Tunnelling Protocol [IM_GSN]Intermediate GSN Internet Protocol Gateway Location Register Serving GPRS support node Tunnel Endpoint IDentifier User Datagram Protocol
+Title Path: General
+Content: The present document defines the GPRS Tunnelling Protocol (GTP) specific to the network with the GLR, i.e. the protocol between IM_GSN and other nodes (i.e. GGSN, SGSN and GTP-MAP protocol converting GSN). It includes only the GTP signalling but not data transfer procedures. The interface between IM_GSM and GGSN is either intra-PLMN interface or inter-PLMN interface. The GTP protocol is implemented only by IM_GSNs, SGSNs and GGSNs. No other systems need to be aware of GTP. GPRS MSs are connected to a SGSN without being aware of GTP. It is assumed that there will be a many-to-many relationship between IM_GSNs, SGSNs and GGSNs. An IM_GSN may provide service to many GGSNs. A SGSN may provide service to many IM_GSNs and GGSNs.
+Title Path: Transmission order and bit definitions
+Content: Transmission order and bit definitions on the interface between the IM_GSN and other nodes in the network with GLR are the same as that used in the network without the GLR, see 3GPP TS 29.060.
+Title Path: GTP header
+Content: The GTP header used on interface between the IM_GSN and other nodes in the network with GLR is the same as that used in the network without the GLR, see 3GPP TS 29.060.
+Title Path: GTP Message and Message Formats
+Content: The only signalling plane exists between the IM_GSN and other nodes (i.e. GGSN, SGSN and GTP-MAP protocol converting GSN).
+Title Path: GTP Message and Message Formats > Signalling Message Formats
+Content: GTP defines a set of signalling messages between two associated GSNs. The signalling messages to be used between the IM_GSN and other nodes are defined in the table below. For the GTP signalling messages to be used on other interfaces see 3GPP TS 29.060.
+Title Path: GTP Message and Message Formats > Path Management messages
+Content: The messages, which are listed in following table, are used on the interface between the IM_GSN and other nodes. For the definitions of these messages and other messages used on the other interfaces refer to the corresponding sections in 3GPP TS 29.060.
+Title Path: GTP Message and Message Formats > Tunnel Management messages
+Content: In following table, only the messages used between the IM_GSN and GGSN and between the IM_GSN and SGSN are listed. For the definitions of these messages and other messages used on the other interfaces refer to the corresponding sections in 3GPP TS 29.060.
+Title Path: GTP Message and Message Formats > Location Management message
+Content: In the network with the GLR, The optional Location Management messages are defined to support the case when Network-Requested PDP Context Activation procedures are used and an IM_GSN does not have a SS7 MAP interface. GTP is then used to transfer signalling messages between the IM_GSN and a GTP-MAP protocol-converting GSN in the GPRS backbone network. The GTP-MAP protocol-converting GSN converts the signalling messages described in this section between GTP and MAP. The MAP messages are sent to and received from the GLR. The GTP-MAP protocol-converting function is described in 3GPP TS 23.060. The MAP protocol describing the corresponding procedures and messages is described in 3GPP TS 29.002. This alternative method is illustrated in Figure 2. In following table, only the messages used between the IM_GSN and The GTP-MAP protocol-converting GSN are listed. For the definitions of these messages and other messages used on the other interfaces refer to the corresponding sections in 3GPP TS 29.060.
+Title Path: GTP Message and Message Formats > Mobility Management messages
+Content: The messages belonging to the mobility management messages are not used on the interface between the IM_GSN and other nodes in the network with the GLR.
+Title Path: GTP Message and Message Formats > Reliable delivery of signalling messages
+Content: For the Reliability mechanism in the IM_GSN, see section 7.8 in 3GPP TS 29.060.
+Title Path: GTP Message and Message Formats > Information element
+Content: The format of information elements in the message used on the interface between the IM_GSN and other nodes in the network with GLR is the same as that in the network without the GLR. See 3GPP TS 29.060.
+Title Path: Signalling Plane (GTP-C)
+Content: The definition of signalling plane used in the network with the GLR is the same as that used in the network without the GLR, see in 3GPP TS 29.060.
+Title Path: GTP-U
+Content: GTP-U is not used on the interface between the IM_GSN and other nodes. For the definition of GTP-U on the other interfaces, see in 3GPP TS 29.060.
+Title Path: Path Protocol
+Content: The Path Protocol on the interface between the IM_GSN and other nodes in the network with the GLR is the same as that used in the network without the GLR. See 3GPP TS 29.060.
+Title Path: Error handling
+Content: The error handling on the interface between the IM_GSN and other nodes is the same as that in the network without the GLR. See 3GPP TS 29.060. One exception is that the IM_GSN doesn't have a Restart Counter because the IM_GSM stores no PDP and MM context and therefore the synchronisation of the status of these with other GSNs is not needed.
+Title Path: Inter-PLMN GTP communication over the Gp Interface
+Content: Refer to the corresponding section in 3GPP TS 29.060.
+Title Path: IP, the networking technology used by GTP
+Content: Refer to the corresponding section in 3GPP TS 29.060.
+Title Path: GTP parameters
+Content: The definitions and directions for use of the parameters in GTP (inc. timer values or counter values and so on) on the interface between the IM_GSN and other nodes is the same as that used in the network without the GLR. See 3GPP TS 29.060.

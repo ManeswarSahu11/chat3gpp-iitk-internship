@@ -1,0 +1,1060 @@
+Title Path: Down Link (DL) / 1 Up Link (UL)
+Content: (Release 17) Foreword This Technical Report has been produced by the 3rd Generation Partnership Project (3GPP). The contents of the present document are subject to continuing work within the TSG and may change following formal TSG approval. Should the TSG modify the contents of the present document, it will be re-released by the TSG with an identifying change of release date and an increase in version number as follows: Version x.y.z where: the first digit: presented to TSG for information; presented to TSG for approval; or greater indicates TSG approved document under change control. the second digit is incremented for all changes of substance, i.e. technical enhancements, corrections, updates, etc. the third digit is incremented when editorial only changes have been incorporated in the document. In the present document, modal verbs have the following meanings: indicates a mandatory requirement to do something [shall not]indicates an interdiction (prohibition) to do something The constructions "shall" and "shall not" are confined to the context of normative provisions, and do not appear in Technical Reports. The constructions "must" and "must not" are not used as substitutes for "shall" and "shall not". Their use is avoided insofar as possible, and they are not used in a normative context except in a direct citation from an external, referenced, non-3GPP document, or so as to maintain continuity of style when extending or modifying the provisions of such a referenced document. indicates a recommendation to do something [should not]indicates a recommendation not to do something indicates permission to do something [need not]indicates permission not to do something The construction "may not" is ambiguous and is not used in normative elements. The unambiguous constructions "might not" or "shall not" are used instead, depending upon the meaning intended. indicates that something is possible indicates that something is impossible The constructions "can" and "cannot" are not substitutes for "may" and "need not". indicates that something is certain or expected to happen as a result of action taken by an agency the behaviour of which is outside the scope of the present document [will not]indicates that something is certain or expected not to happen as a result of action taken by an agency the behaviour of which is outside the scope of the present document indicates a likelihood that something will happen as a result of action taken by some agency the behaviour of which is outside the scope of the present document [might not]indicates a likelihood that something will not happen as a result of action taken by some agency the behaviour of which is outside the scope of the present document In addition: (or any other verb in the indicative mood) indicates a statement of fact [is not](or any other negative verb in the indicative mood) indicates a statement of fact The constructions "is" and "is not" do not indicate requirements.
+Title Path: Scope
+Content: The present document is a technical report for Rel-17 NR 3DL/1UL Inter-band Carrier Aggregation. The purpose is to gather the relevant background information and studies in order to address 3DL/1UL Inter-band Carrier Aggregation requirements for the Rel-17 band combinations in Table 1-1. UL carrier is supported in each of the 3 bands being aggregated unless otherwise specified. The present document contains a general part and band specific combination part. The actual requirements are added to the corresponding technical specifications.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 . Carrier aggregation: Aggregation of two or more component carriers in order to support wider transmission bandwidths. Inter-band carrier aggregation: Carrier aggregation of component carriers in different operating bands. NOTE: Carriers aggregated in each band can be contiguous or non-contiguous.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: [$ $R ]Allowed reference sensitivity relaxation due to support for inter-band CA operation, for serving cell c. [$ $T ]Allowed maximum configured output power relaxation due to support for inter-band CA operation, for serving cell c.
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Base Station Bandwidth Combination Set Carrier Aggregation [CA_X]Intra-band contiguous CA of component carriers in one sub-block within Band X where X is the applicable NR operating band [CA_X-X]Intra-band non-contiguous CA of component carriers in two sub-blocks within Band X where X is the applicable NR operating band [CA_X-Y]Inter-band CA of component carrier(s) in one sub-block within Band X and component carrier(s) in one sub-block within Band Y where X and Y are the applicable NR operating band [CA_X-X-Y]CA of component carriers in two sub-blocks within Band X and component carrier(s) in one sub-block within Band Y where X and Y are the applicable NR operating bands Component Carriers Downlink Frequency Division Duplex Inter-modulation Maximum Sensitivity Degradation Subcarrier Spacing Time Division Duplex Power Amplifier Primary Component Carrier Reference Sensitivity power level Secondary Component Carrier Time Division Duplex User Equipment Uplink
+Title Path: Background
+Content: The present document is a technical report for 3DL/1UL Inter-band Carrier Aggregation under Rel-17 time frame. It covers both the UE and BS side. The present document is divided in two different parts: General part: this part covers BS and UE specific which is band combination independent. Specific band combination part: this part covers each band combination and its specific issues independently from each other (i.e. one subclause is defined per band combination). The specific band combination parts are independent and therefore, the working speed also differs. It should be noted that a single company is responsible for introducing all approved TPs in the present document, i.e. editor of the present document. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n77-n79 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n77-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n1 to n77 and n79, and from n77 to n1 and n79, and from n79 to n1 and n77 have been already studied for 3DL/1UL fallback combinations CA n1-n77 and CA_n1-n79 and n77-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n77-n79 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n77 and n79, the $ $T and $ $R values are shown in table 6.1.4-1 and table 6.1.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n77-n79 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference from n1 to n77 and n79, and from n77 to n1 and n79, and from n79 to n1 and n77 have been already studied for 3DL/1UL fallback combinations CA n1-n77 and CA_n1-n79 and n77-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n78-n79 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n78-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n1 to n78 and n79, and from n78 to n1 and n79, and from n79 to n1 and n78 have been already studied for 3DL/1UL fallback combinations CA n1-n78 and CA_n1-n79 and n78-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n78-n79 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n78 and n79, the $ $T and $ $R values are shown in table 6.2.4-1 and table 6.2.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n78-n79 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference from n1 to n78 and n79, and from n78 to n1 and n79, and from n79 to n1 and n78 have been already studied for 3DL/1UL fallback combinations CA n1-n78 and CA_n1-n79 and n78-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n41 > UE co-existence studies
+Content: Co-existence studies of CA_n3-n28-n41 with 1UL have been covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n41 > $ $TIB and $ $RIB values
+Content: For three DLs of Band n3, n28 and n41, the same $ $T and $ $R values specified for LTE CA_3-28-41 are used as below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n41 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n41-n78 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n41-n78 > Co-existence studies
+Content: Co-existence studies of CA_n3-n41-n78 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n41-n78 > $ $T and $ $R values
+Content: For CA_n3-n41-n78, the $ $T and $ $R values can reuse the values for DC_3-41_n78 as shown in table 6.4.4-1 and table 6.4.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n41-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n66 > Co-existence studies
+Content: Table 6.5.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No harmonic issue is identified for this band combination. Table 6.5.3-2 gives harmonic mixing issue for CA with Band n5, n25 and n66. No harmonic mixing issue is identified for this band combination. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n5, n25 and n66, the $ $T and $ $R values are shown in table 6.5.4-1 and table 6.5.4-2, respectively. The requirement is reused from the similar combination, CA_2-5-66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n66 > REFSENS requirements
+Content: There is no specific REFSENS requirement for 1 band UL of this combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n78 > Co-existence studies
+Content: Table 6.6.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. The 4th harmonic of Band n5 may fall into own Rx of Band n78. The 2nd harmonic of Band n25 may fall into own Rx of Band n78. Table 6.6.3-2 gives harmonic mixing issue for CA with Band n5, n25 and n6. The 4th harmonic mixing of Band n5 may fall into own Rx of Band n78. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n5, n25 and n78, the $ $T and $ $R values are shown in table 6.6.4-1 and table 6.6.4-2, respectively. The requirement is derived from the max operation of all fallback CAs.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n78 > REFSENS requirements
+Content: Band n78 MSD due to Band n5 and Band n25 uplink is already specified in 2DL/1UL WI. No specific analysis for 3DL/1UL is needed.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n48-n66 > Co-existence studies
+Content: Table 6.7.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n25 UL into n48 DL but that is addressed in the lower order combination CA_n25-48. Table 6.7.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that there are no issues. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n48-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n25, n48 and n66, the $ $T and $ $R values are shown in table 6.7.4-1 and table 6.7.4-2, respectively. Values are same as for DC_2-48_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n48-n66 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n39-n40-n41 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.8.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that no harmonic issue for band combination CA_n39-n40-n41. Table 6.8.3-2 gives harmonic mixing issue for CA with Band n39, n40 and n41. It is seen that no harmonic mixing issue for band combination CA_n39-n40-n41.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n39-n40-n41 > $ $T and $ $R values
+Content: For CA_n39A-n40A-n41A, the $ $T and $ $R values are the same with DC_39_n40-n41, which are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n39-n40-n41 > REFSENS requirements
+Content: There are no specific REFSENS requirements for this combination in 3DL/1UL NR CA operation.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n39-n40-n79 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.9.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that 2nd order harmonic of Band n40 will fall into Band n79. Table 6.9.3-2 gives harmonic mixing issue for CA with Band n39, n40 and n41. It is seen that 2nd harmonic mixing issue for the band combination of n40 and n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n39-n40-n79 > $ $T and $ $R values
+Content: For CA_n39A-n40A-n79A, the $ $T and $ $R values are the same with DC_39_n40-n79, which are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n39-n40-n79 > REFSENS requirements
+Content: The harmonic and harmonic mixing issue for band n40 and band n79 have been already addressed in TR 38.716-02-00. No need to specify for REFSENS requirements for this combination in 3DL/1UL NR CA operation.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n77-n257 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n77-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n77 and n257, the $ $T and $ $R values are shown in table 6.10.4-1 and table 6.10.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n77-n257 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied for CA_n1-n77, and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n78-n257 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n78-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n78 and n257, the $ $T and $ $R values are shown in table 6.11.4-1 and table 6.11.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n78-n257 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied for CA_n1-n78, and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n79-n257 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n79-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n79 and n257, the $ $T and $ $R values are shown in table 6.12.4-1 and table 6.12.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n79-n257 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied for CA_n1-n79, and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n41-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n41-n77 > Co-existence studies
+Content: Co-existence studies of CA_n3-n41-n77 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n41-n77 > $ $T and $ $R values
+Content: For CA_n3-n41-n77, the $ $T and $ $R values can reuse the values for DC_3-41_n77 as shown in table 6.13.4-1 and table 6.13.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n77 > Co-existence studies
+Content: Co-existence studies of CA_n28-n41-n77 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n77 > $ $T and $ $R values
+Content: For CA_n28-n41-n77, the $ $T and $ $R values can reuse the values for DC_28-41_n77 as shown in table 6.14.4-1 and table 6.14.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n77 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > Co-existence studies
+Content: Co-existence studies of CA_n28-n41-n78 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > $ $T and $ $R values
+Content: For CA_n28-n41-n78, the $ $T and $ $R values have been defined in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n78 > Co-existence studies
+Content: Co-existence analysis is captured into REL16 TR 38.416-03-01 for CA_n1A-n8A-n78A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n40-n41 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.17.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that the 3rd order harmonic of Band n8 will fall into Band n41. Table 6.17.3-2 gives harmonic mixing issue for CA with Band n8, n40 and n41. It is seen that no harmonic mixing issue for band combination CA_n8-n40-n41.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n40-n41 > $ $T and $ $R values
+Content: For CA_n8A-n40A-n41A, the $ $T and $ $R values are the same with DC_8_n40-n41, which are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n40-n41 > REFSENS requirements
+Content: The MSD caused by 3rd order harmonic of Band n8 will fall into Band n41 have been already captured in the TR38.716-02-00. There are no additional REFSENS requirements for this combination in 3DL/1UL NR CA operation.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n66-n77 > Co-existence studies
+Content: Table 6.18.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. The 4th harmonic of Band n5 may fall into own Rx of Band n77. The 2nd harmonic of Band n66 may fall into own Rx of Band n77. Table 6.18.3-2 gives harmonic mixing issue for CA with Band n5, n66 and n77. The 4th harmonic mixing of Band n5 may fall into own Rx of Band n77. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n5, n66 and n77, the $ $T and $ $R values are shown in table 6.18.4-1 and table 6.18.4-2, respectively. The requirement is derived from the max operation of all fallback CAs.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n66-n77 > REFSENS requirements
+Content: Band n77 MSD due to Band n5 and Band n66 uplink is already specified in 2DL/1UL WI. No specific analysis for 3DL/1UL is needed.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n66-n77 > Co-existence studies
+Content: Table 6.19.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. The 2nd harmonic of Band n2 may fall into own Rx of Band n77. The 2nd harmonic of Band n66 may fall into own Rx of Band n77. Table 6.19.3-2 gives harmonic mixing issue for CA with Band n5, n66 and n77. The 2nd harmonic mixing of Band n2 may fall into own Rx of Band n77. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n66 and n77, the $ $T and $ $R values are shown in table 6.19.4-1 and table 6.19.4-2, respectively. The requirement is derived from the max operation of all fallback CAs.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n66-n77 > REFSENS requirements
+Content: Band n77 MSD due to Band n2 and Band n66 uplink is already specified in 2DL/1UL WI. No specific analysis for 3DL/1UL is needed.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n71-n78 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n71-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n66, n71 and n78, the $ $T and $ $R values are shown in table 6.20.4-1 and table 6.20.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n71-n78 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n38-n66-n78 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n38-n66-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n38, n66 and n78, the $ $T and $ $R values are shown in table 6.21.4-1 and table 6.21.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n38-n66-n78 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n38-n78 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n38-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n25, n38 and n78, the $ $T and $ $R values are shown in table 6.22.4-1 and table 6.22.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n38-n78 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n5-n7 > Co-existence studies
+Content: Table 6.23.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are no issues. Table 6.23.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that there are no issues. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n5-n7 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n3, n5 and n7, the $ $T and $ $R values are shown in table 6.23.4-1 and table 6.23.4-2, respectively. Values are same as for DC_3-7_n5.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n5-n7 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n7-n78 > Co-existence studies
+Content: Table 6.24.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are 4th harmonic issues from n5 UL into n78 DL but that is not needed to be addressed at this level. Table 6.24.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that there are 4th harmonic mixing issues from n5 UL into n78 DL but that is not needed to be addressed at this level. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n7-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n3, n5 and n7, the $ $T and $ $R values are shown in table 6.24.4-1 and table 6.24.4-2, respectively. Values are same as for DC_5-7_n78.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n7-n78 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n41-n77 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.25.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n25 UL into n77 DL which need to be addressed in lower order combination. Table 6.25.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n25 DL into n77 UL which need to be addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n41-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n25, n41 and n77, the $ $T and $ $R values are shown in tables below. Values are derived from DC_2-7_n78.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n41-n77 > REFSENS requirements
+Content: The 2nd harmonic issues from n25 DL into n77 UL will be addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n66-n77 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.26.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n25 and n66 UL into n77 DL which need to be addressed in lower order combination. Table 6.26.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n25 into n77 UL which need to be addressed in lower order combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n25, n66 and n77, the $ $T and $ $R values are shown in table 6.26.4-1 and table 6.26.4-2, respectively. Values are derived from DC_2-66_n78. 6.26.5 REFSENS requirements The 2nd harmonic issues from n25 DL and n66 DL into n77 UL will be addressed in lower order combination. [ 1.1 ] [6.27] CA_n25-n71-n77 [6.27.1] Operating bands for CA 6.27.2 Channel bandwidths per operating band for CA 6.27.3 Co-existence studies For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.27.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n25 UL into n77 DL which need to be addressed in lower order combination. Table 6.27.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n25 DL into n77 UL which need to be addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n25, n71 and n77, the $ $T and $ $R values are shown in table 6.27.4-1 and table 6.27.4-2, respectively. Values are derived from DC_2-71_n78. 6.27.5 REFSENS requirements The 2nd harmonic issues from n25 DL into n77 UL will be addressed in lower order combination. 6.28 CA_n41-n66-n77
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n66-n77 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.28.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n66 UL into n77 DL which need to be addressed in lower order combination. Table 6.28.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n41, n66 and n77, the $ $T and $ $R values are shown in table 6.28.4-1 and table 6.28.4-2, respectively. Values are derived from DC_66_n7-n78. 6.28.5 REFSENS requirements The 2nd harmonic issues from n66 DL into n77 UL will be addressed in lower order combination. [ 1.1 ] [6.29] CA_n41-n71-n77 [6.29.1] Operating bands for CA 6.29.2 Channel bandwidths per operating band for CA 6.29.3 Co-existence studies For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.29.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No issues can be seen. Table 6.29.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n41, n71 and n77, the $ $T and $ $R values are shown in table 6.29.4-1 and table 6.29.4-2, respectively. Values are derived from DC_41_n28-n77. 6.29.5 REFSENS requirements No harmonic issues to be addressed. [ 1.1 ] [6.30] CA_n66-n71-n77 [6.30.1] Operating bands for CA 6.30.2 Channel bandwidths per operating band for CA 6.30.3 Co-existence studies For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.30.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic issues from n66 UL into n77 DL which need to be addressed in lower order combination. Table 6.30.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n66, n71 and n77, the $ $T and $ $R values are shown in table 6.30.4-1 and table 6.30.4-2, respectively. Values are derived from DC_66-71_n78. 6.30.5 REFSENS requirements The 2nd harmonic issues from n66 DL into n77 UL will be addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n77 > Co-existence studies
+Content: Table 6.31.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. The 4th and 5th harmonics of band n5 uplink may fall into band n77 downlink. The 2nd harmonic of band n25 may fall into band n77 downlink. Table 6.31.3-2 gives harmonic mixing issue for CA with Band n5, n25 and n77. There is a harmonic mixing relation for the 4th harmonic of n5 downlink and n77 downlink. There is a harmonic mixing relation for the 2nd harmonic of n25 downlink and n77 downlink. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n5, n25 and n77, the $ $T and $ $R values are shown in table 6.31.4-1 and table 6.31.4-2, respectively. The requirement is reused from the similar combination, DC_2-5_n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n25-n77 > REFSENS requirements
+Content: MSD due to the above harmonic issues are specified in 2DL/1UL fallback CAs, CA_n5-n77 and CA_n25-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n41 > UE co-existence studies
+Content: Co-existence studies of CA_n3-n18-n41 with 1UL have been covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n41 > $ $T and $ $R values
+Content: For three DLs of Band n3, n18 and n41, the $ $T and $ $R values specified for LTE CA_3-5-41 are used as below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n41 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n77 > Co-existence studies
+Content: For 3DL/1UL NR CA, only, only harmonic issue and harmonic mixing issue need to be considered. There is no in this band combination MSD issue.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n77 > $ $T and $ $R values
+Content: For CA_n3-n28-n77, the $ $T and $ $R values have been defined in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n78 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n78 > Co-existence studies
+Content: For 3DL/1UL NR CA, only, only harmonic issue and harmonic mixing issue need to be considered. There is no in this band combination MSD issue.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n78 > $ $T and $ $R values
+Content: For CA_n3-n28-n78, the $ $T and $ $R values have been defined in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > Co-existence studies
+Content: Co-existence studies of CA_n28-n41-n78 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > $ $T and $ $R values
+Content: For CA_n28-n41-n78, the $ $T and $ $R values have been defined in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n41-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n25-n66 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n25-n66 > Co-existence studies
+Content: Co-existence studies of CA_n13-n25-n66 with 2UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n25-n66 > $ $T and $ $R values
+Content: For CA_n13-n25-n66, the $ $T and $ $R values can reuse DC_2-13_n66 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n25-n66 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n29-n66 > UE co-existence studies
+Content: Co-existence studies of CA_n25-n29-n66 with 1UL have been covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n29-n66 > $ $TIB and $ $RIB values
+Content: For three DLs of Band n25, n29 and n66, the $ $T and $ $R values specified for DC_29-66_n2 are used as below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n29-n66 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n77-n79 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n77-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n28-n77, CA_n28-n79 and n77-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n77-n79 > $ $T and $ $R values
+Content: For three DLs and one UL of Band n28, n77 and n79, the $ $T and $ $R values are shown in table 6.38.4-1 and table 6.38.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n77-n79 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n28-n77, CA_n28-n79 and n77-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n78-n79 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n78-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n28-n78, CA_n28-n79 and n78-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n78-n79 > $ $T and $ $R values
+Content: For three DLs and one UL of Band n28, n78 and n79, the $ $T and $ $R values are shown in table 6.39.4-1 and table 6.39.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n78-n79 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n28-n78, CA_n28-n79 and n78-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n79 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n8 and n79, the $ $T and $ $R values are shown in table 6.40.4-1 and table 6.40.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n79 > REFSENS requirements
+Content: MSD studies can be omitted because the corresponding analysis and requirements are covered by fallback combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n79 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n8 and n79, the $ $T and $ $R values are shown in table 6.41.4-1 and table 6.41.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n79 > REFSENS requirements
+Content: MSD studies can be omitted because the corresponding analysis and requirements are covered by fallback combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n20 > UE co-existence studies
+Content: Co-existence studies of CA_n1-n3-n20 with 1UL have been covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n20 > $ $TIB and $ $RIB values
+Content: For three DLs of Band n1, n3 and n20, the $ $T and $ $R values specified for LTE CA_1-3-20 are used as below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n20-n78 > UE co-existence studies
+Content: Co-existence studies of CA_n1-n20-n78 with 1UL have been covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n20-n78 > $ $TIB and $ $RIB values
+Content: For three DLs of Band n1, n20 and n78, the $ $T and $ $R values specified for the constituent fall-back modes are used below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n20-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n20-n78 > UE co-existence studies
+Content: Co-existence studies of CA_n3-n20-n78 with 1UL have been covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n20-n78 > $ $TIB and $ $RIB values
+Content: For three DLs of Band n3, n20 and n78, the $ $T and $ $R values specified for the constituent fall-back modes are used below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n20-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n28-n78 > UE co-existence studies
+Content: Co-existence studies of CA_n8-n28-n78 with 1UL have been covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n28-n78 > $ $TIB and $ $RIB values
+Content: For three DLs of Band n8, n28 and n78, the $ $T and $ $R values specified for the constituent fall-back modes are used below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n28-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n3-n28, CA_n3-n79 and n28-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n79 > $ $T and $ $R values
+Content: For CA_n3-n28-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n28-n79 > REFSENS requirements
+Content: Based on 6.46.3,there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n79-n257 > $ $T and $ $R values
+Content: For CA_n3-n79-n257, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n79-n257 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied in the fallback band combination and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n79-n257 > $ $T and $ $R values
+Content: For CA_n28-n79-n257, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n79-n257 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied in the fallback band combination and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n25-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n25-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n25-n77 > $ $T and $ $R values
+Content: For CA_n7-n25-n77, the $ $T and $ $R values can reuse DC_2-7_n77 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n25-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n66-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n66-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n66-n77 > $ $T and $ $R values
+Content: For CA_n7-n66-n77, the $ $T and $ $R values can reuse DC_7-66_n77 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n66-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n7 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n7 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n3 and n7, the $ $T and $ $R values are shown in table 6.51.4-1 and table 6.51.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n7 > REFSENS requirements
+Content: MSD studies can be omitted because the corresponding analysis and requirements are covered by fallback combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n66 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.52.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No issues can be seen. Table 6.52.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that there are 2nd harmonic mixing issues from n5 DL may fall into n66 UL which need to be addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n5 and n66, the $ $T and $ $R values are shown in table 6.52.4-1 and table 6.52.4-2, respectively. Values are derived from DC_2-5_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n66 > MSD
+Content: The 2nd harmonic mixing issues from n5 UL into n66 DL will be addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n30 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.53.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No issues can be seen. Table 6.53.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n30 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n5 and n30, the $ $T and $ $R values are shown in table 6.53.4-1 and table 6.53.4-2, respectively. Values are derived from DC_2-30_n5.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n25-n77 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.54.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. 2nd harmonic from n25 UL might fall into n77 DL. Table 6.54.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. 2nd harmonic mixing from n25 DL might fall into n77 UL.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n25-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n13, n25 and n77, the $ $T and $ $R values are shown in table 6.54.4-1 and table 6.54.4-2, respectively. Values are derived from DC_13_n2-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n25-n77 > MSD
+Content: The 2nd harmonic and 2nd harmonic mixing issues between n25 and n77 will be addressed in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n66-n77 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.55.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. 2nd harmonic from n66 UL might fall into n77 DL. Table 6.55.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. 2nd harmonic mixing from n66 DL might fall into n77 UL.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n13, n66 and n77, the $ $T and $ $R values are shown in table 6.55.4-1 and table 6.55.4-2, respectively. Values are derived from DC_13-66_n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n13-n66-n77 > MSD
+Content: The 2nd harmonic and 2nd harmonic mixing issues between n66 and n77 will be addressed in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n30-n66 > Co-existence studies
+Content: Table 6.56.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There are no harmonic interference. Table 6.56.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are no harmonic mixing interference. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n30-n66 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from DC_2-30_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n30-n66 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n66 > Co-existence studies
+Content: Table 6.57.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is no harmonic interference. Table 6.57.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are no harmonic mixing interference. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n66 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from DC_5-30_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n66 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n66 > Co-existence studies
+Content: Table 6.58.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is no harmonic interference. Table 6.58.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are no harmonic mixing interference. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n66 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from DC_5-30_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n66 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n77-n260 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n77-n260 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n77 and n260, the $ $T and $ $R values are shown in table 6.59.4-1 and table 6.59.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n77-n260 > REFSENS requirements
+Content: No harmonics issue is found up to 5th order products from the FR1 and FR2 bands. The MSD between FR1 bands has been studied in CA_n2-n77 combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n77-n261 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n77-n261 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n77 and n261, the $ $T and $ $R values are shown in table 6.60.4-1 and table 6.60.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n77-n261 > REFSENS requirements
+Content: No harmonics issue is found up to 5th order products from the FR1 and FR2 bands. The MSD between FR1 bands has been studied in CA_n2-n77 combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n77-n260 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n77-n260 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n5, n77 and n260, the $ $T and $ $R values are shown in table 6.61.4-1 and table 6.61.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n77-n260 > REFSENS requirements
+Content: No harmonics issue is found up to 5th order products from the FR1 and FR2 bands. The MSD between FR1 bands has been studied in CA_n5-n77 combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n77-n261 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are defined as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n77-n261 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n5, n77 and n261, the $ $T and $ $R values are shown in table 6.62.4-1 and table 6.62.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n77-n261 > REFSENS requirements
+Content: No harmonics issue is found up to 5th order products from the FR1 and FR2 bands. The MSD between FR1 bands has been studied in CA_n5-n77 combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n77-n260 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n77-n260 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n66, n77 and n260, the $ $T and $ $R values are shown in table 6.63.4-1 and table 6.63.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n77-n260 > REFSENS requirements
+Content: No harmonics issue is found up to 5th order products from the FR1 and FR2 bands. The MSD between FR1 bands has been studied in CA_n66-n77 combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n77-n261 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n77-n261 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n66, n77 and n261, the $ $T and $ $R values are shown in table 6.64.4-1 and table 6.64.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n77-n261 > REFSENS requirements
+Content: No harmonics issue is found up to 5th order products from the FR1 and FR2 bands. The MSD between FR1 bands has been studied in CA_n66-n77 combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n24-n41-n48
+Content: [To be added later once the TP is approved.]
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n24-n41-n77 > Co-existence studies
+Content: Table 6.66.3-1 summarizes frequency ranges where harmonics occur for CA_n24-n41-n77. Based on above table, the 2nd harmonic of n24 UL may fall into the lower DL frequency range of n77 which need to be addressed in lower order combination. Table 6.66.1.3-2 summarizes frequency ranges where harmonics mixing occur for CA_n24-n41-n77. Based on above table, there are no harmonic mixing issues for the CA_n24-n41-n77 combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n24-n41-n77 > $ $T and $ $R values
+Content: For CA_n24-n41-n77, the $ $T and $ $R values are given according to CA_n24-n41, CA_n24-n77 relaxation values.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n24-n41-n77 > REFSENS requirements
+Content: The 2nd harmonic issues from n24 UL into n77 DL is addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n77-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n3-n77, CA_n3-n79 and n77-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n77-n79 > $ $T and $ $R values
+Content: For CA_n3-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n77-n79 > REFSENS requirements
+Content: Based on 6.67.3, there are no additional MSD requirements for this band combination since harmonic interference from n3 to n77 and n79, and from n77 to n3 and n79, and from n79 to n3 and n77 have been already studied.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n79-n258 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes in TR 38.716-02-00.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n79-n258 > $ $T and $ $R values
+Content: For CA_n41A-n79A-n258A, the $ $T and $ $R values are given in the tables below, where same $ $T and $ $R values as CA_n41A-n79A for band n41 and band n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n79-n258 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied for CA_n41-n79, and harmonic interference between FR1 bands and FR2 band are negligible
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n71-n78 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n71-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n25, n38 and n78, the $ $T and $ $R values are shown in table 6.69.4-1 and table 6.69.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n25-n71-n78 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n66-n77 > Co-existence studies
+Content: Table 6.70.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL Based on above table the 5th harmonic of band n14 as well as the 2nd harmonic of band n66 falls inside band n77. Both are found in the fall back mode to this combination. Table 6.70.3-2 gives harmonic mixing issue for CA with Band n14, n66 and n77. No harmonic mixing issue is identified for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n66-n77 > $ $T and $ $R values
+Content: For three DLs of Band n14, n66 and n77, the same $ $T and $ $R values specified for CA_n5-n66-n77 are used as below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n66-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n30-n77 > Co-existence studies
+Content: Table 6.71.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There are no harmonic interference. Table 6.71.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are no harmonic mixing interference. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n30-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from CA_14-30 and DC_13_n78.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n30-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n14-n77 > Co-existence studies
+Content: Table 6.72.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is 4th HAM from n5 UL to n77 DL. MSD is already defined for this in 38.101-1 Table 6.72.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There is 4th HAM from n5 UL to n77 DL. MSD is already defined for this in 38.101-1. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n14-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from DC_13-n77, DC_5_n77 and CA_5-13.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n14-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n14-n77 > Co-existence studies
+Content: Table 6.73.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is 2nd HAM from n2 UL to n77 DL. MSD is already defined for this in 38.101-1. Table 6.73.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There is 2nd HAM from n2 UL to n77 DL. MSD is already defined for this in 38.101-1. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n14-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from DC_13-n77 and CA_n2-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n14-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n66-n77 > Co-existence studies
+Content: Table 6.74.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. 3rd HAM from n66 UL might fall in n77 DL. MSD for this is already captured in 38.101-1. Table 6.74.3-2 gives harmonic mixing issue for CA with Band n14, n66 and n77. No harmonic mixing issue is identified for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n66-n77 > $ $T and $ $R values
+Content: For three DLs of Band n12, n66 and n77, the same $ $T and $ $R values specified for DC_66_n77 and DC_12_n66, are used as below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n66-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n30-n77 > Co-existence studies
+Content: Table 6.75.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There are no harmonic interference. Table 6.75.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are no harmonic mixing interference. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n30-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from CA_12-30, DC_12_n30 and DC_12_n78.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n30-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n77 > Co-existence studies
+Content: Table 6.76.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There are no harmonic issues. Table 6.76.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are no harmonic issues. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from CA_n2-n77, DC_12_n78 and CA_2-12.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n12-n77 > Co-existence studies
+Content: Table 6.77.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There are 4th HAM from n5 UL to n77 DL. MSD sue to this is already defined in 38.101-1. Table 6.77.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are 4th HAM from n5 UL to n77 DL. MSD sue to this is already defined in 38.101-1. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n12-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from CA_5-12, DC_5_n77, DC_5_n12 and DC_12_n78.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n12-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n77 > Co-existence studies
+Content: Table 6.78.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is 2nd HAM from n2 UL to n77 DL and 4th HAM from n5 UL to n77 DL. MSD is already defined for this in 38.101-1 Table 6.78.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There is 2nd HAM from n2 UL to n77 DL and 4th HAM from n5 UL to n77 DL. MSD is already defined for this in 38.101-1 For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from CA_n2-n77, DC_5_n77 and CA_2-5.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n77 > Co-existence studies
+Content: Table 6.79.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is 4th HAM from n5 UL to n77 DL. MSD is already defined for this in 38.101-1 Table 6.79.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There is 4th HAM from n5 UL to n77 DL. MSD is already defined for this in 38.101-1. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from DC_5_n77 and CA_5-30.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n30-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n30-n77 > Co-existence studies
+Content: Table 6.80.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is 2nd HAM from n2 UL to n77 DL. MSD is already defined for this in 38.101-1. Table 6.80.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There is 2nd HAM from n2 UL to n77 DL. MSD is already defined for this in 38.101-1. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n30-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from CA_n2-n77 and CA_2-30.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n30-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n30-n66-n77 > Co-existence studies
+Content: Table 6.81.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There are 2nd HAM from n66 UL to n77 DL. MSD for this is already defined in 38.101-1. Table 6.81.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There are no harmonic issue. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n30-n66-n77 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from CA_30-66 and DC_66_n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n30-n66-n77 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n25-n78 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.82.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen, 2nd harmonic from n25 UL might affect n78 DL, which are addressed in lower order combinations. Table 6.82.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n25-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n7, n25 and n78, the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_7-25_n78.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n25-n78 > REFSENS requirements
+Content: The 2nd harmonic mixing issues from n25 UL into n78 DL will be addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n78-n258 > $ $T and $ $R values
+Content: For CA_n7-n78-n258, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n78-n258 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied in the fallback band combination and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n14-n30 > Co-existence studies
+Content: Table 6.84.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No harmonic relation is identified. Table 6.84.3-2 gives harmonic mixing issue for CA with Band n2, n14 and n30. No harmonic mixing relation is identified. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n14-n30 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n14 and n30, the $ $T and $ $R values are shown in table 6.84.4-1 and table 6.84.4-2, respectively. The requirement is reused from the similar combination, E-UTRA CA_2-14-30.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n14-n66 > Co-existence studies
+Content: Table 6.85.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No harmonic relation is identified. Table 6.85.3-2 gives harmonic mixing issue for CA with Band n2, n14 and n66. No harmonic mixing relation is identified. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n14-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n14 and n66, the $ $T and $ $R values are shown in table 6.85.4-1 and table 6.85.4-2, respectively. The requirement is reused from the similar combination, E-UTRA CA_2-14-66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n30-n66 > Co-existence studies
+Content: Table 6.86.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No harmonic relation is identified. Table 6.86.3-1 summarizes frequency ranges where harmonic mixing occur due to 3DL bands CA with 1 UL. No harmonic mixing relation is identified. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1 .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n14-n30-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n14, n30 and n66, the $ $T and $ $R values are shown in table 6.86.4-1 and table 6.86.4-2, respectively. The requirement is reused from the similar combination, E-UTRA CA_14-30-66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n77 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n3 and n77 , the $ $T and $ $R values are shown in table 6.87.4-1 and table 6.87.4-2 refer to DC_1-3_n77 in 38.101-3, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n77 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n257 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n3 and n257 , the $ $T and $ $R values are shown in table 6.88.4-1 and table 6.88.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n257 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n77 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n3, n8 and n77 , the $ $T and $ $R values are shown in table 6.89.4-1 and table 6.89.4-2 refer to DC_3-8_n77 in 38.101-3, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n77 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n257 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n3, n8 and n257 , the $ $T and $ $R values are shown in table 6.90.4-1 and table 6.90.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n257 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n77-n257 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n77-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n8, n77 and n257 , the $ $T and $ $R values are shown in table 6.91.4-1 and table 6.91.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n77-n257 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n48 to n66 and n77, and from n66 to n48 and n77, and from n77 to n48 and n66 have been already studied for 3DL/1UL fallback combinations CA n48-n66 and CA_n48-n77 and n66-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n77 > $ $T and $ $R values
+Content: The $ $T and $ $R values are given in tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations and there is no additional requirement for this CA configuration .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n5 to n48 and n77, and from n48 to n5 and n77, and from n77 to n5 and n48 have been already studied for 3DL/1UL fallback combinations CA n5-n48 and CA_n5-n77 and n48-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n77 > $ $T and $ $R values
+Content: The $ $T and $ $R values are given in tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations and there is no additional requirement for this CA configuration .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n66 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n66 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n5 to n48 and n66, and from n48 to n5 and n66, and from n66 to n5 and n48 have been already studied for 3DL/1UL fallback combinations CA n5-n48 and CA_n5-n66 and n48-n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n66 > $ $T and $ $R values
+Content: The $ $T and $ $R values are given in tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n48-n66 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations and there is no additional requirement for this CA configuration .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n48-n77 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n48-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n2 to n48 and n77, and from n48 to n2 and n77, and from n77 to n2 and n48 have been already studied for 3DL/1UL fallback combinations CA n2-n48 and CA_n2-n77 and n48-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n48-n77 > $ $T and $ $R values
+Content: The $ $T and $ $R values are given in tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n48-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations and there is no additional requirement for this CA configuration .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n48-n66 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode. 6.96.3 Co-existence studies Co-existence studies can be omitted because harmonic interference from n2 to n48 and n66, and from n48 to n2 and n66, and from n66 to n2 and n48 have been already studied as fallback combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n48-n66 > $ $T and $ $R values
+Content: The $ $T and $ $R values are given in tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n48-n66 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations and there is no additional requirement for this CA configuration .
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n2 to n5 and n48, and from n5 to n2 and n48, and from n48 to n2 and n5 have been already studied for 3DL/1UL fallback combinations CA n2-n5, CA_n2-n48 and n5-n48.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > $ $T and $ $R values
+Content: The $ $T and $ $R values are given in tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations and there is no additional requirement for this CA configuration . 6.98 CA_n1-n3-n5
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > Co-existence studies
+Content: Table 6.98.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No issues can be ssen. Table 6.98.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n3 and n5 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from CA_1-3-5. 6.98.5 REFSENS requriements No harmonic issues to be addressed. 6.99 CA_n1-n5-n7
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > Co-existence studies
+Content: Table 6.99.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. No harmonic mixing issue can be seen. Table 6.99.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No harmonic mixing issue can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n5 and n7 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_1-5_n7. 6.99.5 REFSENS requirements No Harmonic mixing issues need to be addressed. 6.100 CA_n1-n5-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > Co-existence studies
+Content: Table 6.100.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen, 4th harmonic/harmonic mixing from n5 might affect n78 DL, which are addressed in lower order combinations. Table 6.100.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. As can be seen, 4th harmonic/harmonic mixing from n5 might affect n78 DL, which are addressed in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n5 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_1-5_n78. 6.100.5 REFSENS requirements The 4th harmonic/harmonic mixing from n5 into n78 DL and UL will be addressed in lower order combination. 6.101 CA_n28-n41-n79
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes in TR 38.716-02-00 , where no harmonic issues for the 1UL/3DL NR CA CA_n28A-n41A-n79A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n5-n48 > $ $T and $ $R values
+Content: For CA_n28A-n41A-n79A, $ $T and $ $R values are given in table 6.101.4.1 and 6.101.4.2 6.101.4.1 $ $T 6.101.4.2 $ $R 6.101.5 MSD No additional MSD is needed for 1UL/3DL NR CA CA_n28A-n41A-n79A since there are no harmonic issues. Also there are no cross band isolation MSD issues.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n71-n78 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n71-n78 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n71-n78 > $ $T and $ $R values
+Content: For CA_n41-n71-n78, the $ $T and $ $R values can reuse CA_n41-n71-n77 defined in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n71-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n8 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n8 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n3 and n8 , the $ $T and $ $R values are shown in table 6.103.4-1 and table 6.103.4-2 refer to DC_1-3_n8 in 38.101-3, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n8 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n77 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n8 and n77 , the $ $T and $ $R values are shown in table 6.104.4-1 and table 6.104.4-2 refer to DC_1-8_n77 in 38.101-3, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n77 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n8 and n257 , the $ $T and $ $R values are shown in table 6.105.4-1 and table 6.105.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination. 6.106 CA_n40-n41-n258
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes in TR 38.716-02-00.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > $ $T and $ $R values
+Content: For CA_n40A-n41A-n258A, $ $T and $ $R values are set to zero for n258, and the values for constituent FR1 NR bands are same as those for the corresponding inter-band CA_n40A-n41A for band n41 and band n41, where band n40 and n41 are synchronization operation in these configuration, which means simultaneous Rx/Tx is not supported between band n40 and band n41. 6.106.5 MSD MSD studies can be omitted because harmonic interference between FR1 bands have been already studied for CA_n40-n41, and harmonic interference between FR1 bands and FR2 band are negligible 6.107 CA_n3-n5-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.107.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen, 2nd harmonic/harmonic mixing from n3 UL might affect n78 DL and 4th harmonic/harmonic mixing from n5 might affect n78 DL, which are addressed in lower order combinations. Table 6.107.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n3, n5 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_3-5_n78. 6.107.5 MSD The 2nd harmonic/harmonic mixing issues from n3 UL into n78 DL and the 4th harmonic/harmonic mixing from n5 into n78 DL will be addressed in lower order combination. 6.108 CA_n25-n41-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.108.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen, 2nd harmonic/harmonic mixing from n25 UL might affect n78 DL, which are addressed in lower order combinations. Table 6.108.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n25, n41 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from CA_n7-n25-n78. 6.108.5 MSD The 2nd harmonic/harmonic mixing issues from n25 UL into n78 DL are addressed in lower order combination. 6.109 CA_n41-n66-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.109.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen, 2nd harmonic from n66 might affect n78 DL, which are addressed in lower order combinations. Table 6.109.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. As can be seen, there are no harmonic mixing issues.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n41, n66 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from CA_n41-n66-n77. 6.109.5 MSD The 2nd harmonic issues from n66 UL into n78 are addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1A-n28A-n40 > Co-existence studies
+Content: Table 6.110.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. There is 3rd HAM from n28 UL to n1 DL. MSD is already defined for this in 38.101-1. Table 6.110.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. There is 3rd HAM from n28 DL to n40 UL. MSD is already defined for this in 38.101-1. For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1A-n28A-n40 > $ $T and $ $R values
+Content: It is proposed to re-use $ $T and $ $R values from DC_1-28_n40.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1A-n28A-n40 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n26-n66-n70 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n26 to n66 and n70, and from n66 to n26 and n70, and from n70 to n26 and n70 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n26-n66 and CA_n26-n70 and CA_n66-n70 is already in the 38.101-1 specification.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n26-n66-n70 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n26, n66 and n70, the $ $T and $ $R values are shown in table 6.111.4-1 and table 6.111.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n26-n66-n70 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference from n26 to n66 and n70, and from n66 to n26 and n70, and from n70 to n26 and n66 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n26-n66, CA_n26-n70 and CA_n66-n70 are already in the 38.101-1 specification
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n70 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n48 to n66 and n70, and from n66 to n48 and n70, and from n70 to n48 and n70 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n48-n66 and CA_n48-n70 and CA_n66-n70 is already in the 38.101-1 specification.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n70 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n48, n66 and n70, the $ $T and $ $R values are shown in table 6.112.4-1 and table 6.112.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n70 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference from n48 to n66 and n70, and from n66 to n48 and n70, and from n70 to n48 and n66 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n48-n66 and CA_n48-n70 and CA_n48-n70 is already in the 38.101-1 specification
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n71 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference from n48 to n66 and n71, and from n66 to n48 and n71, and from n71 to n48 and n71 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n48-n66 and CA_n48-n71 and CA_n66-n71 is already in the 38.101-1 specification.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n71 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n48, n66 and n71, the $ $T and $ $R values are shown in table 6.113.4-1 and table 6.113.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n66-n71 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference from n48 to n66 and n71, and from n66 to n48 and n71, and from n71 to n48 and n66 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n48-n66 and CA_n48-n71 and CA_n48-n71 is already in the 38.101-1 specification
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n70-n71 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference between n48 and n70, and between n48 and n71 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n48-n66 and CA_n48-n70 and CA_n70-n71 is already in the 38.101-1 specification.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n70-n71 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n48, n70 and n71, the $ $T and $ $R values are shown in table 6.114.4-1 and table 6.114.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n48-n70-n71 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between n48 and n70, and between n48 and n71 have been prepared along with this TP for 3DL/1UL fallback combinations CA_n48-n66 and CA_n48-n71 and CA_n70-n71 is already in the 38.101-1 specification
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n70-n71 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n70-n71 > $ $TIB and $ $RIB values
+Content: For CA_n24-n41-n48, the $ $TIB,c and $ $RIB,c values are given according to corresponding 2 inter-band CA combination relaxation values.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n70-n71 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this CA combinations. 6.117 CA_n24-n48-n77
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n70-n71 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n70-n71 > $ $TIB and $ $RIB values
+Content: For CA_n24-n48-n77, the $ $T and $ $R values are given according to corresponding 2 inter-band CA combination relaxation values.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n66-n70-n71 > REFSENS requirements
+Content: The 2nd harmonic issues from n24 UL into n77 DL is addressed in lower order combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n1-n3, CA_n1-n79 and n3-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n79 > $ $T and $ $R values
+Content: For CA_n1-n3-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n79 > REFSENS requirements
+Content: Based on 6.118.3,there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n41 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n1-n28, CA_n1-n41 and n28-n41.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n41 > $ $T and $ $R values
+Content: For CA_n1-n28-n41, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n41 > REFSENS requirements
+Content: Based on 6.119.3,there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n1-n28, CA_n1-n77 and n28-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n77 > $ $T and $ $R values
+Content: For CA_n1-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n77 > REFSENS requirements
+Content: Based on 6.120.3,there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n79 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n1-n28, CA_n1-n79 and n28-n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n79 > $ $T and $ $R values
+Content: For CA_n1-n28-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n79 > REFSENS requirements
+Content: Based on 6.121.3,there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n257 > $ $T and $ $R values
+Content: For CA_n1-n28-n257, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n257 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied in the fallback band combination and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because harmonic interference have been already studied for 2DL/1UL fallback combinations such as CA n1-n41, CA_n1-n77 and n41-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n77 > $ $T and $ $R values
+Content: For CA_n1-n41-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n77 > REFSENS requirements
+Content: Based on 6.123.3,there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n257 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n257 > $ $T and $ $R values
+Content: For CA_n1-n41-n257, the $ $T and $ $R values are given in the tables below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n257 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied in the fallback band combination and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n5-n28 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n5-n28 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n5-n28 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_1-8_n28.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n5-n28 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n7-n8 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n7-n8 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n7-n8 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_1-7_n8.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n7-n8 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n28 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n28 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n28 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_1-8_n28.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n8-n28 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n5-n28 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n5-n28 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n5-n28 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_3-8_n28.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n5-n28 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n7-n8 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n7-n8 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n7-n8 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_3-7_n8
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n7-n8 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n28 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n28 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n28 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_3-8_n28
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n8-n28 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n7-n28 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n7-n28 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n7-n28 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_5-7_n71
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n7-n28 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n28 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n28 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n28 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_7-8_n28
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n28 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n78 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n78 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from DC_7-8_n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n78 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination. 6.134 CA_n28-n40-n79
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n78 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes in TR 38.716-02-00 , where no harmonic issues for the 1UL/3DL NR CA CA_n28A-n40A-n79A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n8-n78 > $ $T and $ $R values
+Content: For CA_n28A-n40A-n79A, $ $T and $ $R values are given in table 6.134.4.1 and 6.134.4.2 6.134.4.1 $ $T 6.134.4.2 $ $R 6.134.5 MSD No additional MSD is needed for 1UL/3DL NR CA CA_n28A-n40A-n79A since there are no additional harmonic issues. Also there are no cross band isolation MSD issues.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n46-n78 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n46-n78 > Co-existence studies
+Content: Co-existence studies of CA_n28-n46-n78 with 1 UL are already covered in the constituent fallback modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n46-n78 > $ $T and $ $R values
+Content: The same relaxation values for CA_n28-n78 are reused.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n28-n46-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n46-n78 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered for these bands in TS 38.101-1. Table below summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen, 2nd harmonic from n7 might affect n46 DL, which are addressed in lower order combinations. Table below summarizes frequency ranges where harmonics mixing occur due to 3DL bands CA with 1 UL. As can be seen, 2nd harmonic from n7 might affect n46 UL, which are addressed in lower order combinations. Further, mixing of 2nd and 3rd Harmonic of n7 and n78 as well as n46 and n78. This is also addressing in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n46-n78 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL the $ $T and $ $R values are re-used from CA_n7-n46, CA_n7-n78 and CA_n46-n78.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n7-n46-n78 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n77 > Co-existence studies
+Content: Co-existence studies of CA_n2-n29-n77 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n29 and n77, the $ $T and $ $R values are shown in table 6.137.4-1 and table 6.137.4-2, respectively. They are taken from the existing combination DC_n2-n29_n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n77 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n29-n77 > Co-existence studies
+Content: Co-existence studies of CA_n5-n29-n77 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n29-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n5, n29 and n77, the $ $T and $ $R values are shown in table 6.138.4-1 and table 6.138.4-2, respectively. They are taken from the existing combination CA_n5-n12-n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n5-n29-n77 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n30-n77 > Co-existence studies
+Content: Co-existence studies of CA_n29-n30-n77 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n30-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n29, n30 and n77, the $ $T and $ $R values are shown in table 6.139.4-1 and table 6.139.4-2, respectively. They are taken from the existing combination DC_29-30_n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n30-n77 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n66-n77 > Co-existence studies
+Content: Co-existence studies of CA_n29-n66-n77 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n66-n77 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n29, n66 and n77, the $ $T and $ $R values are shown in table 6.140.4-1 and table 6.140.4-2, respectively. They are taken from the existing combination DC_29-66_n77.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n66-n77 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n66-n260 > Channel bandwidths per operating band for CA
+Content: NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, it means that all single carrier bandwidths for the constituent bands are supported as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n41-n66-n260 > REFSENS requirements
+Content: MSD studies can be omitted because harmonic interference between FR1 bands have been already studied for CA_n41-n66, and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n18 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n18 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n18 > $ $T and $ $R values
+Content: For CA_n1-n3-n18, the $ $T and $ $R values can reuse CA_1-3-18 defined in TS 36.101.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n3-n18 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n28 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n28 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n28 > $ $T and $ $R values
+Content: For CA_n1-n18-n28, the $ $T and $ $R values can reuse CA_1-18-28 defined in TS 36.101.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n28 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n41 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n41 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n41 > $ $T and $ $R values
+Content: For CA_n1-n18-n41, the $ $T and $ $R values can reuse CA_1-18-41 defined in TS 36.101.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n41 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n77 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n77 > $ $T and $ $R values
+Content: For CA_n1-n18-n77, the $ $T and $ $R values can reuse CA_1-18-42 defined in TS 36.101 and DC_1-18_n77 defined in 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n18-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n41 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n41 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n41 > $ $T and $ $R values
+Content: For CA_n1-n28-n41, the $ $T and $ $R values can reuse DC_1-28_n7 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n41 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n77 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n77 > $ $T and $ $R values
+Content: For CA_n1-n28-n77, the $ $T and $ $R values can reuse DC_1_n28-n77 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n28-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n77 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n77 > $ $T and $ $R values
+Content: For CA_n1-n41-n77, the $ $T and $ $R values can reuse DC_1-41_n77 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n1-n41-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n28 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n28 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n28 > $ $T and $ $R values
+Content: For CA_n3-n18-n28, the $ $T and $ $R values can reuse DC_3-18_n28 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n28 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n77 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n77 > $ $T and $ $R values
+Content: For CA_n3-n18-n77, the $ $T and $ $R values can reuse DC_3-18_n77 defined in 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n3-n18-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n41 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n41 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n41 > $ $T and $ $R values
+Content: For CA_n18-n28-n41, the $ $T and $ $R values are defined below.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n41 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n77 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n77 > $ $T and $ $R values
+Content: For CA_n18-n28-n77, the $ $T and $ $R values can reuse DC_18-28_n77 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n28-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n41-n77 > Channel bandwidths per operating band for CA
+Content: bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n41-n77 > Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n41-n77 > $ $T and $ $R values
+Content: For CA_n18-n41-n77, the $ $T and $ $R values can reuse DC_18-41_n77 defined in TS 38.101-3.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n18-n41-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n30-n66 > Co-existence studies
+Content: Co-existence studies of CA_n12-n30-n66 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n30-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n12, n30 and n66, the $ $T and $ $R values are shown in table 6.154.4-1 and table 6.154.4-2, respectively. They are taken from the existing combination E-UTRA CA_12-30-66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n12-n30-n66 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n30-n66 > Co-existence studies
+Content: Co-existence studies of CA_n29-n30-n66 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n30-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n29, n30 and n66, the $ $T and $ $R values are shown in table 6.155.4-1 and table 6.155.4-2, respectively. They are taken from the existing combination DC_29-30_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n29-n30-n66 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n30 > Co-existence studies
+Content: Co-existence studies of CA_n2-n12-n30 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n30 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n12 and n30, the $ $T and $ $R values are shown in table 6.156.4-1 and table 6.156.4-2, respectively. They are taken from the existing combination DC_2-12_n30.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n30 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n66 > Co-existence studies
+Content: Co-existence studies of CA_n2-n12-n66 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n12 and n66, the $ $T and $ $R values are shown in table 6.157.4-1 and table 6.157.4-2, respectively. They are taken from the existing combination DC_2-12_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n12-n66 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n30 > Co-existence studies
+Content: Co-existence studies of CA_n2-n29-n30 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n30 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n29 and n30, the $ $T and $ $R values are shown in table 6.158.4-1 and table 6.158.4-2, respectively. They are taken from the existing combination DC_2-29_n30.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n30 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > Co-existence studies
+Content: Co-existence studies of CA_n2-n29-n66 with 1UL are already covered in the constituent fall-back modes.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n29 and n66, the $ $T and $ $R values are shown in table 6.159.4-1 and table 6.159.4-2, respectively. They are taken from the existing combination DC_2-29_n66.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > REFSENS requirements
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination. 6.160 CA_n41-n70-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.160.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen there are 2nd harmonic issues from UL n70 affecting DL n78., which are addressed in lower order combinations. Table 6.160.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n41, n70 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from CA_n3-n7-n78. 6.160.5 MSD The 2nd harmonic from n70 UL into n78 DL is addressed in lower order combination. 6.161 CA_n1-n20-n67
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > Co-existence studies
+Content: Table 6.161.3-1 gives harmonic issue for the 3DL bands CA with 1 UL. No issues can be seen. Table 6.161.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. It can be seen that 3rd harmonic mixing of n20 might affect DL n1.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n41, n70 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_1-20_n28. 6.161.5 MSD The 3rd harmonic mixing from n20 UL into n1 DL is addressed in lower order combination. 6.162 CA_n3-n20-n67
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > Co-existence studies
+Content: Table 6.162.3-1 gives harmonic issue for the 3DL bands CA with 1 UL. It can be seen that 2nd harmonic UL of n20 might affect DL n3. Table 6.162.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. No issues can be seen.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n41, n70 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_3-20_n28. 6.162.5 MSD The 2nd harmonic from n20 UL into n3 DL is addressed in lower order combination. 6.163 CA_n2-n71-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.163.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen there are 2nd harmonic issues from UL n2 affecting DL n78 and 3rd harmonic issues from UL n71 affecting DL n2, which are addressed in lower order combinations. Table 6.163.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. As can be seen there are 3rd harmonic issues from DL n71 affecting UL n2, which are addressed in lower order combinations.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n71 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_2-71_n78. 6.163.5 MSD The harmonic and harmonic mixing issues are addressed in lower order combinations. 6.164 CA_n2-n66-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > Co-existence studies
+Content: For 3DL/1UL NR CA, only single uplink operation needs to be considered. For single uplink operation of this combination, only harmonic issue and harmonic mixing issue need to be considered. Table 6.164.3-1 summarizes frequency ranges where harmonics occur due to 3DL bands CA with 1 UL. As can be seen there are 2nd harmonic issues from UL n2 affecting DL n78 and 2nd harmonic issues from UL n66 affecting DL n2, which are addressed in lower order combinations. Table 6.164.3-2 gives harmonic mixing issue for the 3DL bands CA with 1 UL. As can be seen there are no harmonic mixing issues.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n2, n66 and n78 , the $ $T and $ $R values are shown in table 6.1.x.4-1 and table 6.1.x.4-2, respectively. Values are derived from DC_2-66_n78. 6.164.5 MSD The harmonic issues are addressed in lower order combinations. 6.165 CA_n28-n40-n41
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes in TR 38.716-02-00 , where: - There is no harmonics issue and harmonics mixing issue for the band combination of n28 and n41. - There is 3rd harmonic DL mixing from band n28 DL will affect band n40 UL.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values
+Content: For CA_n28A-n40A-n79A, $ $T and $ $R values are given in table 6.165.4.1 and 6.165.4.2 6.165.4.1 $ $ T 6.165.4.2 $ $ R 6.165.5 MSD No additional MSD is needed for 1UL/3DL NR CA CA_n28A-n40A-n41A since the MSD for 3rd harmonic DL mixing from band n28 DL affect band n40 UL were already defined in the fall back mode of CA_n28A-n40A. [ 1.1 ] [6.166] CA_n46-n48-n96 [6.166.1] Operating bands for CA
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n2-n29-n66 > $ $T and $ $R values > Channel bandwidths per operating band for CA
+Content: 6.166.1.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n46, n48 and n96, the $ $T and $ $R values are shown in table 6.166.1.4-1 and table 6.166.1.4-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n77-n79-n258
+Content: 6.167.1 Operating band for CA 6.167.2 Channel bandwidths per operating band for CA [ 1.1.1 ] [6.167.3] Co-existence studies [6.167.4] $ $T and $ $R values For CA_n77-n79-n258, the $ $T and $ $R values are given in the tables below. 6.167.5 REFSENS requirements MSD studies can be omitted because harmonic interference between FR1 bands have been already studied in the fallback band combination and harmonic interference between FR1 bands and FR2 band are negligible.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Operating bands for CA
+Content: 6.168.2 Channel bandwidths per operating bands for CA
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Co-existence studies
+Content: Co-existence studies can be covered in the lower order combinations. 6.168.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band combinations n8-n78-n257 , the $ $T and $ $R values are shown in table 6.168.3-1 and table 6.168.3-2, respectively. 6.168.5 REFSENS requirements MSD requirements are already specified in the lower order combinations. [ 1.1 ] [6.169] CA_n5-n40-n78 [6.169.1] Operating bands for CA 6.169.2 Channel bandwidths per operating band for CA hree bands) NOTE: For the UE that signals support of any bandwidth combination set for carrier aggregation, the UE shall support all single carrier bandwidths for the constituent bands as defined in Table 5.3.5-1 of TS 38.101-1 and in Table 5.3.5-1 of TS 38.101-2 when operating in single carrier mode.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > 6.169.3 Co-existence studies
+Content: Co-existence studies can be omitted because fallback combinations cover these requirements and analysis 6.169.4 $ $T and $ $R values For CA_n5-n40-n78, the $ $T and $ $R values are defined as below. 6.169.5 REFSENS requirements MSD requirements are captured in lower order combinations. 6.170 CA_n3-n8-n41
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes , where: - 2nd harmonic produce of band n8 may fall into band n3, and there is no harmonics mixing issue for the band combination of n3 and n8. -3rd order harmonic of Band n8 will fall into Band n41, and there is no harmonics mixing issue for the band combination of n8 and n41. - There is no harmonics issue and harmonics mixing issue for the band combination of n3 and n41.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > $ $T and $ $R values
+Content: For CA_n3A-n8A-n41A, $ $T and $ $R values are given in table 6.170.4.1 and 6.170.4.2 6.170.4.1 $ $TIB,c 6.170.4.2 $ $RIB,c
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > MSD
+Content: No additional MSD is needed for 1UL/3DL NR CA CA_n3A-n8A-n41A. 6.171 CA_n3-n8-n79
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes , where: - 2nd harmonic produce of band n8 may fall into band n3, and there is no harmonics mixing issue for the band combination of n3 and n8. - 5th harmonic produce of band n8 may fall into band n79, and there is no harmonics mixing issue for the band combination of n8 and n79. - There is no harmonics issue and harmonics mixing issue for the band combination of n3 and n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > $ $T and $ $R values
+Content: For CA_n3A-n8A-n79A, $ $T and $ $R values of DC_3-8_n79 are resued, which are given in table 6.171.4.1 and 6.171.4.2 6.171.4.1 $ $ T 6.171.4.2 $ $ R
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > MSD
+Content: No additional MSD is needed for 1UL/3DL NR CA CA_n3A-n8A-n79A. 6.172 CA_n8-n39-n79
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes , where: - There are no harmonics issue and harmonics mixing issue for the band combination of n8 and n39. - 5th harmonic produce of band n8 may fall into band n79, and there is no harmonics mixing issue for the band combination of n8 and n79. - There are no harmonics issue and harmonics mixing issue for the band combination of n39 and n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > $ $T and $ $R values
+Content: For CA_n8A-n39A-n79A, $ $T and $ $R values of DC_8_n39-n79 are resued, which are given in table 6.172.4.1 and 6.172.4.2 6.172.4.1 $ $ T 6.172.4.2 $ $ R
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > MSD
+Content: No additional MSD is needed for 1UL/3DL NR CA CA_n8A-n39A-n79A. 6.173 CA_n28-n39-n40
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes in TR 38.716-02-00 , where: - There is no harmonics issue and harmonics mixing issue for the band combination of n28 and n39. - There is no harmonics issue for band n28 and band n40, 3rd harmonic DL mixing from band n28 UL will affect band n40 DL. - There is no harmonics issue and harmonics mixing issue for the band combination of n39 and n40 due to synchronization for these two bands.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > $ $T and $ $R values
+Content: For CA_n28A-n39A-n79A, $ $T and $ $R values are given in table 6.173.4.1 and 6.173.4.2 6.173.4.1 $ $ T 6.173.4.2 $ $ R
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > MSD
+Content: No additional MSD is needed for 1UL/3DL NR CA CA_n28A-n39A-n40A. 6.174 CA_n28-n39-n41
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes in TR 38.716-02-00 , where: - There is no harmonics issue and harmonics mixing issue for the band combination of n28 and n39. - There is no harmonics issue and harmonics mixing issue for the band combination of n28 and n41. - There is no harmonics issue and harmonics mixing issue for the band combination of n39 and n41 due to synchronization for these two bands.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > $ $T and $ $R values
+Content: For CA_n28A-n39A-n79A, $ $T and $ $R values are given in table 6.174.4.1 and 6.174.4.2 6.174.4.1 $ $ T 6.174.4.2 $ $ R 6.174.5 MSD No additional MSD is needed for 1UL/3DL NR CA CA_n28A-n39A-n41A. 6.175 CA_n28-n39-n79
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Co-existence studies
+Content: The coexistence studies of harmonic interference have been captured in the constituent fallback modes , where: - There are no harmonics issue and harmonics mixing issue for the band combination of n28 and n39. - There are no harmonics issue and harmonics mixing issue for the band combination of n28 and n79. - There are no harmonics issue and harmonics mixing issue for the band combination of n39 and n79.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > $ $T and $ $R values
+Content: For CA_n28A-n39A-n79A, $ $T and $ $R values are given in table 6.175.4.1 and 6.175.4.2 6.175.4.1 $ $ T 6.175.4.2 $ $ R 6.175.5 MSD No additional MSD is needed for 1UL/3DL NR CA CA_n28A-n39A-n79A. [ 1.1 ] [6.176] CA_n1-n28-n38 [6.176.1] Operating bands for CA 6.176.2 Channel bandwidths per operating band for CA 6.176.3 Co-existence studies For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1. 6.176.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n1, n28 and n38, the $ $T and $ $R values are shown in table 6.176.4-1 and table 6.176.4-2, respectively. 6.176.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. [ 1.1 ] [6.177] CA_n1-n38-n78 [6.177.1] Operating bands for CA 6.177.2 Channel bandwidths per operating band for CA 6.177.3 Co-existence studies For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1. 6.177.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n1, n38 and n78, the $ $T and $ $R values are shown in table 6.177.4-1 and table 6.177.4-2, respectively. 6.177.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. [ 1.1 ] [6.178] CA_n28-n38-n78 [6.178.1] Operating bands for CA 6.178.2 Channel bandwidths per operating band for CA 6.178.3 Co-existence studies For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1. 6.178.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n28, n38 and n78, the $ $T and $ $R values are shown in table 6.178.4-1 and table 6.178.4-2, respectively. 6.178.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. [ 1.1 ] [6.179] CA_n1-n7-n79 [6.179.1] Operating bands for CA 6.179.2 Channel bandwidths per operating band for CA 6.179.3 Co-existence studies For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1. 6.179.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n1, n38 and n78, the $ $T and $ $R values are shown in table 6.179.4-1 and table 6.179.4-2, respectively. 6.179.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. 6.180 CA_n3-n38-n40
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Channel bandwidths per operating band for CA
+Content: 6.180.3 Co-existence studies Co-existence studies of CA_n3-n38-n40 with 1UL are already covered in the constituent fall-back modes. 6.180.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n3, n38 and n40, the $ $T and $ $R values are shown in table 6.180.4-1 and table 6.180.4-2, respectively. They are taken from the existing combination DC_3_n40-n41. 6.180.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. 6.181 CA_n8-n38-n40
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Channel bandwidths per operating band for CA
+Content: 6.181.3 Co-existence studies Co-existence studies of CA_n8-n38-n40 with 1UL are already covered in the constituent fall-back modes. 6.181.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n8, n38 and n40, the $ $T and $ $R values are shown in table 6.181.4-1 and table 6.181.4-2, respectively. They are taken from the existing combination CA_8A-40A-41A. 6.181.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. 6.182 CA_n1-n7-n40
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Channel bandwidths per operating band for CA
+Content: 6.182.3 Co-existence studies Co-existence studies of CA_n1-n7-n40 with 1UL are already covered in the constituent fall-back modes. 6.182.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n1, n7 and n40, the $ $T and $ $R values are shown in table 6.182.4-1 and table 6.182.4-2, respectively. They are taken from the existing combination DC_1-7_n40. 6.182.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. 6.183 CA_n1-n8-n40
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Channel bandwidths per operating band for CA
+Content: 6.183.3 Co-existence studies Co-existence studies of CA_n1-n8-n40 with 1UL are already covered in the constituent fall-back modes. 6.183.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n1, n8 and n40, the $ $T and $ $R values are shown in table 6.183.4-1 and table 6.183.4-2, respectively. They are taken from the existing combination DC_1_n8-n40. 6.183.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. 6.184 CA_n7-n8-n40
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Channel bandwidths per operating band for CA
+Content: 6.184.3 Co-existence studies Co-existence studies of CA_n7-n8-n40 with 1UL are already covered in the constituent fall-back modes. 6.184.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n7, n8 and n40, the $ $T and $ $R values are shown in table 6.184.4-1 and table 6.184.4-2, respectively. They are taken from the existing combination DC_7_n8-n40. 6.184.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination. 6.185 CA_n8-n40-n78
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_n8-n78-n257 > Channel bandwidths per operating band for CA
+Content: 6.185.3 Co-existence studies Co-existence studies of CA_n8-n40-n78 with 1UL are already covered in the constituent fall-back modes. 6.185.4 $ $T and $ $R values For three simultaneous DLs and one UL of Band n8, n40 and n78, the $ $T and $ $R values are shown in table 6.185.4-1 and table 6.185.4-2, respectively. They are taken from the existing combination DC_8_n40-n78. 6.185.5 REFSENS requirements Compared to its fallback modes, there are no additional MSD requirements for this band combination.

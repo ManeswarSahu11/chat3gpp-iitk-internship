@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the standards allowed to implement Layer 1 on the F1 interface. The F1 interface provides means for interconnecting a gNB-CU and a gNB-DU of a gNB within an NG-RAN, or for interconnecting a gNB-CU and a gNB-DU of an en-gNB within an E-UTRAN. The specification of transmission delay requirements and O\&M requirements are not in the scope of the present document. In the following 'Layer 1' and ‘Physical Layer’ are assumed to be synonymous.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: gNB-CU: as defined in TS 38.401 gNB-DU: as defined in TS 38.401 gNB: as defined in TS 38.300 en-gNB: as defined in TS 37.340
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TS 38.411 apply.
+Title Path: Introduction
+Content: The F1 Layer 1 shall comply with the requirements of clauses 4 through 6 in TS 38.411 .

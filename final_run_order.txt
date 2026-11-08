@@ -1,0 +1,6 @@
+1. Chat3GPP TeleQnA on index_clean_rel1718_final_v2
+2. If best, lock index_clean_rel1718_final_v2
+3. Chat3GPP Tele-Eval on index_clean_rel1718_final_v2
+4. Tele-it TeleQnA on index_clean_rel1718_final_v2
+5. Tele-it Tele-Eval on index_clean_rel1718_final_v2
+6. Score/judge Tele-Eval outputs

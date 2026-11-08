@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document specifies the standards allowed to implement layer 1 on the NG interface. The specification of transmission delay requirements and O\&M requirements are not in the scope of the present document. In the following, 'layer 1' and 'physical layer' are assumed to be synonymous.
+Title Path: Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 .
+Title Path: Introduction
+Content: The main functions of layer 1 are summarized in the following: Interface to physical medium; Frame delineation; Line clock extraction capability; Layer 1 alarms extraction and generation; Transmission quality control.
+Title Path: Layer 1 specifications
+Content: The support of any suitable layer 1 technique - like point-to-point or point-to-multipoint techniques - shall not be prevented.
+Title Path: Interface to management plane
+Content: The description of the interface towards the management plane is out of scope of this document, but at least the following O\&M functions should be foreseen: Performance monitoring functions; Alarm status reporting functions; Synchronisation source management.

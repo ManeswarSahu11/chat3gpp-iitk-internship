@@ -1,0 +1,14 @@
+Title Path: Scope
+Content: The present document specifies the interface test for the Terminal / UICC. The present document specifies the tests of: physical characteristics of the UICC; the electrical interface between the UICC and the Terminal; the initial communication establishment and the transport protocols; the application independent procedures.
+Title Path: Definitions, symbols, abbreviations and coding
+Content: All definitions, symbols, abbreviations and coding conventions applicable to the terminal are specified in ETSI TS 102 230 .
+Title Path: Physical Characteristic Tests
+Content: All tests within the scope of this clause are specified in ETSI TS 102 230 .
+Title Path: Electrical Characteristic Tests
+Content: All tests within the scope of this clause are specified in ETSI TS 102 230 .
+Title Path: Initial Communication Tests
+Content: All tests within the scope of this clause are specified in ETSI TS 102 230 .
+Title Path: Transmission Protocol Tests
+Content: All tests within the scope of this clause are specified in ETSI TS 102 230 .
+Title Path: Application independent procedures
+Content: All tests within the scope of this clause are specified in ETSI TS 102 230 .

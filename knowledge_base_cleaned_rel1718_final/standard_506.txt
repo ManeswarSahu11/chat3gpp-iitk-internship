@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document is part of an Integration Reference Point (IRP) named Wireless Local Area Network (WLAN) Management Network Resource Model (NRM) IRP, through which an IRPAgent can communicate management information to one or several IRPManagers concerning WLAN management. The WLAN management NRM IRP comprises a set of specifications defining Requirements, a protocol neutral Information Service and one or more Solution Set(s). The present document specifies the Solution Sets for the WLAN NRM IRP.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and 3GPP TS 32.150 apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 , 3GPP TS 32.150 [3 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or 3GPP TS 32.150 . WLAN Wireless Local Area Network
+Title Path: Solution Set definitions
+Content: Since the instances of all of the IOC(s) defined in WLAN NRM IS (3GPP TS 28.682 ) are not visible to Basic CM IRP and Bulk CM IRP, there is no need to define solution sets in the present document.

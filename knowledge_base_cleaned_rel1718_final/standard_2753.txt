@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document defines, in addition to the requirements defined in , and , the requirements for the present IRP : GERAN Network Resource Model (NRM) Integration Reference Point (IRP).
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply. IRP: See 3GPP TS 32.101 . Network Resource Model (NRM): See definition in TS 32.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: GSM/EDGE Radio Access Network Global System for Mobile communication Integration Reference Point Information Service (see ) Network Resource Model Universal Mobile Telecommunications System
+Title Path: Requirements
+Content: The following general and high-level requirements apply for the present IRP: [ a) ] IRP-related requirements in 3GPP TS 32.101 . IRP-related requirements in 3GPP TS 32.102 . IRP-related requirements in 3GPP TS 32.600 . The NRM defined by this IRP: [ a) ] Shall support communications for telecommunication network management purposes, including management of converged networks. Is a member of the Federated Network Information Model (FNIM) and its information is derived from FNIM Umbrella Information Model (UIM) . In addition to the above, the following more specific requirements apply: REQ-GERAN_NRM-CON-001: The Network Resource Model defined by this IRP shall contain GERAN specific classes and related definitions, supporting the management of GERAN Network entities. REQ-GERAN_NRM-CON-002: The Network Resource Model defined by this IRP shall support management of UMTS-GSM Inter-system handover.

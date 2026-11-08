@@ -1,0 +1,4 @@
+Title Path: Scope
+Content: The present document provides an index to the set of specifications for interworking between 3GPP systems and Wireless Local Area Networks (WLAN ). No further changes to this specification are intended. If any future evolution of the procedures in this specification is necessary, it should be documented in other specifications.
+Title Path: Security Requirements for 3GPP-WLAN Interworking
+Content: This feature has been discontinued since Release 13 and the present specification is used to provide references to the latest versions of the stage-1, 2 and 3 specifications. TS 22.234 . TS 24.234 . TS 24.235 . TS 24.327 . TS 29.161 . TS 29.234 . - TS 23.234 . - TS 32.252 .

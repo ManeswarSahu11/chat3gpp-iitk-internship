@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document is Fault Management stage 3 specification for mobile networks that include virtualized network functions which can be part of EPC or IMS.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 . Information Service Simple Object Access Protocol Solution Set
+Title Path: General descriptions
+Content: For VNF Fault Management Stage 3 solution over Itf-N, the Alarm IRP SS is applicable. The overall description of Alarm IRP SS is specified in TS 32.111-6 .The semantics of Alarm IPR SS are specified in Alarm IRP Information Service TS 32.111-2 . Three solution sets are contained in , which are the CORBA Solution Set, the XML definitions and the SOAP Solution Set. For VNF Fault Management Stage 3 solution over Ve-Vnfm reference point, the corresponding RESTful solution of ETSI GS NFV-SOL 002 shall be used as specified in clause 5.2.
+Title Path: Solution Set Definitions > Itf-N
+Content: For Itf-N VNF alarm management, the following Solution Set Definitions defined by AlarmIRP which is specified in 3GPP TS 32.111-6 shall be used:

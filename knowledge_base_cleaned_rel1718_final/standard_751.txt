@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document specifies the 3GPP confidentiality and integrity algorithms known as UEA2 and UIA2.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and in the SAGE Specification apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the symbols defined in the SAGE Specification apply.
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and in the SAGE Specification apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: Technical provisions
+Content: The technical provisons of the current document are contained in the SAGE Specification .

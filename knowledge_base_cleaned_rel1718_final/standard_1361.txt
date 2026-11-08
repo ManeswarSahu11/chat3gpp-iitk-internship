@@ -1,0 +1,26 @@
+Title Path: Scope
+Content: The present document specifies the Inventory Management (IM) Network Resource Model (NRM) that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks. The present document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 and 3GPP TS 32.600 and the following apply: Association: See definition in TS 28.622 . Managed Element (ME): See definition in TS 28.622 . Managed Object (MO): See definition in TS 28.622 . Management Information Model (MIM): See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Distinguished Name (see 3GPP TS 32.300 ) Inventory Management Information Object Class Integration Reference Point [ITU-T]International Telecommunication Union, Telecommunication Sector Management Information Model Managed Object Managed Object Class Network Element Network Manager Network Resource Model Relative Distinguished Name (see 3GPP TS 32.300 ) Telecommunications Management Network Unified Modelling Language Universal Mobile Telecommunications System UMTS Terrestrial Radio Access Network
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of IOCs that encapsulate information relevant for this service. This clause provides the overview of all information object classes in UML. Subsequent clauses provide more detailed specification of various aspects of these information object classes. The inventory NRM contains two alternatives for inventory data modeling. Alternative 1 is for NE structure and hardware inventory. Alternative 2 is an extended version for inventory information modeling consisting of NE structure, hardware, software and license data inventory. Alternative 1, hardware inventory model NOTE: The listed cardinality numbers represent transient as well as steady-state numbers, and reflect all managed object creation and deletion scenarios. Each IOC instance is identified with a Distinguished Name (DN) according to 3GPP TS 32.300 that expresses its containment hierarchy. As an example, the DN of a IOC representing a InventoryUnit could have a format like: SubNetwork=Sweden,meContext=MEC-Gbg-1,ManagedElement=RNC-Gbg-1,InventoryUnit=Inv-1. Alternative 2, extended model for hardware, software and licence inventory: NOTE: Inventory information upload in alternative 2 is done using the FT IRP and related FT IRP notification capabilities
+Title Path: Model > Class diagram > Inheritance
+Content: This subclause depicts the inheritance relationships that exist between IOCs. Figure 4.2.2 shows the inheritance hierarchy for the IM NRM.
+Title Path: Model > Class definitions > InventoryUnit > Definition
+Content: This IOC represents inventory information for an Inventory Unit.
+Title Path: Model > Class definitions > InventoryUnitNE > Definition
+Content: This SupportIOC represents the logical and physical structure of the NE.
+Title Path: Model > Class definitions > InventoryUnitHw > Definition
+Content: This SupportIOC represents the hardware components.
+Title Path: Model > Class definitions > InventoryUnitSw > Definition
+Content: This SupportIOC represents the software components.
+Title Path: Model > Class definitions > InventoryUnitLic > Definition
+Content: This SupportIOC represents the licence components.
+Title Path: Model > Class definitions > TmaInventoryUnit > Definition
+Content: This IOC represents inventory information for a Tower Mounted Amplifier Unit.
+Title Path: Model > Class definitions > AntennaInventoryUnit > Definition
+Content: This IOC represents inventory information for an Antenna Unit.
+Title Path: Model > Attribute definitions > Attribute properties
+Content: The following table defines the attributes that are present in several Information Object Classes of the present document.

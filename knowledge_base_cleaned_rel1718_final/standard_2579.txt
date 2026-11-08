@@ -1,0 +1,56 @@
+Title Path: Scope
+Content: The present document specifies policy management procedures, stage 2 and stage 3 for policy MnS.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: Policy management procedures > Policy Creation
+Content: The Figure 4.1-1 illustrates the procedure for creating a new policy. MnS Consumer sends a request to create a policy instance to MnS Producer for the new policy to be created(see createMOI operation defined in TS 28.532 ). Based on the request, the MnS Producer creates the concrete policy MOI]. MnS Producer sends a response to the MnS consumer(see createMOI operation defined in TS 28.532 ).
+Title Path: Policy management procedures > Policy Deletion
+Content: The Figure 4.2-1 illustrates the procedure for deleting a policy. MnS Consumer sends a request to delete a policy instance(see deleteMOI operation defined in TS 28.532 ) to MnS Producer. Based on the request, the MnS Producer deletes the concrete policy MOI (i.e. instance of policy IOC). MnS Producer sends a response to the MnS consumer(see deleteMOI operation defined in TS 28.532 ).
+Title Path: Policy management procedures > Policy Update
+Content: The Figure 4.3-1 illustrates the procedure for updating a policy. MnS Consumer sends a request to update a policy instance to MnS Producer(see modifyMOIAttributes operation defined in TS 28.532 ). Based on the request, the MnS Producer updates the concrete policy MOI (i.e. instance of policy IOC). MnS Producer sends a response to the MnS consumer(see modifyMOIAttributes operation defined in TS 28.532 ).
+Title Path: Policy management procedures > Policy Query
+Content: The Figure 4.4-1 illustrates the procedure for querying a new policy. MnS Consumer sends a request to query a policy instance to MnS Producer(see getMOIAttributes operation defined in TS 28.532 ). Based on the request, the MnS Producer queries the concrete policy MOI (i.e. instance of policy IOC). MnS Producer sends a response to the MnS consumer(see getMOIAttributes operation defined in TS 28.532 ).
+Title Path: Policy management procedures > Policy Conflicts Notification
+Content: The Figure 4.5-1 illustrates the procedure for notifying policy conflicts. 1. When MnS Producer receives new or updated policy (ies) from MnS Consumer, it will check whether the each received policy is conflicts with the previous storage policy. 2. If the conflict is detected, MnS Producer will notify the information to MnS Consumer(see notifyEvent operation defined in TS 28.532 ).
+Title Path: Policy management procedures > Policy Activation
+Content: The Figure 4.6-1 illustrates the procedure for activating a new policy. MnS Consumer sends a request to activate a policy instance to MnS Producer. Based on the request, the MnS Producer activate the concrete policy MOI (i.e. instance of policy IOC). MnS Producer sends a response to the MnS Consumer.
+Title Path: Policy management procedures > Policy Deactivation
+Content: The Figure 4.7-1 illustrates the procedure for deactivating a policy. MnS Consumer sends a request to deactivate a policy instance to MnS Producer. Based on the request, the MnS Producer deactivate the concrete policy MOI (i.e. instance of policy IOC). MnS Producer sends a response to the MnS Consumer.
+Title Path: Policy MnS Stage 2 > Management operation for Policy (MnS component type A)
+Content: The operations (e.g. createMOI operations) and notifications (e.g. notifyMOIcreation) of generic provisioning MnS defined in TS 28.532 can be used for policy lifecycle management. The policy can be treated as object instance.
+Title Path: Policy MnS Stage 2 > Information model definition entities for Policy > Class diagram > Relationships
+Content: This clause introduces the set of nformation bject lasses (IOCs). NOTE: The diagram maybe updated depending on the scenarios.
+Title Path: Policy MnS Stage 2 > Information model definition entities for Policy > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships. 5.2.3 Class definitions
+Title Path: Policy MnS Stage 2 > Information model definition entities for Policy > Class diagram > Policy > Attributes
+Content: The Policy IOC includes attributes inherited from Top IOC (defined in TS 28.622) and the following attributes:
+Title Path: Policy MnS Stage 2 > Information model definition entities for Policy > Class diagram > Notifications > General
+Content: The Notifications include notifications (e.g. notifyMOIcreation) of generic provisioning MnS defined in TS 28.532 and Notification notifyPolicyConflict(5.2.3.2.1)
+Title Path: Policy MnS Stage 2 > Information model definition entities for Policy > Class diagram > Notifications > Notification notifyPolicyConflict (CM)
+Content: 5.2.3.2.1.1 Definition This notification supports the policy conflict notification to be notified when a new policy conflicts with the previous storage policy.
+Title Path: Policy MnS Stage 2 > Information model definition entities for Policy > Class diagram > PolicyContent dataType > Definition
+Content: This data type represents the content of a network policy.
+Title Path: Policy MnS Stage 2 > Information model definition entities for Policy > Information attribute definitions > Introduction
+Content: This clause defines the semantics of the attributes used in IOCs.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Mapping of operations > Introduction
+Content: The IS operations are mapped to SS equivalents according to table 6.1.1.1-1.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Mapping of operations > Operation
+Content: The mapping of operations (e.g. createMOI operations) of generic provisioning MnS defined in TS 28.532 can be used for policy lifecycle management.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Mapping of notifications > Introduction
+Content: The IS notifications are mapped to SS equivalents according to table 6.1.2.1-1.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Mapping of notifications > Notification > General
+Content: The mapping of notifications (e.g. notifyMOICreation) of generic provisioning MnS defined in TS 28.532 and notifyPolicyConflict(6.1.1.2.1) can be used for policy lifecycle management.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Mapping of notifications > Notification > Notification "notifyPolicyConflict"
+Content: The IS notification parameters are mapped to SS equivalents according to table 6.1.1.2.1-1.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Resources
+Content: The resources of generic provisioning MnS defined in TS 28.532 can be used for policy lifecycle management.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Data type definitions > Query, message body and resource data types > General
+Content: Query, message body and resource data types of generic provisioning MnS defined in TS 28.532 and the following definitions can be used for policy lifecycle management.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Data type definitions > Referenced structured data types
+Content: The referenced structured data types of generic provisioning MnS defined in TS 28.532 can be used for policy lifecycle management.
+Title Path: Policy MnS Stage 3 > RESTful HTTP-based solution set > Data type definitions > Simple data types and enumerations > General
+Content: The simple data types and enumerations of generic provisioning MnS defined in TS 28.532 , and the following simple data types and enumerations can be used for policy lifecycle management.
+Title Path: Policy MnS Stage 3 > YANG/Netconf-based solution set
+Content: The YANG/Netconf based solution set of generic provisioning MnS defined in TS 28.532 can be used for policy lifecycle management.

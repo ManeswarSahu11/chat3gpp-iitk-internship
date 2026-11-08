@@ -1,0 +1,14 @@
+Title Path: Scope
+Content: The present document is the Life Cycle Management (LCM) stage 2 specification for mobile networks that include virtualized network functions.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 , 3GPP TS 28.500 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 , 3GPP TS 28.500 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Information model definition > Os-Ma-nfvo
+Content: For Os-Ma-nfvo NS lifecycle management (LCM) and VNF lifecycle as part of NS LCM, the information elements and notifications related to NS lifecycle management which are specified in clause 8.3 of ETSI GS NFV-IFA 013 shall be used.
+Title Path: Information model definition > Ve-Vnfm-em
+Content: For Ve-Vnfm-em VNF lifecycle management, the following shall be used: the information elements related to VNF lifecycle management which are specified in clause 9.4 of ETSI GS NFV-IFA 008 , the information elements and notifications related to VNF lifecycle changes which are specified in clause 9.5 of ETSI GS NFV-IFA 008 , and the information elements and notifications related to multiple interfaces which are specified in clause 9.8 of ETSI GS NFV-IFA 008 .
+Title Path: Interface definitions > Os-Ma-nfvo
+Content: For NS lifecycle management the operations of the NS Lifecycle Management interface specified in clause 7.3 of ETSI GS NFV-IFA 013 shall be used. For NS lifecycle change notifications and notification subscription management, the operations of the NS Lifecycle Change Notification interface specified in clause 7.4 of ETSI GS NFV-IFA 013 shall be used.
+Title Path: Interface definitions > Ve-Vnfm-em
+Content: For VNF lifecycle management the operations of the VNF Lifecycle Management interface specified in clause 7.2 of ETSI GS NFV-IFA 008 shall be used. For VNF lifecycle change notifications and notification subscription management, the operations of the VNF Lifecycle Change Notification interface specified in clause 7.3 of ETSI GS NFV-IFA 008 shall be used.

@@ -1,0 +1,52 @@
+Title Path: Scope
+Content: The present document describes the architecture for Home NodeB (HNB) Management and Data class definition for Fault Management, Configuration Management and Performance Measurements. The stage 2 definitions captured in this document shall be met via type 1 interface between HNB and Domain Manager.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 Home NodeB, 3G Home NodeB and HNB: These terms, their derivations and abbreviations are used synonymously throughout this document.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Domain Manager Element Manager For Further Study Home NodeB Management System Home NodeB Internet Protocol Long Term Evolution Mobile Management Entity Next Generation Mobile Networks Operations, Administrator and Maintenance Plug and Play System Architecture Evolution Self-Organising Networks To Be Discussed Universal Mobile Telecommunications System UMTS Radio Access Network
+Title Path: Purpose
+Content: The purpose of this document is to specify the Information Model for Home NodeB Type 1 Interface for the remote management using the TR-069 CWMP Ref . The strategy used to define the data model is as defined below : Configuration Management: An abstraction of the data model definition from Broadband Forum Ref A complete information model is defined for Fault Management and Performance Management
+Title Path: Structure of HNB Information Model
+Content: Each of the three boxes represents the logical grouping of the parameters in the Information Model. . Figure 1. HNB Information Model Structure 6 Information Model Definition
+Title Path: Structure of HNB Information Model > Configuration Management
+Content: NOTE: State Management (Operational Status, Administrative status of the device) is covered as part of configuration management
+Title Path: Structure of HNB Information Model > Configuration Management > HNB Access Network
+Content: Editor’s Note: alignment of access parameter fields in 32.582 and 32.592 is FFS.
+Title Path: Structure of HNB Information Model > Fault Management > Common Alarm Attributes
+Content: The HNB Fault Management utilises a common set of alarm parameters as follows:
+Title Path: Structure of HNB Information Model > Fault Management > Current Alarms List
+Content: The HNB maintains a list of current alarms not yet cleared on the HNB. Newly raised alarms events result in a new entry in the Current Alarms Table being added, any changes to the alarm as a result of an update event are updated in the table, and a clear event raised against an alarm results in the alarm being removed from this table , reference REQ-OAMP_FM-FUN-007
+Title Path: Structure of HNB Information Model > Fault Management > Current Alarms List > Alarm Indexing Parameters
+Content: Entries in the Current Alarm Table shall be uniquely indexable using the following parameters:
+Title Path: Structure of HNB Information Model > Fault Management > Current Alarms List > Alarm Content Parameters
+Content: The Alarms List table shall contain a list of entries which shall contain the parmeters identified in 6.2.3.1, the common set of alarm parameters which are identified in clause 6.2.1, and the following additional information:
+Title Path: Structure of HNB Information Model > Fault Management > Alarm History List
+Content: The HNB maintains an alarm history list which contains the alarms raised by the HNB for each alarm that has appeared on the Alarms List as defined in REQ-OAMP_FM-FUN-007.
+Title Path: Structure of HNB Information Model > Fault Management > Alarm History List > Alarm Indexing Parameters
+Content: Entries in the Alarms History Alarm Table shall be uniquely indexable using the following parameters:
+Title Path: Structure of HNB Information Model > Fault Management > Alarm History List > Alarm Content Parameters
+Content: The Alarms Event History table shall contain a list of entries which shall contain the parameters identified in 6.2.3.1, the common set of alarm parameters which are identified in section 6.2.1, and the following additional information:
+Title Path: Structure of HNB Information Model > Fault Management > Expedited and Queued Alarm Handling
+Content: The HNB maintains expedited and queued alarm handling lists which contains the alarms raised by the HNB for each alarm that has appeared on the Alarms List which are waiting to be delivered to the HMS within the TR-069 RPC Methods as either Active or Passive Notifications, as defined in REQ-OAMP_FM-FUN-007
+Title Path: Structure of HNB Information Model > Fault Management > Expedited and Queued Alarm Handling > Alarm Indexing Parameters
+Content: Entries in the Expedited and Queued Alarm Handling Tables shall be uniquely indexable using the following parameters:
+Title Path: Structure of HNB Information Model > Fault Management > Expedited and Queued Alarm Handling > Alarm Content Parameters
+Content: The Expedited and Queued Event Delivery tablea shall contain a list of entries which shall contain the parameters identified in 6.2.5.1, the common set of alarm parameters which are identified in section 6.2.1, and the following additional information:
+Title Path: Structure of HNB Information Model > Fault Management > Supported Alarms and Reporting Mechanisms
+Content: The HNB identifies which Alarm Events can be generated by the HNB and based on the reporting mechanism as defined in REQ-OAMP_FM-FUN-008 the HNB shall perform the identified actions. The supported alarm table shall contain a list of entries containing the following information:
+Title Path: Structure of HNB Information Model > Fault Management > Encoding > dateTime
+Content: See Broadband Forum TR-069 HNB WAN Management Protocol Amendment 2, Table 9, for a definition of the dateTime and supported values.
+Title Path: Structure of HNB Information Model > Fault Management > Encoding > Event Type
+Content: See 3GPP TS32.111-2 Annex A for information on pre-defined alarm types from the 3GPP standards and 3GPP TS32.111-6 for supported alarm type values
+Title Path: Structure of HNB Information Model > Fault Management > Encoding > Probable Cause
+Content: See 3GPP TS32.111-2 Annex B for information on pre-defined Probable Causes from the 3GPP standards and 3GPP TS32.111-6 for supported Probable Cause values.
+Title Path: Structure of HNB Information Model > Fault Management > Encoding > PerceivedSeverity
+Content: See 3GPP TS32.111-2 for information on pre-defined Perceived Severity from the 3GPP standards and 3GPP TS32.111-6 for supported Perceived Severity values Although ``Indeterminate'' is defined in 3GPP TS32.111-2 it should not be used by the HNB as a Perceived Severity.
+Title Path: Structure of HNB Information Model > Performance Management > Periodic Performance File Upload
+Content: The HNB can be configured to send periodic performance files to a designated File Server as defined in REQ-OAMP-PM-FUN-003 The File Management table shall contain the following information:
+Title Path: Structure of HNB Information Model > Performance Management > Periodic Statistics > Sample Set Management
+Content: The HNB contains a collection of sample sets which consist of a collection of periodic statistics for the HNB . Each configured sample set shall contain the following Management Parameters:
+Title Path: Structure of HNB Information Model > Performance Management > Periodic Statistics > Sample Set Statistic Parameters
+Content: Each Sample set shall include a collection of periodic statistics in a table whose values are to be sampled and each periodic statistic shall contain the following: Note: The support of table 6.3.2.1 and 6.3.2.2 is optional by HNB.
+Title Path: Structure of HNB Information Model > Performance Management > PM File Content description
+Content: Table below lists all the PM file content items. It also provides a description of the individual items. PM File Content Description

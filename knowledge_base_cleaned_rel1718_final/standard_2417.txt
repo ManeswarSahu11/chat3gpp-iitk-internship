@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document describes the NRM IRP requirements of WLAN management.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 , and 3GPP TS 32.150 apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Access Point Integration Reference Point Network Element Network Resource Model Wireless Local Access Network
+Title Path: Concepts and background
+Content: The architecture for management of WLAN AP is conformant to the management reference model as defined in Figure 1 of TS 32.101 where the WLAN AP is depicted as NE. The system context of the WLAN management is in compliance with the System Context A, defined in Figure 4.7.1 in TS 32.150 . Based on the above characteristics, the present document defines respective WLAN management NRM IRP requirements.
+Title Path: Requirements
+Content: The following general and high-level requirements apply for the present IRP: IRP-related requirements in 3GPP TS 32.101 . IRP-related requirements in 3GPP TS 32.102 .

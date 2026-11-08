@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the Solution Set definitions (SS) of the Radio Planning Tool Access (RPTA) Integration Reference Point (IRP). This IRP allows the NM to read planned site and antenna data from the RPT. This Solution Set specification is related to 3GPP TS 28.668 V14.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 28.668 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Information Service Solution Set Web Service Description Language
+Title Path: Solution Set Definitions
+Content: The present document defines the following RPTA IRP Solution Set Definitions:

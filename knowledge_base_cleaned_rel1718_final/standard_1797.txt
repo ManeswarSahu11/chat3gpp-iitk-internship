@@ -1,0 +1,26 @@
+Title Path: Scope
+Content: The present document is a technical report for WI ``Rel-18 downlink interruption for NR and EN-DC band combinations at dynamic Tx Switching in Uplink'' under Rel-18 time frame. The purpose is to gather the relevant background information and studies in order to address the band combinations requested for mandating no DL interruption to conduct dynamic Tx switching in uplink listed in Table 1-1.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply:
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 .
+Title Path: Background
+Content: At 3GPP RAN\#96 meeting, a new basket Work Item ``Rel-18 downlink interruption for NR and EN-DC band combinations at dynamic Tx Switching in Uplink'' was approved. The objectives are as following, For the core part: Discuss and specify inter-band uplink CA and EN-DC combinations for which DL interruption is not allowed when dynamic switching between two uplink carriers is conducted. Based on the requested band combinations from operators, analyze if it is feasible to specify no DL interruption in RAN4 specification. Based on the feasibility analysis for specific combination, decide to introduce no DL interruption in RAN4 specification. For the performance part: For 2CC 1Tx-2Tx switching, the mandating of no DL interruption for new band combinations is release independent from Rel-16. For 3CC 1Tx-2Tx switching and 2CC or 3CC 2Tx-2Tx switching, the mandating of no DL interruption for new band combinations is release independent from Rel-17. The present document is the technical report for this basket Work Item.
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band/band combination to ensure that the TPs related to the band/band combination have been implemented.
+Title Path: Specific Band Combinations > NR band combinations > CA_n1-n5-n78 > Technical analysis
+Content: For CA_n1-n78 and CA_n5-n78, no DL interruption allowed has been specified as mandated in 38101-1, which means switching from n1/n5 to n78 has no impact to n1/n5 downlink. Thus there is no DL interruption for CA_n1-n5-n78 with CA_n1-n78 or CA_n5-n78 uplink configuration when conducting dynamic Tx switching.
+Title Path: Specific Band Combinations > NR band combinations > CA_n1-n5-n78 > Conclusion
+Content: No DL interruption for CA_n1-n5-n78 with CA_n1-n78 or CA_n5-n78 uplink configuration is mandated.
+Title Path: Specific Band Combinations > NR band combinations > CA_n3-n5-n78 > Technical analysis
+Content: For CA_n3-n78 and CA_n5-n78, no DL interruption allowed has been specified as mandated in 38101-1, which means switching from n3/n5 to n78 has no impact to n3/n5 downlink. Thus there is no DL interruption for CA_n3-n5-n78 with CA_n3-n78 or CA_n5-n78 uplink configuration when conducting dynamic Tx switching.
+Title Path: Specific Band Combinations > NR band combinations > CA_n3-n5-n78 > Conclusion
+Content: No DL interruption for CA_n3-n5-n78 with CA_n3-n78 or CA_n5-n78 uplink configuration is mandated.
+Title Path: Release Independent Requirements
+Content: The mandating of no DL interruption requirement belongs to the feature of inter-band CA or EN-DC with tx switching. Thus to specify the release independent requirement shall involve the feature of tx switching. The specific requirements need to be fulfilled include downlink interruption requirement, mandating no DL interruption requirement and time mask requirements as specified in the 38.133 and 38.101-1 . Because RRM downlink interruption requirement is referred when specifying mandating no DL interruption in 38.101-1, only UE RF requirements are listed in the last column of the table in the clause 6.1 and 6.2, which are the requirements to be fulfilled by inter-band CA or EN-DC to support tx switching feature.
+Title Path: Release Independent Requirements > Inter-band CA
+Content: Requirements for a Rel-16 UE for additional NR inter-band CA configurations within FR1 compared to TS 38.101-1 of Rel-16 are introduced via this clause. Requirements for a Rel-17 UE for additional NR inter-band CA configurations within FR1 compared to TS 38.101-1 of Rel-17 are introduced via this clause.
+Title Path: Release Independent Requirements > Inter-band EN-DC
+Content: Requirements for a Rel-16 UE for additional EN-DC inter-band configurations within FR1 compared to TS 38.101-3 of Rel-16 are introduced via this clause.

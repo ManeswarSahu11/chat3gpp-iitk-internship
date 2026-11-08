@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document provides the Solution Set definitions for Generic Integration Reference Point (IRP) management, whose capabilities are specified in 3GPP TS 32.312 , the Generic IRP management: Information Service. This Solution Set Definition specification is related to 3GPP TS 32.312 V14.0.X.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TS 32.312 apply. IRP document version number string (or "IRPVersion"): See 3GPP TS 32.311 subclause 3.1.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Common Object Request Broker Architecture HyperText Transfer Protocol Interface Definition Language Integration Reference Point Information Object Class Object Management Group Solution Set Web Services Description Language [WS-I]Web Services Interoperability Organization eXtensible Markup Language
+Title Path: Solution Set definitions
+Content: This specification defines the following 3GPP Generic IRP management Solution Set definitions: 3GPP Generic IRP management CORBA SS (Annex A) 3GPP Generic IRP management SOAP Solution Set (Annex B) Solution Set to XML definitions is not present in the current version of this specification.

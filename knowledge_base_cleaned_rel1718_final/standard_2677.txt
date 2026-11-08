@@ -1,0 +1,18 @@
+Title Path: Scope
+Content: The present document defines the implementers test data of the 3GPP integrity algorithm GIA4.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 .
+Title Path: Introductory information > Introduction
+Content: The integrity algorithm GIA4 computes a 32-bit MAC (Message Authentication Code) of a given input message using integrity key KI128. The approach adopted uses KASUMI in a form of CBC-MAC mode.
+Title Path: Introductory information > Notation > Radix
+Content: "0x" is used to indicate hexadecimal numbers.
+Title Path: Introductory information > Notation > Conventions
+Content: The assignment operator "=", is used as in several programming languages. The following: variable = expression means that variable assumes the value that expression had before the assignment took place. For instance, x = x + y + 3 means (new value of x) becomes (old value of x) + (old value of y) + 3.
+Title Path: Introductory information > Notation > Bit/Byte ordering
+Content: All data variables in this specification are presented with the most significant bit (or byte) on the left hand side and the least significant bit (or byte) on the right hand side. Where a variable is broken down into a number of sub-strings, the left most (most significant) sub-string is numbered 0, the next most significant is numbered 1 and so on through to the least significant. For example an n-bit MESSAGE is subdivided into 64-bit substrings MB ,MB MB so for a message: 0x0123456789ABCDEFFEDCBA987654321086545381AB594FC28786404C50A37 The resulting notation is: MB = 0x0123456789ABCDEF MB = 0xFEDCBA9876543210 MB = 0x86545381AB594FC2 MB = 0x8786404C50A37 In binary this would be: [] 000000010010001101000101011001111000100110101011110011011110111111111110 MB = 0000000100100011010001010110011110001001101010111100110111101111 MB = 1111111011011100101110101001100001110110010101000011001000010000 MB = 1000011001010100010100111000000110101011010110010100111111000010 MB = 1000011110000110010000000100110001010000101000110111
+Title Path: Introductory information > List of variables
+Content: [A, B]are 64-bit registers that are used within the function to hold intermediate values. an integer variable indicating the number of successive applications of KASUMI that need to be performed. [CONSTANT-F]a 32-bit parameter which is constant for any given FRAMETYPE input. a 1-bit input indicating the direction of transmission (uplink or downlink). an 8-bit input to the function indicating the type of frame to be protected. [INPUT-I]a 32-bit time variant input to the function. the 128-bit integrity key. a 128-bit constant that is used to modify a key. an input to the function which specifies the number of octets of message to be MAC’d (1-65536). the 32-bit message authentication code (MAC) produced by the function. the input octet stream of length M octets that is to be processed by the function. is the input padded string processed by the function.
+Title Path: Test data
+Content: This clause only available under licence. See.

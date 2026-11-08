@@ -1,0 +1,174 @@
+Title Path: Scope
+Content: The present document describes the Information Model definition for Fault Management, Configuration Management and Performance measurements of Home eNodeBs. The stage 2 definitions captured in the present document shall be met via type 1 interface between HeNB and HMS.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905. 3G Home NodeB and Home eNodeB: These terms, their derivations and abbreviations are used synonymously throughout the present document.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Domain Manager Element Manager For Further Study Home NodeB Management System Home eNodeB Management System Home NodeB Home eNodeB Internet Protocol Long Term Evolution Mobile Management Entity Next Generation Mobile Networks Operations, Administrator and Maintenance Plug and Play System Architecture Evolution Self-Organising Networks To Be Discussed Universal Mobile Telecommunications System UMTS Radio Access Network
+Title Path: Purpose
+Content: The purpose of this document is to specify the Information Model for Home eNodeB Type 1 Interface for the remote management using the TR-069 CWMP . The information in this document is used by Broadband Forum to generate the solution set as defined in .
+Title Path: Structure of HeNB Information Model
+Content: Note: The structure of the Information Model is FFS.
+Title Path: Information Model Definition > Configuration Management
+Content: The names of objects and classification of parameters under objects is tentative. It is subject to modifications as needed.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters
+Content: Tables in below sections summarize the set of proposed Physical Layer objects and parameters.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > Antenna Information
+Content: This table contains parameters related to antenna configuration.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > PDSCH
+Content: This table contains parameters related to configuration of PDSCH.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > Sounding Reference Signal (SRS)
+Content: This table contains parameters common across the cell related to configuration of UL Sounding Reference Signal.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > PRACH
+Content: This table contains parameters related to RACH configuration at the PHY level.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > PUCCH
+Content: This table contains parameters related to common PUCCH configuration.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > PUSCH
+Content: This table contains parameters related to PUSCH configuration.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > PUSCH > Uplink Reference Signal
+Content: This table contains parameters related to configuration of uplink reference signals on PUSCH (or PUCCH).
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > Uplink Power Control
+Content: This table contains parameters used for computing UL power.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > MBSFN Configuration
+Content: This table contains parameters related to MBSFN configuration.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > MBSFN Configuration > MBSFN Subframe List
+Content: This table contains parameters that define the list of configurations of subframes reserved for MBSFN in downlink.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > Positioning reference Signals
+Content: This table contains parameters related to Positioning Reference Signals (PRS) configuration.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > TDD Frame Structure
+Content: This table contains parameters related to configuration of TDD physical layer frame structure.
+Title Path: Information Model Definition > Configuration Management > Physical Layer Parameters > Power Setting Parameters
+Content: This table contains parameters related to configuration of Power Setting for co-channel E-UTRA Protection .
+Title Path: Information Model Definition > Configuration Management > MAC Layer Parameters
+Content: Tables in below sections summarize the set of proposed MAC Layer objects and parameters.
+Title Path: Information Model Definition > Configuration Management > MAC Layer Parameters > RACH
+Content: This table contains parameters related to RACH configuration at the MAC level across the cell.
+Title Path: Information Model Definition > Configuration Management > MAC Layer Parameters > DRX
+Content: This table contains parameters related to DRX configuration.
+Title Path: Information Model Definition > Configuration Management > MAC Layer Parameters > Uplink SCH
+Content: This table contains parameters related to UL SCH configuration.
+Title Path: Information Model Definition > Configuration Management > RLC Layer Parameters
+Content: Tables in below sections summarize the set of proposed RLC Layer objects and parameters.
+Title Path: Information Model Definition > Configuration Management > RLC Layer Parameters > SRB
+Content: This table contains parameters related to AM RLC layer parameters for SRBi, where i can be 1 or 2.
+Title Path: Information Model Definition > Configuration Management > Cell Restriction Parameters
+Content: Tables in below sections summarize the set of proposed cell restriction.
+Title Path: Information Model Definition > Configuration Management > Cell Restriction Parameters > Cell barring and Access Class
+Content: This table contains cell barring and 3GPP access class parameters.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters
+Content: Tables in below sections summarize the set of proposed idle mode mobility objects and parameters.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > Common Parameters
+Content: This table contains common parameters related to idle mode mobility.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > Intra-Frequency Parameters
+Content: This table contains frequency-specific parameters related to idle mode mobility within the serving frequency.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > Inter-Frequency Parameters
+Content: This table contains information about other E-UTRA frequencies relevant for inter-frequency cell re-selection within E-UTRAN.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > IRAT from E-UTRA to UTRA
+Content: This table contains information about UTRA relevant for inter-RAT cell re-selection from E-UTRA to UTRA.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > IRAT from E-UTRA to UTRAN FDD
+Content: This table contains information about UTRA FDD frequency carriers relevant for inter-RAT cell re-selection from E-UTRA to UTRAN FDD.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > IRAT from E-UTRA to GERAN
+Content: This table contains information about GERAN relevant for inter-RAT cell re-selection from E-UTRA to GERAN.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > GERAN Frequency Groups
+Content: This table contains information about GERAN groups of frequency carriers relevant for inter-RAT cell re-selection from E-UTRA to GERAN. 6.1.5.1.7A IRAT from E-UTRAN to CDMA2000 This table contains information about CDMA2000 relevant for inter-RAT cell re-selection from E-UTRA to CDMA2000.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Idle Mode Mobility Parameters > CDMA2000 Bands for IRAT
+Content: This table contains information about CDMA2000 bands relevant for inter-RAT cell re-selection from E-UTRA to CDMA2000.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Connected Mode Mobility Parameters
+Content: Tables in below sections summarize the set of proposed connected mode mobility objects and parameters.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Connected Mode Mobility Parameters > Common Parameters for E-UTRA
+Content: This table contains common parameters related to intra-EUTRA connected mode mobility.
+Title Path: Information Model Definition > Configuration Management > Mobility Parameters > Connected Mode Mobility Parameters > IRAT
+Content: This table contains parameters related to IRAT connected mode mobility.
+Title Path: Information Model Definition > Configuration Management > RRC Timers and Constants Parameters
+Content: Tables in below sections summarize the set of proposed RRC timers and constant parameters.
+Title Path: Information Model Definition > Configuration Management > RF Parameters
+Content: Tables in below sections summarize the set of proposed cell restriction.
+Title Path: Information Model Definition > Configuration Management > RF Parameters > RF Configuration
+Content: This table contains parameters relating to the RF configuration.
+Title Path: Information Model Definition > Configuration Management > Common E-UTRAN Parameters
+Content: Table below shows common E-UTRAN parameters
+Title Path: Information Model Definition > Configuration Management > S1AP Parameters
+Content: Table below shows parameters specific to S1 Application Protocol described in TS 36.413.
+Title Path: Information Model Definition > Configuration Management > S1-U Parameters
+Content: This table contains parameters related to S1-U Parameters.
+Title Path: Information Model Definition > Configuration Management > EPC Parameters > General EPC parameters
+Content: Table below shows parameters specific to EPC
+Title Path: Information Model Definition > Configuration Management > Access Management Parameters
+Content: This table contain access management parameters Editor’s Note: alignment of access parameter fields in 32.582 and 32.592 is FFS.
+Title Path: Information Model Definition > Configuration Management > Transport parameters > SCTP Parameters
+Content: This table contains parameters relating to SCTP as defined in RFC 4960 and RFC 3873.
+Title Path: Information Model Definition > Configuration Management > Transport parameters > SCTP Association Parameters
+Content: This table contains parameters relating to SCTP Association. At most one entry in this table can exist with the same values for PrimaryPeerAddress and LocalPort. All parameters defined below are writable unless identified otherwise.
+Title Path: Information Model Definition > Configuration Management > Transport parameters > Parameters relating to Tunnelling
+Content: This table contains parameters relating to Tunnelling.
+Title Path: Information Model Definition > Configuration Management > Transport parameters > IKE IPsec Security Association Table
+Content: This Table contains IPsec Security Association (RFC 4301). At most one entry in this table can exist with the same values for IPAddress and SubnetMask
+Title Path: Information Model Definition > Configuration Management > Transport parameters > Child IPsec Security Association Table
+Content: This Table contains Child IPsec Security Association (RFC 4301). At most one entry in this table can exist with a given value for Security Parameter Index.
+Title Path: Information Model Definition > Configuration Management > Transport parameters > Virtual Interfaces of transport tunnel
+Content: This Table defines Virtual Interfaces (RFC 4301). At most one enabled entry in this table can exist with the same values for CryptoProfile and DSCPMarkPolicy.
+Title Path: Information Model Definition > Configuration Management > Transport parameters > Shared Secret Table
+Content: This table gathers information about all types of shared secret-based credentials (UICC). At most one entry in this table can exist with a given value for UICCCardID.
+Title Path: Information Model Definition > Configuration Management > Transport parameters > Public Key Table
+Content: . This table gathers information about all types of public key-based credentials, such as X.509 certificates. (RFC 3280). At most one entry in this table can exist with a given value for SerialNumber
+Title Path: Information Model Definition > Configuration Management > Transport parameters > Crypto Profile Table
+Content: This table gathers contains parameters relating to IKEv2 and IPsec crypto profiles, which are essentially a subset of the typical IPsec SPD. RFC 4301. At most one enabled entry in this table can exist with all the same values for AuthMethod, IKEEncrypt, IKEPRF, IKEIntegrity, IKEDH, ESPEncrypt and ESPIntegrity.
+Title Path: Information Model Definition > Configuration Management > Neighbor List Parameters
+Content: This table contains parameters related to neighbor list definition for LTE and IRAT..
+Title Path: Information Model Definition > Configuration Management > Neighbor List Parameters > LTE cell neighbor list
+Content: The table below contains LTE cell neighbour list.
+Title Path: Information Model Definition > Configuration Management > Neighbor List Parameters > Inter-RAT UMTS cell neighbor list
+Content: This table provides parameters for inter-RAT UMTS cell neighbour list.
+Title Path: Information Model Definition > Configuration Management > Neighbor List Parameters > Inter-RAT GSM cell neighbor list
+Content: This table defines parameters for inter-RAT GSM cell neighbor list.
+Title Path: Information Model Definition > Configuration Management > Neighbor List Parameters > Inter-RAT CDMA2000 cell neighbor list
+Content: This table defines parameters for inter-RAT CDMA2000 cell neighbor list.
+Title Path: Information Model Definition > Configuration Management > LTE REM parameters
+Content: Table 1 and 2 below show the proposed REM object for LTE EUTRAN cell(s) detected, covering both intra-freq and inter-freq cells detected (SIB4 and SIB5 in RRC ). Table 3 in Clause 6.1.16.3 shows parameters for the purpose of carrier frequency measurement at HeNB. HeNB may measure the specific frequency range to identify the signal quality in which the HeNB service is to be deployed. This range may or may not be associated with any particular LTE cells that may be detected by the HeNB.
+Title Path: Information Model Definition > Configuration Management > Security Parameters > Air interface ciphering and integrity protection algorithms
+Content: Parameters should be added for selection of the air interface ciphering and integrity protection algorithms, these are defined as configurable in 33.401 .
+Title Path: Information Model Definition > Configuration Management > Location management parameters
+Content: Table below shows parameters specific to location management
+Title Path: Information Model Definition > Configuration Management > Energy Savings Policy related parameters
+Content: The table below shows parameters specific to energy savings management [39:
+Title Path: Information Model Definition > Fault Management
+Content: All Parameters in this section are applicable to HNB and HeNB.
+Title Path: Information Model Definition > Fault Management > Common Alarm Attributes
+Content: The HeNB Fault Management utilises a common set of alarm parameters as follows:
+Title Path: Information Model Definition > Fault Management > Current Alarms List
+Content: The HeNB maintains a list of current alarms not yet cleared on the HeNB. Newly raised alarms events result in a new entry in the Current Alarms Table being added, any changes to the alarm as a result of an update event are updated in the table, and a clear event raised against an alarm results in the alarm being removed from this table, reference REQ-OAMP_FM-FUN-007
+Title Path: Information Model Definition > Fault Management > Current Alarms List > Alarm Indexing Parameters
+Content: Entries in the Current Alarm Table shall be uniquely indexable using the following parameters :
+Title Path: Information Model Definition > Fault Management > Current Alarms List > Alarm Content Parameters
+Content: The Alarms List table shall contain a list of entries which shall contain the parameters identified in 6.2.3.1, the common set of alarm parameters which are identified in section 6.2.1, and the following additional information:
+Title Path: Information Model Definition > Fault Management > Alarm History List
+Content: The HeNB maintains an alarm history list which contains the alarms raised by the HeNB for each alarm that has appeared on the Alarms List as defined in REQ-OAMP_FM-FUN-007
+Title Path: Information Model Definition > Fault Management > Alarm History List > Alarm Indexing Parameters
+Content: Entries in the Alarms History Alarm Table shall be uniquely indexable using the following parameters:
+Title Path: Information Model Definition > Fault Management > Alarm History List > Alarm Content Parameters
+Content: The Alarms Event History table shall contain a list of entries which shall contain the parameters identified in 6.2.3.1, the common set of alarm parameters which are identified in section 6.2.1, and the following additional information:
+Title Path: Information Model Definition > Fault Management > Expedited and Queued Alarm Handling
+Content: The HeNB maintains expedited and queued alarm handling lists which contains the alarms raised by the HeNB for each alarm that has appeared on the Alarms List which are waiting to be delivered to the HMS within the TR-069 RPC Methods as either Active or Passive Notifications, as defined in REQ-OAMP_FM-FUN-007
+Title Path: Information Model Definition > Fault Management > Expedited and Queued Alarm Handling > Alarm Indexing Parameters
+Content: Entries in the Expedited and Queued Alarm Handling Tables shall be uniquely indexable using the following parameters:
+Title Path: Information Model Definition > Fault Management > Expedited and Queued Alarm Handling > Alarm Content Parameters
+Content: The Expedited and Queued Event Delivery table shall contain a list of entries which shall contain the parameters identified in clause 6.2.3.1, the common set of alarm parameters which are identified in clause 6.2.1, and the following additional information:
+Title Path: Information Model Definition > Fault Management > Supported Alarms and Reporting Mechanisms
+Content: The HeNB identifies which Alarm Events can be generated by the HeNB and based on the reporting mechanism as defined in REQ-OAMP_FM-FUN-008 the HeNB shall perform the identified actions. The supported alarm table shall contain a list of entries containing the following information: * Editor’s Note: the need for SpecificProblem attribute in the table defined in 6.2.5 is FFS.
+Title Path: Information Model Definition > Fault Management > Encoding > dateTime
+Content: See Broadband Forum TR-069 HeNB WAN Management Protocol Amendment 2, Table 9, for a definition of the dateTime and supported values.
+Title Path: Information Model Definition > Fault Management > Encoding > Event Type
+Content: See 3GPP TS32.111-2 Annex A for information on pre-defined alarm types from the 3GPP standards and 3GPP TS32.111-6 for supported alarm type values
+Title Path: Information Model Definition > Fault Management > Encoding > Probable Cause
+Content: See 3GPP TS32.111-2 Annex B for information on pre-defined Probable Causes from the 3GPP standards and 3GPP TS32.111-6 for supported Probable Cause values.
+Title Path: Information Model Definition > Fault Management > Encoding > PerceivedSeverity
+Content: See 3GPP TS32.111-2 for information on pre-defined Perceived Severity from the 3GPP standards and 3GPP TS32.111-6 for supported Perceived Severity values Although ``Indeterminate'' is defined in TS32.111-2 it shouldn’t be used by the HeNB as a Perceived Severity.
+Title Path: Information Model Definition > Performance Management
+Content: All Parameters in this section are applicable to HNB and HeNB.
+Title Path: Information Model Definition > Performance Management > Periodic Performance File Upload
+Content: The HeNB can be configured to send periodic performance files to a designated File Server as defined in REQ-OAMP-PM-FUN-003 The File Management table shall contain the following information:
+Title Path: Information Model Definition > Performance Management > Periodic Statistics > Sample Set Management
+Content: The HeNB contains a collection of sample sets which consist of a collection of periodic statistics for the HeNB. Each configured sample set shall contain the following Management Parameters:
+Title Path: Information Model Definition > Performance Management > Periodic Statistics > Sample Set Statistic Parameters
+Content: Each Sample set shall include a collection of periodic statistics in a table whose values are to be sampled and each periodic statistic shall contain the following: NOTE: The support of tables in clause 6.3.2.1 and in clause 6.3.2.2 by HeNB is optional.
+Title Path: Information Model Definition > Performance Management > PM File Content description
+Content: Table below lists all the PM file content items. It also provides a description of the individual items. PM File Content Description

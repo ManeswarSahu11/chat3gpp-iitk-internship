@@ -1,0 +1,22 @@
+Title Path: Scope
+Content: The present document contains an example algorithm which may be used as the VSTK key generation function A8_V as described in TS 43.020 . (It is not mandatory that the particular algorithm specified in this document is used - the A8_V function is operator-specifiable rather than being fully standardised.) Clause 4 introduces the algorithm and describes the input and output parameters. Clause 5 defines the algorithm. Clause 6 provides test data.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 , TS 35.206 and TS 43.020 , and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 , TS 35.206 or TS 43.020 .
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: [=]The assignment operator. [ ]The concatenation of the two operands. [X ]The ith bit of the variable X. (X = X X X .. ).
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 , TS 35.206 and TS 43.020 , and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 , TS 35.206 or TS 43.020 . Voice Broadcast Service Voice Group Call Service
+Title Path: Introductory information > Introduction
+Content: For VGCS and VBS ciphering in the GSM system the security function A8_V has been specified. The operation of this function falls completely within the domain of an individual operator, and the function is therefore to be specified by each operator rather than being fully standardized. The algorithm specified in this document is an example that may be used by an operator which does not wish to design its own. The inputs and outputs of the function A8_V is defined in clause 4.4.
+Title Path: Introductory information > Notation > Bit/byte ordering
+Content: All data variables in this specification are presented with the most significant bit (or byte) on the left hand side and the least significant bit (or byte) on the right hand side. Where a variable is broken down into a number of substrings, the leftmost (most significant) substring is numbered 0, the next most significant is numbered 1, and so on through to the least significant. When a variable, with bit length L, is shown in hexadecimal format, bit 0 is the most significant bit of the leftmost hexadecimal digit, and bit L-1 is the least significant bit of the rightmost hexadecimal digit.
+Title Path: Introductory information > List of variables
+Content: For V_Ki, VSTK_RAND and VSTK see TS 43.020 For all f3-function related variables see TS 35.206
+Title Path: Introductory information > Algorithm inputs and outputs
+Content: The inputs to the algorithm are given in table 1, the output in table 2 below.
+Title Path: The A8_V MILENAGE algorithm
+Content: An example algorithm set for UMTS, called MILENAGE (see Note 1), is specified in TS 35.206 . A8_V MILENAGE makes use of MILENAGE. Specifically, the function f3 from the UMTS MILENAGE is making use of (all input and output names are prefixed by "MIL3G-" to distinguish them clearly from the inputs and outputs of A8_V MILENAGE): The A8_V MILENAGE functions are defined as follows: Let (MIL3G-K MIL3G-K ) = (V_K V_K ) Let (MIL3G-RAND MIL3G-RAND ) = (EXP_RAND EXP_RAND ) Whereby EXP_RAND[bits 0,1,...126,127] = EXPAND[bits 0,1,...39] EXPAND[bits 0,1,...39] EXPAND[bits 0,1,...39] ‘11111111’ EXPAND [bits 0,1,...39] = ‘1111’ VSTK_RAND[bits 0,1,...35] Compute MIL3G-CK from MIL3G-K and MIL3G-RAND, using the MILENAGE function f3 Set (VSTK VSTK ) = (MIL3G-CK MIL3G-CK ) NOTE 1: MILENAGE uses a 128-bit operator-specific constant OP; a value has to be assigned to this constant for MILENAGE to be fully specified.
+Title Path: Test data for A8_V MILENAGE > Introduction
+Content: The test data sets presented here have been derived from the MILENAGE test sets in .
+Title Path: Test data for A8_V MILENAGE > Format
+Content: The format of each test data set is as follows: All test data in this tabular format is shown in hexadecimal representation. The first test set is also shown in binary, to show explicitly the relationship between the binary data and the hexadecimal representation.

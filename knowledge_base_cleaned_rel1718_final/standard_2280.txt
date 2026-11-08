@@ -1,0 +1,32 @@
+Title Path: Scope
+Content: The purpose of Advanced Alarm Management (AAM) IRP is to define an interface through which an IRPManager can categorize alarm notifications. The present document is the Information Service of AAM. It defines, for the purpose of categorizing alarm notifications, the information observable and controlled by management system's client and it also specifies the semantics of the interactions used to carry this information.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply: IRP: See 3GPP TS 32.150 . IRPAgent: See 3GPP TS 32.150 . IRPManager: See 3GPP TS 32.150 . Alike Alarm: Two alarms are considered alike, if the corresponding alarm notifications are issued by the same object instance with the same alarmType, same perceivedSeverity, same probableCause and same specificProblem (if present). Lower Edge of Time Window: The point in time which determines the begin of a time span. Upper Edge of Time Window: The point in time which determines the end of a time span.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Advanced Alarm Management Advanced Alarm Management Rule Configuration Management Element Manager Information Object Class Integration Reference Point Information Service [Itf-N]Interface N Management Information Base Network Element
+Title Path: System overview > System context
+Content: The general definition of the System Context for the present IRP is found in 3GPP TS 32.150 , clause 4.7. In addition, the set of related IRP(s) relevant to the present IRP is shown in figures 4.1-1 and 4.1-2. Advanced Alarm Management IRP Advanced Alarm Management IRP 5 Information Object Classes
+Title Path: System overview > Class diagram > Attributes and relationships
+Content: This clause depicts the set of IOCs that encapsulate information within the AAM IRP. The intent is to identify the information required for the AAM IRP implementation of its operations and notification emission. This clause provides the overview of all Information Object Classes in UML. Subsequent clauses provide more detailed specification of various aspects of these Information Object Classes.
+Title Path: System overview > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships that exist between Information Object Classes.
+Title Path: System overview > Information Object Class definitions > advancedAlarmManagementRule > Definition > General Definition
+Content: This information object represents an AAM Rule object instance. An AdvancedAlarmManagementRule is fully identified by its distinguished name. It inherits from IOC top. An AAM Rule is a way for the IRPManager to define which alarms / alarm clearings deliver significant or insignificant information (significant seen with the eyes of the IRPManager) and to tell the IRPAgent not to send the insignificant alarms / alarm clearings. AAMRules will not screen out all insignificant alarms/alarm clearings, but contribute to enable the network operator to reduce the number of reported alarms to a reasonable and manageable level. The choice of rule/s may depend on the type of alarm, the environment, the time of day and many more. To avoid screening of alarms which might be important for the network operator, the user of AAM rules should apply AAMrules with careful consideration and appropriate setting of parameters. An AAM Rule instance is fully identified by its DNdistinguished name. A Rule instance carries, among other things, the identification of the Rule type called AdvancedAlarmManagementRuleType. Of these there exist the following: ThresholdRule TransientRule ToggleRule VendorSpecificRule See Annex A for the description of the above Rules.
+Title Path: System overview > Information Object Class definitions > advancedAlarmManagementIRP > Definition
+Content: This information object represents an AAM IRP. It inherits from IOC managedGenericIRP.
+Title Path: System overview > Information relationships definition > relation- AdvancedAlarmManagementIRP-AdvancedAlarm ManagementRule (M) > Definition
+Content: This relationship defines the relationship between an AdvancedAlarmManagementIRP and an AdvancedAlarmManagementRule instance.
+Title Path: System overview > Information attributes definition
+Content: This clause defines the semantics of the Attributes used in Information Object Classes.
+Title Path: Interface Definition > AAMIRPOperation_1 Interface (M) > Scope
+Content: This interface defines methods for the IRPManager to request the IRPAgent for alarm notifications of significant information (significant from the IRPManager’s perspective). The definition of insignificance is determined by the IRPManager. The choice of AAM Rule/s may depend on the type of alarm, the environment, the time of day and many more. An implementation can claim compliance to this IRP if it supports at least one of the AAMRules, i.e. one of the operations defined in clause 6.2.2 up to and including clause 6.2.5, and the mandatory operations defined in this interface.
+Title Path: Interface Definition > AAMIRPOperation_1 Interface (M) > Operation activateAAMRule (M) > Definition
+Content: This operation allows the IRPManager to request the IRPAgent to activate an AAM rule.
+Title Path: Interface Definition > AAMIRPOperation_1 Interface (M) > Operation getAAMRules (M) > Definition
+Content: This operation allows an IRPManager to request from the IRPAgent a list of activated AAMRules.
+Title Path: Interface Definition > AAMIRPOperation_1 Interface (M) > Operation getAAMRules (M) > Post-condition
+Content: allActiveAdvanceAlarmManagementRulesAreDelivered
+Title Path: Interface Definition > AAMIRPOperation_1 Interface (M) > Operation deactivateAAMRule (M) > Definition
+Content: This operation allows an IRPManager to request the IRPAgent to deactivate one or all activated AAMRules. Deactivated rules are not visible for the IRPManager.
+Title Path: Interface Definition > AAMIRPOperation_1 Interface (M) > Operation deactivateAAMRule (M) > Post-condition
+Content: allOrSpecifiedActiveAdvanceAlarmManagementRulesAreDeactivated

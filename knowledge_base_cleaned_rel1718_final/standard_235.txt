@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the Solution Set definitions for the IRP whose semantics are specified in Management of Quality of Experience (QoE) measurement collection Integration Reference Point (IRP): Information Service (3GPP TS 28.308 ). The present document is applicable to UMTS networks and EPS networks.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 and 3GPP TS 32.150 . IRP document version number string (or "IRPVersion"): See 3GPP TS 32.311 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 , in 3GPP TS 32.150 , and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Distinguished Name Solution Set
+Title Path: Solution Set definitions
+Content: The present document defines the following 3GPP QMC Management IRP Solution Set definitions:

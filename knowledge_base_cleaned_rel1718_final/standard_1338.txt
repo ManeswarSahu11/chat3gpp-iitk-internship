@@ -1,0 +1,58 @@
+Title Path: Scope
+Content: The present document specifies the control and monitoring of Power, Energy and Environmental (PEE) parameters Integration Reference Point (IRP) Information Service (IS). It specifies the semantics and behaviour of operations, notifications and their parameters visible across Itf-N in a protocol and technology neutral way. It does not define their syntax and encoding.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Control Unit Digital Gathering Unit [NM-RMS]Network Management layer RMS Power, Energy and Environmental PEE Control and Monitoring Remote Management Server Vendor-Specific Extension [VS-RMS]Vendor Specific RMS XML enabled CU
+Title Path: System overview > System Context
+Content: The general definition of the System Context for the present IRP is found in 3GPP TS 32.150 , sub-clause 4.7.
+Title Path: Model > Model for solution 1 > Introduction
+Content: NOTE: Void. Due to the fact that existing CM, PM, and FM interface IRPs are applicable to solution 1, the model definition of this solution can refer to model definitions from Basic CM IRP (TS 32.602 ), Bulk CM IRP (TS 32.612 ), PM IRP (TS 32.412 ) and Alarm IRP (TS 32.111-2 ). Use cases and requirement for Solution 1 are described in 28.304 .
+Title Path: Model > Model for solution 1 > Class diagrams > Relationships
+Content: Due to the fact that existing CM, PM, and FM interface IRPs are applicable to solution 1, the model definition of this solution can refer to model definitions from Basic CM IRP (TS 32.602 ), Bulk CM IRP (TS 32.612 ), PM IRP (TS 32.412 ) and Alarm IRP (TS 32.111-2 ).
+Title Path: Model > Model for solution 1 > Class diagrams > Inheritance
+Content: Due to the fact that existing CM, PM, and FM interface IRPs are applicable to solution 1, the model definition of this solution can refer to model definitions from Basic CM IRP (TS 32.602 ), Bulk CM IRP (TS 32.612 ), PM IRP (TS 32.412 ) and Alarm IRP (TS 32.111-2 ).
+Title Path: Model > Model for solution 1 > Class definitions
+Content: Due to the fact that existing CM, PM, and FM interface IRPs are applicable to solution 1, the model definition of this solution can refer to model definitions from Basic CM IRP (TS 32.602 ), Bulk CM IRP (TS 32.612 ), PM IRP (TS 32.412 ) and Alarm IRP (TS 32.111-2 ).
+Title Path: Model > Model for solution 1 > Attribute definitions
+Content: NOTE: Void. Attributes related to the control and monitoring of power, energy and environmental parameters in radio access networks are defined in IOC ManagedFunction cf. 3GPP TS 28.622 .
+Title Path: Model > Model for solution 1 > Common notifications
+Content: No additional notifications compared to those applicable to IOC ManagedFunction cf. 3GPP TS 28.622 .
+Title Path: Model > Model for solution 2 > Introduction
+Content: This clause introduces the set of classes (i.e. IOCs, SupportIOCs) that encapsulate information used by the CMON IRP for the control and monitoring of PEE parameters in radio access networks. The intent is to identify the information required for the CMONIRP implementation of its operations and notification emission. This clause provides the overview of all support object classes in UML. Subsequent clauses provide more detailed specification of various aspects of these support object classes.
+Title Path: Model > Model for solution 2 > Imported and associated information entities > Associated information entities and local labels
+Content: There is no associated information entity.
+Title Path: Model > Model for solution 2 > Class definitions > PEEMonitoredEntity > Definition
+Content: This IOC represents the monitoring of a base station whose Power, Energy and Environmental (PEE) parameters are monitored. It can apply to a GERAN, UTRAN or E-UTRAN base station. It can apply to a base station with either a built-in sensor or an external sensor.
+Title Path: Model > Model for solution 2 > Class definitions > PEEMEDescription > Definition
+Content: This IOC provides a description of the monitored entity.
+Title Path: Model > Model for solution 2 > Class definitions > PEEMeasurementData > Definition
+Content: This IOC represents the PEE measurements of the monitored entity.
+Title Path: Model > Model for solution 2 > Class definitions > PEEAlarmInformation > Definition
+Content: This IOC represents the alarm information of the monitored entity.
+Title Path: Model > Model for solution 2 > Class definitions > PEEConfigInformation > Definition
+Content: This IOC represents the PEE related configuration information of the monitored entity.
+Title Path: Model > Model for solution 2 > Class definitions > PEECMONIRP > Definition
+Content: PEECMONIRP is the representation of the Power, Energy and Environmental (PEE) parameters management capabilities specified by the present document.
+Title Path: Interface Definition > Interface definition for solution 2 > Generic rules
+Content: Rule 1: each operation with at least one input parameter supports a pre-condition valid_input_parameter which indicates that all input parameters shall be valid with regards to their information type. Additionally, each such operation supports an exception operation_failed_invalid_input_parameter which is raised when pre-condition valid_input_parameter is false. The exception has the same entry and exit state. Rule 2: Each operation with at least one optional input parameter supports a set of pre-conditions supported_optional_input_parameter_yyy where "yyy" is the name of the optional input parameter and the pre-condition indicates that the operation supports the named optional input parameter. Additionally, each such operation supports an exception operation_failed_unsupported_optional_input_parameter_yyy which is raised when (a) the pre-condition supported_optional_input_parameter_yyy is false and (b) the named optional input parameter is carrying information. The exception has the same entry and exit state. Rule 3: each operation shall support a generic exception operation_failed_internal_problem which is raised when an internal problem occurs and that the operation cannot be completed. The exception has the same entry and exit state.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONOperations_1 Interface (M) > Operation readMEDescription (M) > Definition
+Content: The IRPManager invokes this operation to read description data of the monitored entity.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONOperations_1 Interface (M) > Operation writeMEDescription (M) > Definition
+Content: The IRPManager invokes this operation to modify description data of the monitored entity.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONOperations_2 Interface (M) > Operation readMEConfiguration (M) > Definition
+Content: The IRPManager invokes this operation to read threshold values on PEE parameters for one monitored entity.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONOperations_2 Interface (M) > Operation writeMEConfiguration (M) > Definition
+Content: The IRPManager invokes this operation to write threshold values on PEE parameters of one monitored entity.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONOperations_3 Interface (M) > Operation createCMONPMJob (M) > Definition
+Content: The IRPManager invokes this operation to create a PEE measurement job on one or more monitored entity(ies). The PEE measurement job starts immediately and run indefinitely until a stopCMONPMJob request is received by IRPAgent. The way the address of the entity to which notifications containing measurement data are sent is provisioned, is not in the scope of this document.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONOperations_3 Interface (M) > Operation stopCMONPMJob (M) > Definition
+Content: The IRPManager invokes this operation to stop an ongoing PEE measurement job on one or more monitored entity(ies). The PEE measurement job stops immediately.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONNotifications_1 Interface (M) > Notification notifyMeasurementData (M) > Definition
+Content: The PEECMONIRP Agent notifies the PEECMONIRP Manager with measurement data.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONNotifications_2 Interface (M) > Notification notifyAlarm (M) > Definition
+Content: The PEECMONIRP Agent notifies the PEECMONIRP Manager of a new alarm.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONNotifications_3 Interface (M) > Notification notifyConfigurationChange (M) > Definition
+Content: The PEECMONIRP Agent notifies the PEECMONIRP Manager of a change of configuration.
+Title Path: Interface Definition > Interface definition for solution 2 > CMONNotifications_4 Interface (M) > Notification notifyThresholdCrossingOrReaching (M) > Definition
+Content: The PEECMONIRP Agent notifies the PEECMONIRP Manager of a threshold crossing.

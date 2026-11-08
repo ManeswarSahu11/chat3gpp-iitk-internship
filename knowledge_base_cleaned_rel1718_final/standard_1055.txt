@@ -1,0 +1,64 @@
+Title Path: Scope
+Content: The present document contains objectives, requirements and test cases that are specific to the SCP network product class. It refers to the Catalogue of General Security Assurance Requirements and formulates specific adaptions of the requirements and test cases given there, as well as specifying requirements and test cases unique to the SCP network product class.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: SCP-specific security requirements and related test cases > Introduction
+Content: The structure of the present document is aligned with TS 33.117 such that the SCP-specific adaptation of a generic requirements in clause 4 of TS 33.117 , can always be found in clause 4 of the present document. The text on pre-requisites for testing in clause 4.1.1 of TS 33.117 applies also to the present document. SCP-specific security requirements include both requirements derived from SCP-specific security functional requirements in relevant specifications as well as security requirements introduced in the present document derived from the threats specific to SCP as described in TR 33.926 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Introduction
+Content: The present clause describes the security functional requirements and the corresponding test cases for SCP network product class. The proposed security requirements are classified in two groups: Security functional requirements derived from TS 33.501 and detailed in clause 4.2.2. General security functional requirements which include requirements not already addressed in TS 33.501 but whose support is also important to ensure that SCP conforms to a common security baseline detailed in clause 4.2.3.
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Security functional requirements on the SCP derived from 3GPP specifications and related test cases > Security functional requirements on the SCP derived from 3GPP specifications general approach
+Content: In addition to the requirements and test cases in TS 33.117 , clause 4.2.2, an SCP shall satisfy the following: It is assumed for the purpose of the present SCAS that an SCP conforms to all mandatory security-related provisions pertaining to an SCP in: TS 33.501 : "Security architecture and procedures for 5G system"; other 3GPP specifications that make reference to TS 33.501 or are referred to from TS 33.501 (e.g. TS 23.501 , TS 23.502 , TS 29.500 , etc.). Security procedures pertaining to an SCP are typically embedded in NF/NF indirect communication, delegated discovery, message forwarding and routing, and are hence assumed to be tested together with them in interoperability testing at PLMN level, shared-slice level and slice-specific level.
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Security functional requirements on the SCP derived from 3GPP specifications and related test cases > Security functional requirements of SBI aspects > Introduction
+Content: According to TS 23.501 , although the SCP is not a Network Function instance and does not expose services itself, it still needs to support service-based interface. Therefore, the general baseline requirements supported by all Network Functions (NF) utilizing Service-Based Interfaces (SBI) as defined in TS 33.117 clause 4.2.2.2 shall also be applicable to the SCP network product class. This clause contains SCP-specific adaptations to the general SBI requirements and related test cases.
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Security functional requirements on the SCP derived from 3GPP specifications and related test cases > Security functional requirements of SBI aspects > Protection at the transport layer
+Content: There are no SCP-specific additions to clause 4.2.2.2.2 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Security functional requirements on the SCP derived from 3GPP specifications and related test cases > Security functional requirements of SBI aspects > Authorization of NF service access
+Content: The SCP is not a network function instance and does not provide any services to any consumer NF. It supports OAuth 2.0 based service access authorization for NF service access, but it does not verify access tokens as NF producers do. Therefore, the requirements and test cases in clause 4.2.2.2.3 of TS 33.117 are not applicable to the SCP network product class.
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Introduction
+Content: The present clause provides baseline technical requirements.
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information general
+Content: There are no SCP-specific additions to clause 4.2.3.2.1 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information unauthorized viewing
+Content: There are no SCP-specific additions to clause 4.2.3.2.2 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information in storage
+Content: There are no SEPP-specific additions to clause 4.2.3.2.3 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information in transfer
+Content: There are no SCP-specific additions to clause 4.2.3.2.4 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Logging access to personal data
+Content: There are no SCP-specific additions to clause 4.2.3.2.5 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting availability and integrity
+Content: There are no SCP-specific additions to clause 4.2.3.3 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Authentication and authorization
+Content: There are no SCP-specific additions to clause 4.2.3.4 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting sessions
+Content: There are no SCP-specific additions to clause 4.2.3.5 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Technical Baseline > Logging
+Content: There are no SCP-specific additions to clause 4.2.3.6 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Operating Systems
+Content: There are no SCP-specific additions to clause 4.2.4 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Web Servers
+Content: There are no SCP-specific additions to clause 4.2.5 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of security functional requirements and related test cases > Network Devices
+Content: There are no SCP-specific additions to clause 4.2.6 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of hardening requirements and related test cases > Introduction
+Content: The requirements proposed hereafter (with the relative test cases) aim to securing SCP by reducing its surface of vulnerability. In particular, the identified requirements aim to ensure that all the default configurations of SCP (including operating system software, firmware and applications) are appropriately set.
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of hardening requirements and related test cases > Technical Baseline
+Content: There are no SCP-specific additions to clause 4.3.2 in TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of hardening requirements and related test cases > Operating Systems
+Content: There are no SCP-specific additions to clause 4.3.3 in TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of hardening requirements and related test cases > Web Servers
+Content: There are no SCP-specific additions to clause 4.3.4 in TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of hardening requirements and related test cases > Network Devices
+Content: There are no SCP-specific additions to clause 4.3.5 in TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of hardening requirements and related test cases > Network Functions in service-based architecture
+Content: There are no SCP-specific additions to clause 4.3.6 in TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of basic vulnerability testing requirements and related test cases > Introduction
+Content: There are no SCP specific addtions to clause 4.4.1 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of basic vulnerability testing requirements and related test cases > Port Scanning
+Content: There are no SCP specific addtions to clause 4.4.2 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of basic vulnerability testing requirements and related test cases > Vulnerability scanning
+Content: There are no SCP specific addtions to clause 4.4.3 of TS 33.117 .
+Title Path: SCP-specific security requirements and related test cases > SCP-specific adaptations of basic vulnerability testing requirements and related test cases > Robustness and fuzz testing
+Content: The test cases under clause 4.4.4 of TS 33.117 are applicable to SCP. The interface defined for the SCP are in clause 4.2.3 of TS 23.501 . According to clause 4.4.4 of TS 33.117 , the transport protocols available on the interfaces providing IP-based protocols need to be robustness tested. Following TCP/IP layer model and c onsidering all the protocols over transport layer, for SCP, the following interface and protocols are in the scope of the testing: - For SBI: the TCP, HTTP2 and JSON protocols. NOTE: There could be other interfaces and/or protocols requiring testing under clause 4.4.4 of TS 33.117

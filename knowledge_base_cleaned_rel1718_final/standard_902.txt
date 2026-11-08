@@ -1,0 +1,230 @@
+Title Path: Scope
+Content: The present document defines the Information Service (IS) part of the Self-Configuration IRP (SCIRP). It describes the semantics of the information and the interactions visible across Itf-N in a protocol independent way. The information is specified by means of Information Object Classes (IOCs) and the interactions by means of operations and notifications. The present document does not specify the syntax (encoding) of the information. The scope of this version of the TS is restricted to self-configuration of eNBs. The present documents also describes how already defined Itf-N functionalities are used in the context of Self-Configuration.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TS 32.101 , TS 32.102 and TR 21.905 , 32.501 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TS 32.501 , TS 32.101 , TS 32.102 and TS 21.905 , in that order.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 , TS 32.501 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 and TS 32.501 . DNS Domain Name System
+Title Path: Stage 2 descriptions > General
+Content: For the logical/Physical architecture of functional blocs and their interactions see in TR 32.816 and TS 32.501 .
+Title Path: Stage 2 descriptions > Management and Monitoring of Self-Configuration > Usage of Itf-N
+Content: For specifically defined interface see 6.4.1.
+Title Path: Stage 2 descriptions > Management and Monitoring of Self-Configuration > Usage of Itf-N > Usage of alarmIRP
+Content: AlarmIRP is re-used for alarm reporting of self-establishment. Specific definitions:
+Title Path: Stage 2 descriptions > Management and Monitoring of Self-Configuration > Usage of Itf-N > Usage of alarmIRP > Usage of notifications
+Content: For notification without sub-clause no specific definitions exist.
+Title Path: Stage 2 descriptions > Management and Monitoring of Self-Configuration > Usage of Itf-N > Usage of alarmIRP > Usage of notifications > Usage of notifyNewAlarm
+Content: The parameter ``probableCause'' shall use one of the values ``softwareDownloadFailure'' (already defined), ``softwareInstallationError'' or ``softwareFallbackError'' (the latter two values need to be introduced) For parameter alarmType the value ``ProcessingErrorAlarm'' should be used. Parameters trendIndication and thresholdInfo should not be used.
+Title Path: Stage 2 descriptions > Management and Monitoring of Self-Configuration > Usage of Itf-N > Usage of alarmIRP > Usage of notifications > Usage of notifyObjectCreation/-deletion/-attributeValueChange
+Content: For notifyObjectCreation/-deletion/-attributeValueChange notifications which are triggered by a self-configuration functionality the value SON_operation shall be used for parameter sourceIndicator. The parameter additionalInformation may indicate that this was triggerd by self-configuration.
+Title Path: Stage 2 descriptions > Inventory Update > Usage of Itf-N > Usage of Inventory Management IRP NRM (32.69n)
+Content: The Inventory Management NRM IRP shall be used.
+Title Path: Information Object Classes > Class diagram > Attributes and relationships
+Content: The diagram reflects the definitions in the text of the following clauses. In case of conflict text takes precedence. The following UML diagram describes the objects required for ARCF.
+Title Path: Information Object Classes > Class diagram > Inheritance
+Content: The diagram reflects the definitions in the text of the following clauses. In case of conflict text takes precedence. The following UML diagram describes the inheritance of the objects required for ARCF. 5.3 Information object class definitions
+Title Path: Information Object Classes > Class diagram > ScManagementCapability > Definition
+Content: This object class is a sub-class of swMCapability and represents the IRPAgent’s capabilities in support of self configuration. It is created by the IRPAgent and cannot be modified by the IRPManager. A ScManagementCapability object is valid for a certain NE type or a set of NE types. For an NE there shall be no ambiguity which ScManagementCapability object is valid for the NE. Multiple ScManagementCapability objects may be instantiated in the IRPAgent. The object identifies a) the sequence of the self-configuration steps and for each step a.1) the NE behavior in case the step does not perform normally a.2) the possibility, whether before the step a stop point can be selected, such that the self-configuration step is suspended and waits for a request by the IRPManager to resume. Information on Requirements Traceability:
+Title Path: Information Object Classes > Class diagram > ScManagementCapability > Attributes
+Content: All attributes inherited from IOC swMCapability. Additional attributes: None
+Title Path: Information Object Classes > Class diagram > ScManagementProfile > Definition
+Content: This object class is a sub-class of swMProfile. It represents the IRPManager decision related to self configuration. A ScManagementProfile object is valid for a certain NE type or a set of NE types. For an NE starting its self-configuration process (see ScProcess) there shall be no ambiguity which ScManagementProfile is valid for the NE. Multiple ScManagementProfile objects may be instantiated in the IRPAgent. By using this object the IRPManager decides which of the possible stop points offered in scManagementCapability are used to suspend the self-configuration process of the specified NE type (or set of NE types). Information on Requirements Traceability:
+Title Path: Information Object Classes > Class diagram > ScManagementProfile > Attributes
+Content: All attributes inherited from IOC swMProfile. Additional attributes: None.
+Title Path: Information Object Classes > Class diagram > ScProcess > Definition
+Content: This object class is a sub-class of genManProcess . It describes the Self Configuration process for an NE. It allows the IRPManager to be informed about the current progress of the Self Configuration process and where stop points are set. No intervention of the IRPManager is foreseen except to provide indication to resume after a stop point was reached or to abort the self-configuration. When the automated management process for an NE starts, an instance of the scProcess is created automatically. The id of the scProcess shall be identical to the identifier of the NE and identify the scProcess instance uniquely. The steps in the stepInfoList shall conform to the content of the relevant scManagementProfile instance. Examples: 1. If the stepsAndSelectedStopPointList of scManagementProfile indicates stopPointCanBeSetBeforeThisStep=No for step X, then the entry for step X in the stepInfoList of scProcess can only have the value stopPointIsNotSet . 2. All steps within the stepInfoList shall have the same sequenceNumberInScProcess as in the scStepList of scManagementProfile. When there is no relevant scManagementProfile at creation time of scProcess , then the IRPAgent creates the scProcess based on the relevant scManagementCapability . In this case preferably no stop point shall be set in the self configuration process. When the last step of the self configuration process is completed successfully, the scProcess instance is deleted automatically. When self configuration process is terminated by the IRPManager, the scProcess instance is deleted automatically. Information on Requirements Traceability:
+Title Path: Information Object Classes > Class diagram > ScProcess > Attributes
+Content: All attributes inherited from IOC GenManProcess. No additional attributes.
+Title Path: Information Object Classes > Class diagram > SelfConfigurationIRP > Definition
+Content: This information object represents a self-configuration IRP. It inherits from IOC managedGenericIRP.
+Title Path: Information Object Classes > Class diagram > SelfConfigurationIRP > Attributes
+Content: All attributes inherited from IOC managedGenericIRP. Additional attributes: None.
+Title Path: Information Object Classes > Class diagram > SelfConfigurationIRP > Notifications
+Content: All notifications inherited from IOC managedGenericIRP. Additional notifications: None.
+Title Path: Information Object Classes > Class diagram > ENBLevelArcfData > Definition
+Content: T his IOC represents the eNB level data defined only for the ARCF Handling.
+Title Path: Information Object Classes > Class diagram > EUtranCellLevelArcfData > Definition
+Content: This IOC represents the E-Utran Cell level data defined only for the ARCF Handling.
+Title Path: Information Object Classes > Class diagram > EUtranCellLevelArcfData > Attributes
+Content: F or the conditions relevant to the attributes with CM qualifier see 5.5.1.
+Title Path: Information Object Classes > Class diagram > AntennaLevelArcfData > Definition
+Content: This IOC represents the Antenna level data defined only for the ARCF Handling.
+Title Path: Information Object Classes > Information relationship definitions > relation-SelfConfigurationIRP-scManagementCapability (M) > Definition
+Content: This represents the relationship between SelfConfigurationIRP and ScManagementCapability.
+Title Path: Information Object Classes > Information relationship definitions > relation-SelfConfigurationIRP-scManagementCapability (M) > Constraints
+Content: There is no constraint for this relationship.
+Title Path: Information Object Classes > Information relationship definitions > relation-SelfConfigurationIRP-scManagementProfile (M) > Definition
+Content: This represents the relationship between SelfConfigurationIRP and ScManagementProfile.
+Title Path: Information Object Classes > Information relationship definitions > relation-SelfConfigurationIRP-scManagementProfile (M) > Constraints
+Content: There is no constraint for this relationship.
+Title Path: Information Object Classes > Information relationship definitions > relation-SelfConfigurationIRP-scProcess (M) > Definition
+Content: This represents the relationship between SelfConfigurationIRP and ScProcess.
+Title Path: Information Object Classes > Information relationship definitions > relation-SelfConfigurationIRP-scProcess (M) > Constraints
+Content: There is no constraint for this relationship.
+Title Path: Information Object Classes > Information relationship definitions > relation-ScManagementCapabilites-scManagementProfile (M) > Definition
+Content: This represents the relationship between ScManagementCapability and ScManagementProfile.
+Title Path: Information Object Classes > Information relationship definitions > relation-ScManagementCapabilites-scManagementProfile (M) > Constraints
+Content: A relation can only exist between a ScManagementProfile and a ScManagementCapability when a) all steps which are entries in the stepsAndSelectedStopPointList of ScManagementProfile have stopPointCanBeSetBeforeThisStep = Yes in the stepsAndOfferedStopPointList of the ScManagementCapability. b) nEInformation of ScManagementProfile is a subset of nEInformation of ScManagementCapability.
+Title Path: Information Object Classes > Information relationship definitions > relation scManagementProfile-scProcess (M) > Definition
+Content: This represents the relationship between ScManagementProfile and ScProcess.
+Title Path: Information Object Classes > Information relationship definitions > relation scManagementProfile-scProcess (M) > Constraints
+Content: A ScProcess shall perform all self-configuration steps according to stepsAndOfferedStopPointList of ScManagementProfile. A relation can only exist between a ScProcess and a ScManagementProfile when nEIdentification of ScProcess falls into nEInformation of ScManagementProfile.
+Title Path: IRP descriptions: Interface Definitions > Class diagram representing interfaces
+Content: The diagram reflects the definitions in the text of the following clauses. In case of conflict text takes precedence. 6.3 Generic rules Rule 1: each operation with at least one input parameter supports a pre-condition valid_input_parameter which indicates that all input parameters shall be valid with regards to their information type. Additionally, each such operation supports an exception operation_failed_invalid_input_parameter which is raised when pre-condition valid_input_parameter is false. The exception has the same entry and exit state. Rule 2: Each operation with at least one optional input parameter supports a set of pre-conditions supported_optional_input_parameter_yyy where "yyy" is the name of the optional input parameter and the pre-condition indicates that the operation supports the named optional input parameter. Additionally, each such operation supports an exception operation_failed_unsupported_optional_input_parameter_yyy which is raised when (a) the pre-condition supported_optional_input_parameter_yyy is false and (b) the named optional input parameter is carrying information. The exception has the same entry and exit state. Rule 3: each operation shall support a generic exception operation_failed_internal_problem which is raised when an internal problem occurs and that the operation cannot be completed. The exception has the same entry and exit state.
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementCapabilities (M) > Definition
+Content: This operation allows the IRPManager to determine on the Itf-N interface in which sequence the self-configuration steps are performed in NEs of a certain type, what is done by the NE in case a step does not perform normally and before which steps a stop point can be set, such that the self-configuration step halts and waits for a continuation request by the IRPManager. This operation imports from operation listSwmCapabilities defined in 32.532 . It delivers instances of scManagementCapability. Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementCapabilities (M) > Input parameters
+Content: Same as operation listSwmCapabilities defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementCapabilities (M) > Output parameters
+Content: Same as operation listSwmCapabilities defined in 32.532 . The entries in the capabilityList refer to instances of scManagementCapability.
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementCapabilities (M) > Pre-condition
+Content: Same as operation listSwmCapabilities defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementCapabilities (M) > Post-condition
+Content: Same as operation listSwmCapabilities defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementCapabilities (M) > Exceptions
+Content: Same as operation listSwmCapabilities defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementProfiles (M) > Definition
+Content: This operation allows the IRPManager to find out which instances of scManagementProfile are valid for NEs of a certain type. This operation imports from operation listSwmProfiles defined in 32.532 . It delivers instances of scManagementProfiles. Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementProfiles (M) > Input parameters
+Content: Same as operation listSwmProfiles defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementProfiles (M) > Output parameters
+Content: Same as operation listSwmProfiles defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementProfiles (M) > Pre-condition
+Content: Same as operation listSwmProfiles defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementProfiles (M) > Post-condition
+Content: Same as operation listSwmProfiles defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScManagementProfiles (M) > Exceptions > exceptionName
+Content: Same s operation listSwmProfiles defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation createScManagementProfile (M) > Definition
+Content: This operation allows the IRPManager to establish an instance of scManagementProfile to be valid for NEs of a certain type. This operation imports from operation createSwmProfile defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation createScManagementProfile (M) > Input parameters
+Content: Same as operation createSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation createScManagementProfile (M) > Output parameters
+Content: Same as operation createSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation createScManagementProfile (M) > Pre-condition
+Content: Same as operation createSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation createScManagementProfile (M) > Post-condition
+Content: Same as operation createSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation createScManagementProfile (M) > Exceptions > exceptionName
+Content: Same as operation createSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation deleteScManagementProfile (M) > Definition
+Content: This operation allows the IRPManager to delete an instance of scManagementProfile . This operation imports from operation deleteSwmProfile defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation deleteScManagementProfile (M) > Input parameters
+Content: Same as operation deleteSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation deleteScManagementProfile (M) > Output parameters
+Content: Same as operation deleteSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation deleteScManagementProfile (M) > Pre-condition
+Content: Same as operation deleteSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation deleteScManagementProfile (M) > Post-condition
+Content: Same as operation deleteSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation deleteScManagementProfile (M) > Exceptions > exceptionName
+Content: Same as operation deleteSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Definition
+Content: This operation allows the IRPManager to find out the status of one or several scProcess instances. This operation imports from operation listSwmProcesses defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Input parameters
+Content: Same as operation listSwmProcesses defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Output parameters
+Content: Same as operation listSwmProcesses defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Pre-condition
+Content: Same as operation listSwmProcesses defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Post-condition
+Content: Same as operation listSwmProcesses defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Exceptions > exceptionName
+Content: Same as operation listSwmProcesses defined in 32.532 . 6.4. Operation resumeScProcess (M)
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Definition
+Content: This operation allows the IRPManager to resume a self-configuration process which currently has been suspended at a stop point. This operation imports from operation resumeSwmProcess defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Input parameters
+Content: Same as operation resumeSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Output parameters
+Content: Same as operation resumeSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Pre-condition
+Content: Same as operation resumeSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Post-condition
+Content: Same as operation resumeSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation listScProcesses (M) > Exceptions > exceptionName
+Content: Same as operation resumeSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation terminateScProcess (M) > Definition
+Content: This operation allows the IRPManager to terminate a self-configuration process which is currently ongoing. After termination it is not possible to resume the terminated self-configuration process again. This operation imports from operation terminateSwmProcess defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation terminateScProcess (M) > Input parameters
+Content: Same as operation terminateSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation terminateScProcess (M) > Output parameters
+Content: Same as operation terminateSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation terminateScProcess (M) > Pre-condition
+Content: Same as operation terminateSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation terminateScProcess (M) > Post-condition
+Content: Same as operation terminateSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation terminateScProcess (M) > Exceptions > exceptionName
+Content: Same as operation terminateSwmProcess defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation resumeScProcessWithArcfData (M) > Definition
+Content: This operation allows the IRPManager deliver ARCF parameter values to a IRPAgent which it had requested the notifycProcessStage notification and to resume the self-configuration process which has been suspended at a stop point and is waiting for the ARCF data. At reception of this operation request the IRPAgent validates the received ARCF parameter values. If the validation fails, an error is reported in the operation’s result. This operation is an import of operation resumeSwmProcess defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation resumeScProcessWithArcfData (M) > Input parameters
+Content: Same as operation resumeSwmProcess defined in 32.532 . In addition the following parameters are defined:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_1 Interface (M) > Operation resumeScProcessWithArcfData (M) > Output parameters
+Content: Same as operation resumeSwmProcess defined in 32.532 , with the addit ion of the possibility to indicate a validationError, see table below: *) Condition: result = validationError
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_2 Interface (O) > Operation changeScManagementProfile (O) > Definition
+Content: This operation allows the IRPManager to change an instance of scManagementProfile . This operation imports from operation changeSwmProfile defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_2 Interface (O) > Operation changeScManagementProfile (O) > Input parameters
+Content: Same as operation changeSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_2 Interface (O) > Operation changeScManagementProfile (O) > Output parameters
+Content: Same as operation changeSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_2 Interface (O) > Operation changeScManagementProfile (O) > Pre-condition
+Content: Same as operation changeSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_2 Interface (O) > Operation changeScManagementProfile (O) > Post-condition
+Content: Same as operation changeSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementOperations_2 Interface (O) > Operation changeScManagementProfile (O) > Exceptions > exceptionName
+Content: Same as operation changeSwmProfile defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileCreation (M) > Definition
+Content: This notification conveys information about a creation of an instance of IOC scManagementProfile . This operation imports from notification notifySwmProfileCreation defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileCreation (M) > Input parameters
+Content: Same as notification notifySwmProfileCreation defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileCreation (M) > Triggering event > From state
+Content: Same as notification notifySwmProfileCreation defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileCreation (M) > Triggering event > To state
+Content: Same as notification notifySwmProfileCreation defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileDeletion (M) > Definition
+Content: This notification conveys information about the deletion of an instance of IOC scManagementProfile. This operation imports from notification notifySwmProfileDeletion defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileDeletion (M) > Input parameters
+Content: Same as notification notifySwmProfileDeletion defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileDeletion (M) > Triggering event > From state
+Content: Same as notification notifySwmProfileDeletion defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScManagementProfileDeletion (M) > Triggering event > To state
+Content: Same as notification notifySwmProfileDeletion defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessCreation (M) > Definition
+Content: This notification conveys information about the creation of an instance of IOC scProcess . This operation imports from notification notifySwmProcessCreation defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessCreation (M) > Input parameters
+Content: Same as notification notifySwmProcessCreation defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessCreation (M) > Triggering event > From state
+Content: Same as notification notifySwmProcessCreation defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessCreation (M) > Triggering event > To state
+Content: Same as notification notifySwmProcessCreation defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessStage (M) > Definition
+Content: This notification conveys information about progress of a self configuration. It also reports the arrival at a stopPoint ( stepProgress of a step in stepInfoList changed value to awaitingResume ) or leaving a stop point ( stepProgress of a step in stepInfoList changed value from awaitingResume ). This notification also can carry a request for radio parameters values that are needed to complete the radio configuration; information which can be relevant for IRPManager to determine the values of the radio parameters requested and a time limit within which the IRPManager must supply the requested radio parameters values, otherwise, the process will be terminated. This notification is an import of from notification notifySwmProcessStage defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessStage (M) > Input parameters
+Content: Same as notification notifySwmProcessStage defined in 32.532 . In addition, the following parameters are defined: If this notification is used to ask for ARCF data, then the listOfNeededRadioParameters shall be present, inputForRadioParameterDetermination may be present.
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessStage (M) > Triggering event > From state
+Content: Same as notification notifySwmProcessStage defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessStage (M) > Triggering event > To state
+Content: Same as notification notifySwmProcessStage defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessDeletion (M) > Definition
+Content: This notification conveys information about the deletion of an instance of IOC scProcess and what triggered the deletion. IRPAgent shall also send out this notification in case of a process termination caused by an exception, for example IRP Agent terminates the process because it had to wait too long after a suspend operation. This operation imports from notification notifySwmProcessDeletion defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessDeletion (M) > Input parameters
+Content: Same as notification notifySwmProcessDeletion defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessDeletion (M) > Triggering event > From state
+Content: Same as notification notifySwmProcessDeletion defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyScProcessDeletion (M) > Triggering event > To state
+Content: Same as notification notifySwmProcessDeletion defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_1 Interface (M) > Notification notifyNewScManagementCapabilityAvailability (M) > Definition
+Content: This notification conveys information about the availability of a new scManagementCapability instance. Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_2 Interface (O) > Notification notifyScManagementProfileChange (O) > Definition
+Content: This notification conveys information about a change of an instance of IOC scManagementProfile . This operation imports from notification notifySwmProfileChange defined in 32.532 . Information on Requirements Traceability:
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_2 Interface (O) > Notification notifyScManagementProfileChange (O) > Input parameters
+Content: Same as notification notifySwmProfileChange defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_2 Interface (O) > Notification notifyScManagementProfileChange (O) > Triggering event > From state
+Content: Same as notification notifySwmProfileChange defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > SCManagementNotification_2 Interface (O) > Notification notifyScManagementProfileChange (O) > Triggering event > To state
+Content: Same as notification notifySwmProfileChange defined in 32.532 .
+Title Path: IRP descriptions: Interface Definitions > Operations to transport ARCF data (M)
+Content: The following three options are defined to allow the transport of ARCF data (see ). At least one option needs to be supported for ARCF. Information on Requirements Traceability :
+Title Path: IRP descriptions: Interface Definitions > Operations to transport ARCF data (M) > Re-use of bulk CM IRP (O)
+Content: In order to transfer the ARCF data to the IRPAgent the IRPManager can use the operations download , pre-activate and activate defined in the Bulk CM IRP . For validation of the ARCF data transferred via Bulk CM IRP operations, the operation validate (see ) may be used.
+Title Path: IRP descriptions: Interface Definitions > Operations to transport ARCF data (M) > Re-use of FT IRP (O)
+Content: In order to transfer the ARCF data to the IRPAgent the IRPManager can use the File Transfer IRP .

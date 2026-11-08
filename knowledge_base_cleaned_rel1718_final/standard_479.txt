@@ -1,0 +1,120 @@
+Title Path: Scope
+Content: This document defines the IMS service level tracing management object. The management object is compatible with OMA Device Management protocol specifications, version 1.2 and upwards, and is defined using the OMA DM Device Description Framework as described in the Enabler Release Definition OMA-ERELD _DM-V1_2 . The IMS service level tracing management object consists of relevant parameters that can be managed for IMS service level tracing capabilities specified in 3GPP TS 24.229 .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 apply.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Core Network Device Description Framework Device Management IP Multimedia core network Subsystem Internet Protocol Management Object Open Mobile Alliance Session Initiation Protocol Stand-alone Non-Public Network User Equipment
+Title Path: IMS service level tracing management object
+Content: The IMS service level tracing management object is used to manage configuration settings of the UE for IMS service level tracing. The management object covers parameters for IMS service level trace related capabilities. The management object enables the management of the settings on behalf of the end user. The management object Identifier is: urn:oma:mo:ext-3gpp-ims_slt:1.0. Protocol compatibility: This MO is compatible with OMA DM 1.2. The following nodes and leaf objects are possible under the Service Level Tracingnode:
+Title Path: Management object parameters > General
+Content: This clause describes the parameters for the IMS service level tracing management object.
+Title Path: Management object parameters > Node: / X
+Content: This interior node acts as a placeholder for one or more accounts for a fixed node. Occurrence: OneOrMore Format: node Access Types: Get Values: N/A The interior node is mandatory if the UE supports one or more IMS service level tracing capabilities. Support for a UE is defined by the related roles as defined by the related IMS service level tracing service, as listed in clause 4 of this specification. NOTE: One node is normally used.
+Title Path: Management object parameters > / X /Name
+Content: The Name leaf is a name for the 3GPP service level tracing settings. Occurrence: ZeroOrOne Format: chr Access Types: Get Values: User displayable name
+Title Path: Management object parameters > / X /Debug_info_List/
+Content: The Debug-info_List node acts as a placeholder for control and configuration of IMS service level tracing. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X
+Content: This run-time node acts as a placeholder for one or more debugging configurations containing control and configuration of IMS service level tracing. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/
+Content: The Debug-config node acts as a placeholder for control and configuration of IMS service level tracing. Occurrence: ZeroOrMore Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/
+Content: Address_of_record The Address_of_record leaf represents one public user identity. Occurrence: One Format: chr Access Types: Get, Replace Values: A public user identity This public user identity is the identity used to subscribe to SIP debugging configuration from the debug-event package. The format of the public user identity is defined by 3GPP TS 23.003 . EXAMPLE: sip: 234150999999999@ims.mnc015.mcc234.3gppnetwork.org
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: The Session_List interior node is used to allow a reference to a list of different SIP sessions to be debugged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/ X
+Content: This run-time node acts as a placeholder for one or more descriptions of SIP sessions to be debugged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/ The Session interior node is used to allow a reference to events that start and stop logging of SIP signalling, and to control what is logged. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/ The Start_trigger interior node is used to allow a reference to events that start logging of SIP signalling. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/From The From leaf represents an address in the From: SIP header field. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/To The To leaf represents an address in the To: SIP header field. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/ICSI The ICSI leaf represents an IMS communication service identifier. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: an IMS communication service identifier The format of the IMS commuication service identifier is defined by 3GPP TS 24.229 . EXAMPLE: urn:urn-7:3gpp-service.ims.icsi.mmtel
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/IARI The IARI leaf represents an IMS application reference identifier. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: an IMS application reference identifier The format of the IMS application reference identifier is defined by 3GPP TS 24.229 . EXAMPLE: urn:urn-7:3gpp-application.ims.iari.mmtel-app-
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/Method The Method leaf represents a SIP method. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A SIP method name The SIP method names are listed in 3GPP TS 24.229 . EXAMPLE: MESSAGE
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/Time The Method leaf represents a SIP method. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A date and time at which trace logging shall begin in ISO 8601 extended format CCYY-MM-DDThh:mm:ss Date and time is described by the standard type 'dateTime' for an XML schema . EXAMPLE: 2009-05-09T15:00:00-05:00 to indicate 3:00 pm on May 9th, 2009 for Eastern Standard Time, which is 5 hours behind Coordinated Universal Time (UTC).
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Start_trigger/Debug_ID The Debug_ID leaf represents represents an identifier that allows trace logging to be correlated across IMS entities. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: 6-digit hexadecimal number The format of the trace reference is 3 octets in hexadecimal format, as defined by 3GPP TS 32.422 . EXAMPLE: 7BA614
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Stop_trigger/ The Stop_trigger interior node is used to allow a reference to events that stop logging of SIP signalling. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Stop_trigger/Time The Time leaf represents a time at which SIP logging is stopped. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A date and time at which trace logging shall stop in ISO 8601 extended format CCYY-MM-DDThh:mm:ss Date and time is described by the standard type 'dateTime' for an XML schema . EXAMPLE: 2009-05-09T15:00:00-05:00 to indicate 3:00 pm on May 9th, 2009 for Eastern Standard Time, which is 5 hours behind Coordinated Universal Time (UTC).
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Stop_trigger/Time_period The Time_period leaf represents a time duration of logging SIP signalling. When the duration has expired, logging stops. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A time period, measured from starting trace logging, after which trace logging shall stop Time period is described by the standard type 'duration' for an XML schema .
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Stop_trigger/Reason The Reason leaf represents a named event that causes logging SIP signalling to stop. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: "dialog_established" or "session_end"
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Control/ The Control interior node is used to allow a reference to parameters that control what SIP signalling is logged. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Control/Interface_List/ The Interface_List interior node is used to allow a reference to a list of different interfaces for which SIP signalling is to be logged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Control/Interface_List/ X / This run-time node acts as a placeholder for one or more identifiers of interfaces for which SIP signalling is to be logged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Control/Interface_List/ X /Interface The Interface leaf identifies an interfaces for which SIP signalling is to be logged. Occurrence: One Format: node Access Types: Get Values: An IP address and port number of an interface
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Control/Depth The Depth leaf indicates which SIP requests and responses are to be logged. Occurrence: ZeroOrOne Format: node Access Types: Get Values: "maximum" or "minimum"
+Title Path: Management object parameters > / X /Debug_info_List/ X /Debug_config/Session_List/
+Content: X /Session/Control/Debug_ID The Debug_ID leaf contains an identifier that is common to all logged SIP requests and responses for one logging session. Occurrence: ZeroOrOne Format: node Access Types: Get Values: MCC + MNC + a 4-digit hexadecimal number . EXAMPLE: 722330A4D7
+Title Path: Management object parameters > / X /SNPN_Configuration
+Content: This interior node contains configuration parameters regarding a UE operating in SNPN access operation mode. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X
+Content: This interior node acts as a placeholder for a list of: [ a) ] SNPN identity; and configuration parameters. NOTE: For each of the elements in the list, a) must be present and at least one parameter of b) needs to appear. A configuration parameter in an / X /SNPN_Configuration/ X node other than the SNPN_identifier, is applicable when the UE selects an entry of "list of subscriber data" with the SNPN identity of the subscribed SNPN which is the same as the SNPN identity in the SNPN_identifier leaf. Occurrence: OneOrMore Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /SNPN_identifier
+Content: This leaf indicates the SNPN identity of the subscribed SNPN for which the list of configuration parameters are applicable. Occurrence: One Format: chr Access Types: Get, Replace Values: PLMN NID The PLMN and NID are in the format defined by 3GPP TS 23.003 , with each digit of the MCC and MNC of the PLMN and each digit of the assignment mode and NID value of the NID encoded as an ASCII character.
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/
+Content: The Debug-info_List node acts as a placeholder for control and configuration of IMS service level tracing. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X
+Content: This run-time node acts as a placeholder for one or more debugging configurations containing control and configuration of IMS service level tracing. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/ The Debug-config node acts as a placeholder for control and configuration of IMS service level tracing. Occurrence: ZeroOrMore Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Address_of_record The Address_of_record leaf represents one public user identity. Occurrence: One Format: chr Access Types: Get, Replace Values: A public user identity This public user identity is the identity used to subscribe to SIP debugging configuration from the debug-event package. The format of the public user identity is defined by 3GPP TS 23.003 . EXAMPLE: sip: 234150999999999@ims.mnc015.mcc234.3gppnetwork.org
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ The Session_List interior node is used to allow a reference to a list of different SIP sessions to be debugged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X This run-time node acts as a placeholder for one or more descriptions of SIP sessions to be debugged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/ The Session interior node is used to allow a reference to events that start and stop logging of SIP signalling, and to control what is logged. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/ The Start_trigger interior node is used to allow a reference to events that start logging of SIP signalling. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/ From The From leaf represents an address in the From: SIP header field. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/To The To leaf represents an address in the To: SIP header field. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/ICSI The ICSI leaf represents an IMS communication service identifier. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: an IMS communication service identifier The format of the IMS commuication service identifier is defined by 3GPP TS 24.229 . EXAMPLE: urn:urn-7:3gpp-service.ims.icsi.mmtel
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/IARI The IARI leaf represents an IMS application reference identifier. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: an IMS application reference identifier The format of the IMS application reference identifier is defined by 3GPP TS 24.229 . EXAMPLE: urn:urn-7:3gpp-application.ims.iari.mmtel-app-
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/Method The Method leaf represents a SIP method. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A SIP method name The SIP method names are listed in 3GPP TS 24.229 . EXAMPLE: MESSAGE
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/Time The Method leaf represents a SIP method. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A date and time at which trace logging shall begin in ISO 8601 extended format CCYY-MM-DDThh:mm:ss Date and time is described by the standard type 'dateTime' for an XML schema . EXAMPLE: 2009-05-09T15:00:00-05:00 to indicate 3:00 pm on May 9th, 2009 for Eastern Standard Time, which is 5 hours behind Coordinated Universal Time (UTC).
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Start_trigger/ Debug_ID The Debug_ID leaf represents represents an identifier that allows trace logging to be correlated across IMS entities. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: 6-digit hexadecimal number The format of the trace reference is 3 octets in hexadecimal format, as defined by 3GPP TS 32.422 . EXAMPLE: 7BA614
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Stop_trigger/ The Stop_trigger interior node is used to allow a reference to events that stop logging of SIP signalling. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Stop_trigger/Time The Time leaf represents a time at which SIP logging is stopped. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A date and time at which trace logging shall stop in ISO 8601 extended format CCYY-MM-DDThh:mm:ss Date and time is described by the standard type 'dateTime' for an XML schema . EXAMPLE: 2009-05-09T15:00:00-05:00 to indicate 3:00 pm on May 9th, 2009 for Eastern Standard Time, which is 5 hours behind Coordinated Universal Time (UTC).
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Stop_trigger/ Time_period The Time_period leaf represents a time duration of logging SIP signalling. When the duration has expired, logging stops. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: A time period, measured from starting trace logging, after which trace logging shall stop Time period is described by the standard type 'duration' for an XML schema .
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Stop_trigger/ Reason The Reason leaf represents a named event that causes logging SIP signalling to stop. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: "dialog_established" or "session_end"
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Control/ The Control interior node is used to allow a reference to parameters that control what SIP signalling is logged. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Control/ Interface_List/ The Interface_List interior node is used to allow a reference to a list of different interfaces for which SIP signalling is to be logged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Control/ Interface_List/ X / This run-time node acts as a placeholder for one or more identifiers of interfaces for which SIP signalling is to be logged. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Control/ Interface_List/ X /Interface The Interface leaf identifies an interfaces for which SIP signalling is to be logged. Occurrence: One Format: node Access Types: Get Values: An IP address and port number of an interface
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Control/Depth The Depth leaf indicates which SIP requests and responses are to be logged. Occurrence: ZeroOrOne Format: node Access Types: Get Values: "maximum" or "minimum"
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /Debug_info_List/ X /
+Content: Debug_config/Session_List/ X /Session/Control/Debug_ID The Debug_ID leaf contains an identifier that is common to all logged SIP requests and responses for one logging session. Occurrence: ZeroOrOne Format: node Access Types: Get Values: MCC + MNC + a 4-digit hexadecimal number . EXAMPLE: 722330A4D7

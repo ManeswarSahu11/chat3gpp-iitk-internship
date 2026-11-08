@@ -1,0 +1,84 @@
+Title Path: Scope
+Content: The present document specifies a Common Baseline Information Model for UDC . This information model denotes an abstract, formal representation of entity types that are common to many applications using the UDR. CBIM describes the basic IOCs of UDC, their properties and their relationships. Detailed requirements for the specification of this Common Baseline Information Model are given in 3GPP TR 22.985 and 3GPP TS 22.101 . From the Common Baseline Information Model specialized information models and data models can be derived. All these derived models are out of the scope of this specification.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 . Common Baseline Information Model: an abstract, formal representation of entity types common to many applications using the UDR. CBIM describes the basic IOCs of UDC, their properties and their relationships, so that these IOCs constitute the baseline for any given application. Therefore, CBIM provides flexibility (in its data structure and content) , extensibility and multi-application approach. In particular, CBIM provides support for the concepts of Subscription, Service Profile, End User, Identifiers, End User Group, and End Device, among others. CBIM does not define the models that are associated with each application and that are under their responsibility.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Common Baseline Information Model User Equipment Front End Integration Reference Point IP Multimedia Private User Identity IP Multimedia Public User Identity IP Multimedia Subsystem International Mobile Subscriber Identity Integrated Services Digital Network Information Service IM Services Identity Module Mobile Subscriber ISDN Number Network Access Identifier User Data Convergence User Data Repository Unified Modelling Language Uniform Resource Identifier
+Title Path: Modelling Approach
+Content: The CBIM is not an Integration Reference Point (IRP) as it is not used for a management interface; however this specification follows the IRP IS template specified in 3GPP TS 32.151 and reuses the UML repertoire described in 3GPP TS 32.152 . NOTE: The intention of CBIM is to provide the basic common IOCs of UDC, including their definitions and relationships. Attributes of the IOCs are not intended to be part of this specification.
+Title Path: Information Object Classes > Information Object Class Definitions > EndUser > Definition
+Content: In this context this object class represents an End User (as per 3GPP TS 21.905 ). This class represents the view that the telecommunication network has about the end user and contains the valid parameters that define the End User from UDC point of view. An EndUser object class has an End-User Identity attribute (EUI), which is described in 3GPP TS 21.905 .
+Title Path: Information Object Classes > Information Object Class Definitions > Identifier > Definition
+Content: This abstract object class represents an end user identifier that is used within the network so that the different network functionalities can be used (mobility management, authentication, and service usage). This is an abstract IOC that can be inherited by the real identifier used in the network, like IMSI, MSISDN, IMPI, IMPU, etc. NOTE: This object does not include identities that are not associated to a user, such as an IMEI, hostID, etc.
+Title Path: Information Object Classes > Information Object Class Definitions > UdcServiceProfile > Definition
+Content: This object class represents the data characterizing a service assigned to an EndUser. It includes service preferences and settings chosen for an EndUser. The service profile contains the permanent and temporary data pertaining to an end user that is subscribed to a service. This IOC can be inherited by different service profiles, such as CS, GPRS, EPS, IMS service profiles and so on.
+Title Path: Information Object Classes > Information Object Class Definitions > EndDevice > Definition
+Content: This object class represents a composite of hardware and software that implements service terminal functions and that the EndUser operates in order to get access to telecommunication services.
+Title Path: Information Object Classes > Information Object Class Definitions > UdcCsServiceProfile > Definition
+Content: This object class represents the part of the UdcServiceProfile that contains data related to Circuit-Switched services. An example of further specialization of this object class, including attributes, is provided in 3GPP TS 32.181 .
+Title Path: Information Object Classes > Information Object Class Definitions > UdcGprsServiceProfile > Definition
+Content: This object class represents the part of the UdcServiceProfile that contains data related to Packet-Switched services. An example of further specialization of this object class, including attributes, is provided in 3GPP TS 32.181 .
+Title Path: Information Object Classes > Information Object Class Definitions > UdcEpsServiceProfile > Definition
+Content: This object class represents the part of the UdcServiceProfile that contains data related to the Evolved Packet System services. An example of further specialization of this object class, including attributes, is provided in 3GPP TS 32.181 .
+Title Path: Information Object Classes > Information Object Class Definitions > UdcImsServiceProfile > Definition
+Content: This object class represents the part of the UdcServiceProfile that contains data related to IMS services. An example of further specialization of this object class, including attributes, is provided in 3GPP TS 32.181 .
+Title Path: Information Object Classes > Information Object Class Definitions > MSISDN > Definition
+Content: In this context t his object class represents a Mobile Subscriber Integrated Services Digital Network Number (as per 3GPP TS 23.003 ) . An MSISDN is allocated from an E.164 numbering plan.
+Title Path: Information Object Classes > Information Object Class Definitions > IMSI > Definition
+Content: In this context t his object class represents an International Mobile Subscriber Identity (as per 3GPP TS 23.003 ).
+Title Path: Information Object Classes > Information Object Class Definitions > IMPI > Definition
+Content: In this context this object class represents an IMS Private User Identity (as per 3GPP TS 23.228 ). The Private User Identity takes the form of a Network Access Identifier (NAI), which is defined in IETF RFC 4282 . It is possible for a representation of the IMSI to be contained within the NAI for the private user identity.
+Title Path: Information Object Classes > Information Object Class Definitions > IMPU > Definition
+Content: In this context this object class represents an IMS Public User Identity (as per 3GPP TS 23.228 ). An IMPU takes the form of either a SIP URI (see IETF RFC 3261 ) or a Tel URI (see IETF RFC 3966 ). For UEs that are not equipped with an ISIM application, it is possible to derive a temporary IMPU from the IMSI (see 3GPP TS 23.003 for details).
+Title Path: Information Object Classes > Information Object Class Definitions > E164 > Definition
+Content: This object class represents a telephone number crafted according to ITU-T Recommendation E.164 .
+Title Path: Information Object Classes > Information Object Class Definitions > NAI > Definition
+Content: This object class represents a Network Access Identifier (as per IETF RFC 4282 ).
+Title Path: Information Object Classes > Information Object Class Definitions > TelURI > Definition
+Content: This object class represents a telephone URI (as per IETF RFC 3966 ).
+Title Path: Information Object Classes > Information Object Class Definitions > SIPURI > Definition
+Content: This object class represents a SIP URI (as per IETF RFC 3261 ).
+Title Path: Information Object Classes > Information Object Class Definitions > UdcEndUserGroup > Definition
+Content: This IOC represents a grouping of several End Users by the operator. The IOC includes information that describes the grouping and criteria for membership. Examples of UdcEndUserGroup may include the following: Closed User Group, VPN, and market segments.
+Title Path: Information Object Classes > Information Object Class Definitions > UdcSubscription > Definition
+Content: This IOC represents common data shared by a group of UdcServiceProfile instances. This IOC exists due to the relationship of a subscriber to the service provider. The end user can be attached to different UDC subscriptions through UDC Service Profiles for different service usage (e.g. for a private and a professional service usage). Editor’s Note: The relationship between Identifier and UdcSubscription is left for further study.
+Title Path: Information Object Classes > Information Relationship Definitions > Definition
+Content: This represents the association established between UdcSubscription and UdcServiceProfile due to common data shared by a group of UdcServiceProfile instances.
+Title Path: Information Object Classes > Information Relationship Definitions > SPMayIncludeID > Definition
+Content: This represents the association established between Identifier and UdcServiceProfile.
+Title Path: Information Object Classes > Information Relationship Definitions > EUHasSP > Definition
+Content: This represents the association established between UdcServiceProfile and EndUser due to the fact that any end user who is receiving a service has a service profile associated to it.
+Title Path: Information Object Classes > Information Relationship Definitions > IdentifierPairsIdentifier > Definition
+Content: This represents the relation established by instances of Identifier with other instances of Identifier. For example, one instance of Identifier can be an IMPU IOC, and the other and IMPI IOC. The relation of both is generically described by this relationship.
+Title Path: Information Object Classes > Information Relationship Definitions > EUIdentifiedByID > Definition
+Content: This represents an instance of EndUser that aggregates instances of Identifier.
+Title Path: Information Object Classes > Information Relationship Definitions > GroupMembership > Definition
+Content: This represents the association established between EndUser and UdcEndUserGroup determined due to the operator selecting instances of EndUser belonging to UdcEndUserGroup.
+Title Path: Information Object Classes > Information Relationship Definitions > TemporarilyPaired > Definition
+Content: This represents the temporarily association established between EndDevice and Identifiers, and vice versa. The relation is determined by an identifier (such as an MSISDN or an IMPU) being used from end devices, and from an end device being used by identifiers.
+Title Path: Information Object Classes > Information Relationship Definitions > CSSPcontainsMSISDN > Definition
+Content: This represents an aggregation from UdcCsServiceProfile to MSISDN.
+Title Path: Information Object Classes > Information Relationship Definitions > GPRSSPcontainsMSISDN > Definition
+Content: This represents an aggregation from UdcGprsServiceProfile to one or more instances of MSISDN.
+Title Path: Information Object Classes > Information Relationship Definitions > EPSSPcontainsMSISDN > Definition
+Content: This represents an aggregation from UdcEpsServiceProfile to MSISDN.
+Title Path: Information Object Classes > Information Relationship Definitions > IMSSPcontainsIMPU > Definition
+Content: This represents an aggregation from UdcImsServiceProfile to IMPU.
+Title Path: Information Object Classes > Information Relationship Definitions > MSISDNPairsIMSI > Definition
+Content: This represents the association established between MSISDN and IMSI. This might be the case when an MSISDN uses IMSIs included in a SIM application for authentication purposes.
+Title Path: Information Object Classes > Information Relationship Definitions > IMPIDerivesFromIMSI > Definition
+Content: This represents the association established when an IMPI is built from the contents of an IMSI. This might be the case when a UE that is accessing IMS services is not equipped with a ISIM application, but just a USIM application in the UICC. See details of the derivation process in 3GPP TS 23.003 .
+Title Path: Information Object Classes > Information Relationship Definitions > IMPUPairsOrDerivesFromIMPI > Definition
+Content: This represents the association established when an IMPU is paired with an IMPI, where the IMPI is used for authentication purposes of that IMPU.
+Title Path: Information Object Classes > Information Relationship Definitions > IMPUDerivesFromIMSI > Definition
+Content: This represents the association established when an IMPU is derived from an IMSI. This might be the case when a UE that is accessing IMS services is not equipped with an ISIM application, but a USIM application in the UICC. See details of the derivation process in 3GPP TS 23.003 .
+Title Path: Information Object Classes > Information Relationship Definitions > MSISDNTakesFormatOfE164 > Definition
+Content: This represents the association established when an MSISDN is created from an E.164 number.
+Title Path: Information Object Classes > Information Relationship Definitions > IMPITakesFormatOfNAI > Definition
+Content: This represents the association established when the IMPI takes the format of a NAI. See details in 3GPP TS 23.003 .
+Title Path: Information Object Classes > Information Relationship Definitions > IMPUTakesFormatOfTelURI > Definition
+Content: This represents the association established when an IMPU takes the format of a Tel URI. See details in 3GPP TS 23.003 .
+Title Path: Information Object Classes > Information Relationship Definitions > IMPUTakesFormatOfSIPURI > Definition
+Content: This represents the association established when an IMPU takes the format of a SIP URI. See details in 3GPP TS 23.003 .
+Title Path: Information Object Classes > Information Relationship Definitions > TelURIDerivesFromE164 > Definition
+Content: This represents the association established when a Tel URI is derived from an E.164 number.

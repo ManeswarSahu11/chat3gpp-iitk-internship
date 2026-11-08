@@ -1,0 +1,38 @@
+Title Path: Scope
+Content: The present document specifies the Home Node B Subsystem (HNS) Network Resource Model (NRM) IRP (that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks . This document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding. In order to access the information defined by this NRM, an IRP IS is needed, such as the Basic CM IRP IS (3GPP TS 32.602 ) or the Bulk CM IRP IS (3GPP TS 32.612 ). However, which IS that is applicable is outside the scope of the present document.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following definitions and abbreviations apply. For definitions and abbreviations not found here, please refer to 3GPP TS 32.101 , 3GPP TS 32.102 and 3GPP TS 32.600 . Association: See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 . Home Node B Management System (HMS): See TS 32.583 . HNB GW: See TS 25.467 . Home Node B Subsystem (HNS): See TS 23.002 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Distinguished Name Gateway Home Node B Home Node B Subsystem Information Object Classes Integration Reference Point Network Resource Model Universal Terrestrial Radio Access Network
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes (e.g. IOCs ) that encapsulates the information relevant for this IRP. This clause provides an overview of the relationships between relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes. NOTE 1: The listed cardinality numbers, in particular the use of cardinality number zero, do not represent transient states. The transient state is considered an inherent property of all IOC instances and therefore there is no need to represent them by individual IOC cardinality numbers. [NOTE 1:]The listed cardinality numbers, in particular the use of cardinality number zero, do not represent transient states. The transient state is considered an inherent property of all IOC instances and therefore there is no need to represent them by individual IOC cardinality numbers. [NOTE 2:]Each instance of the VsDataContainer shall only be contained under one IOC. The VsDataContainer can be contained under IOCs defined in other NRMs. The VsDataContainer is only used for the Bulk CM IRP. Each IOC instance is identified with a Distinguished Name (DN) according to 3GPP TS 32.300 that expresses its containment
+Title Path: Model > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships that exist between classes. [] Figure 4.2.2-1 Inheritance Hierarchy [NOTE:] IuhSignLinkTp is a special definition for the signalling of the EP-Iuh, and these two IOC inherit from EP RP.
+Title Path: Model > Class definitions > HNBGWFunction > Definition
+Content: This IOC represents HNB GW functionality. For more information about the HNB GW, see 3GPP TS 25.467 .
+Title Path: Model > Class definitions > HNBGWFunction > Notifications
+Content: The common notifications defined in clause 4.5 are valid for this class, without exceptions or additions.
+Title Path: Model > Class definitions > IuhSignLinkTp > Definition
+Content: This IOC represents a signaling link on the Iuh interface and inherits from EP-RP.
+Title Path: Model > Class definitions > IuhSignLinkTp > Notifications
+Content: The common notifications defined in clause 4.5 are valid for this class, without exceptions or additions.
+Title Path: Model > Class definitions > EP_Iuh > Definition
+Content: This IOC represents an end point of the Iuh interface. It inherits from EP-RP. For more information Iu-h interface, see 3GPP TS 25.467 .
+Title Path: Model > Class definitions > EP_Iuh > Notifications
+Content: The common notifications defined in clause 4.5 are valid for this class, without exceptions or additions.
+Title Path: Model > Class definitions > HMSFunction > Definition
+Content: This IOC represents HMS functionality. For more information about HMS, see 3GPP TS 32.583 .
+Title Path: Model > Class definitions > HNB > Definition
+Content: This class represents HNB functionality. For more information about the HNB, see 3GPP TS 25.467 . For definition of HNB, see 3GPP TS 22.220 . The Home NodeB, represented by the SupportIOC HNB, has registered itself with one node represented by HMSFunction.
+Title Path: Model > Class definitions > HNB > Notifications
+Content: The common notifications defined in clause 4.5 are not valid for this class. The set of notifications defined in the following table is valid.
+Title Path: Model > Class definitions > HNBProfile > Definition
+Content: The HNBProfile is a representation of information that a) identifies a specific set of HNB devices and b) the related configuration parameters (and their values) that are required to be configured in those identified HNB devices during HNB registration procedure. It contains userLabel, an attribute inherited from ManagedFunction. This is a user friendly label assigned by operator. Examples can be ``VIP configuration'', ``Gold Tier configuration'', ``device vendor XYZ software version 3.4'', ``camel'', etc
+Title Path: Model > Class definitions > LocalGWFunction > Definition
+Content: This class represents local Gateway functionality. For more information about the local gateway, see 3GPP TS 23.060 and 3GPP TS 23.401 . The Local Gateway, represented by the SupportIOC LocalGWFunction, has registered itself with one node represented by HMSFunction.
+Title Path: Model > Class definitions > LocalGWFunction > Notifications
+Content: The common notifications defined in clause 4.5 are not valid for this class. The set of notifications defined in the following table is valid.
+Title Path: Model > Attribute definitions > Attribute Properties
+Content: The following table defines the attributes that are present in several Information Object Classes (IOCs) of the present document.
+Title Path: Model > Attribute definitions > Constraints
+Content: None. [ 1.1 ] [4.5] Common notifications [4.5.1] Alarm notifications This subclause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification. 4.5.2 Configuration notifications None.

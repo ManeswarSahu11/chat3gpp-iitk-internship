@@ -1,0 +1,24 @@
+Title Path: Scope
+Content: This document defines the IMS Centralised Services Management Object (MO). The management object is compatible with OMA Device Management protocol specifications, version 1.2 and upwards, and is defined using the OMA DM Device Description Framework as described in the Enabler Release Definition OMA-ERELD _DM-V1_2 . The IMS Centralised Services Management Object consists of relevant parameters that can be managed for ICS.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 apply. For the purposes of the present document, the following terms and definitions given in 3GPP TS 23.003 apply: Home Network Domain Name For the purposes of the present document, the following terms and definitions given in 3GPP TS 23.292 apply: ICS UE
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Device Management IMS Centralised Services IP Multimedia core network Subsystem Internet Protocol Management Object Open Mobile Alliance User Equipment
+Title Path: ICS Managed Object
+Content: The ICS Management Object (MO) is used to configure ICS UE behaviour for IMS Centralised Services. The Management Object Identifier is: urn:oma:mo:ext-3gpp-ICS:1.0. Protocol compatibility: This MO is compatible with OMA DM 1.2. The OMA DM Access Control List (ACL) property mechanism (see OMA-ERELD-DM-V1_2 ) may be used to grant or deny access rights to OMA DM servers in order to modify nodes and leaf objects of the ICS MO. The following nodes and leaf objects are possible under the ICS node as described in figure 4-1:
+Title Path: Management Object parameters > General
+Content: This clause describes the parameters for the IMS Centralised Services Management Object (MO).
+Title Path: Management Object parameters > Node: X
+Content: This interior node acts as a placeholder for the IMS Centralised Services Management Object (MO). Occurrence: ZeroOrOne Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /Name
+Content: The Name leaf is a name for the IMS Centralised Services settings. Occurrence: ZeroOrOne Format: chr Access Types: Get Values: User displayable name
+Title Path: Management Object parameters > / X /ICS_Capabilities_Enabled
+Content: The ICS_Capabilities_Enabled leaf indicates an operator's preference to enable or disable IMS Centralised Services. Occurrence: One Format: bool Access Types: Get, Replace Values: 0, 1
+Title Path: Indicates that IMS Centralised Services capabilities over Gm are disabled.
+Content: The default value is that IMS Centralised Services over Gm are disabled when the IMS Centralised Services Management Object is not provisioned. Use of the ICS_Capabilities_Enabled leaf is specified in 3GPP TS 24.292 .
+Title Path: Indicates that IMS Centralised Services capabilities over Gm are disabled. > / X /I1_Capabilities_Enabled
+Content: The I1_Capabilities_Enabled leaf indicates an operator's preference to enable or disable support for the I1 protocol. Occurrence: One Format: int Access Types: Get, Replace Values: 0, 1
+Title Path: Indicates that IMS Centralised Services capabilities over I1 are enabled if concurrent use of CS RAT and PS RAT is not supported.
+Content: The default value is that IMS Centralised Services over I1 are disabled when the IMS Centralised Services Management Object is not provisioned. Use of the I1_Capabilities_Enabled leaf is specified in 3GPP TS 24.292 .
+Title Path: Indicates that IMS Centralised Services capabilities over I1 are enabled if concurrent use of CS RAT and PS RAT is not supported. > / X /Ext/
+Content: The Ext is an interior node for where the vendor specific information about the IMS Centralised Services MO is being placed (vendor meaning application vendor, device vendor etc.). Usually the vendor extension is identified by vendor specific name under the ext node. The tree structure under the vendor identified is not defined and can therefore include one or more un-standardized sub-trees. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A

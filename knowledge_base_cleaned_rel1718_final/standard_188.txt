@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document contains the Solution Sets for the IRP whose semantics are specified in File Transfer IRP: Information Service (3GPP TS 32.342 ). This Solution Set specification is related to 3GPP TS 32.342 V14.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.150 , 3GPP TS 32.331 and 3GPP TS 32.341 and the following apply: IRP document version number string (or "IRPVersion"): See 3GPP TS 32.311 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Configuration Management Common Object Request Broker Architecture Distinguished Name File Transfer File Transfer IRP Interface Definition Language Integration Reference Point Information Service Network Element Notification Log Network Resource Model Object Management Group Performance Management Solution Set Unified Modelling Language Web Service Description Language eXtensible Markup Language
+Title Path: Solution Set Definitions
+Content: This specification defines the following 3GPP FT IRP Solution Set Definitions:

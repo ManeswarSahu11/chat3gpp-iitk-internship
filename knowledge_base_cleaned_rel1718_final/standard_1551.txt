@@ -1,0 +1,30 @@
+Title Path: LSA Controller (LC) Integration Reference Point (IRP); Requirements
+Content: [ 1.1 ] [28.302] LSA Controller (LC) Integration Reference Point (IRP); Information Service (IS) [28.303] LSA Controller (LC) Integration Reference Point (IRP); Solution Set (SS) definitions
+Title Path: Scope
+Content: The present document specifies the requirements of the Licensed Shared Access (LSA) Controller (LC) Integration Reference Point (IRP). This IRP allows the NM to interact with the LC. This interaction with the LC enables the NM to configure NEs utilizing LSA spectrum resources. The following two deployment scenarios are supported: one scenario in which the LC communicates LSA spectrum resource availability information to the NM, and one scenario in which the LC determines and communicates to the NM constraints on parameters of cells liable to use LSA spectrum resources.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Conference of Postal and Telecommunications Administrations LSA Controller LSA Repository Licensed Shared Access LSA Spectrum Resource Availability Information Network Element Network Manager Network Management Layer Service
+Title Path: Concepts and background > General
+Content: ETSI TS 103 235 , ETSI TS 103 379 , ETSI TS 103 154 and ETSI TR 103 113 describe a system architecture for operation of mobile broadband services in the 2 300 MHz - 2 400 MHz band under Licensed Shared Access (LSA), aimed at enabling access for mobile/fixed communication networks (MFCNs) in those CEPT countries where access to the band is foreseen but cannot be provided without restrictions due to incumbent usage. This specification series describes the interface between the NM and LC.
+Title Path: Concepts and background > Architecture
+Content: The LC is a kind of NMLS (see TS 32.101 ). The interface between the NM and LC is a Type 7 interface.
+Title Path: Concepts and background > Functionality
+Content: Two deployment scenarios are considered and different functionality is specified for the interface between the LC and NM. Deployment scenario 1: In this scenario the LC is a relay for the LSRAI received from the LR. The LC forwards it to the NM. Deployment scenario 2: In this scenario the LSRAI is not forwarded to the NM. The LC computes radio configuration constraints based on the LSRAI received from the LR and radio planning parameters received from the NM. These radio configuration constraints are sent to the NM.
+Title Path: Business level requirements > Requirements > Requirements for scenario 1
+Content: REQ-LC-IRP-SC1-CON-001: The LSA licensee shall be able to use LSA spectrum resources.
+Title Path: Business level requirements > Requirements > Requirements for scenario 2
+Content: REQ-LC-IRP-SC2-CON-001: The LSA licensee shall be able to use LSA spectrum resources.
+Title Path: Business level requirements > Actor roles
+Content: See detailed description of actor roles in clause 5.4.
+Title Path: Business level requirements > Telecommunications resources
+Content: See detailed description of telecommunication resources in clause 5.4.
+Title Path: Specification level requirements > Requirements > Requirements for scenario 1
+Content: REQ-LC-IRP-SC1-FUN-001: The LC shall support a capability allowing the NM to trigger the registration of the LC with the LR. REQ-LC-IRP-SC1-FUN-002: The LC shall support a capability allowing to inform the NM about completion of the registration with the LR. REQ-LC-IRP-SC1-FUN-003: The LC shall support a capability allowing the NM to trigger the de-registration of the LC with the LR. REQ-LC-IRP-SC1-FUN-004: The LC shall support a capability allowing to inform the NM about completion of the de-registration with the LR. REQ-LC-IRP-SC1-FUN-005: The LC shall support a capability allowing the NM to read the LSRAI that the LC has received from the LR. REQ-LC-IRP-SC1-FUN-006: The LC shall support a capability allowing to inform the NM about changes of the LSRAI that the LC has received from the LR. REQ-LC-IRP-SC1-FUN-007: The NM shall support a capability allowing to inform the LC that configuration changes in the MFCN (if needed) have been applied according to previously received LSRAI. REQ-LC-IRP-SC1-FUN-008: The NM shall support a capability allowing LC to read if configuration changes in the MFCN (if needed) have been applied according to previously received LSRAI.
+Title Path: Specification level requirements > Requirements > Requirements for scenario 2
+Content: REQ-LC-IRP-SC2-FUN-001: see REQ-LC-IRP-SC1-FUN-001 REQ-LC-IRP-SC2-FUN-002: see REQ-LC-IRP-SC1-FUN-002 REQ-LC-IRP-SC2-FUN-003: see REQ-LC-IRP-SC1-FUN-003 REQ-LC-IRP-SC2-FUN-004: see REQ-LC-IRP-SC1-FUN-004 REQ-LC-IRP-SC2-FUN-005: The LC shall support a capability allowing the NM to obtain the constraints on cells parameters that need to be satisfied in order to use LSA spectrum resources. REQ-LC-IRP-SC2-FUN-006: The NM shall support a capability allowing the LC to obtain ranges of acceptable parameters for the cells operating on LSA frequencies. REQ-LC-IRP-SC2-FUN-007: The LC shall take into account LSRAI in the LSA cells constraints calculation. REQ-LC-IRP-SC2-FUN-008: The LC shall take into account the range for cell parameters provided by NM in the LSA cells constraints calculation.
+Title Path: Specification level requirements > Actor roles
+Content: See detailed description of actor roles in clause 6.4.
+Title Path: Specification level requirements > Telecommunications resources
+Content: See detailed description of telecommunications resources in clause 6.4.

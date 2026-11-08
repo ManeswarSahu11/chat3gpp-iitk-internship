@@ -1,0 +1,58 @@
+Title Path: Scope
+Content: The present document contains objectives, requirements and test cases that are specific to the AUSF network product class. It refers to the Catalogue of General Security Assurance Requirements and formulates specific adaptions of the requirements and test cases given there, as well as specifying requirements and test cases unique to the AUSF network product class.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 .
+Title Path: AUSF-specific security requirements and related test cases > Introduction
+Content: AUSF specific security requirements include both requirements derived from AUSF specific security functional requirements in relevant specifications as well as security requirements introduced in the present document derived from the threats specific to AUSF as described in TR 33.926 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Introduction
+Content: The present clause describes the security functional requirements and the corresponding test cases for AUSF network product class. The proposed security requirements are classified in two groups: Security functional requirements derived from TS 33.501 and detailed in clause 4.2.2. General security functional requirements which include requirements not already addressed in TS 33.501 but whose support is also important to ensure that AUSF conforms to a common security baseline detailed in clause 4.2.3.
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Security functional requirements on the AUSF deriving from 3GPP specifications and related test cases
+Content: The general approach in TS 33.117 clause 4.2.2.1 and all the requirements and test cases in TS 33.117 clause 4.2.2.2 related to SBA/SBI aspect apply to the AUSF network product class. There are no AUSF-specific test cases according to the security functional requirements on the AUSF deriving from TS 33.501 and security requirements derived from the threats specific to AUSF as described in TR 33.926 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Introduction
+Content: The present clause provides baseline technical requirements.
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information general
+Content: There are no AUSF-specific additions to clause 4.2.3.2.1 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information unauthorized viewing
+Content: There are no AUSF-specific additions to clause 4.2.3.2.2 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information in storage
+Content: There are no AUSF-specific additions to clause 4.2.3.2.3 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information in transfer
+Content: There are no AUSF-specific additions to clause 4.2.3.2.4 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting data and information > Logging access to personal data
+Content: There are no AUSF-specific additions to clause 4.2.3.2.5 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting availability and integrity
+Content: There are no AUSF-specific additions to clause 4.2.3.3 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Authentication and authorization
+Content: There are no AUSF-specific additions to clause 4.2.3.4 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Protecting sessions
+Content: There are no AUSF-specific additions to clause 4.2.3.5 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Technical Baseline > Logging
+Content: There are no AUSF-specific additions to clause 4.2.3.6 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Operating Systems
+Content: There are no AUSF -specific additions to clause 4.2.4 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Web Servers
+Content: There are no AUSF -specific additions to clause 4.2.5 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of security functional requirements and related test cases > Network Devices
+Content: There are no AUSF-specific additions to clause 4.2.6 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of hardening requirements and related test cases > Introduction
+Content: The present clause contains AUSF-specific adaptations of hardening requirements and related test cases.
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of hardening requirements and related test cases > Technical baseline
+Content: There are no AUSF-specific additions to clause 4.3.2 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of hardening requirements and related test cases > Operating systems
+Content: There are no AUSF-specific additions to clause 4.3.3 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of hardening requirements and related test cases > Web servers
+Content: There are no AUSF-specific additions to clause 4.3.4 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of hardening requirements and related test cases > Network devices
+Content: There are no AUSF-specific additions to clause 4.3.5 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of hardening requirements and related test cases > Network functions in service-based architecture
+Content: There are no AUSF-specific additions to clause 4.3.6 in TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of basic vulnerability testing requirements and related test cases > Introduction
+Content: There are no AUSF specific addtions to clause 4.4.1 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of basic vulnerability testing requirements and related test cases > Port Scanning
+Content: There are no AUSF specific addtions to clause 4.4.2 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of basic vulnerability testing requirements and related test cases > Vulnerability scanning
+Content: There are no AUSF specific addtions to clause 4.4.3 of TS 33.117 .
+Title Path: AUSF-specific security requirements and related test cases > AUSF-specific adaptations of basic vulnerability testing requirements and related test cases > Robustness and fuzz testing
+Content: The test cases under clause 4.4.4 of TS 33.117 are applicable to AUSF. The interface defined for the AUSF are in 4.2.3 of TS 23.501 . According to clause 4.4.4 of TS 33.117 , the transport protocols available on the interfaces providing IP-based protocols need to be robustness tested. Following TCP/IP layer model and considering all the protocols over transport layer, for AUSF, the following interfaces and protocols are in the scope of the testing: - For Nausf: the TCP, HTTP2 and JSON protocols. NOTE: There could be other interfaces and/or protocols requiring testing under clause 4.4.4 of TS 33.117 .

@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document is part of an Integration Reference Point (IRP) named Subscription Management (SuM) Network Resource Model (NRM) IRP, through which an IRPAgent can communicate configuration management information to one or several IRPManagers concerning SuM resources. The SuM NRM IRP comprises a set of specifications defining Requirements, a protocol neutral Information Service and one or more Solution Set(s). The present document specifies the Solution Sets for the SuM NRM IRP. This specification is related to 3GPP TS 28.752 V14.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions in 3GPP TS 32.101 , TS 32.102 , TS 32.140 , TS 32.141 , TS 28.751 and TS 28.752 apply.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations in 3GPP TS 32.101 , TS 32.102 , TS 32.140 , TS 32.141 , TS 28.751 and TS 28.752 apply.
+Title Path: Solution Set Definitions
+Content: This specification defines the following 3GPP SuM NRM IRP Solution Set Definitions: - 3GPP SuM NRM IRP XML Definitions (Annex A) CORBA Solution Set is not supported.

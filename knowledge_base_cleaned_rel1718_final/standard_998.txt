@@ -1,0 +1,12 @@
+Title Path: Scope
+Content: The present document defines the ISIM Application Programming Interface extending the "UICC API for Java Card " . This API allows to develop an application running together with a ISIM application. The present document includes information applicable to network operators, service providers, server -, and database anufactures.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions defined in ETSI TS 102 241 apply.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations defined in ETSI TS 102 241 apply.
+Title Path: Description > Overview
+Content: This API is an extension to the ETSI TS 102 241 "UICC API for Java Card " and requires the implementation of this specification. The classes and interfaces described in this specification inherit functionality from the classes and interfaces specified in ETSI TS 102 141 "UICC API for Java Card ".
+Title Path: Description > ISIM Java Card architecture
+Content: The overall architecture of the ISIM API is based on the "UICC API for Java Card " defined in ETSI TS 102 241 .
+Title Path: File Access API
+Content: The ISIM file access API consists of the package uicc.isim.access. This package defines additional constants to those defined in the uicc.access package from ETSI TS 102 241 . The access to the file system, defined in TS 31.103 is the one specified in ETSI TS 102 241 via the UICC FileView Interface.

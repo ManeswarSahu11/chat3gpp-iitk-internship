@@ -1,0 +1,54 @@
+Title Path: Scope
+Content: The present document is part of an Integration Reference Point (IRP) named "Signalling Transport Network (STN) interface NRM IRP", through which an "IRPAgent" (typically an Element Manager or Network Element) can communicate Configuration Management information to one or several "IRPManagers" (typically Network Managers) concerning Signalling Transport resources. This IRP comprises a set of specifications defining Requirements, a protocol neutral Network Resource Model (NRM) and corresponding Solution Set(s). The present document specifies the protocol neutral STN interface NRM IRP. It reuses relevant parts of the generic NRM in TS 28.622 , either by direct reuse or sub-classing, and in addition to that defines Signalling Transport specific Managed Object Classes. In order to access the information defined by this NRM, an IRP IS is needed, such as the Basic CM IRP: IS (TS 32.602 ) or the Bulk CM IRP: IS (TS 32.612 ). However, which IS is applicable is outside the scope of this document. Finally, regarding the support of the State Management IRP: IS (TS 28.625 ), all NRMs of one release shall support the same State Management IRP version.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions in 3GPP TS 32.101 , 32.102 , 32.600 , 28.734 and the following apply: Association: See definition in TS 28.622 . Managed Element (ME): See definition in TS 28.622 . Managed Object (MO): See definition in TS 28.622 . Management Information Model (MIM): See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Configuration Management Distinguished Name Information Object Class Integration Reference Point [ITU-T]International Telecommunication Union, Telecommunication Standardisation Sector Managed Element Management Information Model Managed Object Message Transfer Part Network Element Network Resource Model Relative Distinguished Name Signalling Link Code Signalling Link Selection Signalling Point Signalling Transport Network Signalling Transfer Point Termination Point Unified Modelling Language
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes (e.g. IOCs ) that encapsulates the information relevant for this IRP. This clause provides the overview of the relationships of relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes. The figure below shows the name-containment relation and other types of relations of the STN NRM.
+Title Path: Model > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships that exist between IOCs. The following figure shows the inheritance hierarchy for the STN NRM.
+Title Path: Model > Class definitions > MtpSignPoint > Definition
+Content: This IOC represents the Signalling Point functionality. For more information about the Signalling Point, see ITU T Q.700 and ITU T Q.751.1 .
+Title Path: Model > Class definitions > MtpSignPoint > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SignLinkSetTp > Definition
+Content: This IOC represents a bi-directional Signalling Link Set Termination Point functionality. For more information about the Signalling Link Set Termination Point, see ITU T Q.700 and ITU T Q.751.1 .
+Title Path: Model > Class definitions > SignLinkSetTp > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SignLinkTp > Definition
+Content: This IOC represents a bi-directional Signalling Link Termination Point functionality. For more information about the Signalling Link Termination Point, see ITU T Q.700 and ITU T Q.751.1 .
+Title Path: Model > Class definitions > SignLinkTp > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SignRouteSetNePart > Definition
+Content: This IOC represents a Signalling Route Set functionality. For more information about the Signalling Route Set Network Element Part, see ITU T Q.700 and ITU T Q.751.1 .
+Title Path: Model > Class definitions > SignRouteSetNePart > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SignRouteNePart > Definition
+Content: This IOC represents a Signalling Route functionality. For more information about the Signalling Route Network Element Part, see ITU T Q.700 and ITU T Q.751.1 .
+Title Path: Model > Class definitions > SignRouteNePart > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > M3UAEntity > Definition
+Content: This IOC represents a functionality entity which processes M3UA signalling. For more information about M3UA, see and .
+Title Path: Model > Class definitions > M3UAEntity > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > M3UALinkSetTp > Definition
+Content: This IOC represents a bi-directional termination point functionality of M3UA signalling link set which is the set of M3UA signalling links between M3UA_AS and SG or between M3UA_AS and M3UA_AS. For more information about M3UA_AS and SG, see and .
+Title Path: Model > Class definitions > M3UALinkSetTp > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > M3UALinkTp > Definition
+Content: This IOC represents a termination point functionality of M3UA signalling link which is a bi-directional M3UA logical communication channel between the particular SCTP termination points of signalling gateway process (SGP) and application server process (ASP) or the logical communication channel between the particular SCTP termination points of two IP server processes (IPSPs). For more information about M3UA and SCTP signalling information, see and .
+Title Path: Model > Class definitions > M3UALinkTp > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > M3UARouteSetNePart > Definition
+Content: This IOC represents a set of the M3UA signalling route between M3UA local entity and M3UA destination entity. For M3UA signalling information, see and .
+Title Path: Model > Class definitions > M3UARouteSetNePart > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > M3UARouteNePart > Definition
+Content: This IOC represents a path between local M3UA entity and destination M3UA entity. For more information about M3UA signalling, see and .
+Title Path: Model > Class definitions > M3UARouteNePart > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Common notifications > Alarm notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.
+Title Path: Model > Common notifications > Configuration notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.

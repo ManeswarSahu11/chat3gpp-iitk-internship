@@ -1,0 +1,256 @@
+Title Path: Scope
+Content: The present document specifies the stage 3 protocol and data model for common data types that are used or may be expected to be used by multiple Service Based Interface APIs supported by the same or different Network Function(s). The Principles and Guidelines for Services Definition are specified in 3GPP TS 29.501 .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . 5G Core Network Data Network Access Identifier Extended Unique Identifier Geosynchronous Orbit Generic Public Subscription Identifier Globally Unique AMF Identifier Hybrid Fiber Coax Low Earth Orbit Medium Earth Orbit Non-5G Capable Network Slice- Specific Authentication and Authorization Permanent Equipment Identifier Service Based Interface Subscription Permanent Identifier Uncrewed Aerial Vehicle
+Title Path: Overview
+Content: For the different 5GC SBI API, data types shall be defined. Data types identified as common data types shall be defined in this Technical specification and should be referenced from individual 5GC SBI API specifications. Data types applicable or intended to be applicable to several 5GC SBI API specifications should be interpreted as common data types.
+Title Path: Common Data Types > Introduction
+Content: In the following clauses, common data types for the following areas are defined: Data types for generic usage; Data types for Subscription, Identification and Numbering; Data types related to 5G Network; Data types related to 5G QoS; Data types related to 5G Trace; Data types related to 5G ODBs.
+Title Path: Common Data Types > Data Types for Generic Usage > Introduction
+Content: This clause defines common data types for generic usage. 5.2.1A Re-used Data Types This clause specifies the re-used data types from other specifications.
+Title Path: Common Data Types > Data Types for Generic Usage > Simple Data Types
+Content: This clause specifies common simple data types. For example, if only the first feature defined in the feature list is set to 1, the corresponding SupportedFeatures attribute would have a hexadecimal character value of "1", or a string of hexadecimal characters with value of "001" (any amount of 0's to the left of the 1 would result into an equivalent feature list). If we have 32 features defined, and only the last feature in a feature list is set to 1, the corresponding SupportedFeatures attribute would have a string of hexadecimal characters with value of "80000000"(see the description of the SupportedFeatures encoding in Table 5.2.2-1).
+Title Path: Common Data Types > Data Types for Generic Usage > Structured Data Types > Type: LinkRm
+Content: This data type is defined in the same way as the "Link" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types for Generic Usage > Structured Data Types > Type: ComplexQuery
+Content: The ComplexQuery data type is either a conjunctive normal form or a disjunctive normal form. The attribute names "cnfUnits" and "dnfUnits" (see clause 5.2.4.11 and clause 5.2.4.12) serve as discriminator.
+Title Path: Common Data Types > Data Types for Generic Usage > Structured Data Types > Type: FqdnPatternMatchingRule
+Content: [EXAMPLE 1:]A FQDN pattern described by a string matching rule matching all FQDNs with "smartmeter-\ factoryID\ .company.com" where "\ factoryID\ " can be any string JSON: \ "stringMatchingRule": \ stringMatchingConditions:[\ "matchingString": "smartmeter-","matchingOperator": "STARTS_WITH"\ ,\ "matchingString": ".company.com","matchingOperator": "ENDS_WITH"\ ]\ \ [EXAMPLE 2:]A FQDN pattern described by a regular expression matching all FQDNs with "smartmeter-\ factoryID\ .company.com" where "\ factoryID\ " can be any string. JSON: \ "regex": " -.+ .company .com\$"\
+Title Path: Common Data Types > Data Types related to Subscription, Identification and Numbering > Introduction
+Content: This clause defines common data types related to subscription, identification and numbering information.
+Title Path: Common Data Types > Data Types related to Subscription, Identification and Numbering > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to Subscription, Identification and Numbering > Enumerations > Enumeration: GroupServiceId
+Content: The enumeration GroupServiceId is a part of IMSI-Group-Id (see clause 19.9 of 3GPP TS 23.003 ) and indicates the specific service for which the IMSI-Group-Id is used. Values greater than 1000 are reserved for home operator specific use. IMSI-Group-IDs with a Group-Service-Id in this range shall not be sent outside the HPLMN unless roaming agreements allow so.
+Title Path: Common Data Types > Data Types related to Subscription, Identification and Numbering > Structured Data Types > Type: GuamiRm
+Content: This data type is defined in the same way as the "Guami" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Introduction
+Content: This clause defines common data types related to 5G Network (other than related to 5G QoS).
+Title Path: Common Data Types > Data Types related to 5G Network > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: PduSessionType
+Content: The enumeration PduSessionType indicates the type of a PDU session. It shall comply with the provisions defined in table 5.4.3.3-1.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: UpIntegrity
+Content: The enumeration UpIntegrity indicates whether UP integrity protection is required, preferred or not needed for all the traffic on the PDU Session . It shall comply with the provisions defined in table 5.4.3.4-1.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: UpConfidentiality
+Content: The enumeration UpConfidentiality indicates whether UP confidentiality protection is required, preferred or not needed for all the traffic on the PDU Session . It shall comply with the provisions defined in table 5.4.3.5-1.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: SscMode
+Content: The enumeration SscMode represents the service and session continuity mode.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: DnaiChangeType
+Content: The enumeration DnaiChangeType represents the type of a DNAI change. A NF service consumer may subscribe to "EARLY", "LATE" or "EARLY_LATE" types of DNAI change. The types of observed DNAI change the SMF may notify are "EARLY" or "LATE". The DnaiChangeType data type shall comply with the provisions defined in table 5.4.3.7-1.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: AccessTypeRm
+Content: This enumeration is defined in the same way as the "AccessType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: RatTypeRm
+Content: This enumeration is defined in the same way as the "RatType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: PduSessionTypeRm
+Content: This enumeration is defined in the same way as the "PduSessionType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: UpIntegrityRm
+Content: This enumeration is defined in the same way as the "UpIntegrity" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: UpConfidentialityRm
+Content: This enumeration is defined in the same way as the "UpConfidentiality" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: SscModeRm
+Content: This data type is defined in the same way as the "SscMode" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: DnaiChangeTypeRm
+Content: This data type is defined in the same way as the "DnaiChangeType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: RestrictionTypeRm
+Content: This data type is defined in the same way as the "RestrictionType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: CoreNetworkType
+Content: This data type is defined in the same way as the "CoreNetworkType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: StationaryIndicationRm
+Content: This enumeration is defined in the same way as the "StationaryIndication" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: ScheduledCommunicationTypeRm
+Content: This enumeration is defined in the same way as the "ScheduledCommunicationType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: TrafficProfileRm
+Content: This enumeration is defined in the same way as the "TrafficProfile" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: DlDataDeliveryStatusRm
+Content: This enumeration is defined in the same way as the "DlDataDeliveryStatus" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: LineTypeRm
+Content: This enumeration is defined in the same way as the "LineType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Enumerations > Enumeration: SatelliteBackhaulCategoryRm
+Content: This data type is defined in the same way as the "SatelliteBackhaulCategory" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: Snssai
+Content: When Snssai needs to be converted to string (e.g. when used in maps as key), the string shall be composed of one to three digits "sst" optionally followed by "-" and 6 hexadecimal digits "sd", and shall match the following pattern: ([0-9] [1-9][0-9] 1[0-9][0-9] 2([0-4][0-9] 5[0-5]))(-[A-Fa-f0-9]\ 6\ )?\$ Example 1: "255-19CDE0" Example 2: "29"
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: PlmnId
+Content: When PlmnId needs to be converted to string (e.g. when used in maps as key), the string shall be composed of three digits "mcc" followed by "-" and two or three digits "mnc", and shall match the following pattern: \ 3\ -[0-9]\ 2,3\ \$ Example 1: "262-01" Example 2: "302-720"
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: Tai
+Content: NOTE: The "nid" attribute is used to convey the Network Identifier (NID) of the SNPN as part of the "Tai" JSON object data type definition; this is a protocol aspect that does not imply any change on the system-wide definition of the TAI, as described in 3GPP 23.003 .
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: Ecgi
+Content: NOTE: The "nid" attribute is used to convey the Network Identifier (NID) of the SNPN as part of the "Ecgi" JSON object data type definition; this is a protocol aspect that does not imply any change on the system-wide definition of the ECGI, as described in 3GPP 23.003 .
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: Ncgi
+Content: NOTE: The "nid" attribute is used to convey the Network Identifier (NID) of the SNPN as part of the "Ncgi" JSON object data type definition; this is a protocol aspect that does not imply any change on the system-wide definition of the NCGI, as described in 3GPP 23.003 .
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: PlmnIdRm
+Content: This data type is defined in the same way as the "PlmnId" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: TaiRm
+Content: This data type is defined in the same way as the "Tai" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: EcgiRm
+Content: This data type is defined in the same way as the "Ecgi" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: NcgiRm
+Content: This data type is defined in the same way as the "Ncgi" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: EutraLocationRm
+Content: This data type is defined in the same way as the "EutraLocation" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: NrLocationRm
+Content: This data type is defined in the same way as the "NrLocation" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: UpSecurityRm
+Content: This data type is defined in the same way as the "UpSecurity" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: RefToBinaryDataRm
+Content: This data type is defined in the same way as the " RefToBinaryData " data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: PresenceInfoRm
+Content: This data type is defined in the same way as the "PresenceInfo" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: PlmnIdNid
+Content: When PlmnIdNid needs to be converted to string (e.g. when used in maps as key), the string shall be composed of three digits "mcc" followed by "-" and two or three digits "mnc" followed by "-" and 11 digits "nid", and shall match the following pattern: \ 3\ -[0-9]\ 2,3\ -[A-Fa-f0-9]\ 11\ \$ Example 1: "262-01-000007ed9d5" Example 2: "302-720-000007ed9d5"
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: PlmnIdNidRm
+Content: This data type is defined in the same way as the "PlmnIdNid" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: HfcNodeIdRm
+Content: This data type is defined in the same way as the "HfcNodeId" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: ScheduledCommunicationTimeRm
+Content: This data type is defined in the same way as the "ScheduledCommunicationTime" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: BatteryIndicationRm
+Content: This data type is defined in the same way as the "BatteryIndication" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: AcsInfoRm
+Content: This data type is defined in the same way as the "AcsInfo" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: NssaaStatusRm
+Content: This data type is defined in the same way as the "NssaaStatus" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: TnapIdRm
+Content: This data type is defined in the same way as the "TnapId" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: TwapIdRm
+Content: This data type is defined in the same way as the "TwapId" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: SdRange
+Content: EXAMPLE: SD range from 023400 to 023499 (hexadecimal) JSON: \ "start": "023400", "end": "023499" \
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: EcsServerAddrRm
+Content: This data type is defined in the same way as the "EcsServerAddr" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Network > Structured Data Types > Type: SpatialValidityCondRm
+Content: This data type is defined in the same way as the "SpatialValidityCond" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Introduction
+Content: This clause defines common data types related to 5G QoS.
+Title Path: Common Data Types > Data Types related to 5G QoS > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: PreemptionCapability
+Content: The enumeration PreemptionCapability indicates the pre-emption capability of a request on other QoS flows. See clause 5.7.2.2 of 3GPP TS 23.501 . It shall comply with the provisions defined in table 5.5.3.1-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: PreemptionVulnerability
+Content: The enumeration PreemptionVulnerability indicates the pre-emption vulnerability of the QoS flow to pre-emption from other QoS flows. See clause 5.7.2.2 of 3GPP TS 23.501 . It shall comply with the provisions defined in table 5.5.3.2-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: ReflectiveQosAttribute
+Content: The enumeration ReflectiveQosAttribute indicates whether certain traffic of the QoS flow may be subject to Reflective QoS (see clause 5.7.2.3 of 3GPP TS 23.501 ). It shall comply with the provisions defined in table 5.5.3.3-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: NotificationControl
+Content: The enumeration NotificationControl indicates whether notifications are requested from the RAN when the GFBR can no longer (or again) be fulfilled for a QoS Flow during the lifetime of the QoS Flow (see clause 5.7.2.4 of 3GPP TS 23.501 ). It shall comply with the provisions defined in table 5.5.3.5-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: QosResourceType
+Content: The enumeration QosResourceType indicates whether a QoS Flow is non-GBR, delay critical GBR, or non-delay critical GBR (see clauses 5.7.3.4 and 5.7.3.5 of 3GPP TS 23.501 ). It shall comply with the provisions defined in table 5.5.3.6-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: PreemptionCapabilityRm
+Content: This enumeration is defined in the same way as the "PreemptionCapability" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: PreemptionVulnerabilityRm
+Content: This enumeration is defined in the same way as the "PreemptionVulnerability" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: ReflectiveQosAttributeRm
+Content: This enumeration is defined in the same way as the "ReflectiveQosAttribute" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: NotificationControlRm
+Content: This enumeration is defined in the same way as the "NotificationControl" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: QosResourceTypeRm
+Content: This enumeration is defined in the same way as the "QosResourceType" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: AdditionalQosFlowInfo
+Content: The enumeration AdditionalQosFlowInfo provides additional QoS flow information (see clause 9.3.1.12 3GPP TS 38.413 ). It shall comply with the provisions defined in table 5.5.3.12-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: PartitioningCriteria
+Content: The enumeration PartitioningCriteria indicates criteria for grouping the UEs (see clause 4.15.1 of 3GPP TS 23.502 ). It shall comply with the provisions defined in table 5.5.3.13-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: PartitioningCriteriaRm
+Content: This enumeration is defined in the same way as the "PartitioningCriteria" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: PduSetHandlingInfo
+Content: The enumeration PduSetHandlingInfo indicates whether all PDUs of the PDU Set are needed for the usage of the PDU Set by the application layer in the receiver side. It shall comply with the provisions defined in table 5.5.3.15-1.
+Title Path: Common Data Types > Data Types related to 5G QoS > Enumerations > Enumeration: RtpHeaderExtType
+Content: Editor's note: It is FFS whether to standardize additional enumeration value.
+Title Path: Common Data Types > Data Types related to 5G QoS > Structured Data Types > Type: ArpRm
+Content: This data type is defined in the same way as the "Arp" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Structured Data Types > Type: AmbrRm
+Content: This data type is defined in the same way as the "Ambr" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Structured Data Types > Type: SliceMbrRm
+Content: This data type is defined in the same way as the "SliceMbr" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Structured Data Types > Type: PduSetQosPara
+Content: Editor's Note: T he definition of these new data types need further checking and alignment with RAN3.
+Title Path: Common Data Types > Data Types related to 5G QoS > Structured Data Types > Type: PduSetQosParaRm
+Content: This data type is defined in the same way as the "PduSetQosPara" data type, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G QoS > Structured Data Types > Type ProtocolDescription
+Content: [EXAMPLE 1:]For a media flow using RTP transport with: - the RTP Header Extension for PDU Set Marking (see clause 4.4.2 of 3GPP TS 26.522 ); - the RTP header extension Id "3"; - RTP packets with different PTs, where packets with PT 96 contain the RTP Header Extension, the Protocol Description is set to: \ "transportProto": "RTP", "rtpHeaderExtInfo": \ "rtpHeaderExtType": "PDU_SET_MARKING", "rtpHeaderExtId": 3\ , "rtpPayloadInfoList": [\ "rtpPayloadTypeList": \ ]\ [EXAMPLE 2:]For a media flow using RTP transport: - not using any RTP Header Extension for PDU Set identication; - H.265 payload format with Payload Types 96 and 97 (see clause A.2.3 (RTP with HEVC payload format) of 3GPP TS 26.522 ); the Protocol Description is set to: \ "transportProto": "RTP", "rtpPayloadInfoList": [\ "rtpPayloadFormat": "H265", "rtpPayloadTypeList": [96, 97]\ ]\
+Title Path: Common Data Types > Data Types related to 5G Trace > Introduction
+Content: This clause defines common data types related to 5G Trace.
+Title Path: Common Data Types > Data Types related to 5G Trace > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: TraceDepth
+Content: The enumeration TraceDepth defines how detailed information should be recorded in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.1-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: TraceDepthRm
+Content: This enumeration is defined in the same way as the "TraceDepth" enumeration, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: JobType
+Content: The enumeration JobType defines Job Type in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.3-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: ReportTypeMdt
+Content: The enumeration ReportTypeMdt defines Report Type for logged MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.4-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: MeasurementLteForMdt
+Content: The enumeration MeasurementLteForMdt defines Measurements used for MDT in LTE in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.5-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: MeasurementNrForMdt
+Content: The enumeration MeasurementNrForMdt defines Measurements used for MDT in NR in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.6-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: SensorMeasurement
+Content: The enumeration SensorMeasurement defines sensor measurement type for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.7-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: ReportingTrigger
+Content: The enumeration ReportingTrigger defines Reporting Triggers for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.8-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: ReportIntervalMdt
+Content: The enumeration ReportIntervalMdt defines Report Interval for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.9-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: ReportAmountMdt
+Content: The enumeration ReportAmountMdt defines Report Amount for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.10-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: EventForMdt
+Content: The enumeration EventForMdt defines events triggered measurement for logged MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.11-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: LoggingIntervalMdt
+Content: The enumeration LoggingIntervalMdt defines Logging Interval for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.12-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: LoggingDurationMdt
+Content: The enumeration LoggingDurationMdt defines Logging Duration for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.13-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: PositioningMethodMdt
+Content: The enumeration PositioningMethodMdt defines Positioning Method for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.14-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: CollectionPeriodRmmLteMdt
+Content: The enumeration CollectionPeriodRmmLteMdt defines Collection period for RRM measurements LTE for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.15-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: MeasurementPeriodLteMdt
+Content: The enumeration MeasurementPeriodLteMdt defines Measurement period LTE for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.16-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: ReportIntervalNrMdt
+Content: The enumeration ReportIntervalNrMdt defines Report Interval in NR for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.17-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: LoggingIntervalNrMdt
+Content: The enumeration LoggingIntervalNrMdt defines Logging Interval in NR for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.18-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: CollectionPeriodRmmNrMdt
+Content: The enumeration CollectionPeriodRmmNrMdt defines Collection period for RRM measurements NR for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.19-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: LoggingDurationNrMdt
+Content: The enumeration LoggingDurationMdt defines Logging Duration in NR for MDT in the trace. See 3GPP TS 32.422 for further description of the values . It shall comply with the provisions defined in table 5.6.3.20-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: QoeServiceType
+Content: The enumeration QoeServiceType indicates the kind of service that shall be recorded for QMC. It shall comply with the provisions defined in Table 5.6.3.21-1.
+Title Path: Common Data Types > Data Types related to 5G Trace > Enumerations > Enumeration: AvailableRanVisibleQoeMetric
+Content: The enumeration AvailableRanVisibleQoeMetric indicates different available RAN-visible QoE metrics to the gNB. It shall comply with the provisions defined in Table 5.6.3.22-1.
+Title Path: Common Data Types > Data Types related to 5G Operator Determined Barring > Introduction
+Content: This clause defines common data types related to 5G Operator Determined Barring.
+Title Path: Common Data Types > Data Types related to 5G Operator Determined Barring > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to 5G Operator Determined Barring > Enumerations > Enumeration: RoamingOdb
+Content: The enumeration RoamingOdb defines the Barring of Roaming as. See 3GPP TS 23.015 for further description . It shall comply with the provisions defined in table 5.7.3.1-1.
+Title Path: Common Data Types > Data Types related to 5G Operator Determined Barring > Enumerations > Enumeration: OdbPacketServices
+Content: The enumeration OdbPacketServices defines the Barring of Packet Oriented Services. See 3GPP TS 23.015 for further description . It shall comply with the provisions defined in table 5.7.3.2-1.
+Title Path: Common Data Types > Data Types related to Charging > Introduction
+Content: This clause defines common data types related to Charging.
+Title Path: Common Data Types > Data Types related to Charging > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to MBS > Introduction
+Content: This clause defines common data types related to MBS.
+Title Path: Common Data Types > Data Types related to MBS > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to MBS > Enumerations > Enumeration: MbsServiceType
+Content: The enumeration MbsServiceType indicates the type of MBS session. It shall comply with the provisions defined in Table 5.9.3.1-1.
+Title Path: Common Data Types > Data Types related to MBS > Enumerations > Enumeration: MbsSessionActivityStatus
+Content: The enumeration MbsSessionActivityStatus indicates the MBS session's activity status. It shall comply with the provisions defined in Table 5.9.3.2-1.
+Title Path: Common Data Types > Data Types related to MBS > Structured Data Types > Type: MbsMediaCompRm
+Content: This data type is defined in the same way as the MbsMediaComp data type defined in clause 5.9.4.17, but with the OpenAPI "nullable: true" property.
+Title Path: Common Data Types > Data Types related to MBS > Structured Data Types > Data types describing alternative data types or combinations of data types > Type: AssociatedSessionId
+Content: 5.9.6.21.1-1: Definition of type AssociatedSessionId as a list of non-exclusive alternative data types
+Title Path: Common Data Types > Data Types related to Time Synchronization > Introduction
+Content: This clause defines common data types related to Time Synchronization.
+Title Path: Common Data Types > Data Types related to Time Synchronization > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to IMS SBA > Introduction
+Content: This clause defines common data types related to IMS SBA.
+Title Path: Common Data Types > Data Types related to IMS SBA > Simple Data Types
+Content: This clause specifies common simple data types.
+Title Path: Common Data Types > Data Types related to IMS SBA > Enumerations > Enumeration: MediaResourceType
+Content: The enumeration MediaResourceType indicates the type of media resource. It shall comply with the provisions defined in Table 5.11.3.1-1.
+Title Path: Common Data Types > Data Types related to IMS SBA > Enumerations > Enumeration: MediaProxy
+Content: The enumeration MediaProxy represents the media proxy configuration applicable to the media flow. It shall comply with the provisions defined in Table 5.11.3.2-1.
+Title Path: Common Data Types > Data Types related to IMS SBA > Enumerations > Enumeration: SecuritySetup
+Content: The enumeration SecuritySetup represents the security setup of the DTLS connection. It shall comply with the provisions defined in Table 5.11.3.3-1.

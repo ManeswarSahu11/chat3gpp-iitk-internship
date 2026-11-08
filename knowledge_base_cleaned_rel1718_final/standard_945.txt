@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document defines, in addition to the requirements defined in , , and , requirements for the present IRP: SuM NRM IRP.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply. For terms and definitions not found here, please refer to 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.140 , 3GPP TS 32.141 and 3GPP TS 32.600 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Integration Reference Point Network Resource Model Subscription Management
+Title Path: Requirements
+Content: The following general and high-level requirements apply for the present IRP: [ a) ] IRP-related requirements in 3GPP TS 32.101 . IRP-related requirements in 3GPP TS 32.102 . IRP-related requirements in 3GPP TS 32.140 . IRP-related requirements in 3GPP TS 32.141 . The NRM defined by this IRP: [ a) ] Shall support communications for telecommunication network management purposes, including management of converged networks. Is a member of the Federated Network Information Model (FNIM) and its information is derived from the FNIM Umbrella Information Model (UIM) .

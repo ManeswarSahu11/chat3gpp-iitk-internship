@@ -1,0 +1,42 @@
+Title Path: Scope
+Content: The present document specifies the Generic Radio Access Network (RAN) network resource model (NRM) that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks. This document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding. In order to access the information defined by this NRM, an Interface IRP such as the "Basic CM IRP" is needed (3GPP TS 32.602 ). However, which Interface IRP is applicable is outside the scope of the present document.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the definitions given in TR 21.905 , TS 32.150 , TS 32.101 , TS 32.102 and the following apply. The definitions defined in the present document take precedence over those, if any, in TS 32.150 , TS 32.101 , TS 32.102 and TR 21.905 , in that order. Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . [] Configuration Management Distinguished Name Information Object Class Relative Distinguished Name Solution Set
+Title Path: Model > Class diagrams > Relationships
+Content: This subclause depicts the set of classes (e.g. IOCs ) that encapsulates the information relevant for this IRP. This subclause provides the overview of the relationships of relevant classes in UML. Subsequent subclauses provide more detailed specification of various aspects of these classes. Figure 4.2.1.1: UTRAN/E-UTRAN/NR/GERAN sharing (1/2)
+Title Path: Model > Class diagrams > Inheritance
+Content: This subclause depicts the inheritance relationships.
+Title Path: Model > Class definitions > SectorEquipmentFunction > Definition
+Content: This IOC represents a set of cells within a geographical area that has common functions relating to AntennaFunction, TMAFunction and supporting equipment, such as power amplifier. This IOC is required as part of the capability to satisfy the Requirements statement identified below.
+Title Path: Model > Class definitions > SectorEquipmentFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > AntennaFunction > Definition
+Content: This IOC represents an array of radiating elements that may be tilted to adjust the RF coverage of a cell(s). This IOC is required as part of the capability to satisfy the Requirements statement identified below.
+Title Path: Model > Class definitions > AntennaFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > TMAFunction > Definition
+Content: This IOC represents a Tower Mounted Amplifier or a number of TMA subunits within one TMA, each separately addressable by a specific index at the application layer. This IOC is required as part of the capability to satisfy the Requirements statement identified below.
+Title Path: Model > Class definitions > TMAFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > GSMCellPart > Definition
+Content: A GSM cell can consist of a number of carriers. These carriers can be configured in a number of ways, for example, the carriers can have different propagation properties which are sent with different antenna tilt, with different RF power, different radio band and even possibly different antenna. The various GSMCellPart instances capture different radio propagation properties allowing different frequency planning schemes, e.g. some GSMCellPart instances can use frequency groups planned for tighter frequency reuse. Hence, a GSM cell can, and in some cases must, be distributed on more than one SectorEquipmentFunction . This IOC is required as part of the capability to satisfy the Requirements statement identified below.
+Title Path: Model > Class definitions > GSMCellPart > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CommonBsFunction > Definition
+Content: This IOC represents common aspects of Base Station (BS) functionality shared by several radio access technologies.
+Title Path: Model > Class definitions > CellReferences > Definition
+Content: This IOC represents the three references to TMAFunction, SectorEquipmentFunction and AntennaFunction. The references are used by various classes of cells, e.g. UtranGenericCell. This is an abstract class.
+Title Path: Model > Class definitions > RepeaterFunction > Definition
+Content: This IOC represents the management aspect of a repeater. For the information on repeater see 3GPP TS 25.106 . This IOC is required as part of the capability to satisfy the Requirements statement identified below.
+Title Path: Model > Class definitions > RepeaterFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ProxyCell ProxyClass > Definition
+Content: This IOC represents GSMCellPart, UTranGenericCell and EUtranGenericCell.
+Title Path: Model > Class definitions > ProxyBsFunction ProxyClass > Definition
+Content: This IOC represents ENBFunction, NodeBFunction and BssFunction.
+Title Path: Model > Common Notifications > Alarm notifications
+Content: This subclause presents a list of notifications, defined in 3GPP TS 32.111-2 , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in 3GPP TS 32.302 , would capture the DN of an instance of an IOC defined in this IRP specification.
+Title Path: Model > Common Notifications > Configuration notifications
+Content: This subclause presents a list of notifications, defined in 3GPP TS 32.662 , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in 3GPP TS 32.302 , would capture the DN of an instance of an IOC defined in this IRP specification.

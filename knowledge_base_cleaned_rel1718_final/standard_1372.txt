@@ -1,0 +1,42 @@
+Title Path: Scope
+Content: The present document specifies the stage 1 description for the Tandem Free Operation (TFO) feature which provides the capability to avoid tandeming speech codecs in mobile to mobile speech calls. The primary aim is to realise improvements in speech quality. The TFO mode of operation could also be used to reduce inter-Mobile services Switching Center (MSC) transmission bandwidth requirements. In analogy with ITU-T Recommendations I.130 , Stage 1 is an overall service description, from the service subscriber's and user's standpoints, that views the network as a single entity which provides services to the user.
+Title Path: Definitions and abbreviations
+Content: GSM 01.04 provides a list of abbreviations and acronyms used in GSM specifications.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply: Tandem Free Operation (TFO): avoidance of tandeming speech codecs in mobile to mobile speech calls TFO call: mobile to mobile call where TFO has been applied Normal call or operation: call where TFO has not been applied Negotiation phase: phase during which the applicability of TFO is assessed through the exchange of information such as the capabilities of the respective transcoders and the types of speech codecs being used A party: user originating the call B party: user receiving the call (unless the call is forwarded) For simplicity the term MS is also used when UE is meant for 3G systems. The same is valid for TRAU and TC analogously.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Avanced Speech Call Items Mobile services Switching Centre Public Land Mobile Network
+Title Path: Description
+Content: The TFO feature avoids the tandeming of speech codecs that occurs in mobile to mobile speech calls.
+Title Path: Description > Applicability of TFO to Basic Services
+Content: TFO shall be applicable to all mobile to mobile speech calls where both parties use the same GSM speech coding standard. TFO shall be supported for all of the GSM speech coding standards (i.e. Full Rate, Half Rate and Enhanced Full Rate). It would also be desirable to extend the TFO approach to realise quality enhancements when different speech codec standards are in use, e.g. by handing over one of the links to provide common codec types and then applying TFO.
+Title Path: Description > Support in Mobile Stations (MS)
+Content: TFO shall not require any modifications to existing or future mobile stations. There shall be no additional user intervention required to enable or invoke the feature. Correspondingly, it shall not be possible for a user to disable the feature.
+Title Path: Description > Parameters to be indicated and negotiated
+Content: The speech codec standards used on each party shall be indicated and negotiated, if applicable.
+Title Path: Description > Provision of Service > Location Independence
+Content: TFO shall be capable of being applied for mobile to mobile calls regardless of the serving networks of the A or B parties. Thus, the A and B parties may be registered on different PLMNs or on the same network.
+Title Path: Description > Provision of Service > Provision of service within and between networks
+Content: Provision of the TFO feature shall be determined by the network operator on a network (or sub-network) wide basis, where equipment to support the feature has been deployed. It shall not be necessary for the service capability to be rolled out throughout an entire network before being made operational. TFO between networks shall be applied if appropriate between supporting (sub) networks. In the case where a TFO call is handed over between two parts of a network, but the new part is not provisioned with TFO, the call shall revert to normal operation. In the case where a normal call is handed over between two parts of a network, and the new part is provisioned with TFO, the call will switch to TFO if appropriate. NOTE: TFO operation will normally require that the coded speech is transmitted transparently (i.e. without errors) between the relevant transcoders (e.g. by bit-stealing).
+Title Path: Description > Provision of Service > Subscription and Billing Information
+Content: This feature shall not be provisioned on a per-subscriber basis and no record of the application of TFO is necessary for billing purposes.
+Title Path: Description > Quality of Service (QoS) > Impact on Speech Quality
+Content: The speech quality and timing requirements depend on the phase of the call and are defined in table 1. In all cases the duration and degradation should be minimised. The timing requirements for the application and removal of TFO are derived from the typical user's perception of the feature in the context of typical call set-up times together with handover operation. There is a much stricter requirement on the time taken to revert to normal operation than to apply TFO because when TFO is enabled only on one side of a call, the speech will be unintelligible. Likewise, failures in the transmission of the coded speech without (significant) errors (e.g. due to routing via an ADPCM link) should be detected rapidly as the speech quality may also be seriously degraded. The timing limits and the quality degradations specified in table 1 are to some extent inter-dependent.
+Title Path: Interaction with supplementary services > General
+Content: This clause defines the interactions between supplementary services and TFO. Neither TFO nor attempted TFO establishment shall interfere with the provision or invocation of any supplementary services.
+Title Path: Interaction with supplementary services > Explicit Call Transfer (ECT)
+Content: Following call transfer, the new call route is evaluated and TFO applied if possible, otherwise normal operation applies.
+Title Path: Interaction with supplementary services > Call wait/Call hold
+Content: Following the establishment of another call, the new call route shall be evaluated and TFO applied if possible, otherwise normal operation applies.
+Title Path: Interaction with supplementary services > Multiparty
+Content: Where more than two parties are involved in a call, TFO may not be applicable. As a result, when a two-party TFO call is extended to multi-party, all the links shall revert to normal operation.
+Title Path: Interaction with supplementary services > Service Announcements
+Content: TFO shall not disrupt the provision of call progress or similar speech announcements to the user which originate in any of the networks routing a call.
+Title Path: Interaction with Alternate and Followed by services
+Content: There shall be no impact on data transmission due to TFO or attempted TFO establishment.
+Title Path: Interaction with other speech services
+Content: There is no requirement for TFO in ASCI services.
+Title Path: Interaction with DTMF
+Content: DTMF transmission performance during TFO shall be no worse than during normal operation.
+Title Path: Interaction with Lawful Intercept
+Content: In the case where lawful intercept is required in a TFO call, the intercept shall not cause any degradation in the speech quality received by the A and B parties.

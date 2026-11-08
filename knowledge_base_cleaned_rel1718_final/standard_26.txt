@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: This Technical Report has been prepared by the ETSI SAGE GSM A5/3 Task Force, and gives a detailed report on the design and evaluation of the A5/3 encryption algorithms for GSM and ECSD, and of the GEA3 encryption algorithm for GPRS (including EGPRS).
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and in the 3GPP Task Force Report apply. A term defined in the latter document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the symbols defined in the 3GPP Task Force Report apply.
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and in the 3GPP Task Force Report apply. An abbreviation defined in the latter document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: Technical provisions
+Content: The technical provisons of the current document are contained in the 3GPP Task Force Report .

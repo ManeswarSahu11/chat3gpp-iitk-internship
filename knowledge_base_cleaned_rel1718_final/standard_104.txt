@@ -1,0 +1,94 @@
+Title Path: bands DL with 1 band UL
+Content: (Release 17) Foreword This Technical Report has been produced by the 3rd Generation Partnership Project (3GPP). The contents of the present document are subject to continuing work within the TSG and may change following formal TSG approval. Should the TSG modify the contents of the present document, it will be re-released by the TSG with an identifying change of release date and an increase in version number as follows: Version x.y.z where: the first digit: presented to TSG for information; presented to TSG for approval; or greater indicates TSG approved document under change control. the second digit is incremented for all changes of substance, i.e. technical enhancements, corrections, updates, etc. the third digit is incremented when editorial only changes have been incorporated in the document. In the present document, modal verbs have the following meanings: indicates a mandatory requirement to do something [shall not]indicates an interdiction (prohibition) to do something The constructions "shall" and "shall not" are confined to the context of normative provisions, and do not appear in Technical Reports. The constructions "must" and "must not" are not used as substitutes for "shall" and "shall not". Their use is avoided insofar as possible, and they are not used in a normative context except in a direct citation from an external, referenced, non-3GPP document, or so as to maintain continuity of style when extending or modifying the provisions of such a referenced document. indicates a recommendation to do something [should not]indicates a recommendation not to do something indicates permission to do something [need not]indicates permission not to do something The construction "may not" is ambiguous and is not used in normative elements. The unambiguous constructions "might not" or "shall not" are used instead, depending upon the meaning intended. indicates that something is possible indicates that something is impossible The constructions "can" and "cannot" are not substitutes for "may" and "need not". indicates that something is certain or expected to happen as a result of action taken by an agency the behaviour of which is outside the scope of the present document [will not]indicates that something is certain or expected not to happen as a result of action taken by an agency the behaviour of which is outside the scope of the present document indicates a likelihood that something will happen as a result of action taken by some agency the behaviour of which is outside the scope of the present document [might not]indicates a likelihood that something will not happen as a result of action taken by some agency the behaviour of which is outside the scope of the present document In addition: (or any other verb in the indicative mood) indicates a statement of fact [is not](or any other negative verb in the indicative mood) indicates a statement of fact The constructions "is" and "is not" do not indicate requirements.
+Title Path: Scope
+Content: The present document is a technical report on inter-band CA for 3 bands DL with 1 band UL under Rel-17 timeframe. The purpose is to gather the relevant background information and studies in order to address 3 bands DL/1 band UL Inter-band Carrier Aggregation requirements for the Rel-17 band combinations in Table 1-1. This TR contains a band specific combination part. The actual requirements are added to the corresponding technical specifications.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . ABBREVIATION Expansion
+Title Path: Background
+Content: The present document is a technical report for 3 bands DL/1 band UL Inter-band Carrier Aggregation under Rel-17 timeframe. The document covers each band combination specific issues (i.e. one sub-clause defined per band combination)
+Title Path: Background > TR maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8-20-38 > REFSENS requirements
+Content: The exception due to band n20 harmonic issue is specified as below for CA_8A-20A-38A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-20-38 > REFSENS requirements
+Content: There are no MSD requirements needed for CA_3A- 20A-38A/ CA_3C- 20A-38A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-40-41 > $ $T and $ $R values
+Content: For CA_3A-40A-41A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-40-41 > REFSENS requirements
+Content: REFSENS requirements are defined in table 5.x.3-1 for inclusion in TS36.101 table 7.3.1A-0bE.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-8-41 > $ $T and $ $R values
+Content: For CA_3A-8A-41A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-8-41 > REFSENS requirements
+Content: REFSENS requirements are defined in table 5.x.3-1 for inclusion in TS36.101 table 7.3.1A-0a.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-8-32 > $ $T and $ $R values
+Content: For CA_1A-8A-32A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-28-32 > $ $T and $ $R values
+Content: For CA_1A-28A-32A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-28-32 > REFSENS requirements
+Content: There are no MSD requirements needed for CA_1A-28A-32A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-8-28 > $ $T and $ $R values
+Content: For CA_7A-8A-28A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-8-32 > $ $T and $ $R values
+Content: For CA_7A-8A-32A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-8-32 > REFSENS requirements
+Content: Table 5.9.3-2: Uplink configuration for the low band (exceptions due to harmonic issue)
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-28-32 > $ $T and $ $R values
+Content: For CA_7A-28A-32A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8-20-32 > $ $T and $ $R values
+Content: For CA_8A-20A-32A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8-28-32 > $ $T and $ $R values
+Content: For CA_8A-28A-32A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_20-28-32 > $ $T and $ $R values
+Content: For CA_20A-28A-32A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_20-28-32 > REFSENS requirements
+Content: There are no MSD requirements needed for CA_20A-28A-32A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-25-66 > $ $T and $ $R values
+Content: Relaxation values for this band combination is based on the similar band combination CA_2-4-7.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-25-66 > REFSENS requirements
+Content: REFSENS exception is not required for this band combination due to no harmonic or harmonic mixing issue.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-8-41 > $ $T and $ $R values
+Content: For CA_1A-8A-41A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-8-41 > REFSENS requirements
+Content: Compared to its fall back modes, there are no additional MSD requirements for this band combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-40-41 > $ $T and $ $R values
+Content: For CA_1A-40A-41A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-40-41 > $ $T and $ $R values
+Content: For CA_8A-40A-41A, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-38 > $ $T and $ $R values
+Content: For CA_1-3-3-38, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-38 > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-28-38 > $ $T and $ $R values
+Content: For CA_1-28-38, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-28-38 > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-32-38 > $ $T and $ $R values
+Content: For CA_1-32-38, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-32-38 > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-8-38 > $ $T and $ $R values
+Content: For CA_3-3-8-38, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-8-38 > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8-32-38 > $ $T and $ $R values
+Content: For CA_8-32-38, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8-32-38 > REFSENS requirements
+Content: No additional MSD required for this combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_20-28-38 > $ $T and $ $R values
+Content: For CA_20-28-38, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_20-28-38 > REFSENS requirements
+Content: No additional MSD required for this combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_20-32-38 > $ $T and $ $R values
+Content: For CA_20-32-38, the $ $T and $ $R values are shown in table 5.x.2-1 and table 5.x.2-2, respectively.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_20-32-38 > REFSENS requirements
+Content: No additional MSD required for this combination.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-38-66 > REFSENS requirements
+Content: There are no MSD requirements needed for CA_7A-38A-66A and CA_7A-38C-66A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-28-32 > REFSENS requirements
+Content: There are no MSD requirements needed for CA_3A-28A-32A.
+Title Path: 3 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_2-7-38 > REFSENS requirements
+Content: There is no MSD requirement needed for CA_2A-7A-38A and CA_2A-7C-38A.

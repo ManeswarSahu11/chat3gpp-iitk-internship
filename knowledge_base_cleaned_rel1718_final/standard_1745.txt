@@ -1,0 +1,12 @@
+Title Path: Scope
+Content: The present document is a technical report for Dual Connectivity (DC) of 5 LTE bands (5DL/1UL) and 1 NR band (1DL/1UL) under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address Dual Connectivity (DC) of 5 LTE band (5DL/1UL) and 1 NR band (1DL/1UL) for the Rel-17 band combinations. The co-existence analysis and RF front end requirements such as $ $R and $ $T are described based on the band combination basis since such information have no difference between the DC configurations consisting with the same E-UTRA band and the same NR band. The actual requirements are added to the corresponding technical specification.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 .
+Title Path: Background
+Content: The present document is a technical report for Dual Connectivity (DC) of 5 bands LTE inter-band CA and 1 NR band under Rel-17 timeframe. The document covers each band combination specific issues (i.e. one sub-clause defined per band combination)
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.

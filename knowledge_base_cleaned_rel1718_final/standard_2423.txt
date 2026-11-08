@@ -1,0 +1,16 @@
+Title Path: Scope
+Content: The present document addresses Integration Reference Point (IRP) requirements for the function Quality of Experience (QoE) measurement collection in UMTS and LTE. The measurements that are collected are DASH and MTSI measurements. The function includes collecting QoE information from UEs frequenting a specified area.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . NRS Network Request Session NOTE: See TS 28.404 . RECS RECording Session NOTE: See 3GPP TS 28.404 . UERS UE Request Session NOTE: See 3GPP TS 28.404 .
+Title Path: Concepts and background
+Content: The collection of QoE information for a specified end user service/end user service type either from UEs in a specified area. The collected information is transported to a collection centre, where it can be analysed and/or KPIs can be calculated. A collection can be requested by an operator technician via the management system to the traffic network. As the network do not have any knowledge which UEs have the capability to record the requested data, therefore the UEs will report whether they have this capability or not when a session set up. UEs that has this capability that match the request from the management system will be requested to start recording the requested information when the request constraints are met. The UE will make the recorded data available for management system.
+Title Path: Business Level Requirements
+Content: See business level requirements in 3GPP TS 28.404 .
+Title Path: Specification level requirements > Requirements
+Content: REQ-EUSPC-FUN-1: The IRPManager shall have a capability to request collection of QoE information per end user service/end user service type for a specified area. REQ-EUSPC-FUN-2: The IRPManager shall have a capability to request the collection of QoE information to be stopped before the time for the NRS has expired. REQ-EUSPC-FUN-3: The IRPAgent shall have a capability to notify the IRPManager when a collection of QoE information has been stopped before the time for the NRS has expired.
+Title Path: Specification level requirements > Use cases > Activate collection measurement job for an area in UTRAN
+Content: NOTE: A similar use case is valid for LTE.
+Title Path: Specification level requirements > Use cases > De-activate collection measurement job in UTRAN
+Content: NOTE: A similar use case is valid for LTE.

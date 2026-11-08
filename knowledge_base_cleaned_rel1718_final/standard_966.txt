@@ -1,0 +1,24 @@
+Title Path: Scope
+Content: The present document describes the data format for Configuration Management, Fault Management, and Performance Management for Home eNodeB (HeNB). The Stage 3 definitions captured in this document shall be met via type 1 interface between HeNB and Home eNodeB Management System (HeMS).
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 . Home eNodeB, 3G Home eNodeB: These terms, their derivations and abbreviations are used synonymously throughout this document.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Configuration Management Domain Manager Document Type Definition Element Manager Home NodeB Management System Home eNodeB Management System Home NodeB Home eNodeB Internet Protocol Long Term Evolution Mobility Management Entity Next Generation Mobile Networks Operations, Administration and Maintenance Performance Management Plug and Play System Architecture Evolution Self-Organising Networks Universal Mobile Telecommunications System Universal Time Coordinated UMTS Radio Access Network eXtensible Markup Language
+Title Path: CM data format definition
+Content: This clause describes the format of Configuration Management data.
+Title Path: CM data format definition > File content description
+Content: Table 4.1 lists all the file content items, provides and explanation of the individual items, and maps the file content items to those used in the XML schema based file format definitions. XML tag attributes are useful where data values bind tightly to its parent element. They have been used where appropriate. A vendor MAY extend the standardized parameter list with vendor-specific parameters and objects. Vendor-specific parameters and objects MAY be defined either in a separate naming hierarchy or within the standardized naming hierarchy of the XML File Format. The name of a vendor-specific parameter or object not contained within another vendor-specific object MUST have the following form to align with the Vendor Specific Parameter Definition of TR-098 Amendment 2 . X_ VENDOR _VendorSpecificName
+Title Path: CM data format definition > XML schema based CM data file format definition > CM data file XML diagram
+Content: For the purposes of the present document XML diagram in TR-196 Amendment 1 applies.
+Title Path: CM data format definition > XML schema based CM data file format definition > CM data file XML schema
+Content: For the purposes of the present document XML schema in TR-196 Amendment 1 applies.
+Title Path: CM data format definition > XML schema based CM data file format definition > CM data file XML header
+Content: For the purposes of the present document XML header in TR-196 Amendment 1 applies.
+Title Path: PM data format definition > Mapping table
+Content: Table 5.1 maps the PM file content items in the 3GPP TS 32.592 document to those used in the XML schema based file format definitions. XML tag attributes are useful where data values bind tightly to its parent element. They have been used where appropriate. The representation of all timestamps in PM files shall follow the representations allowed by the ISO 8601 . The precise format for timestamp representation shall be determined by the technology used for encoding the PM file (e.g. XML DTD, XML Schema). The choice of technology should ensure that this representation is derived from ISO 8601 . Based on the representation used, the timestamp shall refer to either UTC time or local time or local time with offset from UTC.
+Title Path: PM data format definition > XML schema based PM data file format definition > PM data file XML diagram
+Content: For the purposes of the present document XML diagram in TS 32.435 section 4.2.1 applies.
+Title Path: PM data format definition > XML schema based PM data file format definition > PM data file XML schema
+Content: For the purposes of the present document XML schema in TS 32.435 section 4.2.2 applies.
+Title Path: PM data format definition > XML schema based PM data file format definition > PM data file XML header
+Content: For the purposes of the present document XML header in TS 32.435 section 4.2.3 applies.

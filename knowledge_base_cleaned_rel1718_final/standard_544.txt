@@ -1,0 +1,244 @@
+Title Path: Scope
+Content: The present document is a technical report for NR inter-band Carrier Aggregation (CA) and/or Dual Connectivity (DC) of 4DL NR bands and 2UL NR bands under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address NR inter-band CA and/or DC for the Rel-17 band combinations in Table 1-1. This TR contains a band specific combination part. The actual requirements are added to the corresponding technical specifications.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . ABBREVIATION Expansion
+Title Path: Background
+Content: The present document is a technical report for NR inter-band Carrier Aggregation (CA) and/or Dual Connectivity (EN-DC) of 4 NR bands and 2 NR bands under Rel-17 time frame. The document covers each band combination specific issues (i.e. one sub-clause defined per band combination)
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n71-n77 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n71-n77 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n3-n28-n41-n77 with 1UL that have been captured into TR38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n71-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n71 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n71 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for DC_2-7-66_n71 that have been captured into TR38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n71 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n66-n71-n77 > Operating bands for CA
+Content: CA_n25A-n66A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n25A-n71A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n25A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n66A-n71A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n66A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n71A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n66-n71-n77 > UE Co-existence study
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 and in TS 38.101-1 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n66-n71-n77 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n71-n77 > Operating bands for CA
+Content: CA_n25A-n41A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n25A-n71A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n25A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n41A-n71A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n41A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n71A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n71-n77 > UE co-existence study
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 and in TS 38.101-1 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n71-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n77 > Operating bands for CA
+Content: CA_n25A-n41A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n25A-n66A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n25A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n41A-n66A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n41A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n66A-n77A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n77 > UE Co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 and in TS 38.101-1 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n77 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n5-n7-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n5-n7-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n3-n7-n28-n78 with 1UL that have been captured into TR 36.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n5-n7-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n7-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n7-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n1-n3-n7-n78 with 1UL that have been captured into TR 38.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n7-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n28-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n28-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n1-n3-n28-n78 with 1UL that have been captured into TR 38.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n28-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n3-n5-n7-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n3-n5-n7-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n3-n5-n7-n78 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n3-n5-n7-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n3-n7-n28-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n3-n7-n28-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n3-n7-n28-n78 with 1UL that have been captured into TR 36.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n3-n7-n28-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n5-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n5-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n1-n3-n5-n78 with 1UL that have been captured into TR38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n5-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n28-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n28-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n1-n7-n28-n78 with 1UL that have been captured into TR 36.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n28-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n25-n41-n66-n78 with 1UL that have been captured into TR 36.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n25-n41-n66-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n71-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n71-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n41-n66-n71-n78 with 1UL that have been captured into TR 36.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n71-n78 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n5-n7 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n5-n7 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n1-n3-n5-n7 with 1UL that have been captured into TR 36.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n3-n5-n7 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n28-n40-n78 > UE Co-existence study
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 and in TS 38.101-1 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n28-n40-n78 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n12-n30-n66 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n12-n30-n66 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n2-n12-n30-n66 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n12-n30-n66 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n29-n30-n66 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n29-n30-n66 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n2-n29-n30-n66 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n29-n30-n66 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n30-n77 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n30-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n2-n5-n30-n77 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n30-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n14-n30-n77 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n14-n30-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n2-n14-n30-n77 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n14-n30-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n14-n30-n66-n77 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n14-n30-n66-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n14-n30-n66-n77 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n14-n30-n66-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n14-n66-n77 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n14-n66-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n2-n14-n66-n77 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n14-n66-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n5-n30-n66-n77 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n5-n30-n66-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n5-n30-n66-n77 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n5-n30-n66-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n66-n77 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n66-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n2-n5-n66-n77 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n66-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n48-n66 > UE co-existence studies
+Content: The coexistence studies have been captured in the fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n48-n66 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R can reuse the same values for CA_n2-n5-n48-n66 with 1UL that have been captured in TR 38.716-04-01
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n48-n66 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n5-n48-n66-n77 > UE co-existence studies
+Content: The coexistence studies have been captured in the fallback modes in TR 38.717-03-02 and 38.717-04-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n5-n48-n66-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R can reuse the same values for CA_n5-n48-n66-n77 with 1UL that have been captured in TR 38.716-04-01
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n5-n48-n66-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n48-n77 > UE co-existence studies
+Content: The coexistence studies have been captured in the fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n48-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R can reuse the same values for DC_2-5-48_n77 that have been captured into TR 37.717-31-11.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n5-n48-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n48-n66-n77 > UE co-existence studies
+Content: The coexistence studies have been captured in the fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n48-n66-n77 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R can reuse the same values for DC_2-48-66_n77 that have been captured into TS 38.101-3.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n2-n48-n66-n77 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n70-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n70-n78 > $ $T and $ $R values
+Content: The $ $T and $ $R is captured in TR 36.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n41-n66-n70-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n40 > Channel bandwidths per operating band for CA
+Content: CA_n1A-n7A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n8A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n8A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n8A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n40 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n40 > $ $TIB,c and $ $RIB,c values
+Content: The $ $T and $ $R could reuse the values for CA_n1-n7-n8-n40 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n40 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n78 > Channel bandwidths per operating band for CA
+Content: CA_n1A-n7A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n8A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n8A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n8A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n78 > $ $TIB,c and $ $RIB,c values
+Content: The $ $ T and $ $ R could reuse the values for CA_n1-n7-n8-n78 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n8-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n40-n78 > Channel bandwidths per operating band for CA
+Content: CA_n1A-n7A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n40A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n40-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n40-n78 > $ $T and $ $R values
+Content: The $ $ T and $ $ R could reuse the values for CA_n1-n7-n40-n78 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n7-n40-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n8-n40-n78 > Channel bandwidths per operating band for CA
+Content: CA_n1A-n8A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n1A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n8A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n8A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n40A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n8-n40-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n8-n40-n78 > $ $TIB,c and $ $RIB,c values
+Content: The $ $ T and $ $ R could reuse the values for CA_n1-n8-n40-n78 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n1-n8-n40-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n7-n8-n40-n78 > Channel bandwidths per operating band for CA
+Content: CA_n7A-n8A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n7A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n8A-n40A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n8A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1 CA_n40A-n78A 2UL defined in 38.101-1 Table 5.5A.3.1-1
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n7-n8-n40-n78 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.717-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n7-n8-n40-n78 > $ $TIB,c and $ $RIB,c values
+Content: The $ $ T and $ $ R could reuse the values for CA_n7-n8-n40-n78 with 1UL that have been captured into TR 38.717-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA within FR1 > CA_n7-n8-n40-n78 > REFSENS requirements
+Content: MSD requirements are captured in lower order combinations.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n3-n28-n77-n257 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n3-n28-n77-n257 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n3-n28-n77-n257 with 1UL that have been captured into TR38.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n3-n28-n77-n257 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n3-n28-n78-n257 > UE co-existence studies
+Content: The coexistence studies have been captured into the constituent fallback modes in TR 38.716-03-02 , there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n3-n28-n78-n257 > $ $T and $ $R values
+Content: The $ $T and $ $R could reuse the values for CA_n3-n28-n78-n257 with 1UL that have been captured into TR38.716-04-01.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n3-n28-n78-n257 > REFSENS requirements
+Content: There is no need to specify additional MSD requirement for this UL CA configuration.
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n1-n28-n77-n257 > Channel bandwidths per operating band for CA
+Content: .2-1: Supported bandwidths per CA_n1-n28-n77-n257
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n3-n41-n77-n257 > Channel bandwidths per operating band for CA
+Content: .2-1: Supported bandwidths per CA_n3-n41-n77-n257
+Title Path: 4 DL bands inter-band Carrier Aggregation with 2 UL bands: Specific Band Combination Part > Inter-band CA including RF2 > CA_n28-n41-n77-n257 > Channel bandwidths per operating band for CA
+Content: .2-1: Supported bandwidths per CA_n28-n41-n77-n257
+Title Path: 4 DL bands Dual Connectivity with 2 UL bands: Specific Band Combination Part > DC including RF2 > DC_n3-n28-n78-n257 > Operating bands for DC
+Content: 6.2.2.2 Configurations for DC_n3-n28-n78-n257

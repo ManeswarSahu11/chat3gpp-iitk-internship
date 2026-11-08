@@ -1,0 +1,38 @@
+Title Path: Scope
+Content: The present document specifies the Information Service for the File Transfer Integration Reference Point (FileTransferIRP) as it applies to the Itf-N. The present document defines the semantics of operations (and their parameters) visible across the Itf-N in a protocol and technology neutral way. It does not define the syntax or encoding of the operations and their parameters.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions defined in 3GPP TS 32.101 , TS 32.102 and TS 32.341 apply.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Configuration Management Element Manager Information Object Class Integration Reference Point Network Element Performance Management Unified Modelling Language
+Title Path: System Overview > System context
+Content: The general definition of the System Context for the present IRP is found in 3GPP TS 32.150 subclause 4.7. In addition, the set of related IRP(s) relevant to the present IRP is shown in the two diagrams below.
+Title Path: System Overview > Compliance rules
+Content: For general definitions of compliance rules related to qualifiers (Mandatory/Optional/Conditional) for operations, notifications and parameters (of operations and notifications) please refer to 3GPP TS 32.150 .
+Title Path: Information Object Classes (IOC) > Class Diagram > Attributes and relationships
+Content: This clause introduces the set of information object classes (IOCs) that encapsulate information within the IRPAgent. The intent is to identify the information required for the FileTransferIRP Agent implementation of its operations and notification emission. This clause provides the overview of all support object classes in UML. Subsequent clauses provide more detailed specification of various aspects of these support object classes.
+Title Path: Information Object Classes (IOC) > Information Object Class (IOC) definitions > FileTransferIRP > Definition
+Content: FileTransferIRP is the representation of the file transfer management capabilities specified by the present document. This IOC inherits from ManagedGenericIRP IOC specified in 3GPP TS 32.312 .
+Title Path: Information Object Classes (IOC) > Information Object Class (IOC) definitions > AvailableFileDescriptor > Definition
+Content: AvailableFileDescriptor represents the information about an existing closed file containing management data (performance measurement data, etc.). The file is ready for retrieval by IRPManagers.
+Title Path: Information Object Classes (IOC) > Information Object Class (IOC) definitions > AvailableFileList > Definition
+Content: AvailableFileList is the representation of a list of files represented by individual AvailableFileDescriptor(s).
+Title Path: Information Object Classes (IOC) > Information Object Class (IOC) definitions > File > Definition
+Content: The Proxy Object File represents the file stored in the managed system.
+Title Path: Information Object Classes (IOC) > Information relationship definitions > relation-ftIRP-availableFileList (M) > Definition
+Content: This represents the relationship between FileTransferIRP and AvailableFileList.
+Title Path: Information Object Classes (IOC) > Information relationship definitions > relation-availableFileList-availableFiles (M) > Definition
+Content: This represents the relationship between AvailableFileDescriptor and AvailableFileList.
+Title Path: Information Object Classes (IOC) > Information relationship definitions > relation-availableFileDescriptor-file (M) > Definition
+Content: This represents the relationship between AvailableFileDescriptor and PhysicalFile.
+Title Path: Interface Definition > Generic rules
+Content: Rule 1: each operation with at least one input parameter supports a pre-condition valid_input_parameter which indicates that all input parameters shall be valid with regards to their information type. Additionally, each such operation supports an exception operation_failed_invalid_input_parameter which is raised when pre-condition valid_input_parameter is false. The exception has the same entry and exit state. Rule 2: each operation with at least one optional input parameter supports a set of pre-conditions supported_optional_input_parameter_xxx where "xxx" is the name of the optional input parameter and the pre condition indicates that the operation supports the named optional input parameter. Additionally, each such operation supports an exception operation_failed_unsupported_optional_input_parameter_xxx which is raised when (a) the pre-condition supported_optional_input_parameter_xxx is false and (b) the named optional input parameter is carrying information. The exception has the same entry and exit state. Rule 3: each operation shall support a generic exception operation_failed_internal_problem which is raised when an internal problem occurs and that the operation cannot be completed. The exception has the same entry and exit state.
+Title Path: Interface Definition > FileTransferIRPOperations_1 Interface > Operation listAvailableFiles (M) > Definition
+Content: This operation allows IRPManager to list all or specified available management data files stored in the IRPAgent. A Solution Set may choose to split this operation in several operations (e.g. operations to get "iterator" which fulfil the criteria and other operations to retrieve the detailed information of the files from the "iterator").
+Title Path: Interface Definition > FileTransferIRPOperations_2 Interface > Operation fileDownloadIndication (O) > Definition
+Content: This operation allows IRPManager to indicate IRPAgent about completion of the file exchange procedure and related file descriptive information when IRPManager finish downloading one or more files to IRPAgent.
+Title Path: Interface Definition > FileTransferIRPNotifications_1 Interface > Notification notifyFileReady (M) > Definition
+Content: After the management data files have been prepared ready in the IRPAgent, IRPAgent will emit notification to subscribed IRPManager(s) to notify the availability of the file(s).
+Title Path: Interface Definition > FileTransferIRPNotifications_1 Interface > Notification notifyFilePreparationError (M) > Definition
+Content: The subscribed IRPManagers are notified regarding the occurrence of an error during the preparation of the file. This notification is an event and will not be treated as alarms defined in Alarm IRP IS (3GPP TS 32.111-2 ).
+Title Path: Interface Definition > FileTransferIRPNotifications_1 Interface > Notification notifyFilePreparationError (M) > Triggering Event > From-state
+Content: errorInPreparation OR hardDiskFull OR hardDiskFailure OR tooManyFiles OR collectionTimeOut OR incompleteTruncatedFile OR corruptedFile OR lowMemory OR dataNotAvailable

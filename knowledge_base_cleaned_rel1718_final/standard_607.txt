@@ -1,0 +1,68 @@
+Title Path: Scope
+Content: The present document contains the architecture, requirements, use cases, procedures and definitions of interfaces for policy management for 4G networks.
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Element Management Integration Reference Point Network Element Network Functions Virtualization Infrastructure Network Functions Virtualization Orchestrator Network Management Policy Administration Function Policy Function Virtualized Infrastructure Manager Virtualized Network Function VNF Manager
+Title Path: Overview
+Content: NFV policy management system may have policy conflict problem, which is a newly created policy may be conflict with an existing policy. There are two potential policy conflict detection approaches, one is policy conflict detection in the Policy Function (PF), which makes the policy execution decisions, and the other one is policy conflict detection in the Policy Administration Function (PAF), which defines the network policy. There are multiple scenarios for policy conflict. For example, if the events are the same and the same condition are triggered (e.g. scaling policy on a VNF), but two policies have different actions, the conflict should be detected and resolved. It is not easy for one PF to resolve all of scenarios of the policy conflict. Hence, it is reasonable to enable PAF to resolve policy conflict, while the conflict detected by PAF or PF based on different specific scenarios, and the present document try to resolve the problem.
+Title Path: Policy management architecture
+Content: In order to delegate the support of policy control for virtualized NFs such as automatic scale in/out under certain condition, 3GPP management system would use the ETSI NFV defined related policy features/services. Consequently, two important logical functions are needed for the definition of the 3GPP policy management architecture. Policy Administration Function (PAF) provides the services as follows: Allows the operator to define and administrate the network policy Policy Function (PF) makes the decision for policy execution and provides the services as follows: Activating/deactivating the network policy Event subscription/notification of the network policy execution Providing relevant data and parameters during the process of policy execution (e.g. execution time consuming) The 3GPP global policy management system would affect the behavior of all 3GPP defined nodes and would delegate the support of policy for virtualized NFs in ETSI MANO systems . For NFV related policy management, 3GPP mainly focus on NM acting as PAF and EM acted as PF, and the interface between the NM and EM can be updated to support policy related operations. Hence, 3GPP policy management architecture under NFV scenario is as follows. NFV related policy interfaces between 3GPP management system and MANO such as Os-Ma-nfvo and Ve-Vnfm-em have been defined by ETSI.
+Title Path: Business level requirements > Requirements
+Content: REQ-POM_PO-CON-1 3GPP management system should be able to support the capability about the network policy.
+Title Path: Business level requirements > Actor roles
+Content: See detailed actors and roles for each use case in clause 6.4.
+Title Path: Business level requirements > Telecommunication resources
+Content: See detailed telecommunication resources for each use case in clause 6.4.
+Title Path: Specification level requirements > Requirements
+Content: REQ-POM-FUN-01 The IRPAgent shall provide the capability to allow the IRPManager to create the network policy. REQ-POM-FUN-02 The IRPAgent shall provide the capability to allow the IRPManager to delete the network policy. REQ-POM-FUN-03 The IRPAgent shall provide the capability to allow the IRPManager to update the network policy. REQ-POM-FUN-04 The IRPAgent shall provide the capability to allow the IRPManager to query the network policy. REQ-POM-FUN-05 The IRPAgent shall provide the capability to allow the IRPManager to activate the network policy. REQ-POM-FUN-06 The IRPAgent shall provide the capability to allow the IRPManager to deactivate the network policy. REQ-POM-FUN-07 The IRPAgent should notify the IRPManager when there is a network policy conflict.
+Title Path: Specification level requirements > Actor roles
+Content: See detailed actors and roles for each use case in clause 7.4.
+Title Path: Specification level requirements > Telecommunications resources
+Content: See detailed telecommunication resources for each use case in clause 7.4.
+Title Path: Policy management procedures > General description for policy management procedures
+Content: There are two kinds of management procedures. The first kind includes those operations that allow the NM to invoke policy management operations towards the EM. Policy Creation Policy Deletion Policy Update Policy Query Policy Activation Policy Deactivation The second kind includes the operation that the EM notifies NM policy conflicts found in EM. Policy Conflicts Notification.
+Title Path: Policy management procedures > Policy Creation
+Content: After the NM (IRP Manager) decides to create a policy (ies), it will send the create request to the EM (IRP Agent).
+Title Path: Policy management procedures > Policy Deletion
+Content: After the NM (IRP Manager) decides to delete a policy (ies), it will send the delete request to the EM (IRP Agent).
+Title Path: Policy management procedures > Policy Update
+Content: After the NM (IRP Manager) decides to update a policy (ies), it will send the update request to the EM (IRP Agent).
+Title Path: Policy management procedures > Policy Query
+Content: After the NM (IRP Manager) decides to query a policy, it will send the query request to the EM (IRP Agent). For the query request, the EM (IRP Agent) sends back the response with the policy to the NM (IRP Manager).
+Title Path: Policy management procedures > Policy Activation
+Content: After the NM (IRP Manager) decides to activate a policy (ies), it will send the policy activation request to the EM (IRP Agent).
+Title Path: Policy management procedures > Policy Deactivation
+Content: After the NM (IRP Manager) decides to deactivate a policy (ies), it will send the policy deactivation request to the EM (IRP Agent).
+Title Path: Policy management procedures > Policy Conflicts Notification
+Content: When the EM (IRP Agent) receives new or updated policy (ies) from NM (IRP Manager), it will check whether the each received policy is conflicts with the previous storage policy. If the conflict is detected, the EM (IRP Agent) will notify the information to the NM (IRP Manager).
+Title Path: Information Object Classes > Class diagram > Attributes and relationships
+Content: This clause introduces the set of nformation bject lasses (IOCs) that encapsulate capabilities contained within the IRP. This clause provides the overview of all support object classes in UML. Subsequent clauses provide more detailed specification of various aspects of these support object classes.
+Title Path: Information Object Classes > Class diagram > Inheritance
+Content: This IOC inherits from ManagedGenericIRP IOC specified in TS.32.312 .
+Title Path: Information Object Classes > Information object classes definition > PolicyList > Definition
+Content: PolicyList is the representation of the list of Policy.
+Title Path: Information Object Classes > Information object classes definition > PolicyManagementIRP > Definition
+Content: PolicyManagementIRP is the representation of the policy management capabilities specified by the present document. This Support IOC inherits from ManagedGenericIRP Support IOC specified in 3GPP TS 32.312 .
+Title Path: Information Object Classes > Information object classes definition > PolicyManagementIRP > Attribute
+Content: There is no additional attribute defined for this IOC besides those inherited.
+Title Path: Information Object Classes > Information relationship definitions > relation-PolicyManagementIRP-PolicyList (M) > Definition
+Content: This represents the relationship between PolicyManagementIRP and PolicyList.
+Title Path: Information Object Classes > Information relationship definitions > relation-PolicyList-Policy (M) > Definition
+Content: This represents the relationship between PolicyList and Policy.
+Title Path: Information Object Classes > Information attribute definitions > Introduction
+Content: This clause defines the semantics of the attributes used in SupportIOCs. 9.5.1 Definitions and legal values
+Title Path: Interface definition > PolicyManagementIRPOperations_Interface (M) > Operation createPolicy (M) > Results
+Content: In case of success, the corresponding policy information is created by the EM (IRP Agent). In case of failure, appropriate error information is returned.
+Title Path: Interface definition > PolicyManagementIRPOperations_Interface (M) > Operation deletePolicy (M) > Results
+Content: In case of success, the policy information are deleted by the EM (IRP Agent), and the corresponding deleted policy information is returned to the NM (IRP Manager). In case of failure, appropriate error information is returned.
+Title Path: Interface definition > PolicyManagementIRPOperations_Interface (M) > Operation updatePolicy (M) > Results
+Content: In case of success, the corresponding policy information is updated by the EM (IRP Agent). In case of failure, appropriate error information is returned.
+Title Path: Interface definition > PolicyManagementIRPOperations_Interface (M) > Operation queryPolicy (M) > Results
+Content: In case of success, the corresponding policy information is returned by the EM (IRP Agent). In case of failure, appropriate error information is returned.
+Title Path: Interface definition > PolicyManagementIRPOperations_Interface (M) > Operation activatePolicy (M) > Results
+Content: In case of success, the policy(ies) information are activated by the EM (IRP Agent), and the activated policy information is returned to the NM (IRP Manager). In case of failure, appropriate error information is returned.
+Title Path: Interface definition > PolicyManagementIRPOperations_Interface (M) > Operation deactivatePolicy (M) > Results
+Content: In case of success, the policy(ies) information are deactivated by the EM (IRP Agent), and the deactivated policy information is returned to the NM (IRP Manager). In case of failure, appropriate error information is returned.
+Title Path: Interface definition > PolicyManagementIRPOperations_Interface (M) > Operation queryPolicyList (M) > Results
+Content: In case of success, the EM (IRP Agent) returns the corresponding policy information. In case of failure, appropriate error information is returned.
+Title Path: Solution Set (SS) definitions
+Content: The present document defines the following policy management Solution Set Definitions:

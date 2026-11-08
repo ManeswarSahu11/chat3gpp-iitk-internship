@@ -1,0 +1,30 @@
+Title Path: Scope
+Content: The present document is an Integration Reference Point (IRP) named "Evolved Packet Core (EPC) and non-3GPP access interworking system Network resource Model (NRM) IRP; Information Service (IS)", through which an 'IRPAgent' (typically an Element Manager or Network Element) can communicate configuration management information to one or several 'IRPManagers' (typically Network Managers) concerning interworking network resources. The present document specifies the semantics and behaviour of Information Object Class (IOC) attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding. It reuses relevant parts of the generic NRM in 3GPP TS 28.622 , either by direct reuse or sub-classing, and in addition to that defines specific IOCs in EPC and non-3GPP access interworking systems. In order to access the information defined by this NRM, an interface IRP is needed, such as the Basic CM IRP IS (3GPP TS 32.602 ) or the Bulk CM IRP IS (3GPP TS 32.612 ). However, which interface IRP is applicable is outside the scope of the present document.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 , TS 32.101 , TS 32.102 , TS 32.150 , TS 28.622 , TS 32.600 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Distinguished Name Information Object Class
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes (e.g. IOCs) encapsulating the information relevant for this IRP. This clause provides an overview of the relationships between relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes.
+Title Path: Model > Class definitions > Link_3GPPAAAServer_PGW > Definition
+Content: This IOC represents the S6b reference point as defined in 3GPP TS 23.402 .
+Title Path: Model > Class definitions > Link_3GPPAAAServer_PGW > Notifications
+Content: The common notifications defined in clause 4.5 are valid without exceptions or additions for this IOC.
+Title Path: Model > Class definitions > Link_3GPPAAAServer_HSS > Definition
+Content: This IOC represents the SWx reference point as defined in 3GPP 23.402 .
+Title Path: Model > Class definitions > Link_3GPPAAAServer_HSS > Notifications
+Content: The common notifications defined in clause 4.5 are valid without exceptions or additions for this IOC.
+Title Path: Model > Class definitions > Link_3GPPAAAProxy_3GPPAAAServer > Definition
+Content: This IOC represents the SWd reference point as defined in 3GPP 23.402 .
+Title Path: Model > Class definitions > Link_3GPPAAAProxy_3GPPAAAServer > Notifications
+Content: The common notifications defined in subclause 4.5 are valid without exceptions or additions for this IOC.
+Title Path: Model > Class definitions > 3GPPAAAProxyFunction > Definition
+Content: This IOC represents the 3GPP Access, Authentication and Authorisation (AAA) Proxy functionality. For more information about the 3GPP AAA Proxy, see 3GPP TS 23.402 .
+Title Path: Model > Class definitions > 3GPPAAAProxyFunction > Notifications
+Content: The common notifications defined in clause 4.5 are valid without exceptions or additions for this IOC.
+Title Path: Model > Class definitions > 3GPPAAAServerFunction > Definition
+Content: This IOC represents the 3GPP Access, Authentication and Authorisation (AAA) Server functionality. For more information about the 3GPP AAA server, see 3GPP TS 23.402 .
+Title Path: Model > Class definitions > 3GPPAAAServerFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid without exceptions or additions for this IOC.
+Title Path: Model > Common notifications > Alarm notifications
+Content: This clause presents a list of notifications, defined in 3GPP TS 32.111-2 , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in 3GPP TS 32. 302 , would capture the DN of an instance of an IOC defined in this IRP specification. 4.5.2 Configuration notifications This clause presents a list of notifications, defined in 3GPP TS 32. 662 , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in 3GPP TS 32. 302 , would capture the DN of an instance of an IOC defined in this IRP specification.

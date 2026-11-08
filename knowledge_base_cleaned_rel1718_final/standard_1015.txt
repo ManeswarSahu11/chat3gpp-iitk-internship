@@ -1,0 +1,14 @@
+Title Path: Scope
+Content: This Technical Specification (TS) describes and defines a recommended set of Circuit Teleservices to be supported by a PLMN in connection with other networks as a basis for defining the network capabilities required.
+Title Path: Scope > Abbreviations
+Content: Abbreviations used in this TS are listed in 3GPP TR 21.905 .
+Title Path: Framework for describing circuit teleservices supported
+Content: Teleservices supported by a PLMN are described by a number of attributes which are intended to be largely independent. These attributes are described and defined in specification 3GPP TS 22.001 . They are grouped into three categories: High layer attributes; Low layer attributes (describing the Bearer capabilities which support the Teleservice). information transfer attributes; access attributes. General attributes. Figure 1 shows the relationship between the different categories of services attributes, and their scope within a Teleservice. [NOTE 1:]A transit network may not exist. [NOTE 2:]Communication may be established from both ends in principle.
+Title Path: List of the teleservice attributes
+Content: Table 1 gives the list of the attributes. For the definitions and possible values of these attributes, see 3GPP TS 22.001 .
+Title Path: List of teleservice categories and individual teleservices
+Content: Table 2 presents a list of all Teleservices categories and of individual Teleservices and the associated dominant and secondary attributes.
+Title Path: Description of individual teleservices
+Content: The annex contains a data sheet per Teleservice with all attributes and comments.
+Title Path: Bearer capabilities supporting teleservices
+Content: According to specification 3GPP TS 22.001 the Bearer Capability defines the technical features of a Teleservice as they appear to the user at the customer access point or an appropriate interface of a fixed network. The Bearer Capability is characterized by information transfer, access and interworking attributes. The same set of attributes as for a Bearer Service is used. A Bearer Capability is associated with every Teleservice. [Note 1:]The transparent facsimile services apply to GERAN A/Gb mode of operation only. [Note 2:]The non-transparent facsimile services apply to UTRAN only. [Note 3:]The Voice Group Services, TS 91 and TS 92 apply to GERAN A/Gb mode of operation only.

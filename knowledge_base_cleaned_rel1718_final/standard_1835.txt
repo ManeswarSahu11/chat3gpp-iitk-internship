@@ -1,0 +1,42 @@
+Title Path: Scope
+Content: The present document contains requirements and test cases that are specific to the NWDAF network product class. It refers to the Catalogue of General Security Assurance Requirements and formulates specific adaptions of the requirements and test cases, as well as specifying requirements and test cases unique to the NWDAF network product class.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: NWDAF-specific security requirements and related test cases > Introduction
+Content: NWDAF specific security requirements include both requirements derived from NWDAF-specific security functional requirements in relevant specifications as well as security requirements introduced in the present document derived from the threats specific to NWDAF as described in TR 33.926 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific security functional requirements and related test cases > Technical baseline > General
+Content: The present clause provides baseline technical requirements.
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information general
+Content: There are no NWDAF-specific additions to clause 4.2.3.2.1 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information Confidential System Internal Data
+Content: There are no NWDAF-specific additions to clause 4.2.3.2.2 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information in storage
+Content: There are no NWDAF-specific additions to clause 4.2.3.2.3 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information in transfer
+Content: There are no NWDAF-specific additions to clause 4.2.3.2.4 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Logging access to personal data
+Content: There are no NWDAF-specific additions to clause 4.2.3.2.5 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information Data masking on integration analysis
+Content: Requirement Name: Data masking on integration analysis about personal data Requirement Reference: TBA. Requirement Description: NWDAF can collect data from UE, NF, OAM, etc. used for analytics. Personal data of the UE's user are involved also. When NWDAF uses such personal data in analytics with other information together, such data correlation operation could bind more personal information with the user's identity. Thus, privacy information about that specific user could be revealed to the person who is allowed to operate data correlation for analytics but not allowed to know the privacy information as the result of data correlation. Therefore, applicable measures (e.g. data masking) shall be applied to mitigate such privacy violation risk. Threat References: TR 33.926 , clause 5.3.6.7, Personal Identification Information Violation Test Name: TC_DATA_MASKING Purpose: Verify that no privacy information of operators' users is revealed to the party who is not allowed to have. Pre-Condition: The vendor shall provide the documentation describing how to create an account for accessing the analytics results. Privacy information list (should be specified based on local policy, regulation and others). Execution Steps: Review the documentation provided by the vendor describing how to create the account for accessing the analytics results provided by the NWDAF. The tester creates the account, and retrieves the analytics results from the NWDAF using the account. Expected Results: The tester can create the account, and the account does not reveal subscriber permanent identifier. Expected format of evidence: Evidence suitable for the interface, e.g. screenshot containing the results.
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of hardening requirements and related test cases > Introduction
+Content: The present clause contains NWDAF-specific adaptations of hardening requirements and related test cases.
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of hardening requirements and related test cases > Technical baseline
+Content: There are no NWDAF-specific additions to clause 4.3.2 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of hardening requirements and related test cases > Operating systems
+Content: There are no NWDAF-specific additions to clause 4.3.3 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of hardening requirements and related test cases > Web servers
+Content: There are no NWDAF-specific additions to clause 4.3.4 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of hardening requirements and related test cases > Network devices
+Content: There are no NWDAF-specific additions to clause 4.3.5 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of hardening requirements and related test cases > Network functions in service-based architecture
+Content: There are no NWDAF-specific additions to clause 4.3.6 in TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of basic vulnerability testing requirements and related test cases > Introduction
+Content: There are no NWDAF specific addtions to clause 4.4.1 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of basic vulnerability testing requirements and related test cases > Port scanning
+Content: There are no NWDAF specific addtions to clause 4.4.2 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of basic vulnerability testing requirements and related test cases > Vulnerability scanning
+Content: There are no NWDAF specific addtions to clause 4.4.3 of TS 33.117 .
+Title Path: NWDAF-specific security requirements and related test cases > NWDAF-specific adaptations of basic vulnerability testing requirements and related test cases > Robustness and fuzz testing
+Content: The test cases under clause 4.4.4 of TS 33.117 are applicable to NWDAF. The interface defined for the NWDAF are in 4.2.3 of TS 23.501 . According to clause 4.4.4 of TS 33.117 , the transport protocols available on the interfaces providing IP-based protocols need to be robustness tested. Following TCP/IP layer model and c onsidering all the protocols over transport layer, for NWDAF, the following interface and protocols are in the scope of the testing: - For Nnwdaf: the TCP, HTTP2 and JSON protocols. NOTE: There could be other interfaces and/or protocols requiring testing under clause 4.4.4 of TS 33.117

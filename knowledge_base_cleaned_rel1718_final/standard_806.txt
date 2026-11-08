@@ -1,0 +1,184 @@
+Title Path: Scope
+Content: The present document is a technical report for high power UE (power class 2) for NR inter-band Carrier Aggregation or NR-NR DC with and without SUL with x (6$ $x 2) bands downlink and y (y=1, 2) bands uplink under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address power class 2 NR inter-band CA/DC with and without SUL for more than 2 bands DL and with up to 2 bands UL in Table 1-1. Note 1: The UL carrier supports power class 2. Note 2: The integers i and j satisfy: 1 $ $ i $ $ x, 1 $ $ j $ $ x, i $ $ j. The allowed maximum output power by each of carrier for power class 2 cases is listed in table 1-2.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: Explanation [$ $R ]Allowed reference sensitivity relaxation due to support for inter-band CA operation, for serving cell c. [$ $T ]Allowed maximum configured output power relaxation due to support for inter-band CA operation, for serving cell c.
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Expansion Base Station Bandwidth Combination Set Carrier Aggregation Component Carriers Dual Connectivity Downlink Frequency Division Duplex Allowed maximum power reduction Maximum Sensitivity Degradation Reference Sensitivity power level Subcarrier spacing Time Division Duplex User Equipment Uplink
+Title Path: Background
+Content: At 3GPP RAN4\#91-e meeting, a basket Work Item on ``Power class 2 UE for NR inter-band CA and SUL configurations with x (x 2) bands DL and y (y=1, 2) bands UL'' was approved for Rel-17, of which the objectives are as follows: Specify the band-combination specific RF requirements for all listed power class 2 NR inter-band UL CA and SUL configurations with power class 2 on NUL and power class 3 on SUL (xDL/yUL, x 2, y=1, 2). Analysing combinations that have self-desensitization, applicable $ $T and $ $R and reference sensitivity exceptions including MSD test cases. Other additional impact to the requirements due to the high power on UL, if necessary. The present document is a technical report for this basket Work Item, and aims to study the band-combination specific requirements for each of combinations captured in table 1-1.
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band/band combination to ensure that the TPs related to the band/band combination have been implemented.
+Title Path: Power class 2 CA with One UL Carrier
+Content: 5.x CA_nX-nY-nZ 5.x.1 Configurations Editor’s note: the CA configurations and bandwidth combinations sets should be kept same as defined in 38.101-1 Table 5.5A.3-1 unless additional clarification 5.x.2 Maximum output power Editor’s note: In table 5.x.2-1, at least one of the uplink carriers supports power class 2. 5.x.3 REFSENS requirements Editor’s note: This agenda will capture the Reference sensitivity exceptions or MSD requirements due to higher power for CA carrier, please use the same table format as in 38101-1. 5.x.4 $ $TIB and $ $RIB values Editor’s note: If no change by comparing to the values for power class 3 CA, this section will be void.
+Title Path: Power class 2 CA with One UL Carrier > CA_n2-n5-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n2-n12-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n2-n14-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n2-n30-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n5-n30-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n12-n30-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n12-n66-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n14-n30-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n14-n66-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n30-n66-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n5-n12-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n5-n14-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n2-n29-n77 > Maximum output power
+Content: The combination CA_n2_n29-n77 does not have an uplink CA configuration containing n29 since n29 is a SDL operating band.
+Title Path: Power class 2 CA with One UL Carrier > CA_n2-n29-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n2-n66-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n5-n29-n77 > Maximum output power
+Content: The combination CA_n5_n29-n77 does not have an uplink CA configuration containing n29 since n29 is a SDL operating band.
+Title Path: Power class 2 CA with One UL Carrier > CA_n5-n29-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n5-n66-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n29-n30-n77 > Maximum output power
+Content: The combination CA_n29_n30-n77 does not have an uplink CA configuration containing n29 since n29 is a SDL operating band.
+Title Path: Power class 2 CA with One UL Carrier > CA_n29-n30-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with One UL Carrier > CA_n29-n66-n77 > Maximum output power
+Content: The combination CA_n29_n66-n77 does not have an uplink CA configuration containing n29 since n29 is a SDL operating band.
+Title Path: Power class 2 CA with One UL Carrier > CA_n29-n66-n77 > REFSENS requirements
+Content: MSD requirements for single uplink PC2 are captured in lower order combinations.
+Title Path: Power class 2 CA with Dual UL Carrier
+Content: 6.x CA_nX-nY-nZ 6.x.1 Configurations Editor’s note: the CA configurations and bandwidth combinations sets should be kept same as defined in 38.101-1 Table 5.5A.3-1 unless additional clarification 6.x.2 Maximum output power Editor’s note: In table 6.x.2-1, the power class 2 cases supported by the uplink CA should be kept as the same numbering and others that not supported should be removed. 6.x.3 REFSENS requirements Editor’s note: This agenda will capture the Reference sensitivity exceptions or MSD requirements due to higher power for CA carrier, please use the same table format as in 38101-1. The requirements in this TR are intended to be power class 2 cases based, however how to address in the spec will be further discussed. 6.x.3.1 Power class 2 case xxx 6.x.3.2 Power class 2 case xxx 6.x.4 $ $TIB and $ $RIB values Editor’s note: If no change by comparing to the values for power class 3 CA, this section will be void.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n1-n3-n78 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. Also when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. 6.1.3 REFSENS requirements
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n1-n3-n78 > Maximum output power > Power class 2 case a
+Content: According to PC3 CA_n1-n3-n78, the IMD2 of UL n1 and UL n78 may fall into the Rx of the 3rd band n3. Due to higher Tx power, more MSD is required for PC2 CA. The additional MSD requirements are defined in Table 6.1.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n1-n3-n78 > Maximum output power > Power class 2 case b
+Content: No additional MSD requirements are identified due to higher Tx power from n78 UL.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n5-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. 6.2.3 REFSENS requirements According to the PC3 CA_n2A-n5A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD 3 and IMD5 products are produced by Band n2 and n5 that might fall in Rx of band n77. IMD5 products are produced by Band n2 and n77 that might fall in Rx of band n5. IMD 3 product s are produced by Band n5 and n77 might fall in Rx of band n2. For the IMD products produced by Band n2 and n5 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n5-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n2A-n5A-n77A are defined in Table 6.2.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n5-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n2A-n5A-n77A are same as the Case A defined in Table 6.2.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n12-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. 6.3.3 REFSENS requirements According to the PC3 CA_n2A-n12A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD 3, IMD4, and IMD5 products are produced by Band n2 and n12 that might fall in Rx of band n77. There are no IMD products produced by Band n2 and n77 that might fall in Rx of band n12. IMD 3 and IMD4 product s are produced by Band n12 and n77 might fall in Rx of band n2. For the IMD products produced by Band n2 and n12 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n12-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n2A-n12A-n77A are defined in Table 6.3.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n12-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n2A-n12A-n77A are same as the Case A defined in Table 6.3.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n14-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. 6.4.3 REFSENS requirements According to the PC3 CA_n2A-n14A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD 3 and IMD5 products are produced by Band n2 and n14 that might fall in Rx of band n77. There are no IMD products produced by Band n2 and n77 that might fall in Rx of band n14. IMD 3 product s are produced by Band n14 and n77 might fall in Rx of band n2. For the IMD products produced by Band n2 and n14 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n14-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n2A-n14A-n77A are defined in Table 6.4.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n14-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n2A-n14A-n77A are same as the Case A defined in Table 6.4.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n30-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. 6.5.3 REFSENS requirements According to the PC3 CA_n2A-n30A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD 2 and IMD4 products are produced by Band n2 and n30 that might fall in Rx of band n77. IMD4 and IMD5 products are produced by Band n2 and n77 that might fall in Rx of band n30. IMD 4 product s are produced by Band n30 and n77 might fall in Rx of band n2. For the IMD products produced by Band n2 and n30 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n30-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n2A-n30A-n77A are defined in Table 6.5.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n30-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n2A-n30A-n77A are same as the Case A defined in Table 6.5.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n30-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.6.3 REFSENS requirements According to the PC3 CA_n5A-n30A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD3 products are produced by Band n5 and n30 that might fall in Rx of band n77. IMD3 products are produced by Band n5 and n77 that might fall in Rx of band n30. IMD 3 and IMD5 product s are produced by Band n30 and n77 might fall in Rx of band n5. For the IMD products produced by Band n5 and n30 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n30-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n5A-n30A-n77A are defined in Table 6.6.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n30-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n5A-n30A-n77A are same as the Case A defined in Table 6.6.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n12-n30-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. 6.7.3 REFSENS requirements According to the PC3 CA_n12A-n30A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD3 products are produced by Band n12 and n30 that might fall in Rx of band n77. IMD3 products are produced by Band n12 and n77 that might fall in Rx of band n30. IMD 3 and IMD5 product s are produced by Band n30 and n77 might fall in Rx of band n12. For the IMD products produced by Band n12 and n30 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n12-n30-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n12A-n30A-n77A are defined in Table 6.7.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n12-n30-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n12A-n30A-n77A are same as the Case A defined in Table 6.7.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n12-n66-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. 6.8.3 REFSENS requirements According to the PC3 CA_n12A-n66A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD 3, IMD4, and IMD5 products are produced by Band n12 and n66 that might fall in Rx of band n77. IMD3 products are produced by Band n12 and n77 that might fall in Rx of band n66. IMD 3 product s are produced by Band n66 and n77 might fall in Rx of band n12. For the IMD products produced by Band n12 and n66 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n12-n66-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n12A-n66A-n77A are defined in Table 6.8.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n12-n66-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n12A-n66A-n77A are same as the Case A defined in Table 6.8.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n14-n30-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.9.3 REFSENS requirements According to the PC3 CA_n14A-n30A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD3 products are produced by Band n14 and n30 that might fall in Rx of band n77. IMD3 products are produced by Band n14 and n77 that might fall in Rx of band n30. IMD3 and IMD5 products are produced by Band n30 and n77 that might fall in Rx of band n14. For the IMD products produced by Band n14 and n30 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n14-n30-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n14A-n30A-n77A are defined in Table 6.9.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n14-n30-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n14A-n30A-n77A are same as the Case A defined in Table 6.9.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n14-n66-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.10.3 REFSENS requirements According to the PC3 CA_n14A-n66A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD 3, IMD4, and IMD5 products are produced by Band n14 and n66 that might fall in Rx of band n77. IMD3 products are produced by Band n14 and n77 that might fall in Rx of band n66. IMD 3 product s are produced by Band n66 and n77 might fall in Rx of band n14. For the IMD products produced by Band n14 and n66 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n14-n66-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n14A-n66A-n77A are defined in Table 6.10.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n14-n66-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n14A-n66A-n77A are same as the Case A defined in Table 6.10.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n30-n66-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.11.3 REFSENS requirements According to the PC3 CA_n30A-n66A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD 2 and IMD5 products are produced by Band n30 and n66 that might fall in Rx of band n77. IMD4 products are produced by Band n30 and n77 that might fall in Rx of band n66. IMD2 and IMD5 product s are produced by Band n66 and n77 might fall in Rx of band n30. For the IMD products produced by Band n30 and n66 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n30-n66-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n30A-n66A-n77A are defined in Table 6.11.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n30-n66-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n30A-n66A-n77A are same as the Case A defined in Table 6.11.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n12-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. 6.12.3 REFSENS requirements According to the PC3 CA_n5A-n12A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD5 products are produced by Band n5 and n12 that might fall in Rx of band n77. IMD5 products are produced by Band n5 and n77 that might fall in Rx of band n12. IMD5 product s are produced by Band n12 and n77 might fall in Rx of band n5. For the IMD products produced by Band n5 and n12 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n12-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n5A-n12A-n77A are defined in Table 6.12.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n12-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n5A-n12A-n77A are same as the Case A defined in Table 6.12.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n14-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.13.3 REFSENS requirements According to the PC3 CA_n5A-n14A-n77A study captured in TR 38.717-03-02, the following co-existence issues due to dual uplink were identified: IMD4 and IMD5 products are produced by Band n5 and n14 that might fall in Rx of band n77. IMD4 and IMD5 products are produced by Band n5 and n77 that might fall in Rx of band n14. IMD5 product s are produced by Band n14 and n77 might fall in Rx of band n5. For the IMD products produced by Band n5 and n14 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n14-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n5A-n14A-n77A are defined in Table 6.13.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n14-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n5A-n14A-n77A are same as the Case A defined in Table 6.13.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n7-n78 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.14.3 REFSENS requirements IMD2 products are produced by Band n5 and n78 that might fall in Rx of band n7. IMD2 and IMD5 products are produced by Band n7 and n78 that might fall in Rx of band n5. IMD2 and IMD4 products are produced by Band n5 and n7 that might fall in Rx of band n78. For the IMD products produced by Band n5 and n7 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n7-n78 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n5A-n7A-n78A are defined in Table 6.14.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n7-n78 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n5A-n7A-n78A are same as the Case A defined in Table 6.14.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n7-n28-n78 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.15.3 REFSENS requirements IMD2 and IMD5 products are produced by Band n7 and n78 that might fall in Rx of band n28. IMD2 products are produced by Band n28 and n78 that might fall in Rx of band n7. IMD2 and IMD4 products are produced by Band n7 and n28 that might fall in Rx of band n78. For the IMD products produced by Band n7 and n28 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n7-n28-n78 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n7A-n28A-n78A are defined in Table 6.15.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n7-n28-n78 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n7A-n28A-n78A are same as the Case A defined in Table 6.15.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n29-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. 6.16.3 REFSENS requirements The PC2 dual-uplink carrier co-existence analysis for CA_n2-n29-n77 can be re-used from DC_2-29_n77 in TR 37.827. Based on this, no additional MSD is required.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n66-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. Also, when the transmission bandwidths confined within F and F + 4 MHz or F 4 MHz and F , the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB. The tolerance +2/-3 dB is applied. 6.17.3 REFSENS requirements The PC2 dual-uplink carrier co-existence analysis for CA_n2-n66-n77 can be re-used from DC_2-66_n77 in TR 37.827. Based on this, it can be seen that: IMD2, IMD4, and IMD5 products are produced by Band n2 and n77 that might fall in Rx of band n66. IMD2, IMD4, and IMD5 products are produced by Band n66 and n77 that might fall in Rx of band n2 For the IMD products produced by Band n2 and n66 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n66-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n2-n66-n77 can be re-used from PC2 DC_29-66_n77 in TR 37.827 and are defined in Table 6.17.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n2-n66-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n2-n66-n77 are same as the Case A defined in Table 6.17.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n29-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. 6.18.3 REFSENS requirements According to the PC3 CA_n5-n77 study captured in TR 38.716-02-00, the following co-existence issues due to dual uplink can be identified as follows: - IMD5 product s are produced by Band 5 and n77 that might fall in Rx of band 29. There is no need to assess the IMD impact in other Rx bands since those cases are covered in their corresponding fallbacks.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n29-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n5-n29-n77 can be re-used from PC2 CA_n5-n12-n77 in TR 38.842 and are defined in Table 6.18.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n29-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n5-n29-n77 are same as the Case A defined in Table 6.18.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n66-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. The tolerance +2/-3 dB is applied. 6.19.3 REFSENS requirements The PC2 dual-uplink carrier co-existence analysis for CA_n5-n66-n77 can be re-used from DC_5-66_n77 in TR 37.827. Based on this, it can be seen that: - IMD3 products are produced by Band n5 and n77 that might fall in Rx of band n66. For the IMD products produced by Band n5 and n66 UL, the MSD values of the corresponding PC3 CA case can be applied since this uplink configuration does not support PC2.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n66-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n5-n66-n77 can be re-used from DC_5-66_n77 in TR 37.827 and are defined in Table 6.19.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n5-n66-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n5-n66-n77 are same as the Case A defined in Table 6.19.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n29-n30-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. 6.20.3 REFSENS requirements The PC2 dual-uplink carrier co-existence analysis for CA_n29-n30-n77 can be re-used from DC_29-30_n77 in TR 37.827. Based on this, it can be seen that: - IMD3 and IMD5 products are produced by Band n30 and n77 that might fall in Rx of band n29.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n29-n30-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n29-n30-n77 can be re-used from PC2 DC_29-30_n77 in TR 37.827 and are defined in Table 6.20.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n29-n30-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n29-n30-n77 are same as the Case A defined in Table 6.20.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n29-n66-n77 > Maximum output power
+Content: The tolerance +2/-3 dB is applied. 6.21.3 REFSENS requirements The PC2 dual-uplink carrier co-existence analysis for CA_n29-n66-n77 can be re-used from DC_29-66_n77 in TR 37.827. Based on this, it can be seen that: - IMD3 products are produced by Band n66 and n77 that might fall in Rx of band n29.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n29-n66-n77 > Maximum output power > Power class 2 Case A
+Content: The additional MSD due to intermodulation for PC2 CA_n29-n66-n77 can be re-used from PC2 DC_29-66_n77 in TR 37.827 and are defined in Table 6.21.3.1-1.
+Title Path: Power class 2 CA with Dual UL Carrier > CA_n29-n66-n77 > Maximum output power > Power class 2 Case B
+Content: The additional MSD due to intermodulation for PC2 Case B CA_n29-n66-n77 are same as the Case A defined in Table 6.21.3.1-1.
+Title Path: Power class 2 CA with SUL
+Content: 7.x CA_nW-nX_SUL_nY-nZ 7.x.1 Configurations Editor’s note: the CA configurations and bandwidth combinations sets should be kept same as defined in 38.101-1 Table 5.5A.3-1 unless additional clarification 7.x.2 Maximum output power 7.x.3 REFSENS requirements Editor’s note: This agenda will capture the Reference sensitivity exceptions or MSD requirements due to higher power for CA carrier, please use the same table format as in 38101-1. 7.x.4 $ $TIB and $ $RIB values Editor’s note: If no change by comparing to the values for power class 3 CA, this section will be void.

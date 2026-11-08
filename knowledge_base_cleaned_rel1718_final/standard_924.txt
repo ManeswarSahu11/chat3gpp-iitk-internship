@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document defines, in addition to the requirements defined in 3GPP TS 32.101 , 3GPP TS 32.102 and 3GPP TS 32.600 , the requirements for the present IRP: Inventory Management (IM )Network Resource Model (NRM) IRP.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply: data: See 3GPP TS 32.600 . IRP: See 3GPP TS 32.101 . Network Resource Model (NRM): See 3GPP TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Evolved Packet System Integration Reference Point Network Resource Model Self-Organized Network
+Title Path: Requirements
+Content: The following general and high-level requirements apply for the present IRP: [ A) ] IRP-related requirements in 3GPP TS 32.101 . IRP-related requirements in 3GPP TS 32.102 . IRP-related requirements in 3GPP TS 32.600 . The NRM defined by this IRP: [D)]Shall support communications for telecommunication network management purposes, including management of converged networks. [ E) ] Is a member of the Federated Network Information Model (FNIM) and its information is derived from FNIM Umbrella Information Model (UIM) In addition to the above, the following more specific requirements apply: REQ-IM_NRM-CON-001: The NRM defined by this IRP shall provide inventory data over Itf-N of network entities in the 3G network. REQ-IM_NRM-CON-002: The NRM defined by this IRP shall provide inventory data over Itf-N of network entities in the EPS network including those installed by SON functionality.

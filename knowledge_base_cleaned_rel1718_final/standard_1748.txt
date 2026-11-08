@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document defines, in addition to the requirements defined in , and , the requirements for the present IRP: IMS Network Resource Model (NRM) IRP.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply. IRP: See 3GPP TS 32.150 . Information Object Class (IOC): See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Configuration Management IP Multimedia Subsystem Information Object Class Integration Reference Point Network Resource Model
+Title Path: Requirements
+Content: The following general and high-level requirements apply for the present IRP: [ a) ] IRP-related requirements in 3GPP TS 32.101 . IRP-related requirements in 3GPP TS 32.102 . IRP-related requirements in 3GPP TS 32.600 . The NRM defined by this IRP: [ a) ] Shall support communications for telecommunication network management purposes, including management of converged networks. Is a member of the Federated Network Information Model (FNIM) and its information is derived from FNIM Umbrella Information Model (UIM) . In addition to the above, the following more specific requirement applies: The Network Resource Model defined by this IRP shall contain IMS specific IOCs and related definitions, supporting IMS entities in the current 3GPP Release.

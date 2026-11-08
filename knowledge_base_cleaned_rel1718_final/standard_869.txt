@@ -1,0 +1,42 @@
+Title Path: Scope
+Content: The present document is an introduction to the 3GPP TS 36.45x series of technical specifications that define the SLm interface for the interconnection of the Evolved Serving Mobile Location Centre (E-SMLC) to the Location Measurement Unit (LMU) components of the Evolved Universal Terrestrial Radio Access Network (E-UTRAN).
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply:
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . [E-SMLC]E-UTRAN Serving Mobile Location Centre E-UTRAN Node B Evolved Packet Core Evolved Packet System [E-UTRAN]Evolved UTRAN Internet Protocol Location Measurement Unit Long Term Evolution Mobility Management Entity [O\&M]Operation and Maintenance Quality of Service Radio Network Layer SLm Control Plane Interface SLm Application Protocol Service Access Point Stream Control Transmission Protocol Transport Network Layer Uplink Time Difference of Arrival
+Title Path: Definitions, symbols and abbreviations > Specification notations
+Content: For the purposes of the present document, the following notations apply: When referring to a procedure in the specification the Procedure Name is written with the first letters in each word in upper case characters followed by the word "procedure", e.g. Radio Network Layer procedures. When referring to a message in the specification the MESSAGE NAME is written with all letters in upper case characters followed by the word "message", e.g. RADIO LINK SETUP REQUEST message.
+Title Path: General aspects > E-UTRAN UTDOA architecture
+Content: The E-UTRAN is layered into a Radio Network Layer (RNL) and a Transport Network Layer (TNL). The E-UTRAN architecture, i.e. the E-UTRAN logical nodes and interfaces between them, are defined as part of the Radio Network Layer. The overall architecture for UE positioning is described in TS 36.305 . The E-UTRAN network based positioning architecture consists of a set of LMUs (either standalone or eNB-integrated LMUs as described in TS 36.305 ) contained in the E-UTRAN connected to the E-SMLC in the EPC through the SLm. This subclause specifies only the architecture of the SLm interface, and shall not constrain the network architecture of either core or radio access networks. The SLm interface is specified at the boundary between the LMUs and the E-SMLC. Figure 1 depicts the logical division of the SLm interface. From the SLm perspective, the E-UTRAN access point is an LMU, and the EPC access point is the E-SMLC. The E-UTRAN may thus have several SLm access points towards the EPC. As a minimum, each SLm access point (in E-UTRAN or EPC) shall independently fulfil the requirements of the relevant SLm specifications (36.x1x series - see clause 7). SLm is a logical interface. There is only one SLm logical interface between an LMU and a given E-SMLC. However, an LMU can be connected to multiple E-SMLCs using different logical SLm interfaces.
+Title Path: General aspects > SLm interface general principles
+Content: The general principles for the specification of the SLm interface are as follows: the SLm interface should be open; the SLm interface shall support the exchange of signalling information between the LMU and E-SMLC; from a logical standpoint, the SLm is a point-to-point interface between an LMU within the E-UTRAN and an E-SMLC in the EPC. A point-to-point logical interface should be feasible even in the absence of a physical direct connection between the LMU and E-SMLC.
+Title Path: General aspects > SLm interface specification objectives
+Content: The SLm interface specification shall facilitate the following: - inter-connection of E-SMLCs with LMUs supplied by different manufacturers; - separation of SLm interface Radio Network functionality and Transport Network functionality to facilitate introduction of future technology.
+Title Path: General aspects > SLm interface capabilities
+Content: The SLm interface supports: procedures to establish, maintain and release connections between the E-SMLC and LMUs; the separation of each LMU on the protocol level for specific signalling management; location services by transferring location requests from the E-SMLC to LMUs, and UL RTOA measurements from LMUs to E-SMLC;
+Title Path: General aspects > SLm interface characteristics > Use of SCTP
+Content: The SCTP (IETF RFC 4960 ) is used to support the exchange of SLm Application Protocol (SLmAP) signalling messages between an LMU and an E-SMLC.
+Title Path: Functions of the SLm interface protocol > General
+Content: The following sections describe the functions to fulfil the SLm interface capabilities.
+Title Path: Functions of the SLm interface protocol > SLm link management function
+Content: The SLm signalling link management function provides a reliable transfer of the signalling between LMU and E-SMLC.
+Title Path: Functions of the SLm interface protocol > SLm interface management function
+Content: The error indication function is used by the LMU (respectively the E-SMLC) to indicate to the E-SMLC (respectively the LMU) that a logical error has occurred. The reset procedure is used to initialize the peer entity after node setup and after a failure event has occurred. This procedure can be initiated by the E-SMLC or the LMU. The information about the LMU capabilities after a reset is preserved in the E-SMLC. The SLm Setup procedure allows the exchange of application level data, e.g. capability, needed for the LMU and E-SMLC to interoperate correctly on the SLm interface. This procedure is originated by the LMU only and initiates the setup of the SLmAP contexts to the E-SMLC.
+Title Path: Functions of the SLm interface protocol > SLm location function
+Content: The location function is used by the E-SMLC to request the LMU to perform UL RTOA measurements. The LMU reports UL RTOA measurements back to the requesting E-SMLC.
+Title Path: SLm interface protocol structure
+Content: Editor's Note: Protocol Structure following the structure defined in TS 36.305 .
+Title Path: SLm interface protocol structure > General
+Content: The network signalling over SLm consists of the SLm Application Protocol (SLmAP). The SLmAP consists of mechanisms to handle all procedures between the E-SMLC in the EPC and LMUs in the E-UTRAN. Over the SLm interface the SLmAP protocol is, e.g., used to: Request LMUs to perform UL RTOA measurements of target UE SRS transmissions. Transfer of completed UL RTOA measurements from the LMU to the E-SMLC.
+Title Path: SLm interface protocol structure > SLmAP
+Content: Figure 6.1 shows the protocol structure for SLmAP, following the structure described in TS 36.305 . The Transport Network Layer is based on IP transport, comprising SCTP on top of IP.
+Title Path: Other SLm interface specifications
+Content: Editor's Note: Description of the other related specifications.
+Title Path: Other SLm interface specifications > E-UTRAN SLm interface: layer 1 (3GPP TS 36.457)
+Content: 3GPP TS 36.457 specifies the physical layer technologies that may be used to support the SLm interface.
+Title Path: Other SLm interface specifications > E-UTRAN SLm interface: signalling transport (3GPP TS 36.458)
+Content: 3GPP TS 36.458 specifies the signalling bearers for the SLmAP for the SLm interface.
+Title Path: Other SLm interface specifications > E-UTRAN SLm Interface: SLmAP Specification (3GPP TS 36.459)
+Content: 3GPP TS 36.459 specifies the SLmAP for radio network control plane signalling over the SLm interface.

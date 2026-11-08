@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document is Configuration Management stage 2 specification for mobile networks that include virtualized network functions.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Information Model Definition > Itf-N
+Content: For Itf-N configuration management of virtualized network functions which can be part of EPC or IMS, the IOCs defined in3GPP TS 28.622 , 28.708 and 28.705 shall be reused. In 3GPP TS 28.622 , a new attribute vnfParametersList is added in the IOC ManagedFunction (see clause 4.3.4 in ) to support the configuration management of virtualized network functions which can be part of EPC or IMS.
+Title Path: Interface Definition > Itf-N
+Content: For Itf-N configuration management of virtualized network functions which can be part of EPC or IMS, the operations defined in 3GPP TS 32.602 and TS 32.612 and notifications defined in 3GPP TS 32.662 shall be reused.

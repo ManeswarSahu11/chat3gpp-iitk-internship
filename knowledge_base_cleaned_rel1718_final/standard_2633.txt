@@ -1,0 +1,12 @@
+Title Path: Scope
+Content: The present document is the Performance Management stage 3 specification for mobile networks that include virtualized network functions.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 , in 3GPP TS 28.500 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 , in 3GPP TS 28.500 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: General descriptions
+Content: The stage 3 solution over Itf-N reuses the solution sets for PM IRP as specified in 3GPP TS 32.416 . The stage 3 solution over Ve-Vnfm-em reuses the solutions for performance management interface as specified in ETSI GS NFV SOL 002 .
+Title Path: Interface Solution Sets > Itf-N
+Content: For the stage 3 solution of Performance Management for mobile networks that include virtualized network functions over Itf-N, the solution sets for PM IRP specified in 3GPP TS 32.416 are reused.
+Title Path: Interface Solution Sets > Ve-Vnfm-em
+Content: For the stage 3 solution of Performance Management for mobile networks that include virtualized network functions over Ve-Vnfm-em, the following shall be used: the RESTful API resource structure and methods specified in clause 4.2 of ETSI GS NFV-SOL 002 , and the RESTful API sequence diagrams specified in clause 6.3 of ETSI GS NFV-SOL 002 , and the RESTful API resources specified in clause 6.4 of ETSI GS NFV-SOL 002 , and the RESTful API data model specified in clause 6.5 of ETSI GS NFV-SOL 002 .

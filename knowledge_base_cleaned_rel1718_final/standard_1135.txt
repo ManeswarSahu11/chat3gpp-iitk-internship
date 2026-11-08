@@ -1,0 +1,2 @@
+Title Path: Digital Rights Management Model
+Content: The text in this specification has been removed. DRM specifications are elaborated in the Open Mobile Alliance (OMA) according to an agreement between 3GPP and OMA. For DRM Service and System Aspects OMA-RD-DRM is referenced .

@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document is Configuration Management stage 3 specification for mobile networks that include virtualized network functions.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Interface definitions > Itf-N
+Content: For Itf-N configuration management of virtualized network functions which can be part of EPC or IMS, the interface IRP solution sets defined in 3GPP TS 32.606 , TS 32.616 and TS 32.666 shall be used.
+Title Path: NRM Solution Set definitions
+Content: For Itf-N configuration management of virtualized network functions which can be part of EPC or IMS, the NRMs defined in 3GPP TS 28.623 , TS 28.709 and TS 28.706 shall be used.

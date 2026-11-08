@@ -1,0 +1,12 @@
+Title Path: Scope
+Content: The present document specifies the signalling transport related to PCAP signalling to be used across the Iupc interface. The Iupc interface is a logical interface for the interconnection of Stand-Alone SMLC (SAS) and Radio Network Controller (RNC) components of the Universal Terrestrial Radio Access Network (UTRAN) for the UMTS system. The radio network control signalling between these nodes is based upon the Position Calculation Application Part (PCAP).
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following definition applies: Stand-Alone SMLC (SAS): As defined in TS 25.305 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Position Calculation Application Part Service Access Point Stand-Alone SMLC Signalling Connection Control Part Serving Mobile Location Centre User Equipment Universal Mobile Telecommunication System UMTS Terrestrial Radio Access Network
+Title Path: PCAP Signalling Bearer > Introduction
+Content: This clause specifies the Signalling Bearer protocol stack that supports the PCAP signalling protocol. The following requirements on the Signalling Bearer can be stated: provide reliable transfer of control plane signalling messages in both connectionless mode and connection-oriented mode; provide separate independent connections for distinguishing individual transactions; provide networking and routing functions; provide redundancy in the signalling network; provide load sharing.
+Title Path: PCAP Signalling Bearer > Signalling Bearer
+Content: The Iupc signalling bearer shall comply with the requirements of clause 5.2 in TS 25.422 .
+Title Path: PCAP Signalling Bearer > Services Provided by the Signalling Bearer
+Content: When considering the requirements that the upper layers, i.e. PCAP, have on the Signalling Bearer, there are a number of services it has to provide and a number of functions to perform. These numbers of services that the signalling bearer shall provide, to the upper layers, are stated in references ITU-T Rec. Q.711 , ITU-T Rec. Q.712 , ITU-T Rec. Q.713 , ITU-T Rec. Q.714 , ITU-T Rec. Q.715 , and ITU-T Rec. Q.716 .

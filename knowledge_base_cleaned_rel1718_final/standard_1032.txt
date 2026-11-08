@@ -1,0 +1,16 @@
+Title Path: Scope
+Content: The present document is the Performance Management stage 2 specification for mobile networks that include virtualized network functions.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 , in 3GPP TS 28.500 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 , in 3GPP TS 28.500 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: General descriptions
+Content: For the stage 2 solution of Performance Management for mobile networks that include virtualized network functions over Itf-N, the PM IRP IS (TS 32.412 ) is applicable. For the purpose of notification, Notification IRP is needed.
+Title Path: Information Model Definition > Itf-N
+Content: For Performance Management for 3GPP Network Function over Itf-N, the IOCs defined by PM IRP specified in clause 6 of 3GPP TS 32.412 are reused.
+Title Path: Information Model Definition > Ve-Vnfm-em
+Content: For Ve-Vnfm-em Performance Management, the information elements and notifications which are specified in subclause 9.7 of ETSI GS NFV-IFA 008 for VNF Performance Management shall be used.
+Title Path: Interface Definition > Itf-N
+Content: For the stage 2 solution of Performance Management for mobile networks that include virtualized network functions over Itf-N, the operations and notifications defined by PM IRP specified in 3GPP TS 32.412 are reused.
+Title Path: Interface Definition > Ve-Vnfm-em
+Content: For Ve-Vnfm-em performance management, the operations defined in clause 7.4 of ETSI GS NFV-IFA 008 for VNF Performance Management interface shall be used, and the information elements and notifications which are specified in subclause 9.7 of ETSI GS NFV-IFA 008 for VNF performance management shall be used.

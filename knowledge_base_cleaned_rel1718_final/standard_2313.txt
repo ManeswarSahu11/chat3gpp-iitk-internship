@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document provides the NRM-specific part related to the Inventory Management NRM IRP IS in 3GPP TS 28.632 of solution set definitions. This Solution Set definitions specification is related to 3GPP TS 28.632 V 14.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply: XML file: See definition of . XML document: See definition of . XML declaration: See definition of . XML element: See definition of . empty XML element: See definition of . XML content (of an XML element): See definition of . XML start-tag: See definition of . XML end-tag: See definition of . XML empty-element tag: See definition of . XML attribute specification: See definition of . DTD: See definition of . XML schema: See definition of . XML namespace: See definition of . XML complex type: See definition of . XML element type: See definition of .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Common Object Request Broker Architecture Document Type Definition Inventory Management Integration Reference Point Information Service Network Resource Model eXtensible Markup Language XML Schema Definition
+Title Path: Solution Set definitions
+Content: This specification defines the following 3GPP Inventory Management (IM) Network Resource Model (NRM) IRP Solution Set (SS) definitions: - 3GPP Inventory Management (IM) Network Resource Model (NRM) IRP XML definitions (Annex A) CORBA Solution Set is not present in the current version of this specification.

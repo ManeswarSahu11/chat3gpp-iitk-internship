@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the standards allowed to implement layer 1 on the interfaces supporting Multimedia Broadcast Multicast Service (MBMS) within E-UTRAN. In the following, 'layer 1' and 'physical layer' are assumed to be synonymous.
+Title Path: Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . [E-UTRAN]Evolved Universal Terrestrial Radio Access Network Multimedia Broadcast Multicast Service
+Title Path: Introduction
+Content: The main functions of layer 1 are summarized in the following: Interface to physical medium; Frame delineation; Layer 1 alarms extraction and generation; Transmission quality control.
+Title Path: Layer 1 specifications
+Content: The support of any suitable layer 1 technique - like point-to-point or point-to-multipoint techniques - shall not be prevented.

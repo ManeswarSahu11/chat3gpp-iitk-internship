@@ -1,0 +1,32 @@
+Title Path: Scope
+Content: The present document is a technical report for WI ``downlink interruption for band combinations to conduct dynamic Tx Switching'' under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address the band combinations requested for mandating no DL interruption to conduct dynamic Tx switching listed in Table 1-1.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . ABBREVIATION Expansion
+Title Path: Background
+Content: At 3GPP RAN\#90-e meeting, a new Rel-17 Work Item ``Down link interruption for band combinations to conduct dynamic Tx Switching'' was approved. The objectives are as follows, 1) Discuss and specify inter-band uplink CA and EN-DC combinations for which DL interruption is not allowed when 1Tx-2Tx dynamic switching between two uplink carriers is conducted. a) Based on the requested band combinations from operators, identify if it is feasible to specify no DL interruption in RAN4 specification. b) Discuss and find out an appropriate way to indicate no DL interruption for higher order CA and EN-DC combinations in RAN4 specification. 2) For 1Tx-2Tx switching between two uplink carriers, the mandating of no DL interruption for new band combinations is release independent from Rel-16. The present document is the technical report for this basket Work Item.
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band/band combination to ensure that the TPs related to the band/band combination have been implemented.
+Title Path: General
+Content: Editor’s note: This agenda captures the general issues of this WI
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA _n3-n40-n41 > Technical analysis
+Content: RAN4 already agreed that no DL interruption allowed for CA_n3-n41. For CA_n3-n40, there was no discussion on the applicability of DL interruption. Since the frequency gap between n3 and n40 is larger than 1.4GHz, the separation is large enough. So no DL interruption for uplink configuration CA_n3-n40 should be allowed. So for the uplink configurations CA n3-n40 and CA n3-n41 of CA_n3-n40-n41, no DL interruption for dynamic switching between two uplink carriers should also be mandated.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n3-n41-n79 > Technical analysis
+Content: RAN4 already agreed that no DL interruption allowed for CA_n3-n41, CA_n3-n79 and CA n41-n79. And for TDD band combination CA_n41-n79, simultaneous Rx/Tx capability is mandatory supported. So for the uplink configurations CA n3-n41, CA n3-n79, CA n41-n49 of CA_n3-n41-n79, no DL interruption for dynamic switching between two uplink carriers should also be mandated.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n8-n39-n41 > Technical analysis
+Content: RAN4 already agreed that no DL interruption allowed for CA_n8-n41 and CA_n39-n41. For CA_n8-n39, there was no discussion on the applicability of DL interruption. Since the frequency gap between n8 and n39 is 1GHz, the separation is large enough. So no DL interruption for uplink configuration CA_n8-n39 should be allowed. So for the uplink configurations CA n8-n39, CA n8-n41 and CA n39-n41 of CA_n8-n39-n41, no DL interruption for dynamic switching between two uplink carriers should also be mandated.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n8-n41-n79 > Technical analysis
+Content: RAN4 already agreed that no DL interruption allowed for CA n8-n41, CA n8-n79 and CA n41-n79. So for the uplink configurations CA n8-n41, CA n8-n79 and CA n41-n79 of CA_n8-n41-n79, no DL interruption for dynamic switching between two uplink carriers should also be mandated.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n39-n41-n79 > Technical analysis
+Content: RAN4 already agreed that no DL interruption allowed for CA_n39-n79, CA n41-n79 and CA_n39-n41 . So for the uplink configurations CA_n39-n79, CA n41-n79 and CA_n39-n41 of CA_n39-n41-n79, no DL interruption for dynamic switching between two uplink carriers should also be mandated.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n40-n41-n79 > Technical analysis
+Content: RAN4 already agreed that no DL interruption allowed for CA_n40-n79 and CA n41-n79. So for the uplink configurations CA_n40-n79 and CA n41-n79 of CA_n40-n41-n79, no DL interruption for dynamic switching between two uplink carriers should also be mandated.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n3-n40 > Technical analysis
+Content: The frequency gap between n3 and n40 is larger than 400MHz, the separation is large enough. So no DL interruption for uplink configuration CA_n3-n40 should be allowed. So for the uplink configurations CA n3-n40, no DL interruption for dynamic switching between two uplink carriers should also be mandated.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n1-n3-n78 > Technical analysis
+Content: For CA_n1-n78 and CA_n3-n78, no DL interruption allowed has been specified as mandated in 38.101-1, which means switching from n1/n3 to n78 has no impact to n1/n3 downlink. Thus there is no DL interruption for CA_n1-n3-n78 with CA_n1-n78 or CA_n3-n78 uplink configuration when conducting dynamic Tx switching.
+Title Path: Specific Band Combinations > Inter-band uplink CA > CA_n1-n3-n78 > Conclusion
+Content: No DL interruption for CA_n1-n3-n78 with CA_n1-n78 or CA_n3-n78 uplink configuration is mandated.

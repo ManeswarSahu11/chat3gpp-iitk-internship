@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document specifies the format and usage of the Mobile IPv6 Vendor Specific Option within the Third Generation Partnership Project.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 .
+Title Path: 3GPP Mobile IPv6 Option > General
+Content: The 3GPP Mobile IPv6 Option is a Mobile IPv6 Vendor-Specific Option as defined by IETF RFC 5094 using the Vendor-Id assigned to 3GPP. The 3GPP Mobile IPv6 Option is used to encode 3GPP Specific Information Elements within the protocols based on Mobile IPv6 (MIPv6) as defined by IETF RFC 6275 , such as the Dual Stack Mobile IPv6 (DSMIPv6) and Proxy Mobile IPv6 (PMIPv6) protocols respectively defined by IETF RFC 5555 and IETF RFC 5213 .
+Title Path: 3GPP Mobile IPv6 Option > Format
+Content: The format of the 3GPP Mobile IPv6 Option is shown in table 4.2-1. The defined 3GPP Specific Information Elements are listed in table 4.2-2. The data format of a given 3GPP Specific Information Element (IE) is defined in the specification defining its usage, as indicated in table 4.2-2. Figure 4.2-1: 3GPP Mobile IPv6 Option The syntax of the 3GPP specific information element allows appending extra octets. The receiver that does not support such appended octets shall ignore the appended octets in order to ensure backwards compatibility.

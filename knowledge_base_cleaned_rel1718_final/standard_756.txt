@@ -1,0 +1,22 @@
+Title Path: Scope
+Content: The present document defines the management object (MO) for Multi-Device and Multi-Identity in IMS. The MO for Multi-Device (MuD) and Multi-Identity (MiD) in IMS is compatible with OMA device management protocol specifications, version 1.2 and upwards, and is defined using the OMA DM device description framework as described in the enabler release definition OMA-ERELD_DM-V1_2 . The MO for Multi-Device and Multi-Identity in IMS consists of relevant configuration parameters that can be managed for a UE supporting the UE role specified in 3GPP TS 24.174 .
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Multi-iDentity Management Object Multi-Device Stand-alone Non-Public Network
+Title Path: Multi-Device and Multi-Identity management object
+Content: The MO for Multi-Device and Multi-Identity in IMS is used to manage settings of the UE for Multi-Device and Multi-Identity in IMS. Figure 4-1 gives an overview of the configuration parameters of this MO. The conventions used in this specification are as defined in OMA-TS-DM_TND with the following modifications: interior nodes are drawn as rectangles, not rectangles with rounded corners; and leaf nodes are plain text, not rectangles. The MO for Multi-Device and Multi-Identity in IMS covers configuration parameters for a UE supporting Multi-Device and Multi-Identity in IMS specified in TS 24.174 . The MO identifier is: urn:oma:mo:ext-3gpp-mudmid:1.0. Figure 4-1: MO for Multi-Device and Multi-Identity in IMS 5 Management object parameters
+Title Path: Multi-Device and Multi-Identity management object > General
+Content: This clause describes the configuration parameters for the MO for Multi-Device and Multi-Identity in IMS.
+Title Path: Multi-Device and Multi-Identity management object > Node: / X
+Content: The interior node is mandatory for a UE supporting the UE role specified in TS 24.174 . NOTE: One node is normally used. More nodes are only used in case the terminal supports multiple UICCs. Child nodes of this interior node which are not defined in this version of the present document are ignored. - Values: N/A
+Title Path: Multi-Device and Multi-Identity management object > / X /MultiIdentity/DelegatedIdentity/ X /DelegatedId
+Content: This leaf node contains a delegated identity that is allowed to use the native identity. - Values: N/A
+Title Path: Multi-Device and Multi-Identity management object > / X /SNPN_Configuration/ X
+Content: This interior node acts as a placeholder for a list of: [ a) ] SNPN identity; and configuration parameters. NOTE: For each of the elements in the list, a) must be present and at least one parameter of b) needs to appear. A configuration parameter in an / X /SNPN_Configuration/ X node other than the SNPN_identifier, is applicable when the UE selects an entry of "list of subscriber data" with the SNPN identity of the subscribed SNPN which is the same as the SNPN identity in the SNPN_identifier leaf. - Values: N/A
+Title Path: Multi-Device and Multi-Identity management object > / X /SNPN_Configuration/ X /SNPN_identifier
+Content: - Values: PLMN NID The PLMN and NID are in the format defined by 3GPP TS 23.003 , with each digit of the MCC and MNC of the PLMN and each digit of the assignment mode and NID value of the NID encoded as an ASCII character.
+Title Path: Multi-Device and Multi-Identity management object > / X /SNPN_Configuration/ X /MultiIdentity/
+Content: SharedIdentity/ X /SharedId - Values: N/A
+Title Path: Multi-Device and Multi-Identity management object > / X /SNPN_Configuration/ X /MultiIdentity/
+Content: DelegatedIdentity/ X /DelegatedId This leaf node contains a delegated identity that is allowed to use the native identity. - Values: N/A

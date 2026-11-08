@@ -1,0 +1,5 @@
+Chat3GPP TeleQnA (best final v1): 77.939%
+File: outputs/teleqna/chat3gpp_teleqna_clean_rel1718_final_77939.json
+
+Llama-3-8B-Tele-it TeleQnA: 70.608%
+File: outputs/teleqna/tele_it_teleqna_results_clean_rel1718_final_fixed.json

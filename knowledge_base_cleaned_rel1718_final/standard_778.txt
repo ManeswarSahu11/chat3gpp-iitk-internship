@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the Solution Set for the IRP whose semantics is specified in 3GPP TS 32.372 Security Service for IRP Information Service. This Solution Set specification is related to 3GPP TS 32.372 V14.0.X . Note that within the present document there are several alternate solutions. Specific choices will to be made to counter identified security threats, and to consider performance and cost criteria, i.e. an implementation is not expected to have to support every option for every deployment.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.301 and the following apply: IRP document version number string (or "IRPVersion"): See 3GPP TS 32.311 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Certificate Authority Configuration Management Common Object Request Broker Architecture (OMG) Client Security Service Element Manager Interface Definition Language (OMG) Interoperable Object Reference Information Service Notification Channel (OMG) Network Element Name and Value pair Object Management Group Object Request Broker (OMG) Quality of Service Request Interceptor Security Attributes Service (OMG) Security Protocol Solution Set Time-Independent Invocation Target Security Service Unified Modelling Language (OMG)
+Title Path: Solution Set definitions
+Content: This specification defines the following 3GPP Security Services for IRP Solution Set Definitions: 3GPP Security Services for IRP CORBA SS (Annex A). 3GPP Security Services for IRP File integrity solution (Annex B).

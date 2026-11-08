@@ -1,0 +1,70 @@
+Title Path: Scope
+Content: The present document specifies the Information Service for the Notification Log Integration Reference Point (NLIRP) as it applies to Itf-N. This IRP IS defines the semantics of operations (and their parameters) visible across the Itf-N in a protocol and technology neutral way. It does not define the syntax or encoding of the operations and their parameters.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.111-2 and 3GPP TS 32.331 apply. notification category: it refers to the set of notifications of one 3GPP IRP Information Service specification A Notification Category is identified by the name of the IRP specification and the IRP specification version number.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Distinguished Name Element Manager File Transfer Information Object Class Integration Reference Point Mandatory Network Element Notification Log Notification Log Integration Reference Point Network Manager Optional Unified Modelling Language
+Title Path: System overview
+Content: The general definition of the System Context for the present IRP is found in 3GPP TS 32.150 clause 4.7. In addition, the set of related IRP(s) relevant to the present IRP is shown in the two diagrams below
+Title Path: System overview > Compliance rules
+Content: For general definitions of compliance rules related to qualifiers (Mandatory/Optional/Conditional) for operations, notifications and parameters (of operations and notifications) please refer to 3GPP TS 32.102 .
+Title Path: Information Object Classes (IOCs) > Class diagram > Attributes and relationships
+Content: This clause introduces the set of IOCs that encapsulate information within the IRPAgent. The intent is to identify the information required for NLIRP operations and notification. This clause provides the overview of all support object classes in UML. Subsequent clauses provide more detailed specification of various aspects of these support object classes. NotificationIRPNotificationnotificationIdeventTimesystemDNnotificationType(from TS32.302)LogRecordlogRecordIdlogRecordContent InformationObjectClass 11+notification1+logRecord1relation-logRecord-notificationLoglogSubscriptionIdloggingEndTimemaxSizecurrentSizecreationTimelogStatelogRecordCountnotificationCategoriesfilterlogFullActionoccupancyLevelslogManagerToken InformationObjectClass 0..*1+logRecord0..*+log1relation-log-logRecordNLIRPmaxLogs InformationObjectClass 0..*0..* names To change: change logid, add logrecordcontent, remove logrecordsource.
+Title Path: Information Object Classes (IOCs) > Class diagram > Inheritance
+Content: ManagedGenericIRP(from TS32.312)TopobjectClassobjectInstance(from TS32.622) InformationObjectClass NLIRPmaxLogs InformationObjectClass LogRecordlogRecordIdlogRecordContent InformationObjectClass LoglogSubscriptionIdloggingEndTimemaxSizecurrentSizecreationTimelogStatelogRecordCountnotificationCategoriesfilterlogFullActionoccupancyLevelslogManagerToken InformationObjectClass
+Title Path: Information Object Classes (IOCs) > Information Object Class (IOC) definitions > NLIRP > Definition
+Content: LogIRP is the representation of the notification log management capabilities specified by the present document. This IOC inherits from ManagedGenericIRP IOC specified in TS 32.312 .
+Title Path: Information Object Classes (IOCs) > Information Object Class (IOC) definitions > Log > Definition
+Content: The Log IOC is the representation of a Notification Log.
+Title Path: Information Object Classes (IOCs) > Information Object Class (IOC) definitions > Log > State diagram
+Content: The disposition of a log that has been stopped, that is, whether the log remains visible across the Itf-N, is left as vendor specific functionality. The time of the deletion of logs is vendor specific.
+Title Path: Information Object Classes (IOCs) > Information Object Class (IOC) definitions > LogRecord > Definition
+Content: The LogRecord IOC is the representation of an individual Notification Log Record.
+Title Path: Information Object Classes (IOCs) > Information relationship definitions > Relation-nLIRP-log (M) > Definition
+Content: This represents the relationship between NLIRP and the Log.
+Title Path: Information Object Classes (IOCs) > Information relationship definitions > Relation-log-logRecord (M) > Definition
+Content: This represents the relationship between Log and the LogRecord.
+Title Path: Information Object Classes (IOCs) > Information relationship definitions > Relation-logRecord-notificationIRPNotification (M) > Definition
+Content: This represents the relationship between LogRecord and the notification header represented by NotificationIRPNotification.
+Title Path: Interface definition > Class diagram
+Content: NLIRPOperations_1subscribeLog() unsubscribeLog() optional exportLogRecords() optional getLogRecords() Interface FileTransferIRP(from TS32.342)NLIRPNotifications_1notifyLogSubscribed()notifyLogUnsubscribed() Notification NLIRPOperations_2getLogSubscriptionIds()getLogSubscriptionStatus() Interface NLIRPNotifications_2notifyOccupancyLevelCrossed() optional notifiyLoggingResumed() Notification NLIRPmaxLogs InformationObjectClass use may realize agent-internal-usage may use NotificationIRP(from TS32.302) InformationObjectClass agent-internal-usage agent-internal-usage NLIRPOperations_1 shall support either operation exportLogRecords or operation getLogRecords as mandatory. NLIRPOperations_1 shall support either operation exportLogRecords or operation getLogRecords as mandatory.
+Title Path: Interface definition > Generic rules
+Content: [Rule 1:]Each operation with at least one input parameter supports a pre-condition valid_input_parameter which indicates that all input parameters shall be valid with regards to their information type. Additionally, each such operation supports an exception operation_failed_invalid_input_parameter which is raised when pre-condition valid_input_parameter is false. The exception has the same entry and exit state. [Rule 2:]Each operation with at least one optional input parameter supports a set of pre-conditions supported_optional_input_parameter_xxx where "xxx" is the name of the optional input parameter and the pre-condition indicates that the operation supports the named optional input parameter. Additionally, each such operation supports an exception operation_failed_unsupported_optional_input_parameter_xxx which is raised when (a) the pre-condition supported_optional_input_parameter_xxx is false and (b) the named optional input parameter is carrying information. The exception has the same entry and exit state. [Rule 3:]Each operation shall support a generic exception operation_failed_internal_problem which is raised when an internal problem occurs and that the operation cannot be completed. The exception has the same entry and exit state.
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation subscribeLog (M) > Definition
+Content: Using this operation, an IRPManager is initiating the logging of notifications. Resulting from this operation an IRPAgent shall start logging of notifications and, if necessary, also create an associated log.
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation unsubscribeLog (M) > Definition
+Content: Using this operation, the IRPManager that started a specific log is able to stop this log via unsubscribing. Note stopping a log implies that the log becomes invisible across Itf-N, independent from the loggingEndTime; therefore the IRPManager should retrieve log information of interest before using this unsubscribeLog operation, e.g. through the exportLogRecords operation. The disposition of a log that has been stopped, that is, whether the log remains visible across the Itf-N, is left as vendor specific functionality. The time of the deletion of logs is vendor specific. In consideration of a multi-manager environment, the log can only be stopped by the creating IRPManager if this IRPManager provided a related token while initiating subscribeLog.
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation unsubscribeLog (M) > Pre-condition
+Content: There are no pre-conditions, other than those established by the generic rules (see clause 6.2).
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation exportLogRecords (O)
+Content: Support for this operation is mandatory if getLogRecords is not supported.
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation exportLogRecords (O) > Definition
+Content: Using this operation, an IRPManager can initiate export of all or part of a log into a file. This file then is being transferred to the IRPManager using the File Transfer IRP (note also that the FTIRP is providing the file location to the IRPManager).
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation exportLogRecords (O) > Pre-condition
+Content: There are no pre-conditions, other than those established by the generic rules (see clause 6.2).
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation getLogRecords (O)
+Content: Support for these operations is mandatory if exportLogRecords is not supported.
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation getLogRecords (O) > Definition
+Content: Using this operation, an IRPManager can retrieve one or more log records from a certain log. Note that this operation might be preferred for retrieval of small amounts of log records, while operation exportLogRecords might be preferred for retrieval of medium to large amounts of log records, as providing a more efficient bulk transfer mechanism.
+Title Path: Interface definition > NLIRPOperations_1 Interface (M) > Operation getLogRecords (O) > Pre-condition
+Content: There are no pre-conditions, other than those established by the generic rules (see clause 6.2).
+Title Path: Interface definition > NLIRPOperations_2 Interface (O) > Operation getLogSubscriptionIds (M) > Definition
+Content: Using this operation, an IRPManager can query the NLIRP for all available log subscriptions.
+Title Path: Interface definition > NLIRPOperations_2 Interface (O) > Operation getLogSubscriptionIds (M) > Pre-condition
+Content: There are no pre-conditions, other than those established by the generic rules (see clause 6.2).
+Title Path: Interface definition > NLIRPOperations_2 Interface (O) > Operation getLogSubscriptionIds (M) > Post-condition
+Content: There are no post-conditions. Querying of log subscription Id’s does not result in any changes within the IRP Agent.
+Title Path: Interface definition > NLIRPOperations_2 Interface (O) > Operation getLogSubscriptionStatus (M) > Definition
+Content: Using this operation, an IRPManager can query the NLIRP for available log status information of an individual log.
+Title Path: Interface definition > NLIRPOperations_2 Interface (O) > Operation getLogSubscriptionStatus (M) > Pre-condition
+Content: There are no pre-conditions, other than those established by the generic rules (see clause 6.2).
+Title Path: Interface definition > NLIRPOperations_2 Interface (O) > Operation getLogSubscriptionStatus (M) > Post-condition
+Content: There are no post-conditions. Querying of log attributes does not result in any changes within the IRPAgent.
+Title Path: Interface definition > NLIRPNotifications_1 Interface (M) > Notification notifyLogSubscribed (M) > Definition
+Content: Using this notification, an IRPAgent informs all subscribed IRPManagers that a log subscription has been successfully initiated.
+Title Path: Interface definition > NLIRPNotifications_1 Interface (M) > Notification notifyLogUnsubscribed (M) > Definition
+Content: Using this notification, an IRPAgent informs all subscribed IRPManager that a log subscription has stopped.
+Title Path: Interface definition > NLIRPNotifications_2 Interface (O) > Notification notifyOccupancyLevelCrossed (M) > Definition
+Content: Using this notification, an IRPAgent informs all subscribed IRPManagers about the occupancy level of a certain log according with levels defined in 5.5.1 (in addition also the log full action type of this NLIRP instance is being provided for context purposes).
+Title Path: Interface definition > NLIRPNotifications_2 Interface (O) > Notification notifyLoggingResumed (O) > Definition
+Content: Using this notification, an IRPAgent informs all subscribed IRPManagers that the amount of data within a given log has been reduced, allowing logging to resume continue (according to the information provided when the log was created). Note that this notification only applies to Log.logFullAction == ‘halt’.

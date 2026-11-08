@@ -1,0 +1,28 @@
+Title Path: Scope
+Content: The present document provides the list of UE features for NR. For each NR UE feature, the corresponding field name of UE capability, as specified in TS 38.331 is also captured in this document. The Release 15 UE feature list described in clause 4 reflects the status of Release 15 in June 2019 and has not been maintained after this date. The Release 16 UE feature list described in clause 5 reflects the status of Release 16 in June 2021 and has not been maintained after this date.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: Release 15 UE feature list > Layer-1 UE features
+Content: Table 4.1-1 provides the list of Layer-1 features, as shown in and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 15 UE feature list > Layer-2 and Layer-3 features
+Content: Table 4.2-1 provides the list of Layer-2 and Layer-3 features, as shown in and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 15 UE feature list > RF and RRM features
+Content: Table 4.3-1 provides the list of RF and RRM features, as shown in and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 16 UE feature list > Layer-1 UE features > General
+Content: Tables 5.1.1-1 to 5.1.15-1 provide the list of Layer-1 features, as shown in and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 16 UE feature list > Layer-2 and Layer-3 features > General
+Content: Tables 5.2.1-1 to 5.2.24-1 provide the list of Layer-2 and Layer-3 features, as shown in and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 16 UE feature list > RF and RRM Features > General
+Content: Tables 5.3.1-1 to 5.3.13-1 provide the list of RF and RRM features, as shown in , and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 17 UE feature list > Layer-1 UE features > General
+Content: Tables 6.1.1-1 to 6.1.17-1 provide the list of Layer-1 features, as shown in and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 17 UE feature list > Layer-1 UE features > [NR_RF_FR1_enh]
+Content: NOTE: Placeholder as there are no RAN1 UE features for Rel-17 Tx switching agreed until RAN1\#109-e.
+Title Path: Release 17 UE feature list > Layer-1 UE features > [NR_SmallData_INACTIVE]
+Content: NOTE: Placeholder as there are no RAN1 UE features for SDT agreed until RAN1\#109-e.
+Title Path: Release 17 UE feature list > Layer-2 and Layer-3 features > General
+Content: Tables 6.2.1-1 to 6.2.19-1 provide the list of Layer-2 and Layer-3 features, and the corresponding UE capability field name, as specified in TS 38.331 .
+Title Path: Release 17 UE feature list > RF and RRM Features > General
+Content: Tables 6.3.1-1 to 6.3.13-1 provide the list of RF and RRM features, as shown in , and the corresponding UE capability field name, as specified in TS 38.331 .

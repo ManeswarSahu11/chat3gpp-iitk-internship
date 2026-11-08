@@ -1,0 +1,74 @@
+Title Path: Scope
+Content: The present document defines the Network Resource Model (NRM) for the SuM IRP which can be communicated between an IRPAgent and IRPManagers for subscription management purposes, including in the context of converged networks .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply. For terms and definitions not found here, please refer to TS 32.101 , TS 32.102 , TS 32.140 and TS 32.141 . Subscription Profile: see TS 32.140 . Subscription Profile Component: see TS 32.140 . Subscription Profile Component Definition: specifies a Subscription Profile Component. Subscriber Profile: see TS 32.140 . User: see TS 32.140 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document the following and the abbreviations in 32.101 , 32.102 , 32.140 and 32.141 apply. Element Manager Information Object Class Integration Reference Point Managed Object Class Network Element Subscription Management
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes (e.g. IOCs) that encapsulates the information relevant for this IRP. This clause provides an overview of the relationships between relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes.
+Title Path: Model > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships.
+Title Path: Model > Class definitions > SuMService > Definition
+Content: This is an abstract IOC provided for sub-classing only. It provides attribute(s) that are common to Services IOCs.
+Title Path: Model > Class definitions > CSService > Definition
+Content: This class represents a CS service (see TS 23.008 ) provided by a service provider This class contains the valid parameters that define the CS service from subscription point of view.
+Title Path: Model > Class definitions > GPRSService > Definition
+Content: This class represents a GPRS service (see TS 23.008 ) provided by a service provider. This class contains the valid parameters that define the GPRS service from subscription point of view.
+Title Path: Model > Class definitions > IMSService > Definition
+Content: This class represents a IMS service (see TS 23.008 ) provided by a service provider This class contains the valid parameters that define the IMS service from subscription point of view.
+Title Path: Model > Class definitions > SuMSubscribedService > Definition
+Content: This is an abstract IOC provided for sub-classing only. It provides attribute(s) that are common to Subscribed Services IOCs.
+Title Path: Model > Class definitions > CSSubscribedService > Definition
+Content: This class represents subscription to a CS service (see TS 23.008 ) for a subscriber. The entire set of CS subscribed services owned by a subscriber constitutes the subscriber's Subscribed Services Profile for CS services. This class contains the agreed (between the Subscriber and the Service Provider) parameter settings for a CS service that a Subscriber subscribes to.
+Title Path: Model > Class definitions > GPRSSubscribedService > Definition
+Content: This class represents subscription to a GPRS service (see TS 23.008 ) for a subscriber. The entire set of GPRS subscribed services owned by a subscriber constitutes the subscriber's Subscribed Services Profile for GPRS services.
+Title Path: Model > Class definitions > IMSSubscribedService > Definition
+Content: This class represents subscription to an IMS (see TS 23.008 ) service for a subscriber. The entire set of IMS subscribed services owned by a subscriber constitutes the subscriber's Subscribed Services profile for IMS services. This class contains the agreed (between the Subscriber and the Service Provider) parameter settings for an IMS service that a Subscriber subscribes to.
+Title Path: Model > Class definitions > SuMSubscriberProfile > Definition
+Content: This class represents the Subscriber Profile. This class also contains the reference to its aggregated Subscribed Service as well as the users for a subscriber.
+Title Path: Model > Class definitions > SuMServiceProfile > Definition
+Content: This is an abstract IOC provided for sub-classing only. It provides attribute(s) that are common to Service Profiles IOCs.
+Title Path: Model > Class definitions > CSServiceProfile > Definition
+Content: This class represents for a subscribed CS service (see TS 23.008 ) the service preferences and settings chosen for a user.
+Title Path: Model > Class definitions > GPRSSServiceProfile > Definition
+Content: This class represents for a subscribed GPRS service (see TS 23.008 ) the service preferences and settings chosen for a user.
+Title Path: Model > Class definitions > IMSServiceProfile > Definition
+Content: This class represents for a subscribed IMS (see TS 23.008 ) service the service preferences and settings chosen for a user. This class contains the reference to its aggregated IMS Public Identifications.
+Title Path: Model > Class definitions > SubscriptionFunction > Definition
+Content: This class represents subscription functionality. All managed elements related to the subscription of services have this functionality. This class inherits from ManagedFunction (defined in 32.622 ). This class contains the reference to its aggregated Users. This class contains the reference to its aggregated Subscriber Profiles.
+Title Path: Model > Class definitions > SuMCSSupplService > Definition
+Content: This class represents a Supplementary Service for a CS service (see TS 23.008 ) provided by a service provider This class contains the valid parameters that define the CS supplementary service from subscription point of view.
+Title Path: Model > Class definitions > SuMGPRSSupplService > Definition
+Content: This class represents a Supplementary Service for a GPRS service (see TS 23.008 ) provided by a service provider This class contains the valid parameters that define the GPRS supplementary service from subscription point of view.
+Title Path: Model > Class definitions > SuMUser > Definition
+Content: This class represents a User. This class contains the valid parameters that define the User from subscription point of view.
+Title Path: Model > Class definitions > SuMCredentials > Definition
+Content: This class represents a User's credentials. This class contains the valid parameters that define the credentials from subscription point of view.
+Title Path: Model > Class definitions > IMSPublicIdentification > Definition
+Content: This class represents the IMS Public Identification (see TS 23.008 and TS 29.228 ). This class contains the valid parameters that define the IMS Public Identification from subscription point of view.
+Title Path: Model > Class definitions > MobileUserData > Definition
+Content: This class represents user data of a mobile User Equipment. This class contains the valid parameters that define the user data of the mobile User Equipment from subscription point of view.
+Title Path: Model > Class definitions > SuMServiceParameter > Definition
+Content: This class represents a structured Service Parameter defined for a service and is an abstract class provided for sub-classing only. This class shall be used as a base when having the requirement to provision common shared data referred to by specific SuMSubscribedService or SuMServiceProfile instances.
+Title Path: Model > Class definitions > SuMIdentity > Definition
+Content: This class represents a user related identity, regardless of any type service to be provisioned and is an abstract class provided for sub-classing only. This class allows an identity to be used for multiple services.
+Title Path: Model > Class definitions > ServerCapabilities > Definition
+Content: This class is used to provision common shared ServerCapabilities data referred by specific SuMSubscribedService or SuMServiceProfile instances. This class contains information to assist the I-CSCF in the selection of an S-CSCF for an IMS subscriber or a PSI user.
+Title Path: Model > Class definitions > EPSService > Definition
+Content: This class represents an EPS service (see TS 23.008 ) provided by a service provider. This class contains the valid parameters that define the EPS service from a subscription point of view.
+Title Path: Model > Class definitions > EPSSubscribedService > Definition
+Content: This class represents subscription to an EPS service (see TS 23.008 ) for a subscriber. The entire set of EPS subscribed services owned by a subscriber constitutes the subscriber's Subscribed Services Profile for EPS services. This class contains the agreed (between the Subscriber and the Service Provider) parameter settings for an EPS service that a Subscriber subscribes to.
+Title Path: Model > Class definitions > EPSServiceProfile > Definition
+Content: This class represents for a subscribed EPS service (see TS 23.008 ) the service preferences and settings chosen for a user.
+Title Path: Model > Class definitions > PSCommonServiceProfile > Definition
+Content: This is an abstract IOC provided for sub-classing only. It provides attribute(s) that are common to PS Service Profile IOCs (Regarding GPRS or EPS service, please see TS 23.008 ).
+Title Path: Model > Class definitions > IWANParameters > Definition
+Content: This class represents for a subscribed GPRS or EPS service (see TS 23.008 ) the service preferences and settings chosen for a user that are relevant to IWAN services.
+Title Path: Model > Class definitions > OptHandover3GPP2Parameters > Definition
+Content: This class represents for a subscribed EPS service (see TS 23.008 ) the service preferences and settings chosen for a user that are relevant to the optimization of handover to a 3GPP2 network.
+Title Path: Model > Class definitions > Non3GPPAccessParameters > Definition
+Content: This class represents for a subscribed EPS service (see TS 23.008 ) the service preferences and settings chosen for a user that are relevant to use of a non-3GPP access network.
+Title Path: Model > Class definitions > Common3GPPAccessServiceProfile > Definition
+Content: This is an abstract IOC provided for sub-classing only. It provides attribute(s) that are common to CS/PS Service Profile IOCs (Regarding CS, GPRS or EPS service, please see TS 23.008 ).
+Title Path: Model > Attribute definitions > Attribute properties
+Content: The following table defines the properties of attributes specified in the present document.

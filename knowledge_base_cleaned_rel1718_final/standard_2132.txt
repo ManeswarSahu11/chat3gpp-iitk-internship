@@ -1,0 +1,250 @@
+Title Path: Scope
+Content: The present document is a technical report for DC of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and 3 bands NR inter-band CA (3DL/1UL) under Rel-17 time frame , including EN-DC and NE-DC . The purpose is to gather the relevant background information and studies in order to address DC of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and 3 bands NR inter-band CA (3DL/1UL) in Rel-17 as. This TR contains a general part and band specific combination part. The actual requirements are added to the corresponding technical specifications.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: [$ $R ]Allowed reference sensitivity relaxation due to support for CA or DC operation, for serving cell c. [$ $T ]Allowed maximum configured output power relaxation due to support for CA or DC operation, for serving cell c.
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: Background
+Content: The present document is a technical report for DC of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and 3 bands NR inter-band CA (3DL/1UL) under Rel-17 time frame , including EN-DC and NE-DC .
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: DC band combinations of LTE x bands DL/1UL(x=1,2,3) + NR 3 bands DL/1UL: General Part > General
+Content: In order to support DC of LTE CA for up to 3 different bands DL with 1 band UL + NR CA for 3 different bands DL with 1 band UL in rel-1 7, the corresponding fallback modes shall be shall be completed and specified in advance. Unless otherwise stated, the requirements for EN-DC and NE-DC for the same band combination are the same.
+Title Path: DC band combinations of LTE x bands DL/1UL(x=1,2,3) + NR 3 bands DL/1UL: General Part > General treatment of $ $TIB and $ $RIB values
+Content: For DC of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and 3 bands NR inter-band CA (3DL/1UL) band combination, RAN4 should consider to reuse agreed additional insertion losses for all EN-DC band combinations when new RF components are not introduced to support this basket WI. If the new RF components are introduced, then more detail description will be captured in some specific EN-DC band combinations.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n28-n77 > Co-existence studies
+Content: Co-existence study for DC_1_n3-n28-n77 was covered by the studies for the fallback modes of DC_1_n3-n28, DC_1_n3-n77 and DC_1_n28-n77. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_1_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n28-n77 > MSD
+Content: As mentioned in 6.1.3, there is no need to specify additional MSD requirement for this UL DC configuration..
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n28-n77 > Co-existence studies
+Content: Co-existence study for DC_8_n3-n28-n77 was covered by the studies for the fallback modes of DC_8_n3-n28, DC_8_n3-n77 and DC_8_n28-n77. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_8_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n28-n77 > MSD
+Content: As mentioned in 6.2.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8A_n40A-n41A-n79A > $ $T and $ $R values
+Content: For DC_8A_n40A-n41A-n79A , the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8A_n40A-n41A-n79A > MSD
+Content: No additional MSD requirement is needed.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n1-n78-n257, DC_3-3_n1-n78-n257 > $ $T and $ $R values
+Content: For DC_3_n1-n78-n257, DC_3-3_n1-n78-n257, $ $T and $ $R values are set to zero for n257, and the values for constituent E-UTRA and FR1 NR bands are same as those for the corresponding inter band EN-DC configurations which are defined in the TS 38.101-3 already.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n1-n78-n257, DC_3-3_n1-n78-n257 > MSD
+Content: No additional MSD requirement is needed. Next session
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_7_n1-n78-n257, DC_7-7_n1-n78-n257 > $ $T and $ $R values
+Content: For DC_7_n1-n78-n257, DC_7-7_n1-n78-n257, $ $T and $ $R values are set to zero for n257, and the values for constituent E-UTRA and FR1 NR bands are same as those for the corresponding inter band EN-DC configurations which are defined in the TS 38.101-3 already.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_11_n3-n28-n77 > Co-existence studies
+Content: Co-existence study for DC_11_n3-n28-n77 was covered by the studies for the fallback modes of DC_11_n3-n28, DC_11_n3-n77 and DC_11_n28-n77. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_11_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_11_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_11_n3-n28-n77 > MSD
+Content: As mentioned in 6.6.3, there is no need to specify additional MSD requirement for this UL DC configuration..
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_42_n3-n28-n77 > Co-existence studies
+Content: Co-existence study for DC_42_n3-n28-n77 was covered by the studies for the fallback modes of DC_42_n3-n28, DC_42_n3-n77 and DC_42_n28-n77. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_42_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_42_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_42_n3-n28-n77 > MSD
+Content: As mentioned in 6.7.3, there is no need to specify additional MSD requirement for this UL DC configuration..
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1A_n28A-n77A-n79A > $ $T and $ $R values
+Content: For DC_1A_n28A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1A_n28A-n78A-n79A > $ $T and $ $R values
+Content: For DC_1A_n28A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A_n1A-n77A-n79A > $ $T and $ $R values
+Content: For DC_3A_n1A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A_n1A-n78A-n79A > $ $T and $ $R values
+Content: For DC_3A_n1A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A_n28A-n77A-n79A > $ $T and $ $R values
+Content: For DC_3A_n28A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A_n28A-n78A-n79A > $ $T and $ $R values
+Content: For DC_3A_n28A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_19A_n1A-n77A-n79A > $ $T and $ $R values
+Content: For DC_19A_n1A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_19A_n1A-n78A-n79A > $ $T and $ $R values
+Content: For DC_19A_n1A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_21A_n1A-n77A-n79A > $ $T and $ $R values
+Content: For DC_21A_n1A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_21A_n1A-n78A-n79A > $ $T and $ $R values
+Content: For DC_21A_n1A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_21A_n28A-n77A-n79A > $ $T and $ $R values
+Content: For DC_21A_n28A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_21A_n28A-n78A-n79A > $ $T and $ $R values
+Content: For DC_21A_n28A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_42A_n1A-n77A-n79A > Inter-band DC Configurations
+Content: Since Uplink EN-DC configuration is N/A, the combination is not used alone as described in NOTE X. This is the same NOTE with NOTE 9 specified in Table 5.5B.4.1-1 in TS 38.101-3 v17.0.0.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_42A_n1A-n77A-n79A > $ $T and $ $R values
+Content: For DC_42A_n1A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_42A_n1A-n78A-n79A > Inter-band DC Configurations
+Content: Since Uplink EN-DC configuration is N/A, the combination is not used alone as described in NOTE X. This is the same NOTE with NOTE 9 specified in Table 5.5B.4.1-1 in TS 38.101-3 v17.0.0.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_42A_n1A-n78A-n79A > $ $T and $ $R values
+Content: For DC_42A_n1A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8A_n39-n40-n41 > $ $T and $ $R values
+Content: For DC_8A_n40A-n41A-n79A , the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8A_n39-n40-n41 > MSD
+Content: No additional MSD requirement is needed.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8A_n39-n40-n79 > $ $T and $ $R values
+Content: For DC_8A_n40A-n79A-n79A , the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8A_n39-n40-n79 > MSD
+Content: No additional MSD requirement is needed.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n41-n79-n258 > $ $T and $ $R values
+Content: For DC_3A_n41A-n79A-n258A , $ $T and $ $R values are set to zero for n258, and the values for constituent E-UTRA and FR1 NR bands are same as those for the corresponding inter band EN-DC configurations which are defined in the TS 38.101-3 already.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n41-n79-n258 > MSD
+Content: No additional MSD requirement is needed.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n28-n79 > Co-existence studies
+Content: Co-existence study for DC_1_n3-n28-n79 was covered by the studies for the fallback modes of DC_1_n3-n28, DC_1_n3-n79 and DC_1_n28-n79. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n28-n79 > $ $T and $ $R values
+Content: For DC_1_n3-n28-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n28-n79 > MSD
+Content: As mentioned in 6.25.3, there is no need to specify additional MSD requirement for this UL DC configuration..
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n77-n79 > Co-existence studies
+Content: Co-existence study for DC_1_n3-n77-n79 was covered by the studies for the fallback modes of DC_1_n3-n77, DC_1_n3-n79 and DC_1_n77-n79. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n77-n79 > $ $T and $ $R values
+Content: For DC_1_n3-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1_n3-n77-n79 > MSD
+Content: As mentioned in 6.26.3, there is no need to specify additional MSD requirement for this UL DC configuration..
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n77-n79 > Co-existence studies
+Content: Co-existence study for DC_8_n3-n77-n79 was covered by the studies for the fallback modes of DC_8_n3-n77, DC_8_n3-n79 and DC_8_n77-n79. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n77-n79 > $ $T and $ $R values
+Content: For DC_8_n3-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n77-n79 > MSD
+Content: As mentioned in 6.27.3, there is no need to specify additional MSD requirement for this UL DC configuration..
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n28-n79 > Co-existence studies
+Content: Co-existence study for DC_8_n3-n28-n79 was covered by the studies for the fallback modes of DC_8_n3-n28, DC_8_n3-n79 and DC_8_n28-n79. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n28-n79 > $ $T and $ $R values
+Content: For DC_8_n3-n28-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n3-n28-n79 > MSD
+Content: As mentioned in 6.28.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n28-n77-n79 > Co-existence studies
+Content: Co-existence study for DC_8_n28-n77-n79 was covered by the studies for the fallback modes of DC_8_n28-n77, DC_8_n28-n79 and DC_8_n77-n79. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n28-n77-n79 > $ $T and $ $R values
+Content: For DC_8_n28-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n28-n77-n79 > MSD
+Content: As mentioned in 6.29.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n1-n8-n78, DC_3-3_n1-n8-n78 > $ $T and $ $R values
+Content: For DC_3_n1-n8-n78, DC_3-3_ n1-n8-n78, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n1-n8-n78, DC_3-3_n1-n8-n78 > MSD
+Content: No additional MSD requirement is needed. Next session
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_7_n1-n8-n78, DC_7-7_n1-n8-n78 > $ $T and $ $R values
+Content: For DC_7_n1-n8-n78, DC_7-7_ n1-n8-n78, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n1-n3-n77 > Co-existence studies
+Content: Co-existence study for DC_8_n1-n3-n77 was covered by the studies for the fallback modes of DC_8_n1-n3, DC_8_n1-n77 and DC_8_n3-n77. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n1-n3-n77 > $ $T and $ $R values
+Content: For DC_8_n1-n3-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8_n1-n3-n77 > MSD
+Content: As mentioned in 6.32.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_11_n3-n77-n79 > Co-existence studies
+Content: Co-existence study for DC_11_n3-n77-n79 was covered by the studies for the fallback modes of DC_11_n3-n77, DC_11_n3-n79 and DC_11_n77-n79. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_11_n3-n77-n79 > $ $T and $ $R values
+Content: For DC_11_n3-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_11_n3-n77-n79 > MSD
+Content: As mentioned in 6.33.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n1-n40-n78 > Co-existence studies
+Content: Co-existence study for was covered by the studies of the fallback modes of DC_3_n1-n40, DC_3_n1-n78 and DC_3_n40-n78. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n1-n40-n78 > $ $T and $ $R values
+Content: For DC_3_n1-n40-n78, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n1-n40-n78 > MSD
+Content: As analysed in 6.34.3, there is no need to specify additional MSD requirement.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n5-n40-n78 > Co-existence studies
+Content: Co-existence study for was covered by the studies of the fallback modes of DC_3_n5-n40, DC_3_n5-n78 and DC_3_n40-n78. No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n5-n40-n78 > $ $T and $ $R values
+Content: For DC_3_n5-n40-n78, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 1 band DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3_n5-n40-n78 > MSD
+Content: As analysed in 6.35.3, there is no need to specify additional MSD requirement.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3-7_n1-n78-n257, DC_3-3-7_n1-n78-n257, DC_3-7-7_n1-n78-n257, DC_3-3-7-7_n1-n78-n257 > $ $T and $ $R values
+Content: For DC_3-7_n1-n78-n257, DC_3-3-7_n1-n78-n257, DC_3-7-7_n1-n78-n257, DC_3-3-7-7_n1-n78-n257, $ $T and $ $R values are set to zero for n257, and the values for constituent E-UTRA and FR1 NR bands are same as those for the corresponding inter band EN-DC configurations which are defined in the TS 38.101-3 already.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n28-n77 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-8_n3-n28, DC_1-8_n3-n77, DC_1-8_n28-n77, DC_1_n3_n28-n77 and DC_8_n3-n28-n77. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_1-8_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n28-n77 > MSD
+Content: As mentioned in 7.2.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-11_n3-n28-n77 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-11_n3-n28, DC_1-11_n3-n77, DC_1-11_n28-n77, DC_1_n3_n28-n77 and DC_11_n3-n28-n77. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-11_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_1-11_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-11_n3-n28-n77 > MSD
+Content: As mentioned in 7.3.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-42_n3-n28-n77 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-42_n3-n28, DC_1-42_n3-n77, DC_1-42_n28-n77, DC_1_n3_n28-n77 and DC_42_n3-n28-n77. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-42_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_1-42_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-42_n3-n28-n77 > MSD
+Content: As mentioned in 7.4.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-11_n3-n28-n77 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_8-11_n3-n28, DC_8-11_n3-n77, DC_8-11_n28-n77, DC_8_n3_n28-n77 and DC_11_n3-n28-n77. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-11_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_8-11_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-11_n3-n28-n77 > MSD
+Content: As mentioned in 7.5.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-42_n3-n28-n77 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_8-42_n3-n28, DC_8-42_n3-n77, DC_8-42_n28-n77, DC_8_n3_n28-n77 and DC_42_n3-n28-n77. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-42_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_8-42_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-42_n3-n28-n77 > MSD
+Content: As mentioned in 7.6.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1A-3A_n28A-n77A-n79A > $ $T and $ $R values
+Content: For DC_1A-3A_n28A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1A-3A_n28A-n78A-n79A > $ $T and $ $R values
+Content: For DC_1A-3A_n28A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1A-21A_n28A-n77A-n79A > $ $T and $ $R values
+Content: For DC_1A-21A_n28A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1A-21A_n28A-n78A-n79A > $ $T and $ $R values
+Content: For DC_1A-21A_n28A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A-21A_n1A-n77A-n79A > $ $T and $ $R values
+Content: For DC_3A-21A_n1A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A-21A_n1A-n78A-n79A > $ $T and $ $R values
+Content: For DC_3A-21A_n1A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A-21A_n28A-n77A-n79A > $ $T and $ $R values
+Content: For DC_3A-21A_n28A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3A-21A_n28A-n78A-n79A > $ $T and $ $R values
+Content: For DC_3A-21A_n28A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_19A-42A_n1A-n77A-n79A > $ $T and $ $R values
+Content: For DC_19A-42A_n1A-n77A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_19A-42A_n1A-n78A-n79A > $ $T and $ $R values
+Content: For DC_19A-42A_n1A-n78A-n79A, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n77-n79 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-8_n3-n77, DC_1-8_n3-n79, DC_1-8_n77-n79, DC_1_n3_n77-n79 and DC_8_n3-n77-n79. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n77-n79 > $ $T and $ $R values
+Content: For DC_1-8_n3-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n77-n79 > MSD
+Content: As mentioned in 7.17.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_3-7_n1-n8-n78, DC_3-3-7_n1-n8-n78, DC_3-7-7_n1-n8-n78, DC_3-3-7-7_n1-n8-n78 > $ $T and $ $R values
+Content: For DC_3-7_n1-n8-n78, DC_3-3-7_n1-n8-n78, DC_3-7-7_n1-n8-n78, DC_3-3-7-7_n1-n8-n78, the $ $T and $ $R values which are reused from DC_3-3-7-7-8_n1-n78 are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n28-n79 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-8_n3-n28, DC_1-8_n3-n79, DC_1-8_n28-n79, DC_1_n3_n28-n79 and DC_8_n3-n28-n79. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n28-n79 > $ $T and $ $R values
+Content: For DC_1-8_n3-n28-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n3-n28-n79 > MSD
+Content: As mentioned in 7.19.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n28-n77-n79 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-8_n28-n77, DC_1-8_n28-n79, DC_1-8_n77-n79, DC_1_n28_n77-n79 and DC_8_n28-n77-n79. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n28-n77-n79 > $ $T and $ $R values
+Content: For DC_1-8_n28-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8_n28-n77-n79 > MSD
+Content: As mentioned in 7.20.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-11_n3-n77-n79 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_8-11_n3-n77, DC_8-11_n3-n79, DC_8-11_n77-n79, DC_8_n3_n77-n79 and DC_11_n3-n77-n79. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-11_n3-n77-n79 > $ $T and $ $R values
+Content: For DC_8-11_n3-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_8-11_n3-n77-n79 > MSD
+Content: As mentioned in 7.21.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-11_n3-n77-n79 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 2DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-11_n3-n77, DC_1-11_n3-n79, DC_1-11_n77-n79, DC_1_n3_n77-n79 and DC_11_n3-n77-n79. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-11_n3-n77-n79 > $ $T and $ $R values
+Content: For DC_1-11_n3-n77-n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 2 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-11_n3-n77-n79 > MSD
+Content: As mentioned in 7.22.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 3 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8-11_n3-n28-n77 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 3DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-8-11_n3-n28, DC_1-8-11_n3-n77, DC_1-8-11_n28-n77, DC_1-8_n3-n28-n77, DC_1-11_n3_n28-n77 and DC_8-11_n3-n28-n77. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 3 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8-11_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_1-8-11_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 3 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8-11_n3-n28-n77 > MSD
+Content: As mentioned in 8.1.3, there is no need to specify additional MSD requirement for this UL DC configuration.
+Title Path: DC band combinations of LTE 3 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8-42_n3-n28-n77 > Co-existence studies
+Content: Co-existence studies of this DC LTE inter-band 3DL/1UL + inter-band NR3DL/1UL are already covered by the fallback configurations, DC_1-8-42_n3-n28, DC_1-8-42_n3-n77, DC_1-8-42_n28-n77, DC_1-8_n3-n28-n77, DC_1-42_n3_n28-n77 and DC_8-42_n3-n28-n77. Therefore, there is no additional harmonic and intermodulation impact for the additional band receiver.
+Title Path: DC band combinations of LTE 3 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8-42_n3-n28-n77 > $ $T and $ $R values
+Content: For DC_1-8-42_n3-n28-n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC band combinations of LTE 3 bands DL/1UL + NR 3 bands DL/1UL: Specific Band Combination Part > DC_1-8-42_n3-n28-n77 > MSD
+Content: As mentioned in 8.2.3, there is no need to specify additional MSD requirement for this UL DC configuration.

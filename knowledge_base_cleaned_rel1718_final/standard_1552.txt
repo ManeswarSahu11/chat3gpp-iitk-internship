@@ -1,0 +1,50 @@
+Title Path: Scope
+Content: The present document specifies an Allowed Closed Subscriber Group (CSG) List Management Object (MO). The Allowed CSG List MO is compatible with the OMA Device Management (DM) protocol specifications, version 1.2 and upwards, and is defined using the OMA DM Device Description Framework (DDF) as described in the Enabler Release Definition OMA-ERELD-DM-V1_2 . The Allowed CSG List MO consists of relevant parameters for that can be used by the UE to select the appropriate CSG cell based on its subscription. The Allowed CSG List MO defines the relevant parameters related to the Allowed CSG List and to the Operator CSG List. The usage of the Allowed CSG List for in the idle mode process and the mobility management procedure is defined in 3GPP TS 23.122 , 3GPP TS 24.008 and 3GPP TS 24.301 .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 apply.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Closed Subscriber Group Device Management Home NodeB/eNodeB Management Object Open Mobile Alliance Public Land Mobile Network User Equipment
+Title Path: Allowed CSG List Management Object
+Content: The Allowed CSG List Management Object (MO) is used to manage the list of allowed CSG IDs, the Operator CSG IDs and the related restricted access information at UE. The Management Object Identifier is: urn:oma:mo:ext-3gpp-csg:1.0. The OMA DM Access Control List (ACL) property mechanism (see OMA-ERELD-DM-V1_2 ) may be used to grant or deny access rights to OMA DM servers in order to modify nodes and leaf objects of the Allowed CSG list MO. The following nodes and leaf objects are possible under the Allowed CSG List node as described in figure 4-1: When a UE receives an Allowed CSG List Management Object (MO) containing the Allowed CSG List, it shall update its Allowed CSG list stored in a USIM or in a non-volatile memory in the ME. When a UE receives an Allowed CSG List Management Object (MO) containing the Operator CSG List, it shall update the Operator CSG List stored in a non-volatile memory in the ME.
+Title Path: Management Object parameters > General
+Content: This clause describes the parameters for the Allowed CSG List Management Object (MO).
+Title Path: Management Object parameters > Node: X
+Content: This interior node acts as a placeholder for zero or one accounts for a fixed node. Occurrence: ZeroOrOne Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /AllowedCSGEntries
+Content: The AllowedCSGEntries interior node is used to allow a reference to a list of allowed CSG entries. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /AllowedCSGEntries/ X
+Content: This run-time node acts as a placeholder for one or more allowed CSG entries. Occurrence: OneOrMore Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /AllowedCSGEntries/ X /PLMN_ID
+Content: The PLMN_ID leaf represents a PLMN Identifier Occurrence: One Format: chr Access Types: Get, Replace Values: PLMN Identifier The value of the PLMN Identifier shall be a PLMN-Id as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X /AllowedCSGEntries/ X /CSG-entries
+Content: The CSG-entries interior node is used to allow a reference to a list of allowed CSG entries in a PLMN. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /AllowedCSGEntries/ X /CSG-entries/ X
+Content: This run-time node acts as a placeholder for one or more CSG entries (the CSG Identity, its related HNB Name and CSG Type) in a PLMN. Occurrence: OneOrMore Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /AllowedCSGEntries/ X /CSG-entries/ X /CSG_ID
+Content: The CSG_ID leaf represents a CSG Identifier. Occurrence: One Format: bin Access Types: Get, Replace Values: CSG Identifier The value of the CSG Identifier shall be coded as a CSG-ID as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X /AllowedCSGEntries/ X /CSG-entries/ X /HNB_Name
+Content: The HNB_name leaf represents a HNB Name. Occurrence: ZeroOrOne Format: chr Access Types: Get, Replace Values: HNB Name The value of the HNB Name shall be coded as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X /AllowedCSGEntries/ X /CSG-entries/ X /CSG_Type
+Content: The CSG Type leaf represents a CSG type. Occurrence: ZeroOrOne Format: chr Access Types: Get, Replace Values: CSG Type The value of the CSG Type shall be coded as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X /OperatorCSGEntries
+Content: The OperatorCSGEntries interior node is used to allow a reference to a list of operator CSG entries. Occurrence: ZeroOrOne Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /OperatorCSGEntries/ X
+Content: This run-time node acts as a placeholder for one or more operator CSG entries. Occurrence: OneOrMore Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /OperatorCSGEntries/ X /PLMN_ID
+Content: The PLMN_ID leaf represents a PLMN Identifier. Occurrence: One Format: chr Access Types: Get, Replace Values: PLMN Identifier The value of the PLMN Identifier shall be a PLMN-Id as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X /OperatorCSGEntries/ X /CSG-entries
+Content: The CSG-entries interior node is used to allow a reference to a list of operator CSG entries in a PLMN. Occurrence: One Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /OperatorCSGEntries/ X /CSG-entries/ X
+Content: This run-time node acts as a placeholder for one or more CSG entries (the CSG Identity, its related HNB Name and CSG Type) in a PLMN. Occurrence: OneOrMore Format: node Access Types: Get Values: N/A
+Title Path: Management Object parameters > / X /OperatorCSGEntries/ X /CSG-entries/ X /CSG_ID
+Content: The CSG_ID leaf represents a CSG Identifier. Occurrence: One Format: bin Access Types: Get, Replace Values: CSG Identifier The value of the CSG Identifier shall be coded as a CSG-ID as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X /OperatorCSGEntries/ X /CSG-entries/ X /HNB_Name
+Content: The HNB_name leaf represents a HNB Name. Occurrence: ZeroOrOne Format: chr Access Types: Get, Replace Values: HNB Name The value of the HNB Name shall be coded as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X / OperatorCSGEntries / X /CSG-entries/ X /CSG_Type
+Content: The CSG Type leaf represents a CSG type. Occurrence: ZeroOrOne Format: chr Access Types: Get, Replace Values: CSG Type The value of the CSG Type shall be coded as specified in 3GPP TS 23.003 .
+Title Path: Management Object parameters > / X /Ext/
+Content: The Ext is an interior node for where the vendor specific information about the Allowed CSG List MO is being placed (vendor meaning application vendor, device vendor etc.). Usually the vendor extension is identified by vendor specific name under the ext node. The tree structure under the vendor identified is not defined and can therefore include one or more un-standardized sub-trees. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management Object parameters > / X /OperatorCSGEntries/ X /OperatorCSGEntries_Only_thisPLMN
+Content: The OperatorCSGEntries_Only_thisPLMN leaf is used to indicate which CSGs the UE is configured to present to the user for a certain PLMN ID during manual CSG selection. Occurrence: ZeroOrOne Format: bool Access Types: Get, Replace Values: "false", "true" "false" Indicates that HPLMN has configured the UE to present to the user CSGs for the PLMN indicated in PLMN_ID leaf without any restriction. "true" Indicates that HPLMN has configured the UE to present to the user only the CSGs in the Operator CSG List for the PLMN indicated in PLMN_ID leaf. NOTE: For the value "true", if the HPLMN has not included any CSG entry for the PLMN indicated in PLMN_ID leaf, the UE is implicitly configured to not display any CSG for this PLMN during manual CSG selection. If the OperatorCSGEntries_Only_thisPLMN leaf is not included, then its value is equal to the value of OperatorCSGEntries_Only leaf.
+Title Path: Management Object parameters > / X /OperatorCSGEntries/OperatorCSGEntries_Only
+Content: The OperatorCSGEntries_Only leaf is used to indicate which CSGs the UE is configured to present to the user during manual CSG selection for every PLMN not included in the OperatorCSGEntries leaf and for every PLMN for which an OperatorCSGEntries_Only_thisPLMN leaf was not included. Occurrence: ZeroOrOne Format: bool Access Types: Get, Replace Values: "false", "true" "false" Indicates that the HPLMN has configured the UE, for every PLMN not included in any PLMN_ID leaf in the OperatorCSGEntries leaf or for which an OperatorCSGEntries_Only_thisPLMN leaf was not included, to present to the user CSGs without any restriction. "true" Indicates that the HPLMN has configured the UE, for every PLMN not included in any PLMN_ID leaf in the OperatorCSGEntries leaf or any PLMN for which an OperatorCSGEntries_Only_thisPLMN leaf was not included, to present to the user only the CSGs in the Operator CSG List. NOTE: For the value "true", if the HPLMN has not included any CSG entry in the OperatorCSGList for a certain PLMN, the UE is implicitly configured to not display any CSG for that PLMN during manual CSG selection. If the OperatorCSGEntries_Only leaf is not included, the default OperatorCSGEntries_Only value is "false".

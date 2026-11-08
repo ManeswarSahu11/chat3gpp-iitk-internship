@@ -1,0 +1,202 @@
+Title Path: Scope
+Content: The present document is a technical report on inter-band CA for x bands DL (x=4, 5) with 1 band UL under Rel-17 timeframe. The purpose is to gather the relevant background information and studies in order to address 4 or 5 bands DL/1 band UL Inter-band Carrier Aggregation requirements for the Rel-17 band combinations in Table 1-1 and 1-2. This TR contains a band specific combination part. The actual requirements are added to the corresponding technical specifications.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . ABBREVIATION Expansion
+Title Path: Background
+Content: The present document is a technical report for 4 or 5 bands DL/1 band UL Inter-band Carrier Aggregation under Rel-17 timeframe. The document covers each band combination specific issues (i.e. one sub-clause defined per band combination)
+Title Path: Background > TR maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_2-5-7-66 / CA_2-5-7-66-66 > REFSENS requirements
+Content: There is no MSD requirements for CA_2A-5A-7A-66A / CA_2A-5A-7C-66A / CA_2A-5A-7A-66A-66A.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-20-38 > $ $T and $ $R values
+Content: For CA_1A-3A-20A-38A, the $ $T and $ $R values are shown in table 5.3.2-1 and table 5.3.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-20-38 > REFSENS requirements
+Content: REFSENS requirements are defined in table 5.3.3-1 for inclusion in TS36.101 table 7.3.1A-0a. REFSENS requirements are defined in table 5.3.3-2 for inclusion in TS36.101 table 7.3.1A-0bD1. REFSENS requirements are defined in table 5.3.3-3 for inclusion in TS36.101 table 7.3.1A-0bE.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-8-41 > $ $T and $ $R values
+Content: For CA_1A-3A-8A-41A, the $ $T and $ $R values are shown in table 5.4.2-1 and table 5.4.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-8-38 > REFSENS requirements
+Content: The MSD requriements for CA_1A-7A-8A-38A are shown below.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-8-20-38 > REFSENS requirements
+Content: MSD due to harmonic interference between band 20 and 38 can is similar to CA_20A-38A.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-8-20-38 > REFSENS requirements
+Content: MSD due to harmonic interference between band 20 and 38 can is similar to CA_20A-38A. MSD due to harmonic interference between band 3 and 8 can is similar to CA_3A-8A.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-8-38 > REFSENS requirements
+Content: MSD due to harmonic interference between band 3 and 8 can is similar to CA_3A-8A.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-7-20 > $ $T and $ $R values
+Content: For CA_1-3-7-20, the $ $T and $ $R values are shown in table 5.10.2-1 and table 5.10.2-2 respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-40-41 > $ $T and $ $R values
+Content: For CA_1A-3A-40A-41A, the $ $T and $ $R values are shown in table 5.11.2-1 and table 5.11.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-28A > $ $T and $ $R values
+Content: For CA_1A-7A-8A-28A, the $ $T and $ $R values are shown in table 5.12.2-1 and table 5.12.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-8-32 > $ $T and $ $R values
+Content: For CA_1A-7A-8A-32A, the $ $T and $ $R values are shown in table 5.13.2-1 and table 5.13.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-28-32 > $ $T and $ $R values
+Content: For CA_1A-7A-28A-32A, the $ $T and $ $R values are shown in table 5.14.2-1 and table 5.14.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-8-20-32 > $ $T and $ $R values
+Content: For CA_1A-8A-20A-32A, the $ $T and $ $R values are shown in table 5.15.2-1 and table 5.15.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-8-28-32 > $ $T and $ $R values
+Content: For CA_1A-8A-28A-32A, the $ $T and $ $R values are shown in table 5.16.2-1 and table 5.16.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-20-28-32 > $ $T and $ $R values
+Content: For CA_1A-20A-28A-32A, the $ $T and $ $R values are shown in table 5.17.2-1 and table 5.17.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-8A-28A > $ $T and $ $R values
+Content: For CA_3A-7A-8A-28A, the $ $T and $ $R values are shown in table 5.18.2-1 and table 5.18.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3-8-40-41 > $ $T and $ $R values
+Content: For CA_3A-8A-40A-41A, the $ $T and $ $R values are shown in table 5.19.2-1 and table 5.19.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-8A-20A-28A > $ $T and $ $R values
+Content: For CA_7A-8A-20A-28A, the $ $T and $ $R values are shown in table 5.20.2-1 and table 5.20.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-8-20-32 > $ $T and $ $R values
+Content: For CA_7A-8A-20A-32A, the $ $T and $ $R values are shown in table 5.21.2-1 and table 5.21.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-8-28-32 > $ $T and $ $R values
+Content: For CA_7A-8A-28A-32A, the $ $T and $ $R values are shown in table 5.22.2-1 and table 5.22.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-20-28-32 > $ $T and $ $R values
+Content: For CA_7A-20A-28A-32A, the $ $T and $ $R values are shown in table 5.23.2-1 and table 5.23.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8-20-28-32 > $ $T and $ $R values
+Content: For CA_8A-20A-28A-32A, the $ $T and $ $R values are shown in table 5.24.2-1 and table 5.24.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-20-38 > REFSENS requirements
+Content: No additional REFSENS / MSD are needed since it is already covered in fallback band combination.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-3A-8A-38A > $ $T and $ $R values
+Content: For CA_1-3-3-8-38, the $ $T and $ $R values are shown in table 5.26.2-1 and table 5.26.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-3A-8A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-28A-38A > $ $T and $ $R values
+Content: For CA_1-3-28-38, the $ $T and $ $R values are shown in table 5.27.2-1 and table 5.27.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-20A-38A > $ $T and $ $R values
+Content: For CA_1-7-20-38, the $ $T and $ $R values are shown in table 5.28.2-1 and table 5.28.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-20A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-28A-38A > $ $T and $ $R values
+Content: For CA_1-7-28-38, the $ $T and $ $R values are shown in table 5.29.2-1 and table 5.29.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-32A-38A > $ $T and $ $R values
+Content: For CA_1-7-32-38, the $ $T and $ $R values are shown in table 5.30.2-1 and table 5.30.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-8A-32A-38A > $ $T and $ $R values
+Content: For CA_1-8-32-38, the $ $T and $ $R values are shown in table 5.31.2-1 and table 5.31.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-8A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-20A-28A-38A > $ $T and $ $R values
+Content: For CA_1-20-28-38, the $ $T and $ $R values are shown in table 5.32.2-1 and table 5.32.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-20A-32A-38A > $ $T and $ $R values
+Content: For CA_1-20-32-38, the $ $T and $ $R values are shown in table 5.33.2-1 and table 5.33.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-20A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-20A-38A > $ $T and $ $R values
+Content: For CA_3-7-20-38, the $ $T and $ $R values are shown in table 5.34.2-1 and table 5.34.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-20A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-20A-28A-38A > $ $T and $ $R values
+Content: For CA_3-20-28-38, the $ $T and $ $R values are shown in table 5.35.2-1 and table 5.35.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-8A-20A-38A > $ $T and $ $R values
+Content: For CA_7-8-20-38, the $ $T and $ $R values are shown in table 5.36.2-1 and table 5.36.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-8A-20A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-8A-32A-38A > $ $T and $ $R values
+Content: For CA_7-8-32-38, the $ $T and $ $R values are shown in table 5.37.2-1 and table 5.37.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-8A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-20A-28A-38A > $ $T and $ $R values
+Content: For CA_7-20-28-38, the $ $T and $ $R values are shown in table 5.38.2-1 and table 5.38.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-20A-32A-38A > $ $T and $ $R values
+Content: For CA_7-20-32-38, the $ $T and $ $R values are shown in table 5.39.2-1 and table 5.39.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-20A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8A-20A-32A-38A > $ $T and $ $R values
+Content: For CA_8-20-32-38, the $ $T and $ $R values are shown in table 5.40.2-1 and table 5.40.2-2, respectively.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_8A-20A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 4 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-28-32 > REFSENS requirements
+Content: There is no MSD requirements for CA_1A-3A-28A-32A.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-8A-28A > $ $T and $ $R values
+Content: For CA_1A-3A-7A-8A-28A, the $ $T and $ $R values are shown in table 6.2.2-1 and table 6.2.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-8A-20A-28A > $ $T and $ $R values
+Content: For CA_1A-3A-8A-20A-28A, the $ $T and $ $R values are shown in table 6.3.2-1 and table 6.3.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-20A-28A > $ $T and $ $R values
+Content: For CA_1A-7A-8A-20A-28A, the $ $T and $ $R values are shown in table 6.4.2-1 and table 6.4.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-8-20-32 > $ $T and $ $R values
+Content: For CA_1A-7A-8A-20A-32A, the $ $T and $ $R values are shown in table 6.5.2-1 and table 6.5.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-8-28-32 > $ $T and $ $R values
+Content: For CA_1A-7A-8A-28A-32A, the $ $T and $ $R values are shown in table 6.6.2-1 and table 6.6.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-20-28-32 > $ $T and $ $R values
+Content: For CA_1A-7A-20A-28A-32A, the $ $T and $ $R values are shown in table 6.7.2-1 and table 6.7.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7-8-20-28-32 > $ $T and $ $R values
+Content: For CA_7A-8A-20A-28A-32A, the $ $T and $ $R values are shown in table 6.8.2-1 and table 6.8.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-8-20-38 > REFSENS requirements
+Content: Based on the approved WF R4-2016940, higher-order MSD test points are no longer needed since constituent lower-order fall-back MSD are agreed and specified.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-3-7-8-38 > REFSENS requirements
+Content: Based on the approved WF R4-2016940, higher-order MSD test points are no longer needed since constituent lower-order fall-back MSD are agreed and specified .
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-8A-20A-28A > $ $T and $ $R values
+Content: For CA_3A-7A-8A-20A-28A, the $ $T and $ $R values are shown in table 6.11.2-1 and table 6.11.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-20A-38A > $ $T and $ $R values
+Content: For CA_1-3-7-20-38, the $ $T and $ $R values are shown in table 6.12.2-1 and table 6.12.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-20A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-28A-38A > $ $T and $ $R values
+Content: For CA_1-3-7-28-38, the $ $T and $ $R values are shown in table 6.13.2-1 and table 6.13.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-20A-28A-38A > $ $T and $ $R values
+Content: For CA_1-3-20-28-38, the $ $T and $ $R values are shown in table 6.14.2-1 and table 6.14.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-20A-38A > $ $T and $ $R values
+Content: For CA_1-7-8-20-38, the $ $T and $ $R values are shown in table 6.15.2-1 and table 6.15.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-20A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-32A-38A > $ $T and $ $R values
+Content: For CA_1-7-8-32-38, the $ $T and $ $R values are shown in table 6.16.2-1 and table 6.16.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-20A-28A-38A > $ $T and $ $R values
+Content: For CA_1-7-20-28-38, the $ $T and $ $R values are shown in table 6.17.2-1 and table 6.17.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-20A-32A-38A > $ $T and $ $R values
+Content: For CA_1-7-20-32-38, the $ $T and $ $R values are shown in table 6.18.2-1 and table 6.18.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-20A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-8A-20A-32A-38A > $ $T and $ $R values
+Content: For CA_1-8-20-32-38, the $ $T and $ $R values are shown in table 6.19.2-1 and table 6.19.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-8A-20A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-8A-20A-38A > $ $T and $ $R values
+Content: For CA_3-7-8-20-38, the $ $T and $ $R values are shown in table 6.20.2-1 and table 6.20.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-8A-20A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-20A-28A-38A > $ $T and $ $R values
+Content: For CA_3-7-20-28-38, the $ $T and $ $R values are shown in table 6.21.2-1 and table 6.21.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_3A-7A-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-8A-20A-32A-38A > $ $T and $ $R values
+Content: For CA_7-8-20-32-38, the $ $T and $ $R values are shown in table 6.22.2-1 and table 6.22.2-2, respectively.
+Title Path: 5 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_7A-8A-20A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-8A-20A-28A > $ $T and $ $R values
+Content: For CA_1A-3A-7A-8A-20A-28A, the $ $T and $ $R values are shown in table 7.1.2-1 and table 7.1.2-2, respectively.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1-7-8-20-28-32 > $ $T and $ $R values
+Content: For CA_1A-7A-8A-20A-28A-32A, the $ $T and $ $R values are shown in table 7.2.2-1 and table 7.2.2-2, respectively.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-20A-28A-38A > $ $T and $ $R values
+Content: For CA_1-3-7-20-28-38, the $ $T and $ $R values are shown in table 7.3.2-1 and table 7.3.2-2, respectively.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7A-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7C-20A-28A-38A > $ $T and $ $R values
+Content: For CA_1-3-7-20-28-38, the $ $T and $ $R values are shown in table 7.4.2-1 and table 7.4.2-2, respectively.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-3A-7C-20A-28A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-20A-32A-38A > $ $T and $ $R values
+Content: For CA_1-7-8-20-32-38, the $ $T and $ $R values are shown in table 7.5.2-1 and table 7.5.2-2, respectively.
+Title Path: 6 Band Carrier Aggregation with Single UL: Specific Band Combination Part > CA_1A-7A-8A-20A-32A-38A > REFSENS requirements
+Content: No additional MSD required compared to fallbacks.

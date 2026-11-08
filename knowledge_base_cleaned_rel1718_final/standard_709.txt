@@ -1,0 +1,18 @@
+Title Path: Scope
+Content: The present document establishes the minimum UE RF characteristics for shared spectrum channel access.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the followingapply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . Channel bandwidth: The RF bandwidth supporting a single E-UTRA RF carrier with the transmission bandwidth configured in the uplink or downlink of a cell. The channel bandwidth is measured in MHz and is used as a reference for transmitter and receiver RF requirements.
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: BW Channel bandwidth
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Base Station [E-UTRA]Evolved Universal Terrestrial Radio Access New Radio Physical Uplink Shared Channel User Equipment
+Title Path: General > Relationship between minimum requirements and test requirements
+Content: The Minimum Requirements given in this specification make no allowance for measurement uncertainty. The test specification TS 36.521-1 Annex F defines Test Tolerances for E-UTRA, and the test specification TS 38.521-1 Annex F defines Test Tolerances for NR. These Test Tolerances are individually calculated for each test. The Test Tolerances are used to relax the Minimum Requirements in this specification to create Test Requirements. The measurement results returned by the Test System are compared - without any modification - against the Test Requirements as defined by the shared risk principle. The Shared Risk principle is defined in ITU-R M.1545 .
+Title Path: General > Applicability of minimum requirements
+Content: [ a) ] In this specification the Minimum Requirements are specified as general requirements and additional requirements. Where the Requirement is specified as a general requirement, the requirement is mandated to be met in all scenarios For specific scenarios for which an additional requirement is specified, in addition to meeting the general requirement, the UE is mandated to meet the additional requirements. The requirements in this specification for E-UTRA TDD operating bands apply for downlink and uplink operations using Frame Structure Type 3.
+Title Path: Channel access procedures > Uplink channel access procedure
+Content: For uplink operation in Band 46, Band 49, Band n46 and Band n96, a channel access procedure for PUSCH transmission as described in TS 37.213 , Clause 4.2.1 is specified.
+Title Path: Channel access procedures > Uplink channel access procedure > Channel access parameters
+Content: Channel access related parameters for PUSCH are listed in Table 5.1.1-1.
+Title Path: Channel access procedures > Uplink channel access procedure > Minimum requirement
+Content: The UE shall be able to assess whether the medium is busy or idle with at least 90\% probability, using a channel access procedure with the parameters in Table 5.1.1-1.

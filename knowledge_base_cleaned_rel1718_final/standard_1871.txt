@@ -1,0 +1,26 @@
+Title Path: Scope
+Content: The present document specifies an HTML5 profile as a common presentation layer for 3GPP services.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . Application: an interactive service authored using the set of languages defined by the present document.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Application Programming Interface Cascading Style Sheet Dynamic and Adaptive Streaming over HTTP Encrypted Media Extensions Hyper-Text Mark-up Language 5 [ISO BMFF]ISO Base Media File Format Multimedia Broadcast/Multicast Service Multimedia Messaging Service Media Presentation Description Media Source Extensions Packet-switched Streaming Service Server-Sent Events EXtensible Markup Language
+Title Path: Required Mark-up Support > Introduction
+Content: The present document defines a 3GPP HTML5 profile for use in 3GPP services, such as PSS , MBMS and MMS . In this clause, the set of required mark-up and APIs for the 3GPP HTML5 profile is defined. The present document defines requirements and recommendations for Applications and UEs conforming to the 3GPP HTML5 Profile.
+Title Path: Required Mark-up Support > Markup
+Content: The HTML5 specification defines conformance requirements for user-agents and documents: Applications shall comply with conformance requirements for documents in . UEs shall comply with conformance requirements for user agents as defined in .
+Title Path: Required Mark-up Support > Style > Introduction
+Content: Support for CSS as a whole is not required by HTML5, even though some features are defined in terms of specific CSS requirements. This clause defines requirements for CSS and other style and/or graphic related technologies.
+Title Path: Required Mark-up Support > Style > Basic Graphic
+Content: UEs shall support CSS 2.1 . UEs shall support CSS Color Module Level 3 . UEs shall support CSS Image Values and Replaced Content Module Level 3 . UEs shall support CSS Backgrounds and Borders . UEs should support CSS Basic User Interface .
+Title Path: Required Mark-up Support > Style > Device Adaptation, Layout and Processing
+Content: UEs should support CSS Media Queries . UEs should support CSS Flexible Box Layout .
+Title Path: Required Mark-up Support > Style > Advanced Graphic
+Content: UEs shall support the CSS Transforms . UEs shall support CSS Transitions . UEs shall support CSS Animations .
+Title Path: Required Mark-up Support > Scripting
+Content: Scripts are small programs that can be embedded into applications. While defining features that rely on scripting, HTML5 does not mandate support for scripting for all user-agents. Furthermore, scripting is defined using a syntax that in most cases is independent from the underlying scripting language. For such reasons, the present document has additional requirements as defined in this clause. UEs shall support scripting as defined in . UEs shall support ECMA scripting language .
+Title Path: API Support
+Content: A number of specifications from W3C or other organizations define APIs that provide additional functionalities to applications. This clause lists the specifications that SHALL and SHOULD be supported by a UE. UEs shall support the Forms API . UEs shall support the Canvas API . UEs shall support the XMLHttpRequest API . UEs shall support the Media Source Extensions . UEs shall support the ISO BMFF Byte Stream Format with the MIME type and subtypes audio/mp4 and video/mp4. UEs should support the GeoLocation API . UEs should support the Encrypted Media Extensions . UEs should support the Web Socket API with the protocol defined in RFC 6455 . UEs should support the Server-Sent Events API . UEs should support the WebCrypto API .
+Title Path: Service-Specific Aspects > Introduction
+Content: Additional requirements and usage restrictions are necessary depending on the service type that uses the 3GPP HTML5 profile. In this clause, these aspects are addressed.
+Title Path: Service-Specific Aspects > DASH
+Content: When an HTML5 presentation uses DASH for media streaming, then the HTML5 presentation may reference one or more DASH presentations through a reference to the MPD either as a source of an HTML5 media element or as a reference from one of the referenced resources. The user agent should support DASH MPD as a supported MIME type for its source elements and attributes, in which case the DASH playback is done by the user agent.

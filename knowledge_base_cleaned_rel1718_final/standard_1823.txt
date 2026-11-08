@@ -1,0 +1,16 @@
+Title Path: Scope
+Content: The present document specifies the standards for user data transport protocols and related signalling protocols to establish user plane transport bearers over the S1 interface.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions below apply. Terms and definitions not defined below can be found in TR 21.905 . S1: interface between an eNB and an EPC, providing an interconnection point between the EUTRAN and the EPC. It is also considered as a reference point. E-RAB: as defined in TS 36.401 .
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . E-UTRAN Node B Evolved Packet Core [E-RAB]E-UTRAN Radio Access Bearer [E-UTRAN]Evolved UTRAN GPRS Tunnelling Protocol Internet Protocol Tunnel Endpoint Identifier User Datagram Protocol
+Title Path: Data Link Layer
+Content: Any data link protocol that fulfils the requirements toward the upper layer may be used.
+Title Path: S1 Interface user plane protocol > General
+Content: The transport layer for data streams over S1 is an IP based Transport. The following figure shows the transport protocol stacks over S1. The GTP-U (TS 29.281 ) protocol over UDP over IP shall be supported as the transport for data streams on the S1 interface. The data link layer is as specified in clause 4. The transport bearer is identified by the GTP-U TEID (TS 29.281 ) and the IP address (source TEID, destination TEID, source IP address, destination IP address).
+Title Path: S1 Interface user plane protocol > GTP-U
+Content: The GTP-U (TS 29.281 ) protocol shall be used over the S1 interface toward the EPC.
+Title Path: S1 Interface user plane protocol > UDP/IP
+Content: The path protocol used shall be UDP (IETF RFC 768 ). The UDP port number for GTP-U shall be as defined in TS 29.281 . The eNB and the EPC shall support fragmentation and assembly of GTP packets at the IP layer. The eNB and the EPC shall support IPv6 (IETF RFC 2460 ) and/or IPv4 (IETF RFC 791 ). There may be one or several IP addresses in the eNB and in the EPC. The packet processing function in the EPC shall send downstream packets of a given E-RAB to the eNB IP address (received in S1-AP) associated to that particular E-RAB. The packet processing function in the eNB shall send upstream packets of a given E-RAB to the EPC IP address (received in S1-AP) associated to that particular E-RAB. The Transport Layer Address signalled in S1-AP messages is a bit string of [ a) ]
+Title Path: bits if both IPv4 and IPv6 addresses are signalled, in which case the IPv4 address is contained in the first 32 bits. > Diffserv code point marking
+Content: IP Differentiated Services code point marking (IETF RFC 2474 ) shall be supported. The mapping between traffic categories and Diffserv code points shall be configurable by O\&M based on QoS Class Identifier (QCI) Characteristics and other E-UTRAN traffic parameters (e.g. ARP). Traffic categories are implementation-specific and may be determined from the application parameters.

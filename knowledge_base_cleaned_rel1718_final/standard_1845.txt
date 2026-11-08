@@ -1,0 +1,26 @@
+Title Path: Scope
+Content: The present document is a technical report on inter-band CA for 5 bands DL with x bands UL (x=1, 2) under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address 5 bands DL/ x bands UL (x=1, 2) Inter-band Carrier Aggregation requirements for the Rel-17 band combinations in Table 1-1 and Table 1-2. This TR contains a general part and specific band combination part. The actual requirements are added to the corresponding technical specifications.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: Explanation [$ $R ]Allowed reference sensitivity relaxation due to support for inter-band CA operation, for serving cell c. [$ $T ]Allowed maximum configured output power relaxation due to support for inter-band CA operation, for serving cell c.
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Expansion Base Station Bandwidth Combination Set Carrier Aggregation Component Carriers Dual Connectivity Downlink [E-UTRA ] Evolved UMTS Terrestrial Radio Access Frequency Division Duplex Allowed maximum power reduction Maximum Sensitivity Degradation NR New Radio Reference Sensitivity power level Subcarrier spacing Time Division Duplex User Equipment Uplink
+Title Path: Background
+Content: The present document is a technical report for 4 bands DL/ x bands UL (x=1, 2) Inter-band Carrier Aggregation under Rel-17 timeframe. The document covers each band combination specific issues (i.e. one sub-clause defined per band combination)
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band/band combination to ensure that the TPs related to the band/band combination have been implemented.
+Title Path: Five bands inter-band CA involving FR1 > CA_n1-n3-n7-n28-n78 > $ $T and $ $R values
+Content: For CA_n1-n3-n7-n28-n78, the $ $T and $ $R values are derived from DC_1-3-7-28_n78 and are given in the tables below.
+Title Path: Five bands inter-band CA involving FR1 > CA_n1-n3-n5-n7-n78 > $ $T and $ $R values
+Content: For CA_n1-n3-n5-n7-n78, the $ $T and $ $R values are derived from DC_1-3-5-7_n78 and are given in the tables below.
+Title Path: Five bands inter-band CA involving FR1 > CA_n2-n5-n48-n66-n77 > $ $T and $ $R values
+Content: For CA_n2-n5-n48-n66-n77, the $ $T and $ $R values are derived from DC_2-5_n48 and DC_2-66_n77. 5.Y CA_nX-nY-nZ-nW-nV 5.Y.1 Operating bands for CA 5.Y.2 Configurations for inter-band CA 5.Y.3 $ $T and $ $R values For CA_nX-nY-nZ-nW-nV , the $ $T and $ $R values are given in the tables below.
+Title Path: Five bands inter-band CA between FR1 and FR2 > CA_n1-n3-n8-n77-n257 > Co-existence studies
+Content: For single uplink, the UE coexistence is already considered in the fallback combinations in TS 38.101-1.
+Title Path: Five bands inter-band CA between FR1 and FR2 > CA_n1-n3-n8-n77-n257 > $ $T and $ $R values
+Content: For three simultaneous DLs and one UL of Band n1, n3, n8, n77 and n257 , the $ $T and $ $R values are shown in table 6.1.4-1 and table 6.1.4-2, respectively.
+Title Path: Five bands inter-band CA between FR1 and FR2 > CA_n1-n3-n8-n77-n257 > REFSENS requirements
+Content: Compared to its fall-back modes, there are no additional MSD requirements for this band combination.
+Title Path: Five bands inter-band CA between FR1 and FR2 > CA_n3-n28-n77-n79-n257 > Configurations for inter-band CA
+Content: 6.Y CA_nX-nY-nZ-nW-nV 6.Y.1 Operating bands for CA 6.Y.2 Configurations for inter-band CA

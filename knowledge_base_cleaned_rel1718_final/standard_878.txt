@@ -1,0 +1,6 @@
+Title Path: Scope
+Content: The present document specifies requirements on UEs supporting a frequency band that is independent of release.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in apply.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Frequency Division Duplex Radio Resource Control User Equipment 3A General TSG-RAN has agreed that the standardisation of new frequency bands may be independent of a release. However, in order to implement a UE that conforms to a particular release but supports a band of operation that is specified in a later release, it is necessary to specify some extra requirements. For example, Band III is contained in the Release 5 specifications. In order to implement a UE conforming to Release '4 but supporting Band III, it is necessary for the UE to additionally conform to some parts of the Release 5 specifications, such as the radio frequency requirements for the Band III and some signalling extensions relating to the UE radio access capabilities. NOTE: See NOTE in clause 4.4 in or .

@@ -1,0 +1,58 @@
+Title Path: Scope
+Content: The present document contains requirements and test cases that are specific to the NSSAAF network product class. It refers to the Catalogue of General Security Assurance Requirements and formulates specific adaptions of the requirements and test cases, as well as specifying requirements and test cases unique to the NSSAAF network product class.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: NSSAAF-specific security requirements and related test cases > Introduction
+Content: NSSAAF specific security requirements include both requirements derived from NSSAAF security functional requirements as well as security requirements derived from threats specific to eNB as described in TR 33.926 . Generic security requirements and test cases common to other network product classes have been captured in TS 33.117 and are not repeated in the present document.
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Routes the S-NSSAI to the right place
+Content: Requirement Name: Routes the S-NSSAI to the right place Requirement Reference: TS 33.501 , clause 6.8.1.2.3 Requirement Description: If the AAA-P is present (e.g. because the AAA-S belongs to a third party and the operator deploys a proxy towards third parties), the NSSAAF forwards the EAP ID Response message to the AAA-P, otherwise the NSSAAF forwards the message directly to the AAA-S. NSSAAF routes to the AAA-S based on the S-NSSAI, as specified in TS 33.501 , clause 6.13. Threat Reference: TBD Test Name: TC_NSSAAF_CORRECT_ROUTING Purpose: Verify that the NSSAAF forwards the NSSAA request to the right receiving end. Pre-Conditions: Test environment with AMF, AAA-S and AAA-P, which may be simulated. The NSAAF under test is connected with AMF, AAA-S and AAA-P. A document describes the logic how the NSSAAF selects an AAA-S or AAA-P based on S-NSSAI. Preconfigure the NSSAAF under test with two routing entries, each for a NSSAI. One of the slice is a part of MNO and the AAA-S can be directly found by the NSSAAF, while the other slice serves 3rd party and the AAA-P will be used for NSSAA procedure. Execution Steps 1. The AMF sends Nssaaf_NSSAA_Authenticate Req to the NSSAAF including one of the S-NSSAI. 2. The NSSAAF sends AAA message to an AAA-P. 3. Repeat step 1 and 2 with the other S-NSSAI, and the NSSAAF sends AAA message to an AAA-S. Expected Results: The NSSAAF forwards the NSSAA request to the correct AAA-S or AAA-P on the S-NSSAI. Expected format of evidence: Save the logs and the communication flow in a.pcap file.
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > AAA-S authorization in re-authentication and revocation scenarios
+Content: Requirement Name: AAA-S authorization in re-authentication and revocation scenarios Requirement Reference: TS 33.501 , clause 16.4 Requirement Description: The NSSAAF checks whether the AAA-S is authorized to request the re-authentication and re-authorization by checking the local configuration of AAA-S address per S-NSSAI. If success, the NSSAAF requests UDM for the AMF serving the UE using the Nudm_UECM_Get (GPSI, AMF Registration) service operation. The UDM provides the NSSAAF with the AMF ID of the AMF serving the UE as specified in TS 33.501 , clause 6.13. Threat Reference: TBD Test Name: TC_NSSAAF_AAAS_AUTHORIZATION_REAUTH_REVOCATION Purpose: Verify that the AAA-S is authorized to send the re-authentication or revocation. Pre-Conditions: Test environment with AAA-S and AAA-P, which may be simulated. The NSAAF under test is connected with AAA-S and AAA-P. A document describes the mapping between S-NSSAI and AAA-S server. Execution Steps 1. The AAA-S sends Re-authentication or revocation message to the NSSAAF including the S-NSSAI and the GPSI. 2. The NSSAAF checks whether the AAA-S can be matched against with the S-NSSAI based on the mapping table. Expected Results: The NSSAAF rejects the re-authentication or revocation or pass the re-authentication or revocation. Expected format of evidence: Save the logs and the communication flow in a.pcap file.
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Introduction
+Content: The present clause provides baseline technical requirements.
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information general
+Content: There are no NSSAAF additions to clause 4.2.3.2.1 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information unauthorized viewing
+Content: There are no NSSAAF additions to clause 4.2.3.2.2 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information in storage
+Content: There are no NSSAAF additions to clause 4.2.3.2.3 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Protecting data and information in transfer
+Content: There are no NSSAAF additions to clause 4.2.3.2.4 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Protecting data and information > Logging access to personal data
+Content: There are no NSSAAF additions to clause 4.2.3.2.5 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Protecting availability and integrity
+Content: There are no NSSAAF additions to clause 4.2.3.3 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Authentication and authorization > Authentication attributes
+Content: There are no NSSAAF additions to clause 4.2.3.4.1 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Protecting sessions
+Content: There are no NSSAAF additions to clause 4.2.3.5 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Technical baseline > Logging
+Content: There are no NSSAAF additions to clause 4.2.3.6 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Operating systems
+Content: There are no NSSAAF additions to clause 4.2.4 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Web servers
+Content: There are no NSSAAF additions to clause 4.2.5 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Network devices > Protection of data and information
+Content: There are no NSSAAF additions to clause 4.2.6 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Network devices > Protecting availability and integrity > Packet filtering
+Content: There are no NSSAAF additions to clause 4.2.6.2.1 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Network devices > Protecting availability and integrity > Interface robustness requirements
+Content: There are no NSSAAF additions to clause 4.2.6.2.2 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Network devices > Protecting availability and integrity > GTP-C Filtering
+Content: The requirement and testcase in clause 4.2.6.2.3 of TS 33.117 is not applicable to eNB network product.
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific security functional requirements and related test cases > Network devices > Protecting availability and integrity > GTP-U Filtering
+Content: There are no NSSAAF additions to clause 4.2.6.2.4 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific adaptations of hardening requirements and related test cases > Introduction
+Content: The present clause contains eNodeB-specific adaptations of hardening requirements and related test cases.
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific adaptations of hardening requirements and related test cases > Technical Baseline
+Content: There are no NSSAAF additions to clause 4.3.2 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific adaptations of hardening requirements and related test cases > Operating Systems
+Content: There are no NSSAAF additions to clause 4.3.3 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific adaptations of hardening requirements and related test cases > Web Servers
+Content: There are no NSSAAF additions to clause 4.3.4 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific adaptations of hardening requirements and related test cases > Network Devices
+Content: There are no NSSAAF additions to clause 4.3.5 of TS 33.117 .
+Title Path: NSSAAF-specific security requirements and related test cases > NSSAAF-specific adaptations of basic vulnerability testing requirements and related test cases
+Content: There are no NSSAAF additions to clause 4.4 of TS 33.117 .

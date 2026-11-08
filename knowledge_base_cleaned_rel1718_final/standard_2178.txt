@@ -1,0 +1,22 @@
+Title Path: Scope
+Content: The present document specifies the Home enhanced Node B (HeNB) Subsystem (HeNS) Network Resource Model (NRM) IRP that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks . This document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding. In order to access the information defined by this NRM, an IRP IS is needed, such as the Basic CM IRP IS (3GPP TS 32.602 ) or the Bulk CM IRP IS (3GPP TS 32.612 ). However, which IS that is applicable is outside the scope of the present document.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following definitions and abbreviations apply. For definitions and abbreviations not found here, please refer to to 3GPP TS 32.101 , 3GPP TS 32.102 and 3GPP TS 32.600 . Association: See definition in TS 28.622 . Management Information Model (MIM): also referred to as NRM - see the definition below. Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Gateway Home enhanced Node B Home enhanced Node B Subsystem Information Object Classes
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of IOCs that encapsulate information relevant for this service. This clause provides the overview of all information object classes in UML. Subsequent clauses provide more detailed specification of various aspects of these information object classes. NOTE 1: The listed cardinality numbers, in particular the use of cardinality number zero, do not represent transient states. The transient state is considered an inherent property of all IOC instances and therefore there is no need to represent them by individual IOC cardinality numbers.
+Title Path: Model > Class diagram > Relationships > Notifications
+Content: The common notifications defined in clause 4.5 are valid for this class, without exceptions or additions.
+Title Path: Model > Class diagram > HeMSFunction > Definition
+Content: This IOC represents HeMS functionality. For more information about HeMS, see 3GPP TS 32.593 .
+Title Path: Model > Class diagram > HeNBProfile > Definition
+Content: The HeNBProfile is a representation of information that a) identifies a specific set of HeNB devices and b) the related configuration parameters (and their values) that are required to be configured in those identified HeNB devices during HeNB registration procedure . It contains userLabel, an attribute inherited from ManagedFunction. This is a user friendly label assigned by operator. Examples can be ``VIP configuration'', ``Gold Tier configuration'', ``device vendor XYZ software version 3.4'', ``camel'', etc.
+Title Path: Model > Class diagram > HeNB > Definition
+Content: This class represents HeNB functionality. For more information about the HeNB, see 3GPP TS 36.300 . The Home eNodeB, represented by the SupportIOC HeNB, has registered itself with one node represented by HeMSFunction.
+Title Path: Model > Class diagram > HeNB > Notifications
+Content: The common notifications defined in clause 4.5 are not valid for this class. The set of notifications defined in the following table is valid.
+Title Path: Model > Attribute definitions > Attribute Properties
+Content: This table defines the attributes that are present in several Information Object Classes (IOCs) of the present document.
+Title Path: Model > Common Notifications > Alarm notifications
+Content: This subclause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.

@@ -1,0 +1,26 @@
+Title Path: Scope
+Content: This document defines the IMS conferencing management object. The management object is compatible with OMA Device Management protocol specifications, version 1.2 and upwards, and is defined using the OMA DM Device Description Framework as described in the Enabler Release Definition OMA-ERELD_DM-V1_2 . The IMS conferencing management object consists of relevant parameters that can be managed for IMS conferencing capabilities.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 apply. The following terms and definitions given in in IETF RFC 4579 apply: Conference Factory URI
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Core Network Device Description Framework Device Management IP Multimedia core network Subsystem Internet Protocol Management Object Open Mobile Alliance Session Initiation Protocol Stand-alone Non-Public Network User Equipment
+Title Path: IMS conferencing management object
+Content: The IMS conferencing management object is used to manage configuration settings of the UE for IMS conferencing. The management object covers parameters for IMS conferencing related capabilities. The management object enables the management of the settings on behalf of the end user. The Management Object Identifier is: urn:oma:mo:ext-3gpp-conf:1.0. Protocol compatibility: This MO is compatible with OMA DM 1.2.
+Title Path: Management object parameters > General
+Content: This clause describes the parameters for the IMS conferencing management object.
+Title Path: Management object parameters > Node: / X
+Content: This interior node acts as a placeholder for one or more accounts for a fixed node. Occurrence: OneOrMore Format: node Access Types: Get Values: N/A The interior node is mandatory if the UE supports one or more IMS conferencing capabilities. Support for a UE is defined by the related roles as defined by the related IMS conferencing service. NOTE: One node is normally used.
+Title Path: Management object parameters > / X /Name
+Content: The Name leaf is a name for the conferencing settings. Occurrence: ZeroOrOne Format: chr Access Types: Get Values: User displayable name
+Title Path: Management object parameters > / X /Conf_Factory_URI
+Content: The Conf_Factory_URI leaf defines a Conference Factory URI as defined by IETF RFC 4579 that is supported by a subscriber's network as described in 3GPP TS 24.147 . Occurrence: ZeroOrOne Format: chr Access Types: Get, Replace Values: A Conference Factory URI
+Title Path: Management object parameters > / X /Ext
+Content: The Ext is an interior node for where the vendor specific information about the IMS conferencing management is being placed (vendor meaning application vendor, device vendor etc.). Usually the vendor extension is identified by vendor specific name under the ext node. The tree structure under the vendor identified is not defined and can therefore include one or more un-standardized sub-trees. Occurrence: ZeroOrOne Format: node Access Types: Get Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration
+Content: This interior node contains configuration parameters regarding a UE operating in SNPN access operation mode. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X
+Content: This interior node acts as a placeholder for a list of: [ a) ] SNPN identity; and configuration parameters. NOTE: For each of the elements in the list, a) must be present and at least one parameter of b) needs to appear. A configuration parameter in an / X /SNPN_Configuration/ X node other than the SNPN_identifier, is applicable when the UE selects an entry of "list of subscriber data": [ a) ] with the SNPN identity of the subscribed SNPN which is the same as the SNPN identity in the SNPN_identifier leaf. [-]Occurrence: OneOrMore [-]Format: node [-]Access Types: Get, Replace [-]Values: N/A
+Title Path: Management object parameters > / X /SNPN_Configuration/ X /SNPN_identifier
+Content: This leaf indicates the SNPN identity of the subscribed SNPN for which the list of configuration parameters are applicable. Occurrence: One Format: chr Access Types: Get, Replace Values: PLMN NID The PLMN and NID are in the format defined by 3GPP TS 23.003 , with each digit of the MCC and MNC of the PLMN and each digit of the assignment mode and NID value of the NID encoded as an ASCII character.
+Title Path: Management object parameters > / X /Conf_Factory_URI
+Content: The Conf_Factory_URI leaf defines a Conference Factory URI as defined by IETF RFC 4579 that is supported by a subscriber's network as described in 3GPP TS 24.147 . Occurrence: ZeroOrOne Format: chr Access Types: Get, Replace Values: A Conference Factory URI

@@ -1,0 +1,16 @@
+Title Path: Scope
+Content: The present document defines a frame substitution and muting procedure which shall be used by the RX DTX handler when one or more lost speech or SID frames are received from the radio subsystem. The requirements of the present document are mandatory for implementation in all GSM Base Station Systems (BSS) and Mobile Stations (MS).
+Title Path: Definitions and abbreviations
+Content: Abbreviations used in the present document are listed in GSM 01.04 . The definitions of terms used in the present document can be found in GSM 06.31 .
+Title Path: General
+Content: The purpose of the frame substitution is to conceal the effect of lost frames. The purpose of muting the output in the case of several lost frames is to indicate the breakdown of the channel to the user.
+Title Path: Requirements > First lost speech frame
+Content: Normal decoding of lost speech frames would result in very unpleasant noise effects. In order to improve the subjective quality, the first lost speech frame shall be substituted with either a repetition or an extrapolation of the previous good speech frame(s). Lost speech frames shall not be delivered to the speech decoder, nor shall the output be muted directly.
+Title Path: Requirements > Subsequent lost speech frames
+Content: For subsequent lost speech frames, a muting technique shall be used that will gradually decrease the output level, resulting in silencing of the output after a maximum of 320 ms. Clause 6 gives an example solution.
+Title Path: Requirements > First lost SID frame
+Content: A single lost SID frame shall be substituted by the last valid SID frame and the procedure for valid SID frames be applied as described in GSM 06.31 .
+Title Path: Requirements > Subsequent lost SID frame
+Content: For the second lost SID frame, a muting technique shall be used on the comfort noise that will gradually decrease the output level, resulting in silencing of the output after a maximum of 320 ms. Clause 6 gives an example solution. For subsequent lost SID frames, the muting of the output shall be maintained.
+Title Path: Example solution
+Content: For guidance, an example solution is given. The first lost speech frame is replaced at the speech decoder input by the previous good speech frame. Normal decoding is then performed. The muting procedure to be used in the case of subsequent lost speech frames or for comfort noise frames following the second lost SID frame is as follows: The pseudo logarithmic encoded block amplitude Xmaxcr (GSM 06.10 ), coded on the interval from 0 to 63, is decreased with a constant value d=4 in each frame, down to the lowest possible value. Consequently, Xmaxcr will be reduced gradually, and the output muted after a maximum of 320 ms. The grid position parameters are chosen randomly between 0 and 3 during this time. For subsequent unusable frames, after the frame where Xmaxcr reached the lowest possible value, "silence frames" are passed from the RX DTX handler to the speech decoder to guarantee a low output level under all conditions. The silence frame is defined in table 1.

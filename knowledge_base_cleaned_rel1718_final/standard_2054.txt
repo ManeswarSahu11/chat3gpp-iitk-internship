@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the Solution Set definitions for the IRP whose semantics is specified in Kernel CM (Configuration Management) IRP: Information Service 3GPP TS 32.662 . This Solution Set definitions specification is related to 3GPP TS 32.662 .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.600 , 3GPP TS 32.662 and 3GPP TS 32.331 , 3GPP TS 28.622 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.600 , 3GPP TS 32.662 and 3GPP TS 32.331 , 3GPP TS 28.622 . IRP document version number string (or "IRPVersion"): See 3GPP TS 32.311 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 [] Distinguished Name Managed Object Managed Object Class Notification Log Solution Set Vendor Specific Extensions
+Title Path: Solution Set definitions
+Content: This specification defines the following 3GPP Kernel CM IRP Solution Set definitions: 3GPP Kernel CM IRP CORBA SS (Annex A); 3GPP Kernel CM IRP XML definitions (Annex B); 3GPP Kernel CM IRP SOAP Solution Set (Annex C).

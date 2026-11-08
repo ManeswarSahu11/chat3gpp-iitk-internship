@@ -1,0 +1,144 @@
+Title Path: Scope
+Content: The present document contains objectives, requirements and test cases that are specific to the MnF network product class. It refers to the Catalogue of General Security Assurance Requirements and formulates specific adaptions of the requirements and test cases given there, as well as specifying requirements and test cases unique to the MnF network product class. In the present document, the MnF network product class represents independently deployed management product supporting 3GPP defined management services.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . MnF Management Function
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Introduction
+Content: The present clause contains MnF-specific security functional adaptations of requirements and related test cases.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Security functional requirements on the MnF deriving from 3GPP specifications and related test cases
+Content: The requirements and test cases in TS 33.117 clause 4.2.2 apply to the MnF network product class with the following considerations: - The requirements and test cases in TS 33.117 clause 4.2.2.2 are only applicable when the product supports HTTP/2-based SBI interfaces.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Introduction
+Content: The present clause provides baseline technical requirements.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information general
+Content: There are no MnF-specific additions to clause 4.2.3.2.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information unauthorized viewing
+Content: There are no MnF-specific additions to clause 4.2.3.2.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information in storage
+Content: There are no MnF-specific additions to clause 4.2.3.2.3 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting data and information > Protecting data and information in transfer
+Content: There are no MnF-specific additions to clause 4.2.3.2.4 of TS 33.117 . The test case can also address the MnF-specific threat "Unprotected Management data during transmission" of clause V.2.2.2 in TR 33.926 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting data and information > Logging access to personal data
+Content: There are no MnF-specific additions to clause 4.2.3.2.5 of TS 33.117 . .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting availability and integrity > System handling during overload situations
+Content: There are no MnF-specific additions to clause 4.2.3.3.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting availability and integrity > Boot from intended memory devices only
+Content: There are no MnF-specific additions to clause 4.2.3.3.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting availability and integrity > System handling during excessive overload situations
+Content: There are no MnF-specific additions to clause 4.2.3.3.3 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting availability and integrity > System robustness against unexpected input.
+Content: There are no MnF-specific additions to clause 4.2.3.3.4 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting availability and integrity > Network Product software package integrity
+Content: There are no MnF-specific additions to clause 4.2.3.3.5 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Authentication policy
+Content: 4.2.3.4.1.1 System functions shall not be used without successful authentication and authorization. There are no MnF-specific additions to clause 4.2.3.4.1.1 of TS 33.117 . 4.2.3.4.1.2 Accounts shall allow unambiguous identification of the user. There are no MnF-specific additions to clause 4.2.3.4.1.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Authentication attributes > Account protection by at least one authentication attribute.
+Content: There are no MnF-specific additions to clause 4.2.3.4.2.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Authentication attributes > Predefined accounts shall be deleted or disabled.
+Content: There are no MnF-specific additions to clause 4.2.3.4.2.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Authentication attributes > Predefined or default authentication attributes shall be deleted or disabled.
+Content: There are no MnF-specific additions to clause 4.2.3.4.2.3 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Password policy > Password Structure
+Content: There are no MnF-specific additions to clause 4.2.3.4.3.1 of TS 33.117 ..
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Password policy > Password changes
+Content: There are no MnF-specific additions to clause 4.2.3.4.3.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Password policy > Protection against brute force and dictionary attacks
+Content: There are no MnF-specific additions to clause 4.2.3.4.3.3 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Password policy > Hiding password display
+Content: There are no MnF-specific additions to clause 4.2.3.4.3.4 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Specific Authentication use cases > Network Product Management and Maintenance interfaces
+Content: There are no MnF-specific additions to clause 4.2.4.4.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Policy regarding consecutive failed login attempts
+Content: There are no MnF-specific additions to clause 4.2.3.4.5 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Authorization and access control > Authorization policy
+Content: There are no MnF-specific additions to clause 4.2.3.4.6.1 of TS 33.117 . The test case can also address the MnF-specific threat "Over-privileged data process" of clause V.2.2.1 in TR 33.926 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Authentication and authorization > Authorization and access control > Role-based access control
+Content: There are no MnF-specific additions to clause 4.2.3.4.6.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting sessions > Protecting sessions logout function
+Content: There are no MnF-specific additions to clause 4.2.3.5.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Protecting sessions > Protecting sessions Inactivity timeout
+Content: There are no MnF-specific additions to clause 4.2.3.5.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Logging > Security event logging
+Content: There are no MnF-specific additions to clause 4.2.3.6.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Logging > Log transfer to centralized storage
+Content: There are no MnF-specific additions to clause 4.2.3.6.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Technical Baseline > Logging > Protection of security event log files
+Content: There are no MnF-specific additions to clause 4.2.3.6.3 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Operating systems
+Content: There are no MnF-specific additions to clause 4.2.4 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Web servers > HTTPS
+Content: There are no MnF-specific additions to clause 4.2.5.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Web servers > Logging
+Content: There are no MnF-specific additions to clause 4.2.5.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Web servers > HTTP User sessions
+Content: For the requirement defined in clause 4.2.5.3 of TS 33.117 : - The requirement "In addition to the Session Idle Timeout (see clause 4.2.3.5.2 of TS 33.117 ), the Network Product shall automatically terminate sessions after a configurable maximum lifetime. This maximum lifetime defines the maximum session span. When the maximum lifetime expires, the session shall be closed, the session ID shall be deleted and the user shall be forced to (re)authenticate in the web application and to establish a new session. The default value for this maximum lifetime shall be set to 8 hours." may not be applicable to the MnF product.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Web servers > HTTP input validation
+Content: There are no MnF-specific additions to clause 4.2.5.4 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Network devices > Protection of data and information
+Content: There are no MnF-specific additions to clause 4.2.6.2.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Network devices > Protecting availability and integrity > Packet filtering
+Content: There are no MnF-specific additions to clause 4.2.6.2.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Network devices > Protecting availability and integrity > Interface robustness requirements
+Content: There are no MnF-specific additions to clause 4.2.6.2.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Network devices > Protecting availability and integrity > GTP-C Filtering
+Content: The requirement and test case in clause 4.2.6.2.3 of TS 33.117 is not applicable to MnF.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific security functional adaptations of requirements and related test cases > Network devices > Protecting availability and integrity > GTP-U Filtering
+Content: The requirement and test case in clause 4.2.6.2.4 of TS 33.117 is not applicable to MnF.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Introduction
+Content: The present clause contains MnF-specific adaptations of hardening requirements and related test cases.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Technical Baseline
+Content: There are no MnF-specific additions to clause 4.3.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Operating Systems > General operating system requirements and test cases > IP-Source address spoofing mitigation
+Content: There are no MnF-specific additions to clause 4.3.3.1.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Operating Systems > General operating system requirements and test cases > Minimized kernel network functions
+Content: There are no MnF-specific additions to clause 4.3.3.1.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Operating Systems > General operating system requirements and test cases > No automatic launch of removable media
+Content: There are no MnF-specific additions to clause 4.3.3.1.3 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Operating Systems > General operating system requirements and test cases > SYN Flood Prevention
+Content: There are no MnF-specific additions to clause 4.3.3.1.4 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Operating Systems > General operating system requirements and test cases > Protection from buffer overflows
+Content: There are no MnF-specific additions to clause 4.3.3.1.5 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Operating Systems > General operating system requirements and test cases > External file system mount restrictions
+Content: There are no MnF-specific additions to clause 4.3.3.1.6 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > General
+Content: There are no MnF-specific additions to clause 4.3.4.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No system privileges for web server
+Content: There are no MnF-specific additions to clause 4.3.4.2 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No unused HTTP methods
+Content: There are no MnF-specific additions to clause 4.3.4.3 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No unused add-ons
+Content: There are no MnF-specific additions to clause 4.3.4.4 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No compiler, interpreter, or shell via CGI or other server-side scripting
+Content: There are no MnF-specific additions to clause 4.3.4.5 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No CGI or other scripting for uploads
+Content: There are no MnF-specific additions to clause 4.3.4.6 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No execution of system commands with SSI
+Content: There are no MnF-specific additions to clause 4.3.4.7 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > Access rights for web server configuration
+Content: There are no MnF-specific additions to clause 4.3.4.8 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No default content
+Content: There are no MnF-specific additions to clause 4.3.4.9 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > No directory listings
+Content: There are no MnF-specific additions to clause 4.3.4.10 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > Web server information in HTTP headers
+Content: There are no MnF-specific additions to clause 4.3.4.11 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > Web server information in error pages
+Content: There are no MnF-specific additions to clause 4.3.4.12 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > Minimized file type mappings
+Content: There are no MnF-specific additions to clause 4.3.4.13 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > Restricted file access
+Content: There are no MnF-specific additions to clause 4.3.4.14 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Web Servers > Execute rights exclusive for CGI/Scripting directory
+Content: There are no MnF-specific additions to clause 4.3.4.15 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Network Devices > Traffic Separation
+Content: The requirement and test case in clause 4.3.5.1 of TS 33.117 is not applicable to MnF-specific network product.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Network Functions in service-based architecture > Introduction
+Content: There are no MnF-specific additions to clause 4.3.6.1 of TS 33.117 .
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Network Functions in service-based architecture > No code execution or inclusion of external resources by JSON parsers
+Content: The requirement and test case in clause 4.3.6.2 of TS 33.117 is not applicable to MnF-specific network product.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Network Functions in service-based architecture > Unique key values in IEs
+Content: The requirement and test case in clause 4.3.6.3 of TS 33.117 is not applicable to MnF-specific network product.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of hardening requirements and related test cases. > Network Functions in service-based architecture > The valid format and range of values for IEs
+Content: The requirement and test case in clause 4.3.6.4 of TS 33.117 is not applicable to MnF-specific network product.
+Title Path: MnF-specific security requirements and related test cases > MnF-specific adaptations of basic vulnerability testing requirements and related test cases
+Content: There are no MnF-specific additions to clause 4.4 of TS 33.117 .

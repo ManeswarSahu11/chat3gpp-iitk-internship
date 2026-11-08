@@ -1,0 +1,24 @@
+Title Path: Scope
+Content: The present document is Fault Management stage 2 specification for mobile networks that include virtualized network functions which can be part of EPC or IMS.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and in 3GPP TS 28.500 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 or in 3GPP TS 28.500 .
+Title Path: General descriptions
+Content: For VNF Fault Management stage 2 solution over Itf-N, the Alarm IRP IS is applicable. The overall architectural feature of Alarm IRP is specified in TS 32.111-2 . The Alarm IRP IS defines the semantics of alarms and the interactions visible across the reference point in a protocol neutral way. It defines the semantics of the operations and notifications visible in the Alarm IRP. It does not define the syntax or encoding of the operations, notifications and their parameters. For the purpose of notification, Notification IRP is needed.
+Title Path: Information model definition > Itf-N
+Content: For Itf-N VNF alarm management, the IOCs defined by AlarmIRP which is specified in clause 5 of 3GPP TS 32.111-2 shall be used.
+Title Path: Information model definition > Ve-Vnfm-em
+Content: For Ve-Vnfm-em alarm management, the information elements and notifications which are specified in subclause 9.3 of IFA 008 for VNF alarm management shall be used.
+Title Path: Information model definition > Mapping rule for alarm information elements > For construction of notifyNewAlarm
+Content: The following table shows the rule on how to construct the various attributes of notifyNewAlarm (see clause 6.8.1 of TS 32.111-2 ). The first column shows the notifyNewAlarm notification attributes. The second column shows the " Attributes of the Alarm information element" (see clause 9.3.4.2 of ) used by AlarmNotification (see clause 9.3.2 of ) produced by VNFM.
+Title Path: Information model definition > Mapping rule for alarm information elements > For construction of notifyClearedAlarm
+Content: The following table shows the rule on how to construct the various attributes of notifyClearedAlarm (see clause 6.8.3 of TS 32.111-2 ). The first column shows the notifyClearedAlarm notification attributes. The second column shows the `` Attributes of the AlarmClearedNotification (see clause 9.3.3.3 of ) produced by VNFM.
+Title Path: Information model definition > Mapping rule for alarm information elements > For construction of notifyChangedAlarm
+Content: The following table shows the rule on how to construct the various attributes of notifyChangedAlarm (see clause 6.8.1 of TS 32.111-2 ). The first column shows the notifyChangedAlarm notification attributes. The second column shows the `` Attributes of the Alarm information element'' (see clause 9.3.4.2 of ) used by AlarmNotification (see clause 9.3.2 of ) produced by VNFM.
+Title Path: Information model definition > Mapping rule for alarm information elements > For construction of notifyAckStateChangedAlarm
+Content: The following table shows the rule on how to construct the various attributes of notifyAckStateChangedAlarm (see clause 6.8.2 of TS 32.111-2 ). The first column shows the notifyAckStateChangedAlarm notification attributes. The second column shows the `` Attributes of the Alarm information element'' (see clause 9.3.4.2 of ) used by AlarmNotification (see clause 9.3.2 of ) produced by VNFM.
+Title Path: Interface definition > Itf-N
+Content: For Itf-N VNF alarm management, the operations and notifications defined by AlarmIRP which is specified in 3GPP TS 32.111-2 shall be used.
+Title Path: Interface definition > Ve-Vnfm-em
+Content: For REQ-NFV_FM_Ve-Vnfm-em-FUN-1 specified in 3GPP TS 28.515 , the Notify operation specified in clause 7.5.3 of ETSI GS NFV-IFA 008 shall be used. For REQ-NFV_FM_Ve-Vnfm-em-FUN-2 specified in 3GPP TS 28.515 , the Notify operation specified in clause 7.5.3 of ETSI GS NFV-IFA 008 shall be used. For REQ-NFV_FM_Ve-Vnfm-em-FUN-3 specified in 3GPP TS 28.515 , the Heal VNF operation specified in clause 7.2.10 of ETSI GS NFV-IFA 008 shall be used. For REQ-NFV_FM_Ve-Vnfm-em-FUN-4 specified in 3GPP TS 28.515 , the Subscribe operation specified in clause 7.5.2 of ETSI GS NFV-IFA 008 shall be used.

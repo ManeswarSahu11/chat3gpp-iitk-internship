@@ -1,0 +1,40 @@
+Title Path: Scope
+Content: The present document addresses the operations and notifications for the function Quality of Experience (QoE) measurement collection in UMTS and LTE. The measurements that are collected are DASH and MTSI measurements. The function includes collecting QoE information from UEs frequenting a specified area.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and TS 32.150 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 and TS 32.150 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Quality of Experience QoE Measurement Collection
+Title Path: System Overview > System context
+Content: The general definition of the System Context for the present IRP is found in TS 32.150 clause 4.7. In addition, the set of related IRP(s) relevant to the present IRP is shown in the two diagrams below.
+Title Path: System Overview > Compliance rules
+Content: For general definitions of compliance rules related to qualifiers (Mandatory/Optional/Conditional) for operations, notifications and parameters (of operations and notifications) please refer to TS 32.150 .
+Title Path: Information Object Classes > Class definitions > QMCJob > Definition
+Content: It represents a task that controls the QMC and collects data from the applications in the UE (i.e. collects the QMCReportContainer of multiple ManagedEntity instances). The QoEReference is a unique ID, which identifies the network request session that has been created by the QMCJob and activated to one or multiple ManagedEntity instance(s). When a QMCJob is created, none of attributes be modified via the Itf-N: If for any reason the QMCIRP determines that a QMC session has been activated in its ManagedEntity(ies) the QMCIRP shall emit the "noitfyQMCSessionLocalActivation" notification to the subscribed IRPManagers to inform the active QMC Sessions. The IRPManagers can decide whether they deactivate the QMC session or keep the QMC session active. (E.g. if the QoEReference is colliding with an existing QMCJob's QoEReference, the IRPManager may decide to immediately deactivate the QMC session in that ManagedEntity.) The QMCJob shall use its information to activate and configure QMC session(s) in the requested ManagedEntity instance(s). When the QMCIRP determines that there are available QMCReport files, it shall emit a notification to all subscribed IRPManagers informing the availability of the files. The method and the notification of the available files is described in the File Transfer IRP (TS 32.342 ). If a QMCJob receives an indication from one of its ManagedEntity that starting a network request session is failed for any reason, the "notifyNetworkRequestSessionFailure" notification may be emitted to inform all subscribed IRPManagers that there was a network request session that was not started in the ManagedEntity.
+Title Path: Information Object Classes > Class definitions > QMCJob > Notifications
+Content: The common notifications defined in clause 5.5 are valid for this IOC, without exceptions or additions.
+Title Path: Information Object Classes > Class definitions > QMCRecord > Definition
+Content: TQMCRecord is the representation of the files containing the information from the network request session.
+Title Path: Information Object Classes > Class definitions > QMCIRP > Definition
+Content: QMCIRP is the representation of the QMC management capabilities specified by the present document. This IOC inherits from ManagedGenericIRP IOC specified in TS 32.312 .
+Title Path: Information Object Classes > Class definitions > ManagedEntity > Definition
+Content: For area based QMC the ManagedEntity represents the role that can be played by an instance of the following IOCs: UtranCell E-UtranCell
+Title Path: Information Object Classes > Information relationship definitions > relation-qMCIRP-qMCJob (M) > Definition
+Content: This represents the relationship between QMCIRP and the QMCJob.
+Title Path: Information Object Classes > Information relationship definitions > relation-qMCJob-managedEntity (M) > Definition
+Content: This represents the relationship between QMCJob and the ManagedEntity.
+Title Path: Information Object Classes > Information relationship definitions > relation-qMCJob-qMCRecord (M) > Definition
+Content: This represents the relationship between QMCJob and the QMCRecord.
+Title Path: Interface Definition > Class diagram representing interfaces
+Content: Each interface is defined in one or more UML compliant class diagrams (see also TS 32.156 ).
+Title Path: Interface Definition > Generic rules
+Content: Rule 1: each operation with at least one input parameter supports a pre-condition valid_input_parameter which indicates that all input parameters shall be valid with regards to their information type. Additionally, each such operation supports an exception operation_failed_invalid_input_parameter which is raised when pre-condition valid_input_parameter is false. The exception has the same entry and exit state. Rule 2: Each operation with at least one optional input parameter supports a set of pre-conditions supported_optional_input_parameter_yyy where "yyy" is the name of the optional input parameter and the pre-condition indicates that the operation supports the named optional input parameter. Additionally, each such operation supports an exception operation_failed_unsupported_optional_input_parameter_yyy which is raised when (a) the pre-condition supported_optional_input_parameter_yyy is false and (b) the named optional input parameter is carrying information. The exception has the same entry and exit state. Rule 3: each operation shall support a generic exception operation_failed_internal_problem which is raised when an internal problem occurs and that the operation cannot be completed. The exception has the same entry and exit state. NOTE: These rules are mapped at the solution set level. Pre-conditions and exceptions, generated by these rules, need not appear explicitly in the present document.
+Title Path: Interface Definition > QoEIRPManagement Interface (M) > Operation activateAreaQMCJob (M) > Definition
+Content: This operation support IRPManager's request to create an AreaQMCJob through Itf-N. Once the AreaQMCJob has been created, the attributes of the QMCJob will not be modified during the lifetime of the QMCJob. One QMCJob can manage network request sessions in one or more ManagedEntity.
+Title Path: Interface Definition > QoEIRPManagement Interface (M) > Operation deactivateQMCJob (M) > Definition
+Content: This operation supports IPRManager's request to stop a QMCJob through Itf-N. When this operation is received in the requested ManagedEntity instances the network request session shall be deactivated.
+Title Path: Interface Definition > QoEIRPManagement Interface (M) > Operation listQMCJob (M) > Definition
+Content: This operation support IPRManager's request to list the parameters of a specific QMCJob through Itf-N.
+Title Path: Interface Definition > QoEIRPManagement Interface (M) > Operation listActivatedQMCJobs (M) > Definition
+Content: This operation support IRPManager's request to list all the activated QMCJobs through Itf-N.
+Title Path: Interface Definition > QoEIRPManagement Interface (M) > Notification notifyNetworkRequestSessionFailure (O) > Definition
+Content: The QMCIRP notifies all subscribed IRPManagers and the QoE Collection Entity if a network request session in a ManagedEntity has not been started due to any problem.

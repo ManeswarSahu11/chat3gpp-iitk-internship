@@ -1,0 +1,12 @@
+Title Path: Scope
+Content: The present document specifies the digital test sequences for the DSR Extended Advanced Front-end speech codec. These sequences can be used to test for a bit exact implementation of the DSR Advanced Front-end codec and quantization (3GPP TS 26.243).
+Title Path: Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Advanced Front-end Adaptive Multi-Rate [AMR-NB]AMR Narrowband [AMR-WB]AMR Wideband Distributed Speech Recognition European Telecommunications Standards Institute Global System for Mobile communications Speech Enabled Services Voice Activity Detector [X-AFE]eXtended Advanced Front-end
+Title Path: General
+Content: Digital test sequences are provided to test for a bit exact implementation of the Distributed Speech Recognition Extended Advanced Front-end (3GPP TS 26.243 ). The test sequences may also be used to verify installations of the ANSI C code in 3GPP TS 26.243 . Clause 5 describes the format of the files, which contain the digital test sequences.
+Title Path: Test sequence format
+Content: This clause provides information on the format of the digital test sequences for the DSR Extended Advanced Front-end (TS 26.243 ).
+Title Path: Test sequence format > File format
+Content: The test sequence files in PC (little-endian) byte order are provided in archive files (ZIP format), which accompany the present document. Following decompression, three types of file are provided: *.inp - Input to the speech encoder. *.cep Cepstral output of the encoder, input to the quantizer. *.pitch Pitch output of the encoder, input to the quantizer. *.class Class output of the encoder, input to the quantizer. *.vad VAD output of the encoder, input to the quantizer. *.bs Output of the quantizer Two test scripts are provided for exercising the Extended Advanced Front-end and quantizer functions. All file formats are described in 3GPP TS 26.243 .
+Title Path: DSR test sequences
+Content: Forty-three encoder input sequences are provided, 22 with 8kHz sampling, 23 with 16kHz sampling. 8kHz sampling: T00.INP - T21.INP as described in the AMR test sequences document TS 26.074 . 16kHz sampling: T00.INP - T22.INP as described in the AMR WB test sequences document TS 26.174 .

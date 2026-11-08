@@ -1,0 +1,74 @@
+Title Path: Scope
+Content: The present document is a technical report for NR Intra-band Carrier Aggregation Rel-17 for xDL/yUL including contiguous and non-contiguous spectrum under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address NR Intra-band Carrier Aggregation requirements for the Rel-17 band combinations requested by proponents and captured in the WID..
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . ABBREVIATION Expansion
+Title Path: Background
+Content: The present document is a technical report for NR Intra-band Carrier Aggregation under Rel-17 timeframe. The document covers each band combination specific issues (i.e. one sub-clause defined per band combination)
+Title Path: Background > TR maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_n96 DL_n96UL > UE co-existence studies
+Content: There are no co-existence issues for this combination.
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_n96 DL_n96UL > REFSENS
+Content: Considering the receiver design for the higher operation frequency with for the band. And for CA_n96E, there may be gain ripple due to larger aggregation bandwidth configuration than ever, we suggest to allow [0.5]dB REFSENS relaxation as below:
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n2B_1UL_n2A > Reference sensitivity power level for Intra-band contiguous CA
+Content: Not needed as PCC REFSENS is same as single carrier REFSENS and DL SCC is further away from UL than DL PCC.
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n25B_1UL_n25A > Reference sensitivity power level for Intra-band contiguous CA
+Content: Not needed as PCC REFSENS is same as single carrier REFSENS and DL SCC is further away from UL than DL PCC.
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n77B_1UL_n77A > Reference sensitivity power level for Intra-band contiguous CA
+Content: Not needed as PCC REFSENS is same as single carrier REFSENS and DL SCC is further away from UL than DL PCC.
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n40B_2UL_n40B > UE additional maximum output power reduction for CA
+Content: Not needed as there are no additional emission requirements.
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n40B_2UL_n40B > In-band blocking
+Content: Already captured in specification for n40
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n40B_2UL_n40B > Out-of-band blocking
+Content: Already captured in specification for n40
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n40B_2UL_n40B > Narrow band blocking
+Content: Already captured in specification for n40
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n3B_1UL_n3A > Reference sensitivity power level for Intra-band contiguous CA
+Content: Based on the REFSENS requirements for intra-hand contiguous CA specified in clause 7.3A.2.1 from TS 38.101-1, exceptions are not needed as PCC REFSENS is same as single carrier REFSENS and DL SCC is further away from UL than DL PCC.
+Title Path: Intra-Band Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n38B_1UL_n38A > Reference sensitivity power level for Intra-band contiguous CA
+Content: There is no REFSENS exception for this TDD intra-band contiguous CA band combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n71(2A)_1UL_n71A > UE co-existence studies
+Content: There are no co-existence issues for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n71(2A)_1UL_n71A > REFSENS
+Content: REFSENS for CA_n71(2A) need to be added in below table of TS 38.101-1. MSD values proposed are tentative values for the RAN4 \#96 meeting, and these will be crosschecked and to be concluded at the following RAN4 meeting.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n2(2A)_1UL_n2A > Co-existence studies
+Content: There are no co-existence issues for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n2(2A)_1UL_n2A > REFSENS
+Content: REFSENS can be impacted by the PCC UL being closer to do the SCC DL than the nominal spacing. REFSENS values are same as for CA_n2(2A).
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n5(2A)_1UL_n5A > UE co-existence studies
+Content: There are no co-existence issues for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n5(2A)_1UL_n5A > REFSENS
+Content: Below analysis assumptions are used in the REFSENS analysis. REFSENS for CA_n5(2A) need to be added in below table of TS 38.101-1.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_3DL_n77(3A)_1UL_n77A > Co-existence studies
+Content: There are no additional co-existence issues for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_3DL_n77(3A)_1UL_n77A > REFSENS
+Content: There are no REFSENS exceptions for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_ 2DL_n96(2 A)_1UL_n96A > UE co-existence studies
+Content: There are no co-existence issues for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_ 2DL_n96(2 A)_1UL_n96A > REFSENS
+Content: There are no REFSENS exceptions for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n96(3A)_1UL_n96A > UE co-existence studies
+Content: There are no co-existence issues for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n96(3A)_1UL_n96A > REFSENS
+Content: There are no REFSENS exceptions for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n96(4A)_1UL_n96A > UE co-existence studies
+Content: There are no co-existence issues for this combination.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n96(4A)_1UL_n96A > REFSENS
+Content: The DL NCCA with four carriers CA_n96(4A) was first required in RAN4. Considering design complexity of four non-contiguous carriers, REFSENS relaxation may be needed. One possible implantation is split receiver architecture to cover non-contiguous carriers within the whole pass band. Here we propose $ $R
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n12(2A)_1UL_n12A > In-band blocking
+Content: Not needed requirement refers back to single carrier requirement.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n12(2A)_1UL_n12A > Out-of-band blocking
+Content: Not needed requirement refers back to single carrier requirement.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n12(2A)_1UL_n12A > Narrow band blocking
+Content: Not needed requirement refers back to single carrier requirement.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n41(2A)_1UL_n41A
+Content: CA_2DL_n41(A-C)_1UL_n41A CA_3DL_n41(3A)_1UL_n41A
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n41(2A)_1UL_n41A > REFSENS
+Content: Since n41 is TDD there is no need to define additional REFSENS requirements.
+Title Path: Intra-Band Non-Contiguous Carrier Aggregation FR1: Specific Band Combination Part > CA_2DL_n1(2A)_1UL_n1A > Co-existence studies
+Content: There are no additional co-existence issues for this combination since it is single UL.

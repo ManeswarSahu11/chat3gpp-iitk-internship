@@ -1,0 +1,62 @@
+Title Path: Scope
+Content: The present document specifies the stage 3 protocol and data model for the Nspaf Service Based Interface. It provides stage 3 protocol definitions and message flows, and specifies the API for each service offered by the SP-AF. The 5G System stage 2 architecture and procedures are specified in 3GPP TS 23.501 and 3GPP TS 23.502 . The Technical Realization of the Service Based Architecture and the Principles and Guidelines for Services Definition are specified in 3GPP TS 29.500 and 3GPP TS 29.501 .
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Over The Air [SOR-AF]Steering Of Roaming Application Function [SP-AF]Secured Packet Application Function Unified Data Management
+Title Path: Overview > Introduction
+Content: Within the 5GC, the SP-AF offers services to the UDM and to the SOR-AF via the Nspaf service based interface. The UDM or SOR-AF shall make use of the SP-AF services when it needs to protect UE parameters for which the final consumer is the USIM (see 3GPP TS 33.501 clause 6.15.2.1). Figure 4.1-1 provides the reference model with focus on the SP-AF. NOTE: The generation of the secured packet and the definition of the storage and handling of OTA keys or other sensitive data are out of scope of this document. For more details, refer to 3GPP TS 23.040 and 3GPP TS 31.115 .
+Title Path: Services offered by the SP-AF > Introduction
+Content: The SP-AF offers the following services via the Nspaf interface: - Nspaf_SecuredPacket Service Table 5.1-1 summarizes the corresponding APIs defined for this specification.
+Title Path: Services offered by the SP-AF > Nspaf_SecuredPacket Service > Service Description
+Content: The Nspaf_SecuredPacket Service may be consumed by the NF consumer (e.g. UDM or SOR-AF) when it has detected that a UICC configuration parameter (e.g. Routing ID data or Steering of Roaming information) needs to be updated, and the new value is not available in secured packet format. For the list of service operations see clause 5.2.2.1
+Title Path: Services offered by the SP-AF > Nspaf_SecuredPacket Service > Service Operations > Introduction
+Content: For the Nspaf_SecuredPacket service the following service operations are defined: - Provide The Nspaf_SecuredPacket Service is used by Consumer NFs (e.g. UDM or SOR-AF) to request the SP-AF to provide a secured packet that contains an UICC configuration parameter as sent in the request by means of the Provide service operation
+Title Path: Services offered by the SP-AF > Nspaf_SecuredPacket Service > Service Operations > Provide > General
+Content: This service operation is used by the NF Service Consumer (e.g. UDM or SOR-AF) to request construction of a secured packet that contains the provided UICC configuration information (e.g. Routing Indicator or Steering of Roaming information). The following procedures using the Provide service operation are supported: - Secured Packet Retrieval
+Title Path: Services offered by the SP-AF > Nspaf_SecuredPacket Service > Service Operations > Provide > Secured Packet Retrieval
+Content: Figure 5.2.2.2.2-1 shows a scenario where the NF consumer (e.g. UDM or SOR-AF) sends a request to the SP-AF to provide a secured packet. The request contains the UE's identity (/\ supi\ ) and the UICC configuration parameter. The NF consumer sends a POST request (custom method: provide-secured-packet) to the resource representing the SUPI. On success, the SP-AF responds with "200 OK", containing the requested SecuredPacket. If the resource does not exist (the supi is unknown in the SP-AF), the SP-AF returns the HTTP status code "404 Not Found", and additional error information should be included in the response body (in "ProblemDetails" element). On failure, the appropriate HTTP status code indicating the error shall be returned and appropriate additional error information should be returned in the POST response body.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Introduction
+Content: The Nspaf_SecuredPacket service shall use the Nspaf_SecuredPacket API. The request URI used in HTTP request from the NF service consumer towards the NF service producer shall have the structure defined in clause 4.4.1 of 3GPP TS 29.501 , i.e.: \ apiRoot\ / apiName / apiVersion / apiSpecificResourceUriPart with the following components: The \ apiRoot\ shall be set as described in 3GPP TS 29.501 . The apiName shall be "nspaf-secured-packet". The apiVersion shall be "v1". The apiSpecificResourceUriPart shall be set as described in clause 6.1.3.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Usage of HTTP > General
+Content: HTTP/2, IETF RFC 9113 , shall be used as specified in clause 5 of 3GPP TS 29.500 . HTTP/2 shall be transported as specified in clause 5.3 of 3GPP TS 29.500 . The OpenAPI specification of HTTP messages and content bodies for the Nspaf_SecuredPacket API is contained in Annex A.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Usage of HTTP > HTTP standard headers > General
+Content: See clause 5.2.2 of 3GPP TS 29.500 for the usage of HTTP standard headers.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Usage of HTTP > HTTP standard headers > Content type
+Content: JSON, IETF RFC 8259 , shall be used as content type of the HTTP bodies specified in the present specification as specified in clause 5.4 of 3GPP TS 29.500 . The use of the JSON format shall be signalled by the content type "application/json". "Problem Details" JSON object shall be used to indicate additional details of the error in a HTTP response body and shall be signalled by the content type "application/problem+json", as defined in IETF RFC 9457 .
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Usage of HTTP > HTTP custom headers
+Content: The mandatory HTTP custom header fields specified in clause 5.2.3.2 of 3GPP TS 29.500 shall be applicable.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Resources > Overview
+Content: Table 6.1.3.1-1 provides an overview of the resources and applicable HTTP methods.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Resources > Resource: SecuredPacket > Description
+Content: This resource represents the information that is needed to construct secured packets for the SUPI.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Resources > Resource: SecuredPacket > Resource Definition
+Content: Resource URI: \ apiRoot\ /nspaf-secured-packet/v1/\ supi\ /provide-secured-packet This resource shall support the resource URI variables defined in table 6.1.3.2.2-1.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Resources > Resource: SecuredPacket > Resource Standard Methods
+Content: No Standard Methods are supported for this resource.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Resources > Resource: SecuredPacket > Resource Custom Operations
+Content: 6.1.3.2.4.1 Overview 6.1.3.2.4.2 Operation: provide-secured-packet
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Resources > Resource: SecuredPacket > Resource Custom Operations > Description
+Content: This custom operation is used by the NF service consumer (e.g. UDM) to request a secured packet for the SUPI containing the presented UICC configuration parameter. The returned secured packet shall be constructed as an SMS-Deliver as specified in 3GPP TS 23.040 and protected as specified in 3GPP TS 31.115 .
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Resources > Resource: SecuredPacket > Resource Custom Operations > Operation Definition
+Content: This operation shall support the request data structures specified in table 6.1.3.2.4.2.2-1 and the response data structure and response codes specified in table 6.1.3.2.4.2.2-2.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Custom Operations without associated resources
+Content: In this release of this specification, no custom operations without associated resources are defined for the Nspaf_SecuredPacket Service.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Notifications
+Content: In this release of this specification, no notifications are defined for the Nspaf_SecuredPacket Service.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Data Model > General
+Content: This clause specifies the application data model supported by the API. Table 6.1.6.1-1 specifies the data types defined for the Nspaf service based interface protocol. Table 6.1.6.1-2 specifies data types re-used by the Nspaf service based interface protocol from other specifications, including a reference to their respective specifications and when needed, a short description of their use within the N service based interface.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Data Model > Structured data types > Introduction
+Content: This clause defines the structures to be used in resource representations.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Data Model > Simple data types and enumerations > Introduction
+Content: This clause defines simple data types and enumerations that can be referenced from data structures defined in the previous clauses.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Data Model > Simple data types and enumerations > Simple data types
+Content: The simple data types defined in table 6.1.6.3.2-1 shall be supported.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Error Handling > General
+Content: For the Nspaf_SecuredPacket API, HTTP error responses shall be supported as specified in clause 4.8 of 3GPP TS 29.501 . Protocol errors and application errors specified in table 5.2.7.2-1 of 3GPP TS 29.500 shall be supported for an HTTP method if the corresponding HTTP status codes are specified as mandatory for that HTTP method in table 5.2.7.1-1 of 3GPP TS 29.500 . In addition, the requirements in the following clauses are applicable for the Nspaf_SecuredPacket API.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Error Handling > Protocol Errors
+Content: No specific procedures for the Nspaf_SecuredPacket service are specified.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Error Handling > Application Errors
+Content: The application errors defined for the Nspaf_SecuredPacket service are listed in Table 6.1.7.3-1.
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Feature negotiation
+Content: The optional features in table 6.1.8-1 are defined for the Nspaf_SecuredPacket API. They shall be negotiated using the extensibility mechanism defined in clause 6.6 of 3GPP TS 29.500 .
+Title Path: API Definitions > Nspaf_SecuredPacket Service API > Security
+Content: As indicated in 3GPP TS 33.501 and 3GPP TS 29.500 , the access to the Nspaf_SecuredPacket API may be authorized by means of the OAuth2 protocol (see IETF RFC 6749 ), based on local configuration, using the "Client Credentials" authorization grant, where the NRF (see 3GPP TS 29.510 ) plays the role of the authorization server. If OAuth2 is used, an NF Service Consumer, prior to consuming services offered by the Nspaf_SecuredPacket API, shall obtain a "token" from the authorization server, by invoking the Access Token Request service, as described in 3GPP TS 29.510 , clause 5.4.2.2. NOTE: When multiple NRFs are deployed in a network, the NRF used as authorization server is the same NRF that the NF Service Consumer used for discovering the Nspaf_SecuredPacket service. The Nspaf_SecuredPacket API defines a single scope "nspaf-secured-packet" for the entire service, and it does not define any additional scopes at resource or operation level.

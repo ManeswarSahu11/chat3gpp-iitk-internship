@@ -1,0 +1,16 @@
+Current indexing run:
+- index_clean_rel1718_final_v2
+- source corpus: knowledge_base_cleaned_rel1718_final_v2
+- expected files: 1843
+
+Best completed TeleQnA runs:
+- chat3gpp_teleqna_k60_74108.json
+- chat3gpp_teleqna_k10_74108.json
+- chat3gpp_teleqna_cleanindex_76ish.json
+- chat3gpp_teleqna_clean_rel1718_final_77939.json
+
+Next intended runs:
+1. Chat3GPP TeleQnA on final_v2 index
+2. Chat3GPP Tele-Eval on final_v2 index
+3. Tele-it TeleQnA on final_v2 index
+4. Tele-it Tele-Eval on final_v2 index

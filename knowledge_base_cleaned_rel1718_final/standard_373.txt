@@ -1,0 +1,12 @@
+Title Path: Scope
+Content: The present document is a technical report for release 18 basket WI High power UE (power class 1.5) for NR FR1 TDD single band. The purpose is to gather the relevant background information and studies in order to complete the band specific requirements for the newly requested bands for power class 1.5 UE under TDD mode.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply:
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . User Equipment Time Division Duplex
+Title Path: Background
+Content: At 3GPP RAN\#97 meeting, a basket Work Item on ``High power for FR1 TDD single bands with power class 1.5 UE'' was approved for Rel-18. At 3GPP RAN\#98 meeting, the WID is revised . The objectives of the core part are as follows: Develop RF requirements that are applicable to PC1.5 UE mobile device and FWA for NR TDD bands. Introduction of high power UE (power class 1.5) operation for NR TDD bands. Including bands n34, n39, n40 as in table 1. Other bands based on operators request. Specify RF characteristics with dual-PA assumption, including following requirements if needed. UE maximum output power Tx power tolerance A-MPR, if needed Reuse existing SAR mechanism. The present document is a technical report for this basket Work Item.
+Title Path: High power for FR1 TDD single bands with power class 1.5 UE > NR band n39 > UE additional maximum output power reduction
+Content: In 3GPP RAN4 \#104bis meeting, following agreements is approved to evaluate A-MPR for NS_50. A-MPR including 5MHz and region need to be re-evaluated. Evaluate the PC1.5 A-MPR requirements for NS_50 for band n39, using the Rel-17 RF assumptions for mobile devices. The new PC1.5 A-MPR requirements to be defined for NS_50 are also applicable for FWA devices.

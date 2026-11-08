@@ -1,0 +1,60 @@
+Title Path: Scope
+Content: This Technical Specification gives the stage 2 description of the Call Deflection supplementary service.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: Abbreviations used in this specification are listed in TR 21.905. For the purpose of this specification the following abbreviations apply: CD: Call Deflection
+Title Path: Messages and their Contents > Messages between the MS and the MSC > CD Request ack
+Content: The CD Request ack message is sent from the MSC to MS direction. This message contains no information elements.
+Title Path: Messages and their Contents > Messages between the MS and the MSC > CD Request negative response
+Content: CD Request negative response message is sent from the MSC to MS direction. The negative response information element can take the following values: service not subscribed; deflected-to number is own number; deflected-to number is a special service code; number invalid; call barred; SS incompatibility; forwarding violation; forwarding failure.
+Title Path: Messages and their Contents > Messages between the MSC and the VLR > Process Call Waiting negative response
+Content: For the description of the Process Call Waiting negative response message refer to TS 23.018. The negative response information element can take the following additional value: - Call Deflection.
+Title Path: Messages and their Contents > Messages between the MSC and the VLR > Complete Call negative response
+Content: For the description of the Complete Call negative response message refer to TS 23.018. The negative response information element can take the following additional value: - Call Deflection.
+Title Path: Messages and their Contents > Messages between the MSC and the VLR > Send Info for Incoming Call negative response
+Content: For the description of the Send Info for Incoming Call negative response message refer to TS 23.018. The negative response information element can take the following additional values: service not subscribed; deflected-to number is own number; deflected-to number is a special service code; number invalid; call barred.
+Title Path: Functions of the serving MSC
+Content: The functions of the serving MSC are specified in TS 23.018. The procedures specific to the CD supplementary service are specified in this clause.
+Title Path: Functions of the serving MSC > Procedure Handling_CD_MSC
+Content: This procedure is called when a CD request is received from the MS.
+Title Path: Functions of the serving MSC > Procedure CD_Reject
+Content: This procedure is called if the CD request was treated unsuccessful in the VLR.
+Title Path: Functions of the serving MSC > Procedure CD_Failure
+Content: This procedure is called if the CD request was treated unsuccessful in the serving MSC.
+Title Path: Functions of the serving MSC > Procedure CD_UUS_Interaction
+Content: This procedure is called if the CD request was treated unsuccessful in the serving MSC due to the interaction with the UUS supplementary service.
+Title Path: Functions of the serving MSC > Procedure CD_Success
+Content: This procedure is called if the CD request was treated successful in the serving MSC.
+Title Path: Functions of the serving MSC > Procedure CD_Notify_SS_Invocation
+Content: This procedure is called by the procedures CD_OR_Clear and CD_Success to send notification of the CD invocation to the gsmSCF if required. The output signal SS Invocation Notify is sent if the SS-CSI was received in the SIFIC ack. The SS-CSI will only be included in the SIFIC ack if there is a requirement to notify the gsmSCF that CD has been invoked.
+Title Path: Functions of the serving VLR
+Content: The functions of the serving VLR are specified in TS 23.018. The procedure specific to the CD supplementary service is specified in this clause.
+Title Path: Functions of the serving VLR > Procedure CD_Authorization
+Content: This procedure examines the authorization related to Call Deflection. The procedure CAMEL_Check_CD_Interaction is specific to CAMEL phase 2. If CAMEL phase 2 is not supported in the VLR, processing continues from the "No" exit of the test "Result=Pass?". The procedure CAMEL_CHECK_SII2_CDTI is specific to CAMEL Phase 3 or higher. If CAMEL Phase 3 or higher is not supported in the VLR, processing continues from the "Yes" exit of the test "Result = Pass?".
+Title Path: Functions of the serving VLR > Procedure CAMEL_Check_CD_Interaction
+Content: This procedure examines whether a Translation Interaction Flag (TIF-CSI) is provided for the served subscriber.
+Title Path: Interaction with other supplementary services > Line Identification services
+Content: If the serving MSC receives an Answer message from the destination C network after the successful invocation of the call deflection supplementary service, the process MAF039 of TS 23.081 shall be performed. Refer to Process ICH_MSC of TS 23.018 for further details.
+Title Path: Interaction with other supplementary services > Call Waiting
+Content: The MS may send a CD Request message for an incoming waiting call. Refer to procedure Process_Call_Waiting_MSC of TS 23.018 for further details.
+Title Path: Interaction with other supplementary services > Closed User Group
+Content: The serving VLR shall perform the forwarding CUG authorisation as defined in TS 23.085 while processing a call deflection request. Refer to Process ICH_VLR of TS 23.018 for details.
+Title Path: Interaction with other supplementary services > Call Barring Services
+Content: If a call deflection request is processed, the serving VLR shall check whether the requested deflected-to number contradicts active and operative outgoing barring programs. Refer to Procedure CD_Authorization (figure 6.6) for details.
+Title Path: Interaction with other supplementary services > Explicit call transfer (ECT)
+Content: If in the originating network ECT is invoked (one call answered, the other alerting), the serving MSC shall map a redirection number parameter received in the ECT notification into the calling identity parameter of the outgoing IAM message. Refer to TS 23.091 (Interaction of Call Forwarding on mobile subscriber busy due to UDUB and explicit call transfer) for details.
+Title Path: Interaction with other supplementary services > Completion of Calls to Busy Subscriber (CCBS)
+Content: If a call is deflected to a NDUB destination, the serving MSC shall set the diagnostic to "CCBS not possible" when it releases the call towards the calling network. Refer to Process ICH_MSC of TS 23.018 for further details. The serving MSC shall remove the CCBS call Indicator from the IAM message when deflecting a call.
+Title Path: Interaction with other network features > Customised Applications for Mobile network Enhanced Logic (CAMEL)
+Content: If the served subscriber is provided with a Translation Information Flag (TIF-CSI) as defined in TS 23.018 the VLR shall neither perform checks regarding the validity of the deflected-to number nor perform interactions with BOIC and BOIC-exHC barring programs. Refer to Procedure CD_Authorization for further details.
+Title Path: Interaction with other network features > Support of Optimal Routeing
+Content: The procedures for optimal routeing of late call forwarding shall apply if the Call Deflection supplementary service is invoked. Refer to TS 23.079 for further details.
+Title Path: Information stored in the HLR
+Content: The following logical states are applicable for the Call Deflection service (refer to TS 23.011 for an explanation of the notation): (Not Provisioned, Not Applicable, Not Active, Not Induced) (Provisioned, Not Applicable, Active and Operative, Not Induced) The HLR shall store: the logical state of the Call Deflection service (which shall be one of the valid states listed above) on a per subscriber basis. the subscription option "notification to the calling party" on a per subscriber basis; This subscription option takes one of the following values: - no notification; - notification. the subscription option "MSISDN of the served subscriber can be presented to the forwarded-to subscriber" on a per subscriber basis; This subscription option takes one of the following values: - presentation restricted; - presentation allowed.
+Title Path: State transition model
+Content: Figure 11.1 shows the successful cases of transition between the applicable logical states of the Call Deflection service. The state changes are caused by actions of the service provider. Note that error cases are not shown in the diagram as they normally do not cause a state change. Additionally, some successful requests may not cause a state change and are therefore not shown in the diagram.
+Title Path: Transfer of information from HLR to VLR
+Content: If the provisioning state for the Call Deflection service is "Provisioned" then when the subscriber registers on a VLR the HLR shall send that VLR information about the logical state of the Call Deflection service In this case the following additional information shall be sent to the VLR: subscription options "notification to the calling party" and "MSISDN of the served subscriber can be presented to the forwarded-to subscriber". Translation Information Flag (TIF-CSI) if contained in the CAMEL subscriber data of the served subscriber (refer to TS 23.078 for further details). If the logical state of the Call Deflection service or the value of the subscription options "notification to the calling party" or "MSISDN of the served subscriber can be presented to the forwarded-to subscriber" or the presence of the Translation Information Flag (TIF-CSI) is changed while a subscriber is registered on a VLR then the HLR shall inform the VLR of the new logical state or the new value of the subscription option or the presence of the Translation Information Flag (TIF-CSI).
+Title Path: Information stored in the VLR
+Content: For the supplementary service Call Deflection the VLR shall store the service state information, information about the subscription options "notification to the calling party" and "MSISDN of the served subscriber can be presented to the forwarded-to subscriber" and the Translation Information Flag (TIF-CSI) received from the HLR.
+Title Path: Handover
+Content: Handover will have no impact on the control procedures and the operation of the service.

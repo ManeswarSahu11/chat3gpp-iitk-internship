@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The purpose of the present document is to define the mapping of the LSA Controller (LC) Integration Reference Point (IRP) (see 3GPP TS 28.302 ) to the protocol specific details necessary for implementation of this IRP in a CORBA/IDL environment and in a SOAP/WSDL environment. This Solution Set specification is related to 3GPP TS 28.302 V14.0.X.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Common Object Request Broker Architecture Object Management Group Web Service Description Language
+Title Path: Solution Set Definitions
+Content: The present document defines the following Solution Set definitions:

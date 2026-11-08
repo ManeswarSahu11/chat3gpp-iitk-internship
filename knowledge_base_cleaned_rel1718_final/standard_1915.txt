@@ -1,0 +1,76 @@
+Title Path: Scope
+Content: The present document specifies the stage three Protocol Description of the Message Waiting Indication (MWI) service, based on stage one and two of the ISDN MWI supplementary services. It provides the protocol details in the IP Multimedia (IM) Core Network (CN) subsystem based on the Session Initiation Protocol (SIP) and the Session Description Protocol (SDP). The present document is applicable to User Equipment (UE) and Application Servers (AS) which are intended to support the MWI supplementary service.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 22.173 , 3GPP TS 22.101 , 3GPP TS 22.228 , 3GPP TS 23.003 and the following apply: correspondent: person or entity that deposits messages in the subscriber's message account NOTE: Correspondent and subscriber can be the same person or entity. Message Account (MA): resource that retains multimedia messages (voice, video, fax, etc.) deposited by correspondents for the subscriber subscriber: person or entity that receives status information about deposited messages supplementary service: modifies or supplements a basic Telecommunication service
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Application Server Communication Deflection Communication DIVersion Communication Forwarding Busy Communication Forwarding on Not Logged-in Communication Forwarding No Reply Communication Forwarding Unconditional CONFerence calling Call Session Control Function Explicit Communication Transfer Communication Hold [I-CSCF]Interrogating - CSCF IP Multimedia Subsystem Internet Protocol Integrated Service Data Network Message Account Malicious Call IDentification Multi-iDentity Multipurpose Internet Mail Extensions MWI Notifier User Agent MWI Subscriber User Agent Multi-Device Message Waiting Indication Originating Identification Presentation Originating Identification Restriction [ P-CSCF ] Proxy - CSCF Public Service Identity Public Switch Telephone Network [S-CSCF]Serving - CSCF Session Description Protocol Session Initiation Protocol Terminating Identification Presentation Terminating Identification Restriction User Agent User Equipment Universal Resource Identifier
+Title Path: Message Waiting Indication (MWI) > Introduction
+Content: The Message Waiting Indication (MWI) service enables the network, upon the request of a controlling user to indicate to the receiving user, that there is at least one message waiting.
+Title Path: Message Waiting Indication (MWI) > Description > General description
+Content: The MWI service enables the AS to indicate to the subscriber, that there is at least one message waiting. The indication is delivered to the subscriber's UE after successful subscription to the Message Waiting Indication service as described in the present document. Other modes of MWI service invocation are not applicable. NOTE: Having received this indication, the subscriber user can subsequently access the message account, to have the deposited message delivered. The means by which the subscriber accesses and manages the message account are outside the scope of the present document.
+Title Path: Message Waiting Indication (MWI) > Functional entities > User Equipment (UE)
+Content: The UE shall implement the MWI Subscriber User Agent role as described in subclause 4.4.1.
+Title Path: Message Waiting Indication (MWI) > Functional entities > Application Server (AS)
+Content: An AS shall implement the role of a MWI Notifier User Agent as described in subclause 4.4.2. An AS implementing the role of MWI Notifier User Agent shall implement the role of the AS acting as terminating UA as described in 3GPP TS 24.229 , subclause 5.7.2. Additionally an AS may implement other roles for the receipt and storage of the messages for example Web Server, Mail Transfer and Delivery Agent, Short Message Service centre, etc. The definition of additional roles for an MWI AS is out of the scope for the current specification.
+Title Path: Message Waiting Indication (MWI) > Roles > MWI Subscriber User Agent (MSUA)
+Content: A MSUA is an entity that is subscribed or requests information about status change of message account from an MWI AS. Actions performed by a MSUA as a part of the UE are described in subclause 4.7.2.1.
+Title Path: Message Waiting Indication (MWI) > Roles > MWI Notifier User Agent (MNUA)
+Content: The MNUA is an entity that provides information about changes in message account status to the MSUA. Actions performed by a MWI Notifier User Agent as a part of the AS are described in subclause 4.7.2.5.
+Title Path: Message Waiting Indication (MWI) > Roles > Message Account (MA) > General
+Content: The definition of the message account from the RFC 3842 applies with following additions: Message account retains multimedia messages (e.g. voice, video and fax) intended to a particular subscriber.
+Title Path: Message Waiting Indication (MWI) > Roles > Message Account (MA) > Identification of the message account for the message deposit
+Content: Since messages may be intended to the different public user identities that belong to the same subscriber, the message account may be configured to retain messages for any of the subscriber's public user identities. Configuration of a message account to retain messages for each public user identity, for a group of public user identities or for all of public user identities that belong to the same subscriber is subject to the operator's policy.
+Title Path: Message Waiting Indication (MWI) > Roles > Message Account (MA) > Identification of the message account for the MWI subscription
+Content: For the identification of the message account by subscriptions to the MWI service any of a subscriber's public user identities can be used (see examples in subclause A.1.1.2).
+Title Path: Message Waiting Indication (MWI) > Operational requirements > Provision/withdrawal
+Content: The MWI service is provided after prior arrangement with the service provider. The MWI service shall be withdrawn at the subscriber's request or for administrative reasons. Any of the subscriber's public user identities can be used to access the MWI service, see annex B.
+Title Path: Message Waiting Indication (MWI) > Operational requirements > Requirements on the originating network side
+Content: No specific requirements are needed on the originating network side. NOTE: Annex B includes an example of an iFC that can be used to invoke the MWI supplementary service.
+Title Path: Message Waiting Indication (MWI) > Operational requirements > Requirements in the network
+Content: No specific requirements are needed in the network.
+Title Path: Message Waiting Indication (MWI) > Operational requirements > Requirements on the terminating network side
+Content: No specific requirements are needed in the network.
+Title Path: Message Waiting Indication (MWI) > Coding requirements
+Content: The application/simple-message-summary MIME type used to provide Message Summary and Message Waiting Indication Information is defined in subclause 5 of RFC 3842 . The coding of the message types in the message-context-class values is defined in the specifications listed in the "reference" column of table 1. The coding of the additional information about deposited messages in the application/simple-message-summary MIME body is defined in subclause 25 of RFC 3261 for SIP extension-header (subclause 3.5 of RFC 3842 ) and follow the rules defined in the specifications listed in the "reference" column of table 2.
+Title Path: Message Waiting Indication (MWI) > Signalling requirements > Activation/deactivation
+Content: The MWI service is immediately activated after the SUBSCRIBE request from the MSUA is successfully processed, see subclause 4.7.2. The MWI service is deactivated after subscription expiry or after unsuccessful attempt to deliver a notification about message waiting. 4.7.1A Registration/erasure The MWI service requires no registration. Erasure is not applicable. 4.7.1B Interrogation Interrogation of MWI is not applicable.
+Title Path: Message Waiting Indication (MWI) > Signalling requirements > Invocation and operation > Actions at the MSUA
+Content: When the MSUA intends to subscribe for status information changes of a message account, the MSUA shall generate a SUBSCRIBE request in accordance with RFC 6665 and RFC 3842 and in alignment with the procedures described in 3GPP TS 24.229 . If the UE receives a 489 (Bad Event) response or a 405 (Method Not Allowed) response to the SUBSCRIBE request, the UE shall not re-try the SUBSCRIBE request until de-registration of the public user identity from IMS. NOTE: 489 (Bad Event) response or 405 (Method Not Allowed) response to the SUBSCRIBE request indicates that MWI is not supported in the network. The MSUA will address the SUBSCRIBE request to one of the subscriber's public user identities (see subclause 4.5.1). The MSUA shall implement the "application/simple-message-summary" content type as described in RFC 3842 .
+Title Path: Message Waiting Indication (MWI) > Signalling requirements > Invocation and operation > Actions at the MNUA
+Content: When the MNUA receives a SUBSCRIBE request for the "message-summary" event package, the MNUA shall identify the message account which status information is requested (see subclause 4.4.3.2), then the MNUA shall attempt to verify the identity of the source of the SUBSCRIBE request as described in 3GPP TS 24.229 subclause 5.7.1.4, then perform authorization according to 3GPP TS 24.229 subclause 5.7.1.5. In case of successful subscription, the MNUA shall generate a response to the SUBSCRIBE request and notifications in accordance with RFC 6665 and RFC 3842 , and as defined by subclause 4.6.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Communication Hold (HOLD)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Terminating Identification Presentation (TIP)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Terminating Identification Restriction (TIR)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Originating Identification Presentation (OIP)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Originating Identification Restriction (OIR)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > CONFerence calling (CONF)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Communication DIVersion services (CDIV) > General
+Content: The subscriber of the message waiting indication service receives the notifications about the change in the status of message account only from. Communication diversion services shall not impact the processing of message waiting indication subscriptions, notifications and responses.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Communication DIVersion services (CDIV) > Communication Forwarding Unconditional (CFU)
+Content: MWI notifications shall not be affected by the communication forwarding unconditional service and always be forwarded to subscribers' current location (if known).
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Communication DIVersion services (CDIV) > Communication Forwarding Busy (CFB)
+Content: MWI notifications shall not be affected by the communication forwarding busy service and always be forwarded to subscribers' current location (if known). The UE will inform the AS if it will not be able to process the notification at the time.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Communication DIVersion services (CDIV) > Communication Forwarding No Reply (CFNR)
+Content: MWI notifications shall not be affected by the communication forwarding busy service and always be forwarded to subscribers' current location (if known). The S-CSCF will inform the AS if the UE can not be contacted at the time.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Communication DIVersion services (CDIV) > Communication Forwarding on Not Logged-in (CFNL)
+Content: MWI notifications shall not be affected by the communication forwarding busy service and always be forwarded to subscribers' current location (if known). The S-CSCF will inform the AS if the UE is not logged-in at the time.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Communication DIVersion services (CDIV) > Communication Deflection (CD)
+Content: MWI notifications shall not be affected by the communication deflection service. The AS shall ignore the redirection information received from the UE and process a 3xx response as a 480 Temporarily Unavailable response.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Malicious Call IDentification (MCID)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Explicit Communication Transfer (ECT)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Enhanced Calling Name (eCNAM)
+Content: No impact, i.e. neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Multi-Device (MuD)
+Content: No impact. Neither service shall affect the operation of the other service.
+Title Path: Message Waiting Indication (MWI) > Interaction with other services > Multi-Identity (MiD)
+Content: No impact. Neither service shall affect the operation of the other service. NOTE: The subscriber of the MWI service receives the notifications about the change in the status of message account only for the subscriber's public user identities i.e. the MWI service is not supported for the other identities that UE can use.
+Title Path: Message Waiting Indication (MWI) > Interactions with other networks
+Content: Interaction with other networks is performed according to 3GPP TS 24.229 .

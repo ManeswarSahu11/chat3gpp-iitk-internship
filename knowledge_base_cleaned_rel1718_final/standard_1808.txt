@@ -1,0 +1,110 @@
+Title Path: Scope
+Content: The present document specifies Evolved Packet Core (EPC) network resource information that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks .. It reuses relevant parts of the Generic NRM in 3GPP TS 28.622 , either by direct reuse or sub-classing, and in addition to that defines EPC specific Information Object Classes. This document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding. In order to access the information defined by this NRM, an Interface IRP such as the "Basic CM IRP" is needed (3GPP TS 32.602 ). However, which Interface IRP is applicable is outside the scope of the present document.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.600 and the following apply: Association: See definition in TS 28.622 . Managed Element (ME): See definition in TS 28.622 . Managed Object (MO): See definition in TS 28.622 . Management Information Model (MIM): also referred to as NRM - see the definition below. Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Common Information Model Control and User Plane Separation Element Manager evolved NodeB Evolved Packet Core evolved Packet Data Gateway [E-UTRAN]Evolved Universal Terrestrial Radio Access Network General Packet Radio System Information Object Class Integration Reference Point Information Service Managed Element Management Information Model Mobility Management Entity Managed Object Network Element Network Resource Network Resource Model Policy and Charging Rules Function [P GW]PDN Gateway [PGW-C]PDN Gateway Control plane function [PGW-U]PDN Gateway User plane function Relative Distinguished Name (see 3GPP TS 32.300 ) [S GW]Serving Gateway [SGW-C]Serving Gateway Control plane function [SGW-U]Serving Gateway User plane function Telecom Management Network Unified Modelling Language
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of IOCs that encapsulate information relevant for this service. This clause provides the overview of the relationships of relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes. The figures below show the containment/naming hierarchy and the associations of the information object classes defined in the present document. NOTE: The listed cardinality numbers represent transient as well as steady-state numbers, and reflect all managed object creation and deletion scenarios in all figures. Each IOC is identified with a Distinguished Name (DN) according to 3GPP TS 32.300 that expresses its containment hierarchy. As an example, the DN of an IOC representing a MME (3GPP TS 23.401 ) could have a format like: SubNetwork=China, MeContext =MEC-Gbg-1, ManagedElement =MME-Gbg-1, MMEFunction=MME-1. NOTE: Void.
+Title Path: Model > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships that exist between IOCs. The figures below show the inheritance hierarchy for the EPC NRM. Figure 4.2.2-4: EPC NRM Inheritance Hierarchy_4
+Title Path: Model > Class definitions > EPDGFunction > Definition
+Content: This IOC represents ePDG functionality. For more information about the ePDG, see 3GPP TS 23.402 .
+Title Path: Model > Class definitions > MMEFunction > Definition
+Content: This IOC represents MME functionality. For more information about the MME, see 3GPP TS 23.401 .
+Title Path: Model > Class definitions > MMEFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > PCRFFunction > Definition
+Content: This IOC represents PCRF functionality. For more information about the PCRF, see 3GPP TS 23.401 .
+Title Path: Model > Class definitions > PGWFunction > Definition
+Content: This IOC represents PDN Gateway functionality. For more information about the PDN Gateway, see 3GPP TS 23.401 .
+Title Path: Model > Class definitions > PGWFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ServingGWFunction > Definition
+Content: This IOC represents Serving Gateway functionality. For more information about the Serving Gateway, see 3GPP TS 23.401 .
+Title Path: Model > Class definitions > ServingGWFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MMEPool > Definition
+Content: This IOC represents MME Pool. For more information about the MME Pool, see 3GPP TS 23.401 .Key concepts related to MME Pool are: An MME Pool consists of one or more MME nodes. A particular node can be a member of one and only one MME Pool. One MME Pool serves at most one MME Pool Area. One MME Pool Area can be served by at most one MME Pool.
+Title Path: Model > Class definitions > MMEPoolArea > Definition
+Content: This IOC represents MME Pool Area. For more information about the MME Pool Area, see 3GPP TS 23.401 . Key concepts related to MME Pool Area are: An MME Pool Area is defined as an area within which an UE may be served without the need to change the serving MME. It is a collection of complete Tracking Areas (TAs). A particular TA can be a member of one or more MME Pool Areas. In the latter case, the MME Pool Areas involved are called ``overlapping MME Pool Areas''.
+Title Path: Model > Class definitions > Link_ENB_MME > Definition
+Content: This IOC models the S1-MME reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_ENB_ServingGW > Definition
+Content: This IOC models the S1-U reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_EPDG_PCRF > Definition
+Content: This IOC models the Gxb reference point as defined in TS 23.402 .
+Title Path: Model > Class definitions > Link_EPDG_PGW > Definition
+Content: This IOC models the S2b reference point as defined in TS 23.402 .
+Title Path: Model > Class definitions > Link_HSS_MME > Definition
+Content: This IOC models the S6a reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_MME_MME > Definition
+Content: This IOC models the S10 reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_MME_SGSN > Definition
+Content: This IOC models the S3 reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_MME_ServingGW > Definition
+Content: This IOC models the S11 reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_PCRF_ServingGW > Definition
+Content: This IOC models the Gxc reference point as defined in TS 23.402 .
+Title Path: Model > Class definitions > Link_PCRF_PGW > Definition
+Content: This IOC models the Gx reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_PGW_ServingGW > Definition
+Content: This IOC models the S5 reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > Link_SGSN_ServingGW > Definition
+Content: This IOC models the S4 reference point as defined in TS 23.401 .
+Title Path: Model > Class definitions > EP_RP_EPS > Definition
+Content: This IOC represents an end point of reference point in EPS as defined in TS 23.401 .
+Title Path: Model > Class definitions > EP_RP_EPS > Notifications
+Content: The common notifications defined in subclause 4.1.6 of 3GPP TS 28.622 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalServingGWFunction > Definition
+Content: This IOC represents SGW functionality controlled by another IRPAgent. For more information about the SGW, see 3GPP TS 23.401 .
+Title Path: Model > Class definitions > ExternalServingGWFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalMMEFunction > Definition
+Content: This IOC represents MME functionality controlled by another IRPAgent. For more information about the MME, see 3GPP TS 23.401 .
+Title Path: Model > Class definitions > ExternalMMEFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > IOC QCISet > Definition
+Content: This IOC represents a set of QCI as defined in section 6.1.7.2 of TS 23.203 .
+Title Path: Model > Class definitions > MBMSGWFunction > Definition
+Content: This IOC represents MBMS GW functionality. For more information about the MBMS GW, see 3GPP TS 36.300 .
+Title Path: Model > Class definitions > Link_MBMSGW_ENB > Definition
+Content: This IOC represents the M1 reference point as defined in 3GPP TS 36.300 .
+Title Path: Model > Class definitions > PGWCFunction > Definition
+Content: This IOC represents PDN Gateway control plane functionality. For more information about the PGW-C, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > PGWCFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > PGWUFunction > Definition
+Content: This IOC represents PDN Gateway user plane functionality. For more information about the PGW-U, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > PGWUFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ServingGwCFunction > Definition
+Content: This IOC represents Serving Gateway control plane functionality. For more information about the SGW-C, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > ServingGwCFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ServingGwUFunction > Definition
+Content: This IOC represents Serving Gateway user plane functionality. For more information about the SGW-U, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > ServingGwUFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalServingGwCFunction > Definition
+Content: This IOC represents SGW-C functionality controlled by another IRPAgent. For more information about the SGW-C, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > ExternalServingGwCFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalServingGwUFunction > Definition
+Content: This IOC represents SGW-U functionality controlled by another IRPAgent. For more information about the SGW-U, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > ExternalServingGwUFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalPGWCFunction > Definition
+Content: This IOC represents PDN Gateway control plane functionality controlled by another IRPAgent. For more information about the PGW-C, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > ExternalPGWCFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalPGWUFunction > Definition
+Content: This IOC represents PDN Gateway user plane functionality controlled by another IRPAgent. For more information about the PGW-U, see 3GPP TS 23.214 .
+Title Path: Model > Class definitions > ExternalPGWUFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Attribute definitions > Attribute properties
+Content: The following table defines the attributes that are present in several Information Object Classes (IOCs) of the present document.
+Title Path: Model > Common notifications > Alarm notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.
+Title Path: Model > Configuration notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.

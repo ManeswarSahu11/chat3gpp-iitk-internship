@@ -1,0 +1,256 @@
+Title Path: Scope
+Content: The present document specifies the IP Multimedia Subsystem (IMS) network resource information that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks . This document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding. The IMS NRM IRP comprises a set of specifications defining Requirements, a protocol neutral Information Service and one or more Solution Set(s). The present document specifies the protocol neutral IMS NRM IRP: Information Service (IS). It reuses relevant parts of the Generic NRM IRP: IS in 3GPP TS 28.622 , either by direct reuse or sub-classing, and in addition to that defines IMS specific Information Object Classes. Finally, in order to access the information defined by this NRM, an Interface IRP is needed, such as the Basic CM IRP in 3GPP TS 32.602 . However, which Interface IRP that is applicable is outside the scope of the present document.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.600 and the following apply: Association: See definition in TS 28.622 . Managed Element (ME): See definition in TS 28.622 . Managed Object (MO): See definition in TS 28.622 . Management Information Model (MIM): See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Application Server Breakout Gateway Control Function Core Network Distinguished Name (see 3GPP TS 32.300 ) [E-CSCF]Emergency Call Session Control Function [I-CSCF]Interrogating Call Session Control Function [IM-SSF]IP Multimedia Service Switching Function IP Multimedia Subsystem [IMS-MGW]IMS Media Gateway Information Object Class Integration Reference Point International Standards Organization Managed Element Media Gateway Control Function Managed Object Managed Object Instance Multimedia Resource Function Controller Multimedia Resource Function Processor Network Element Network Manager Network Resource Network Resource Model Open Systems Interconnection [P-CSCF]Proxy Call Session Control Function Relative Distinguished Name (see 3GPP TS 32.300 ) [S-CSCF]Serving Call Session Control Function Subscription Locator Function Telecommunications Management Network Unified Modelling Language Universal Mobile Telecommunications System
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes (e.g. IOCs ) that encapsulates the information relevant for this IRP. This clause provides the overview of the relationships of relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes.The figures below show the containment/naming hierarchy and the associations of the information object classes defined in the present document. NOTE: The listed cardinality numbers represent transient as well as steady-state numbers, and reflect all managed object creation and deletion scenarios in all figures. Note: If this NRM has interfaces (Link IOCs) modelled to IOCs in other NRM(s), the Link IOC definitions may be defined in the other NRM(s) and need to be considered in implementations. Associations 1
+Title Path: Model > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships that exist between IOCs.
+Title Path: Model > Class definitions > ASFunction > Definition
+Content: This IOC represents AS functionality. For more information about the AS, see 3GPP TS 23.002 . ASFunction may be instantiated when a specific Application Server type is not already represented with an IOC subclassed from this IOC in this specification. If the Application Server type is already represented by an IOC in this specification, then it should instead be used. In the case a subclassed IOC is utilized, the ASFunction relationships (including link objects) are carried forward to the sub-classed IOC through inheritance.
+Title Path: Model > Class definitions > ASFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > ASFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > BGCFFunction > Definition
+Content: This IOC represents BGCF functionality. For more information about the BGCF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > BGCFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > BGCFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CAMELIMSSFASFunction > Definition
+Content: This IOC represents CAMEL IM-SSF AS functionality. For more information about the CAMEL IM-SSF AS, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > CAMELIMSSFASFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > CAMELIMSSFASFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CSCFFunction > Definition
+Content: This IOC represents CSCF functionality. For more information about the CSCF, see 3GPP TS 23.002 . This IOC cannot be instantiated. It is defined for sub-classing purposes.
+Title Path: Model > Class definitions > CSCFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > CSCFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > HSSFunction > Definition
+Content: This IOC represents HSS functionality. For more information about the HSS, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > HSSFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > HSSFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ICSCFFunction > Definition
+Content: This IOC represents I-CSCF functionality. For more information about the I-CSCF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > ICSCFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > ICSCFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > IMSMGWFunction > Definition
+Content: This IOC represents IMS-MGW functionality. For more information about IMS-MGW, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > IMSMGWFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > IMSMGWFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MGCFFunction > Definition
+Content: This IOC represents MGCF functionality. For more information about the MGCF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > MGCFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > MGCFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MRFCFunction > Definition
+Content: This IOC represents MRFC functionality. For more information about the MRFC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > MRFCFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > MRFCFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MRFPFunction > Definition
+Content: This IOC represents MRFP functionality. For more information about the MRFP, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > MRFPFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > MRFPFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > OSASCSASFunction > Definition
+Content: This IOC represents OSA Application Server (Service Capability Server) functionality. For more information about the OSA Service Capability Server, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > OSASCSASFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > PCSCFFunction > Definition
+Content: This IOC represents P-CSCF functionality. For more information about the P-CSCF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > PCSCFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > PCSCFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SCSFFunction > Definition
+Content: This IOC represents S-CSCF functionality. For more information about the S-CSCF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SCSFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > SCSFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SIPASFunction > Definition
+Content: This IOC represents SIP AS functionality. For more information about the SIP AS, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SIPASFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > SLFFunction > Definition
+Content: This IOC represents SLF functionality. For more information about the SLF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SLFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > SLFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ECSCFFunction > Definition
+Content: This IOC represents E-CSCF functionality. For more information about the E-CSCF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > ECSCFFunction > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > ECSCFFunction > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_AS_ICSCF > Definition
+Content: This IOC models the Ma reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_AS_ICSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_AS_ICSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_AS_SCSCF > Definition
+Content: This IOC models the Isc reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_AS_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_AS_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_AS_SLF > Definition
+Content: This models the Dh reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_AS_SLF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_AS_SLF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_BGCF_BGCF > Definition
+Content: This models the Mk reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_BGCF_BGCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_BGCF_BGCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_BGCF_MGCF > Definition
+Content: This models the Mj reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_BGCF_MGCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_BGCF_MGCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_BGCF_SCSCF > Definition
+Content: This models the Mi reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_BGCF_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_BGCF_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_HSS_ICSCF > Definition
+Content: This IOC models the Cx reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_HSS_ICSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_HSS_ICSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_ICSCF_SCSCF > Definition
+Content: This models the Mw reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_ICSCF_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_ICSCF_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_ICSCF_MGCF > Definition
+Content: This IOC models the Mg reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_ICSCF_MGCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_ICSCF_MGCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_ICSCF_PCSCF > Definition
+Content: This models the Mw reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_ICSCF_PCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_ICSCF_PCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_PCSCF_SCSCF > Definition
+Content: This models the Mw reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_PCSCF_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_PCSCF_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_CAMELIMSSFAS_HSS > Definition
+Content: This IOC models the Si reference point between CAMEL Application Server (IM-SSF) and HSS as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_CAMELIMSSFAS_HSS > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_CAMELIMSSFAS_HSS > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_HSS_OSASCSAS > Definition
+Content: This IOC models the Sh reference point between OSA Application Server (Service Capability Server) and HSS as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_HSS_OSASCSAS > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_HSS_OSASCSAS > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_HSS_SCSCF > Definition
+Content: This IOC models the Cx reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_HSS_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_HSS_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_HSS_SIPAS > Definition
+Content: This IOC models the Sh reference point between SIP Application Server and HSS as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_HSS_SIPAS > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_HSS_SIPAS > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_ICSCF_SLF > Definition
+Content: This models the Dx reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_ICSCF_SLF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_ICSCF_SLF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_IMSMGW_MGCF > Definition
+Content: This models the Mn reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_IMSMGW_MGCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_IMSMGW_MGCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_MGCF_SCSCF > Definitions
+Content: This models the Mg reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_MGCF_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_MGCF_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_MRFC_MRFP > Definition
+Content: This IOC models the Mp reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_MRFC_MRFP > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_MRFC_MRFP > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_MRFC_SCSCF > Definition
+Content: This IOC models the Mr reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_MRFC_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_MRFC_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_SCSCF_SCSCF > Definition
+Content: This models the Mw reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_SCSCF_SCSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_SCSCF_SCSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_SCSCF_SLF > Definition
+Content: This IOC models the Dx reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_SCSCF_SLF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_SCSCF_SLF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_PCSCF_ECSCF > Definition
+Content: This IOC models the Mw reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_PCSCF_ECSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_PCSCF_ECSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_BGCF_ECSCF > Definition
+Content: This IOC models the Mi reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_BGCF_ECSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_BGCF_ECSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_MGCF_ECSCF > Definition
+Content: This IOC models the Mg reference point as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_MGCF_ECSCF > Attribute constraints
+Content: There is no attribute constraint defined.
+Title Path: Model > Class definitions > Link_MGCF_ECSCF > Notifications
+Content: The common notifications defined in subclause 4.6 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Common notifications > Alarm notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.
+Title Path: Model > Common notifications > Configuration notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.

@@ -1,0 +1,14 @@
+Title Path: State Management Data Definition Integration Reference Point (IRP); Information Service (IS) ;
+Content: 28.626 State Management Data Definition Integration Reference Point (IRP); Solution Set (SS) definitions. This specification is part of a set that has been developed for converged management solutions.
+Title Path: Scope
+Content: The present document specifies the State Management Data Definition IRP Information Service that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks. The present document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.600 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 and 3GPP TS 32.600 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 , and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Configuration Management Information Object Class
+Title Path: Model > Class definitions > StateManagementEntity > Definition
+Content: StateManagementEntity is an Archetype, that may represent any IOC defined in the Network Resource Models, e.g. Generic Network Resource Model, Core Network Resource Model, UTRAN Network Resource Model or GERAN Network Resource Model. The attributes defined for this Archetype can be imported and used in any IOC of the Network Resource Models, where such attributes are needed. These attributes shall be used in the same way as defined in the ITU T Recommendation X.731 and ITU T Recommendation X.733 , unless otherwise stated. That document gives also examples of state diagrams, defining possible state transitions when one or more of the state attributes defined here are used in a class.
+Title Path: Model > Class definitions > StateManagementEntity > Attributes
+Content: The following attributes are defined for this Archetype.
+Title Path: Model > Attribute definitions > Attribute properties
+Content: The following table gives the definition and legal values for each attribute.

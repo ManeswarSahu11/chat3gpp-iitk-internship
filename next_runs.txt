@@ -1,0 +1,5 @@
+1. Chat3GPP TeleQnA on clean index
+2. If improved, Chat3GPP Tele-Eval on clean index (exact 58627)
+3. Llama-3-8B-Tele-it TeleQnA on clean index
+4. Llama-3-8B-Tele-it Tele-Eval on clean index (exact 58627)
+5. Judge Tele-Eval outputs

@@ -1,0 +1,20 @@
+Title Path: Scope
+Content: The aim of this Technical Report is to study and specify potential enhancements to the IMS architecture to enable IMS FE to integrate with the 5GC network functions to enable IMS applications to directly leverage the features and capabilities of 5GC. The specific capabilities of 5GC included in this study include the PCC functionality required to resolve the key issue related to: Network Slicing and IMS Routing of IMS traffic via a localized UPF
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply:
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . URSP UE Route Selection Policy
+Title Path: Key Issues > Key issue \#1: Network Slicing and IMS
+Content: This key issue refers to the key issue 1 defined in 3GPP TR 23.700-10 . The present document covers only the scenario 1 of the key issue1 defined in 3GPP TR 23.700-10 .
+Title Path: Key Issues > Key issue \#2: Routing of IMS traffic via a localized UPF
+Content: This key issue refers to the key issue 1 defined in 3GPP TR 23.700-12 .
+Title Path: Solutions > Solution \#1: Selecting an appropriate slice by IMS subscription
+Content: This solution refers to the solution 3 defined in 3GPP TR 23.700-10 . The impacts and solution evaluations has been identified in 3GPP TR 23.700-10 and CT3 is fine with that analysis.
+Title Path: Solutions > Solution \#2: Conveying UPF service area to IMS nodes via PCF N5
+Content: This solution refers to the solution 4 defined in 3GPP TR 23.700-12 . The impacts and solution evaluations has been identified in 3GPP TR 23.700-12 and CT3 is fine with that analysis.
+Title Path: Overall Evaluation
+Content: Regarding the evaluation to solution \#1, please refer to section 7 of 3GPP TR 23.700-10 . Regarding the evaluation to solution \#2, please refer to section 7.1 of 3GPP TR 23.700-12 .
+Title Path: Conclusions
+Content: Regarding the conclusion to key issue \#1, please refer to section 8 of 3GPP TR 23.700-10 . As providing a new parameter "IMS home network domain name" in the traffic descriptor will be the basis for work in the normative phase, the URSP needs to be extended to enable a UE connects to two IMS networks through two 5GC network slices . Regarding the conclusion to key issue \#2, please refer to section 8.1 of 3GPP TR 23.700-12 . This solution proposes to convey the UPF service area for the IMS PDU session from SMF to PCF and on to P-CSCF during multimedia session establishment. The PCF either stores the UPF service area as part of the SM policy or fetches the UPF service area from the SMF when requested by P-CSCF. PCF may also subscribe to a new event "UPF service area change" upon establishment of the SM policy association.

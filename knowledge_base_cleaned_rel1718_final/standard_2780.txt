@@ -1,0 +1,130 @@
+Title Path: Scope
+Content: The present document is an introduction to the TSG RAN TS 38.42x series of Technical Specifications that define the Xn interface. It is an interface for the interconnection of two NG-RAN nodes within the NG-RAN architecture (TS 38.401 ).
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . AI: as defined in TS 38.300 . Boundary IAB-node: as defined in TS 38.401 . corresponding node: as defined in TS 38.425 . F1-terminating IAB-donor: as defined in TS 38.401 . IAB-DU: as defined in TS 38.300 . IAB-MT: as defined in TS 38.300 . Mobile IAB-node: as defined in TS 38.300 . Non-F1-terminating IAB-donor: as defined in TS 38.401 . ML: as defined in TS 38.300 . NG-RAN node: as defined in TS 38.300 . RRC-terminating IAB-donor: as defined in TS 38.401 . secondary node: as defined in TS 37.340 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Integrated Access and Backhaul Multicast Broadcast Service QoE Measurement Collection Quality of Experience Stream Control Transmission Protocol [Xn-C]Xn Control plane [Xn-U]Xn User plane
+Title Path: General aspects > Introduction
+Content: The interface allowing to interconnect NG-RAN nodes with each other is referred to as the Xn interface.
+Title Path: General aspects > Xn interface general principles
+Content: The general principles for the specification of the Xn interface are as follows: the Xn interface is open; the Xn interface supports the exchange of signalling information between two NG-RAN nodes, and the forwarding of PDUs to the respective tunnel endpoints; from a logical standpoint, the Xn is a point-to-point interface between two NG-RAN nodes. A point-to-point logical interface should be feasible even in the absence of a physical direct connection between the two NG-RAN nodes.
+Title Path: General aspects > Xn interface specification objectives
+Content: The Xn interface specifications facilitate the following: inter-connection of NG-RAN nodes supplied by different manufacturers; support of continuation between NG-RAN nodes of the NG-RAN services offered via the NG interface; separation of Xn interface Radio Network functionality and Transport Network functionality to facilitate introduction of future technology.
+Title Path: General aspects > Xn interface capabilities
+Content: The Xn interface supports: procedures to support intra-NG-RAN mobility; procedures to support dual connectivity between NG-RAN nodes.
+Title Path: Functions of the Xn interface > General
+Content: The following clauses describe the functions supported in Xn interface.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Xn-C interface management and error handling functions > General
+Content: These functions allow for managing of signalling associations between NG-RAN nodes, surveying the Xn interface and recovering from errors.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Xn-C interface management and error handling functions > Xn Setup function
+Content: This function allows for the initial setup of an Xn interface between two NG-RAN nodes, including exchange of application level data.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Xn-C interface management and error handling functions > Error Indication function
+Content: This function allows the reporting of general error situations on application level.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Xn-C interface management and error handling functions > Xn reset function
+Content: This function allows an NG-RAN node to inform a second NG-RAN node that it has recovered from an abnormal failure and that either all or some of the contexts (except the application level data) related to the first node and stored in the second shall be deleted, and the associated resources released.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Xn-C interface management and error handling functions > Xn configuration data update function
+Content: This function allows two NG-RAN nodes to update application level data at any time.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Xn-C interface management and error handling functions > Xn removal function
+Content: This function allows two NG-RAN nodes to remove the respective Xn interface.
+Title Path: Functions of the Xn interface > Functions of Xn-C > UE mobility management functions > Handover preparation function
+Content: This function allows the exchange of information between source and target NG-RAN nodes in order to initiate the handover of a certain UE to the target.
+Title Path: Functions of the Xn interface > Functions of Xn-C > UE mobility management functions > Handover cancellation function
+Content: This function allows informing an already prepared target NG-RAN node that a prepared handover will not take place. It allows releasing the resources allocated during a preparation.
+Title Path: Functions of the Xn interface > Functions of Xn-C > UE mobility management functions > Retrieve UE Context function
+Content: The Retrieve UE context function is used for a NG-RAN node to retrieve UE context from another one.
+Title Path: Functions of the Xn interface > Functions of Xn-C > UE mobility management functions > RAN Paging function
+Content: The RAN paging function allows a NG-RAN node to initiate the paging for a UE in the inactive state.
+Title Path: Functions of the Xn interface > Functions of Xn-C > UE mobility management functions > Data Forwarding control function
+Content: The data forwarding control function allows establishing and releasing transport bearers between source and target NG-RAN nodes for data forwarding.
+Title Path: Functions of the Xn interface > Functions of Xn-C > UE mobility management functions > Handover Success Indication Function
+Content: This function allows informing a source NG-RAN node that the UE has successfully accessed a target NG-RAN node.
+Title Path: Functions of the Xn interface > Functions of Xn-C > UE mobility management functions > Conditional Handover cancellation function
+Content: This function allows informing a source NG-RAN node that resources reserved for candidate target cell(s) during a conditional handover preparation are about to be released by the target NG-RAN node.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Dual connectivity function
+Content: The dual connectivity function enables usage of additional resources in a secondary node in the NG-RAN.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Energy saving function
+Content: This function enables decreasing energy consumption by indication of cell activation/deactivation or SSB beam activation/deactivation over the Xn interface.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Resource coordination function
+Content: This function enables coordination of cell resource usage between two NG-RAN nodes.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Secondary RAT Data Volume Report function
+Content: This function enables the NG-RAN node to report Secondary RAT usage data information in case of MR-DC with 5GC, either with a dedicated procedure or by including Secondary RAT usage data information in other messages.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Trace function
+Content: The Trace function provides means to control trace sessions for a UE over Xn interface.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Load management function
+Content: This function allows exchanging resource status and traffic load information between NG-RAN nodes, such that the NG-RAN node can control the traffic load appropriately.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Data exchange for self-optimisation function
+Content: This function allows two NG-RAN nodes to exchange information in order to support self-optimization functionality.
+Title Path: Functions of the Xn interface > Functions of Xn-C > IAB support function > F1-C Traffic Transfer function
+Content: This function is used to deliver F1-C traffic between the M-NG-RAN node and the S-NG-RAN node serving a dual-connected IAB-node, where the F1-C traffic is either received from the IAB-node or sent to the IAB-node.
+Title Path: Functions of the Xn interface > Functions of Xn-C > IAB support function > IAB Transport Migration function
+Content: This function allows the exchange of information between the F1-terminating IAB-donor and the non-F1-terminating IAB-donor of a boundary IAB-node, for the purpose of managing the migration of the boundary and descendant IAB-node traffic between the topologies managed by the two IAB-donors. This function also allows the exchange of information between the F1-terminating IAB-donor and the RRC-terminating IAB-donor of a mobile IAB-node, for the purpose of managing the migration of the mobile IAB-node traffic between the topologies managed by the two IAB-donors.
+Title Path: Functions of the Xn interface > Functions of Xn-C > IAB support function > IAB Resource Coordination function
+Content: This function is used to exchange information between the F1-terminating IAB-donor and the non-F1-terminating IAB-donor of a boundary IAB-node in order to support resource multiplexing between the IAB-MT and the IAB-DU of the boundary IAB-node. This function is also used to exchange resource multiplexing related information between the F1-terminating IAB-donor and the RRC-terminating IAB-donor of a mobile IAB-node in order to support resource multiplexing between the IAB-MT and the IAB-DU of the mobile IAB-node.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Small data transmission function > General
+Content: This function supports small data transmission sessions in RRC_INACTIVE both with and without anchor relocation.
+Title Path: Functions of the Xn interface > Functions of Xn-C > Small data transmission function > Partial UE Context Transfer function
+Content: The Partial UE Context Transfer function is used for the last serving NG-RAN node to provide part of the UE Context to the receiving gNB.
+Title Path: Functions of the Xn interface > Functions of Xn-C > QMC support function
+Content: The QMC function provides means to support the mobility of QMC sessions over the Xn interface and to support the coordination of QMC information in case of dual connectivity .
+Title Path: Functions of the Xn interface > Functions of Xn-C > MBS management support function
+Content: This function is used to support the management of MBS Sessions, including the addition of MBS related information in interface management and mobility procedures, and the support of RAN Multicast paging.
+Title Path: Functions of the Xn interface > Functions of Xn-C > AI/ML support function
+Content: This function is used to support AI/ML for NG-RAN, including initiation of data collection and reporting of collected data.
+Title Path: Functions of the Xn interface > Functions of Xn-U > Data transfer function
+Content: The data transfer function allows the transfer of data between NG-RAN nodes to support dual connectivity or mobility operation.
+Title Path: Functions of the Xn interface > Functions of Xn-U > Flow control function
+Content: The flow control function enables a NG-RAN node receiving user plane data from a second NG-RAN node to provide feedback information associated with the data flow.
+Title Path: Functions of the Xn interface > Functions of Xn-U > Assistance information function
+Content: The assistance information function enables a NG-RAN node receiving user plane data from a second NG-RAN node to provide assistance information to the second node (e.g. related to radio conditions).
+Title Path: Functions of the Xn interface > Functions of Xn-U > Fast retransmission function
+Content: The fast retransmission function provides coordination between PDCP-hosting node and corresponding node in case of outage in one of the nodes, to enables the node in good RF conditions to handle data previously forwarded to the node in outage.
+Title Path: Xn interface procedures > General
+Content: The Xn interface supports procedures over the control plane (Xn-C) and user plane (Xn-U).
+Title Path: Xn interface procedures > Control plane protocol procedures > Mobility management procedures
+Content: The mobility management procedures are used to manage the UE mobility in Connected or RRC_Inactive modes: Handover Preparation Handover Cancel SN Status Transfer Retrieve UE Context RAN Paging Xn-U Address Indication UE Context Release Handover Success Indication Conditional Handover Cancel Retrieve UE Context Confirm
+Title Path: Xn interface procedures > Control plane protocol procedures > Dual Connectivity procedures
+Content: The dual connectivity procedures are used to add, modify and releases resources for the operation of Dual Connectivity: S-NG-RAN-node Addition Preparation S-NG-RAN-node Reconfiguration Completion M-NG-RAN-node initiated S-NG-RAN-node Modification Preparation S-NG-RAN-node initiated S-NG-RAN-node Modification M-NG-RAN-node initiated S-NG-RAN-node Release S-NG-RAN-node initiated S-NG-RAN-node Release S-NG-RAN-node Counter Check RRC Transfer Notification Control Indication Activity Notification Secondary RAT Data Usage Report Conditional PSCell Change Cancel
+Title Path: Xn interface procedures > Control plane protocol procedures > Global procedures
+Content: The global procedures are used to exchange configuration level data between two NG-RAN nodes, or to remove Xn connectivity between two NG-RAN nodes in a controlled manner: Xn Setup NG-RAN-node Configuration Update Xn Removal
+Title Path: Xn interface procedures > Control plane protocol procedures > Interface Management procedures
+Content: The interface management procedures are used to align resources between two NG-RAN nodes in the event of failures, and to report detected protocol errors: Reset Error Indication
+Title Path: Xn interface procedures > Control plane protocol procedures > Energy saving procedures
+Content: - Cell Activation procedure: enables an NG-RAN node to request the activation of a previously deactivated cell or SSB beam hosted in another NG-RAN node.
+Title Path: Xn interface procedures > Control plane protocol procedures > Resource coordination procedures
+Content: - E-UTRA - NR Cell Resource Coordination procedure: enables an ng-eNB and a gNB to interact for resource coordination purposes.
+Title Path: Xn interface procedures > Control plane protocol procedures > UE Tracing procedures
+Content: The following procedures are used to trace the UE: Trace Start procedure Deactivate Trace procedure Cell Traffic Trace
+Title Path: Xn interface procedures > Control plane protocol procedures > Load management procedures
+Content: The load management procedures are used by NG-RAN nodes to indicate resource status, overload and traffic load to each other. Resource Status Reporting Initiation Resource Status Reporting
+Title Path: Xn interface procedures > Control plane protocol procedures > Data exchange for self-optimisation procedures
+Content: The data exchange for self-optimisation procedures are used to transfer failure, access and mobility related information among NG-RAN nodes to enable self-optimisation Failure Indication Handover report Mobility Settings Change Access and Mobility Indication SCG Failure Information Report SCG Failure Transfer RACH Indication
+Title Path: Xn interface procedures > Control plane protocol procedures > IAB procedures
+Content: The IAB procedures are used to enable the transfer of F1/non-F1 traffic for IAB, to exchange information between the F1-terminating IAB-donor and the non-F1-terminating IAB-donor of a boundary IAB-node, to enable the delivery of F1-C traffic between the M-NG-RAN node and the S-NG-RAN node serving a dual-connected non-boundary IAB-node, to exchange resource multiplexing related information between the F1-terminating IAB-donor and the non-F1-terminating IAB-donor of a boundary IAB-node, to exchange information between the F1-terminating IAB-donor and the RRC-terminating IAB-donor of a mobile IAB-node, and to exchange resource multiplexing related information between the F1-terminating IAB-donor and the RRC-terminating IAB-donor of the mobile IAB-node: F1-C Traffic Transfer IAB Transport Migration Management IAB Transport Migration Modification IAB Resource Coordination
+Title Path: Xn interface procedures > Control plane protocol procedures > MBS Management procedures
+Content: The MBS management procedures are used to manage the MBS Session: - RAN Multicast Group Paging procedure
+Title Path: Xn interface procedures > Control plane protocol procedures > Small data transmission procedures
+Content: - Partial UE Context Transfer: enables exchange of information between NG-RAN nodes for SDT transmission without anchor relocation Small data transmission is also supported by the following procedures: RRC Transfer Retrieve UE Context Confirm RAN Paging
+Title Path: Xn interface procedures > Control plane protocol procedures > QMC support procedures
+Content: The following procedures are used to transfer QMC configuration and session information to the target NG-RAN node during a UE’s intra-system intra-RAT mobility: Handover Preparation Retrieve UE Context The following procedures are used to coordinate QMC configuration and reporting between the M-NG-RAN node and the S-NG-RAN node: S-NG-RAN node Addition Preparation M-NG-RAN node initiated S-NG-RAN node Modification Preparation S-NG-RAN node initiated S-NG-RAN node Modification S-NG-RAN node initiated S-NG-RAN node Change RRC Transfer
+Title Path: Xn interface procedures > Control plane protocol procedures > AI/ML support procedures
+Content: The following procedures are used to initiate data collection and report collected data to support, e.g., AI/ML for NG-RAN: Data Collection Reporting Initiation Data Collection Reporting
+Title Path: Xn interface procedures > User plane protocol procedures
+Content: The user plane protocol procedures are used to exchange user plane information between Xn-U protocol peers: Transfer of Downlink User Data procedure: enables the node hosting the NR PDCP entity to provide user plane information to the corresponding node. Downlink Data Delivery Status procedure: enables the corresponding node to provide feedback to the node hosting the NR PDCP entity. Transfer of Assistance Information: enables the corresponding node to provide assistance information to the node hosting the NR PDCP entity. Transfer of PDU Session Information procedure: enables an NG-RAN node to provide user plane information associated with the forwarding of data towards a peer NG-RAN node, when using PDU session tunnels.
+Title Path: Xn interface protocol structure > Xn Control Plane
+Content: The control plane protocol stack of the Xn interface is shown on Figure 7.1-1. The transport network layer is built on IP transport. For the reliable transport of signalling messages, SCTP is added on top of IP. The application layer signalling protocol is referred to as XnAP (Xn Application Protocol).
+Title Path: Xn interface protocol structure > Xn User Plane
+Content: The Xn user plane (Xn-U) interface is defined between two NG-RAN nodes. The Xn-U interface provides non-guaranteed delivery of user plane PDUs between two NG-RAN nodes. The protocol stack for Xn-U is shown in Figure 7.2-1. The user plane packets conveyed by GTP-U may be PDCP PDUs (e.g. in case of dual connectivity), PDCP SDUs (e.g. in case of DRB level data forwarding), or SDAP SDUs (e.g. in PDU Session level data forwarding). User plane protocol messages (as defined in TS 38.425 and TS 38.415 ) are carried by container fields in the GTP-U extension header as specified in TS 29.281 . A single GTP-U packet may carry a user plane packet and/or a user plane protocol message. The mapping between container fields and Xn user plane protocol procedures and functions is described in Table 7.2-1.
+Title Path: Other Xn interface specifications > NG-RAN Xn interface: Xn layer 1 (TS 38.421)
+Content: TS 38.421 specifies the physical layer technologies that may be used to support the Xn interface.
+Title Path: Other Xn interface specifications > NG-RAN Xn interface: Xn signalling transport (TS 38.422)
+Content: TS 38.422 specifies how the XnAP signalling messages are transported over Xn.
+Title Path: Other Xn interface specifications > NG-RAN Xn interface: Xn application protocol (XnAP) (TS 38.423)
+Content: TS 38.423 specifies the radio network layer signalling procedures of the control plane between NG-RAN nodes.
+Title Path: Other Xn interface specifications > NG-RAN Xn interface: Xn data transport (TS 38.424)
+Content: TS 38.424 specifies the standards for user data transport protocols over the NG-RAN Xn interface.
+Title Path: Other Xn interface specifications > NG-RAN Xn interface: NR user plane protocol (TS 38.425)
+Content: TS 38.425 specifies the user plane protocol procedures for dual connectivity over the NG-RAN Xn interface.
+Title Path: Other Xn interface specifications > NG-RAN Xn interface: PDU Session User Plane Protocol (TS 38.415)
+Content: TS 38.415 specifies the user plane protocol procedures for data forwarding using PDU Session tunnels over the NG-RAN Xn interface. TS 38.415 specifies the PDU Set Information user plane protocol for sending PDU Set Information and indication of End of Data Burst over the NG-RAN Xn interface.
+Title Path: Other Xn interface specifications > Summary of NG-RAN Xn interface Technical Specifications
+Content: The relationship between the technical specifications that define the NG-RAN Xn interface is shown in Figure 8.7-1.

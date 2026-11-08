@@ -1,0 +1,4 @@
+Title Path: Scope
+Content: The present document serves as a "cover note" for the source code of the 3GPP file format.
+Title Path: Source code
+Content: The definition of the 3GPP file format is derived from the ISO Base Media File Format, as published by ISO/IEC in ISO/IEC 14496-12 (technically identical to 15444-12) . The reference software for the file format is also therefore maintained by ISO/IEC, as part of the overall reference software . However, that reference software was "frozen" some time ago, and more recent versions may be available from the registration authority for the file format, called (for historical reasons) MP4 REG . For convenience, a compiled copy of the library and appropriate headers, for Windows, are included here. The library can be built for other operating systems platforms also, from the source.

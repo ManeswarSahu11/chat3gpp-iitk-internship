@@ -1,0 +1,34 @@
+Title Path: Scope
+Content: The present document lists the 3GPP specific Diameter protocol codes, including the AVP codes and Experimental result codes. This document lists also the application identifiers assigned to 3GPP specific Diameter applications by IANA and the Diameter command code range which is assigned to 3GPP by IANA.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following terms and definitions apply. 3GPP specific: A definition which is used in conjunction with the 3GPP's vendor identifier.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Attribute-Value-Pair Change Request Internet Assigned Numbers Authority Internet Engineering Task Force Liaison Statement
+Title Path: Application identifiers
+Content: The Diameter applications are identified with the application identifiers as specified in the RFC 3588 . There are two kind of applications: IETF standards track applications and vendor specific applications. All application identifiers are assigned by IANA . This chapter lists the application identifiers assigned by IANA to all 3GPP Diameter applications. The application identifiers are transferred in Diameter command's header in the Application-ID field.
+Title Path: Application identifiers > 3GPP specific application identifiers
+Content: The 3GPP specific application identifiers allocated by IANA are listed in the following table.
+Title Path: Command codes
+Content: The command codes are used for communicating the command associated with the Diameter message. The command code is carried in the Diameter header's Command-Code field. The command codes can be divided into standard command codes allocated by IANA and experimental command codes for testing purposes only.
+Title Path: Command codes > Command codes allocated for 3GPP
+Content: Based on the IETF RFC 3589 the IANA has allocated a standard command code range 300 313 for 3GPP. The command codes are presented in the following table. Editor's Note: The following command codes have been allocated to 3GPP, but they have not been used yet. As defined in the IETF RFC 5516 . IANA has allocated the following command code values for the S6a/S6d interface application and S13/S13' interface application. Besides the standard command code values allocated for 3GPP, IANA has allocated the following vendor-specific command code values for 3GPP vendor-specific Diameter applications:
+Title Path: Vendor identifier
+Content: The vendor identifier (also known as Enterprise number) indicates the vendor specific attributes, result codes and application identifiers in Diameter commands. The vendor identifier is used in the Vendor-ID field of the AVP header and in the Vendor-Id AVP. The Vendor-Id AVP is used to identify the vendor in the Vendor-Specific-Application-Id and Experimental-Result-Code grouped AVPs.
+Title Path: Vendor identifier > 3GPP's vendor identifier
+Content: The IANA has allocated a vendor identifier value 10415 for 3GPP .
+Title Path: Attribute-Value-Pair codes
+Content: The AVP codes are used together with the vendor identifier to identify each attribute uniquely. There are multiple AVP namespaces. The IETF IANA namespace, that is, the AVPs with vendor identifier zero or without vendor identifier, is controlled by IANA. Each vendor controls the AVP codes within their AVP namespaces.
+Title Path: Attribute-Value-Pair codes > 3GPP specific AVP codes
+Content: The 3GPP specific AVPs have the Vendor-Specific bit ('V' bit) set in the AVP header and they carry the 3GPP's vendor identifier in the Vendor-ID field of the AVP header. The 3GPP specific AVP codes are presented in the following table.
+Title Path: Experimental result codes
+Content: The Diameter answer messages must carry either Result-Code AVP or Experimental-Result AVP. The values of Result-Code AVP are controlled by IANA. The Experimental-Result AVP is a grouped AVP containing the Vendor-Id AVP and Experimental-Result-Code AVP, thus the experimental result codes are controlled in a vendor-specific manner.
+Title Path: Experimental result codes > 3GPP specific result codes
+Content: The 3GPP specific result codes are always transferred in the Experimental-Result AVP, which has the Vendor-Id with value of 3GPP's vendor identifier. The 3GPP specific result codes shall follow the same classification as defined for the values of Result-Code AVP in IETF RFC 3588 . That means, the result codes are grouped to following ranges: 1xxx (Informational) 2xxx (Success) 4xxx (Transient Failures) 5xxx (Permanent Failures)
+Title Path: Experimental result codes > 3GPP specific result codes > Informational
+Content: The Informational result codes shall use the values from 1001 to 1999 in the Experimental-Result-Code AVP. Editor's note: No informational result codes have been yet defined in 3GPP.
+Title Path: Experimental result codes > 3GPP specific result codes > Success
+Content: The Success result codes shall use the values from 2001 to 2999 in the Experimental-Result-Code AVP. The reserved 3GPP specific Success result codes are presented in the following table.
+Title Path: Experimental result codes > 3GPP specific result codes > Transient Failures
+Content: The Transient Failure result codes shall use the values from 4001 to 4999 in the Experimental-Result-Code AVP. The reserved 3GPP specific Transient Failure result codes are presented in the following table.
+Title Path: Experimental result codes > 3GPP specific result codes > Permanent Failures
+Content: The Permanent Failure result codes shall use the values from 5001 to 5999 in the Experimental-Result-Code AVP. The reserved 3GPP specific Permanent Failure result codes are presented in the following table.

@@ -1,0 +1,132 @@
+Title Path: Scope
+Content: The present document describes and defines performance metrics for popular multimedia services in 3G networks, including packed-switched streaming service (PSS), multimedia broadcast multicast service (MBMS), video telephony (VT), and IP multimedia subsystem service (IMS). The present document has a top-down approach, which starts with the Quality of Experience (QoE) parameters and metrics, and then provides End-to-end Service QoS (ESQoS) and System Quality of Service (SQoS) parameters and metrics and mapping between these different layers.
+Title Path: Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Application Server Breakout Gateway Control Function [BM-SC]Broadcast-Multicast - Service Centre Cell Broadcast Centre Call Session Control Function Dynamic Host Configuration Protocol Domain Name System End-to-end Service QoS Gateway GPRS Support Node Home Subscriber Server [I-CSCF]Interrogating-CSCF IP Multimedia Subsystem [IP-CAN]IP-Connectivity Access Network Least Acceptable Value Multimedia Broadcast/Multicast Service Media Gateway Control Function Media GateWay [P-CSCF]Proxy-CSCF Packet-Switched Conversational service Packed-Switched Streaming service Quality of Experience Quality of Service System Quality of Service User Equipment Visitor Location Register Video Telephony
+Title Path: General description and approach > Definitions
+Content: Quality of Experience (QoE) The overall acceptability of an application or service, as perceived subjectively by the end-user (see notes 1 and 2). [NOTE 1:]Quality of Experience includes the complete end-to-end system effects (client, terminal, network, services infrastructure, etc). [NOTE 2:]Overall acceptability may be influenced by user expectations and context. For the purpose of the present document, QoE is limited to those parameters that are reasonably expected to be under the control of the Service Provider, i.e. it excludes aspects of specific terminal equipment implementation. In the document, the exact E2E measurement point will be defined for each service. QoE indicates performance metrics as expressed from the end service user's point of view. They can be required or reported by the common users, and may be stated irrespective of their measurability. SA4 has defined Quality of Experience (QoE) metrics and their transport for PSS and MBMS in and , respectively. The PSS and MBMS QoE metrics features are optional for both PSS and MBMS streaming server and clients, and shall not disturb the PSS and MBMS service. A PSS or MBMS client supporting the feature shall perform the quality measurements in accordance to the measurement definitions, aggregate them into client QoE metrics and report the metrics to the PSS or MBMS server using described procedures in and for PSS and MBMS, respectively. The way the QoE metrics are processed and made available is out of the scope of the present document. In general, a Service Provider will set service requirements in line with the end-user's expected QoE, which needs to be translated into parameters or metrics that the service provider can control or measure. Thus, it is necessary to map QoE metrics to measurable End-to-end Service QoS and System QoS parameters, which provide the means for the service providers to guarantee the service quality. End-to-end Service QoS (ESQoS) ESQoS is generally used to specify the performance of services from the perspective of operators and service providers. As the number of new services proliferates and becomes more complex, it is important for an operator to measure a network's ESQoS accurately and continuously improve it to achieve customer loyalty and maintain competitive edge. ESQoS is measurable. It can be quantified exactly by several digital parameters, unlike QoE. System Quality of Service (SQoS) The concept of SQoS is a subset of conventional QoS, which is defined in ITU-T Recommendation E.800 as the collective effect of service performances which together determines the satisfaction of a user of a service. It is characterized by the combined aspects of performance factors applicable to all services, such as: service support performance; service operability performance; service accessibility performance; service retainability performance; service integrity performance; service security performance; Compared with ESQoS, SQoS denotes the point-to-point QoS, which is specifically related to the units and links of network systems, rather than the whole service or a network. SQoS can be viewed as the QoS consideration from the viewpoint of network operators.
+Title Path: General description and approach > QoE parameters
+Content: From the user perspective, the QoE cannot be defined only from technical measurements. It should be defined by user investigation using the following methods: Users provide an opinion of QoE only with their feeling and experience. The QoE metric is subjective. With some classic indicators of QoE, users can make a decision to choose some of them as the necessary indicators of QoE. Service performance is characterized by the following: Because QoE parameters and metrics directly relate to the definition of the service itself, it is possible to map the components of the service onto measurable ESQoS and SQoS parameters or metrics, as these relate directly to the performance of the components of the service. This concept can be illustrated by considering the example of a video service, where QoE includes items such as: service setup delay; re-buffering duration; end to end delay; corruption duration; mean time between corruption; content quality(e.g. digital TV-like quality, analog TV-like quality, DSL-like video conference quality ISDN-like video conference quality, etc.); audio/video synchronization (or 'lip sync'); service availability. Common user requirements for different services are therefore collected and classified as our QoE, disregarding the measurability. Users have different requirements for different services. So the QoE for service analysis varies with the types of services, methods of delivery and points of monitoring. Figure 1 shows the model.
+Title Path: General description and approach > ESQoS parameters
+Content: As discussed, the user's definition of QoE does not consider measurability and so ESQoS parameters need to be introduced. These express QoS from the viewpoint of operators and service providers. ESQoS parameters are from end-to-end perspective, i.e. across the full set of components which together provide a service, and, most importantly can be measured and quantified. ESQoS parameters depend on the type of service, and so there will be a set corresponding to each service. Figure 2 shows the model including both the QoE and ESQoS aspects.
+Title Path: General description and approach > SQoS parameters
+Content: The quality of a service perceived by the user perceives is influenced by the network as well as by the terminal equipment. As the intelligence and complexity of an application used in 3G increases, application performance becomes an important factor in determining the quality perceived by the user. Within the present document, the influence of the terminal equipment and application have not been included. Services are applications running on the common network components. SQoS parameters are specific metrics that provide measurements which reflect network component status, and are defined from the viewpoint of the service provider rather than the service user. SQoS parameters can be classified to five classes as shown in figure 3. NOTE: The network entities in the core network (CN) can be considered as servers. Each class also has three layers which reflect the protocol layers in the network. The first s the Application layer. The second is the Transport layer. The third consists of Network, Data link and Physical layers. Figure 4 presents the overall model.
+Title Path: QoE parameters > General
+Content: The parameters and values in the following sections are necessary for the support of 3G services. Firstly, for mobile communication systems, service performance depends on network availability factors expressed in terms of time availability (\% of the time) and radio coverage availability (\% of the radio coverage). Service-specific QoE parameters may include, for the telephony service as an example, speech quality, level of background noise, level of echo, delay, etc. This section provides a parameter list for a Audio/Video service, each parameter would be calibrated on the following basis:
+Title Path: \% probability;
+Content: mean; target value; Least Acceptable Value (LAV). This forms the basis of candidate material for standardization, and must be aligned with the work of the ITU-T.
+Title Path: \% probability; > Service non-access
+Content: The service cannot be accessed by the UE when requested by the user. The service non-access may be caused by the network unavailability or shutdown of service server, etc.
+Title Path: \% probability; > Service failure
+Content: The service can be accessed, but something occurs once the service is in use resulting in failure of service for the user. The service failure may be caused by overload of server, handoff of user or network congestion, etc.
+Title Path: \% probability; > Service setting-up time
+Content: The service setting-up time is the period from the time of service request to the time of service playing. The service setting-up time may vary from microsecond to seconds, and depends on the service requested by the user.
+Title Path: \% probability; > Re-buffering
+Content: Re-buffering denotes the time and the frequency of re-buffering during the usage of service. The main reason of re-buffering is the data network transmission rate cannot keep up with the real-time play requirements of the user's terminal.
+Title Path: \% probability; > Image corruption
+Content: Image corruption refers to the degree of corruption quality of a single image.
+Title Path: \% probability; > Edge noise
+Content: Edge Noise denotes the form of edge busyness that is characterized by spatially varying distortion that occurs in close proximity to the edges of objects in a video display.
+Title Path: \% probability; > Blurriness
+Content: Blurriness denotes the image/video quality as being indistinct.
+Title Path: \% probability; > Colour reproduction accuracy
+Content: Colour reproduction denotes the quality of accuracy in colour reproduction procedure.
+Title Path: \% probability; > Blockiness
+Content: Blockiness refers to the degree of image distortions that occurs in DCT-block edge compression due to compression error or packet loss.
+Title Path: \% probability; > Incontinuous image with block
+Content: Incontinuous image with block denotes the degree of data block consistency among continuous frames.
+Title Path: \% probability; > Freeze image
+Content: Freeze image refers to the degree of frozen image when video is playing, which is caused by inadequate received data or low frame transmission rate.
+Title Path: \% probability; > Audio quality
+Content: Audio quality describes the quality of audio as perceived by the user and mainly is decided by the codec algorithm, network transmission delay and capacity of terminal.
+Title Path: \% probability; > Audio/Video synchronization error
+Content: Audio/video synchronization error describes the time difference of the audio and video signal at the user side. Audio/video synchronization error is mainly caused by the network transmission delay and buffering delay.
+Title Path: ESQoS parameters > General
+Content: The ESQoS parameters can be obtained directly from the QoE. The process is shown in figure 5. There are perfect and reasonable definitions of service QoS parameters in the TS 102 250-2 of ETSI STQ Mobile. Parts of the outputs of TS 102 250-2 are introduced to E2EMSPM's End-to-End Service QoS area for reference.
+Title Path: ESQoS parameters > Service non-availability > Abstract definition
+Content: The Service Non-Availability describes the probability that the first data packet of the stream cannot be received by the UE when requested by the user. The "packet reception" is completed by appearance of the "buffering" message on the player at user side.
+Title Path: ESQoS parameters > Service non-availability > Equation
+Content: $Streaming Service Non-Availability [ ]= all stream request attempts 100 $ 6.2.3 Trigger point NOTE: The main causes of Service unavailable are: Radio access is blocked or failed. Transport network is busy or failed. A server is busy or failed. This parameter also depends on the connecting time limitation of the client.
+Title Path: ESQoS parameters > Service failure ratio > Abstract definition
+Content: The Service Failure Ratio describes the probability that the service cannot be available for the UE of the user once the service is running. The typical case of "service failure" is by appearance of unexpected interruption of video or/and audio.
+Title Path: ESQoS parameters > Service failure ratio > Equation
+Content: $Service Failure Ratio= all successful service connections 100 $ 6.3.3 Trigger point NOTE: The main causes of Service Failure are: Network congestion. Inadequate UE resources. Some servers are failed.
+Title Path: ESQoS parameters > Initial connection time > Abstract definition
+Content: The Initial Connection Time describes the time period needed to complete the establishment of service session.
+Title Path: ESQoS parameters > Initial connection time > Equation
+Content: $Initial Connection Time=t_ reception of first data packet -t_ service request $ 6.4.3 Trigger Point
+Title Path: ESQoS parameters > Initial buffering time > Abstract definition
+Content: The Initial Buffering Time describes the interval from the time of reception of first data packet to the time of service playing.
+Title Path: ESQoS parameters > Initial buffering time > Equation
+Content: $Initial Buffering Time=t_ service playing -t_ reception of first data packet $ 6.5.3 Trigger Point
+Title Path: ESQoS parameters > Re-buffering frequency > Abstract definition
+Content: The Re-Buffering Frequency describes the times of occurrence of re-buffering during the service is provisioning.
+Title Path: ESQoS parameters > Re-buffering frequency > Equation
+Content: $Re-Buffering Frequency= total time of service provision $ 6.6.3 Trigger point
+Title Path: ESQoS parameters > Re-buffering time > Abstract definition
+Content: The Re-Buffering Time describes the average time of an event of re-buffering during the service is provisioning.
+Title Path: ESQoS parameters > Re-buffering time > Equation
+Content: $Re-Buffering Time= total times of re-buffering $
+Title Path: ESQoS parameters > Audio quality > Abstract definition
+Content: The parameter Audio Quality describes the audio quality as perceived by the end-user. ITU-R has defined an algorithm defined for audio information. It can be found in .
+Title Path: ESQoS parameters > Intra-frame video quality > Abstract definition
+Content: The parameter Inter-Frame Video Quality measures the quality within a single video frame. It is noted that a standardized algorithm for the evaluation of intra-frame video quality does not exist, and further study is needed. In this document, PSNR is used to denote the intra-frame video quality.
+Title Path: ESQoS parameters > Intra-frame video quality > Equation
+Content: $ c Dist_ n = (x_ i,k ,y_ i,k )\\ PSNR= ( 10 _ 10 (255 255/Dist_ n )) N $ where x and y are the pixel values of the nth original and reconstructed frames, respectively, N is the total number of frames, and MSE(a,b) is the mean square error between value a and b, i.e., MSE(a,b) = (a-b)2.
+Title Path: ESQoS parameters > Inter-frame video quality > Abstract definition
+Content: The parameter Inter-Frame Video Quality measures the quality of continuous video frames. It is noted that a standardized algorithm for the evaluation of inter-frame video quality does not exist, and further study is needed. In this document, standard deviation of PSNR (STD_PSNR) is used to denote the inter-frame video quality.
+Title Path: ESQoS parameters > Inter-frame video quality > Equation
+Content: $ _ PSNR = (PSNR_ n -PSNR)^ 2 N $ This metric captures the variability of PSNR over the entire video sequence.
+Title Path: ESQoS parameters > Audio/Video de-synchronization error > Abstract definition
+Content: The parameter Audio/Video De-Synchronization Error describes the percentage of time difference of the audio and video signal at the user side exceeds a predefined threshold.
+Title Path: ESQoS parameters > Audio/Video de-synchronization error > Equation
+Content: $Audio/Video De-Synchronizatin Error= total time of service provision $ 6.11.3 Trigger point
+Title Path: SQoS parameters > SQoS parameters of each layer
+Content: SQoS parameters are defined according to one of three layers (Application, Transport and sub-Transport) as well as the network structure, SQoS parameters are first classified according to the layers. Some parameters are selected according to protocol layers and give the definitions of each parameter. Most of the definitions are cited from documents of standards.
+Title Path: SQoS parameters > SQoS parameters of each layer > Application > Frame rate
+Content: Definition: The playing rate of frames, i.e. 30 frame/sec denotes a playing of 30 frames in one second.
+Title Path: SQoS parameters > SQoS parameters of each layer > Application > Frame loss ratio
+Content: Definition: Frame loss ratio indicates the extent of frame loss between the sender and receiver. Frame loss ratio=number of the unreceived frames / number of all sending frames.
+Title Path: SQoS parameters > SQoS parameters of each layer > Application > Frame error ratio
+Content: Definition: Frame error ratio=number of all error frame received/ number of all frames sent.
+Title Path: SQoS parameters > SQoS parameters of each layer > Application > Transaction rate
+Content: Definition: The average rate for servers to transact the data packet. Those servers may include: SGSN, GGSN, VLR, HLR, AuC, web server, media server, etc.
+Title Path: SQoS parameters > SQoS parameters of each layer > Application > Transaction delay
+Content: Definition: The sum of the time for a data packet to wait in queue and receive the service during the server transaction.
+Title Path: SQoS parameters > SQoS parameters of each layer > Transport > Bandwidth
+Content: Definition: The quantity of data transmitted per unit time in the network, usually expressed as bps.
+Title Path: SQoS parameters > SQoS parameters of each layer > Transport > Transfer delay
+Content: Definition: dT, the transfer delay from Src to Dst at time T is defined by the statement: Src sent the first bit of a unit data to Dst at wire-time T and that Dst received the last bit of that packet at wire-time T+dT. NOTE: If the transfer delay from Src to Dst at T is undefined (informally, infinite), this means that Src sent the first bit of a unit data to Dst at wire-time T and that Dst did not receive that unit data .
+Title Path: SQoS parameters > SQoS parameters of each layer > Transport > Jitter
+Content: Definition: The differential time between the packet actual arrival time and its expected arrival time according to a standard clock.
+Title Path: SQoS parameters > SQoS parameters of each layer > Transport > Packet loss ratio
+Content: Definition: Packet loss ratio=the number of unreceived packets/the number of packets sent.
+Title Path: SQoS parameters > SQoS parameters of each layer > Transport > Packet error ratio
+Content: Definition: Packet error ratio the number of received frames that contain an error in the frame payload divided by the total number of transmitted frames.
+Title Path: SQoS parameters > SQoS parameters of each layer > Sub-transport > Frame loss ratio
+Content: Definition: Frame loss ratio= the number of unreceived frames/the number of all sending frames.
+Title Path: SQoS parameters > SQoS parameters of each layer > Sub-transport > Residual frame error ratio
+Content: Definition: The residual frame error ratio is the number of undetected error frames divided by the total number of transmitted frames in one direction of a single virtual connection.
+Title Path: SQoS parameters > SQoS parameters of each layer > Sub-transport > Frame discard ratio
+Content: Definition: The number of received frames that are discarded because of a frame error divided by the total number of transmitted frames in one direction of a single virtual connection. Frame errors are defined as follows: Frames those are too long or too short; Frames that are not a multiple of 8 bits in length; Frames with an invalid or unrecognized DLCI; Frames with an abort sequence; Frames with improper flag delimitation; 6) Frames that fail FCS .
+Title Path: SQoS parameters > SQoS parameters of each layer > Sub-transport > Residual bit ratio
+Content: Definition: Indicates the undetected bit error ratio in the delivered SDUs. If no error detection is requested, Residual bit error ratio indicates the bit error ratio in the delivered SDUs .
+Title Path: SQoS parameters > SQoS parameters of each layer > Sub-transport > Access delay
+Content: Definition: The delay time in queue of the station waiting for base station to assign a channel.
+Title Path: SQoS parameters > SQoS parameters of each layer > Sub-transport > Block ratio
+Content: Definition: The frequency of channel arrangement request failure.
+Title Path: SQoS parameters > SQoS parameters of each layer > Sub-transport > Soft handoff rate
+Content: Definition: The average rate for clients to handoff from one district to another.
+Title Path: SQoS parameters > SQoS parameters of each class
+Content: Some SQoS parameters are selected that is important enough for the five classes as table 1.
+Title Path: SQoS parameters > SQoS parameters of each service
+Content: The general applicable SQoS parameters for each service (IMS, MBMS, PSS, and Video Telephone) are listed in table 2 according to both class and layers. A specific list of transaction node SQoS of each service is listed in table 3. The SQoS metrics of each service are different in the transaction node class.
+Title Path: Mapping between ESQoS and SQoS > General
+Content: Firstly, a general mapping between ESQoS and SQoS parameters for all the new services is presented, and then the specific characters of them are given.
+Title Path: Mapping between ESQoS and SQoS > PSS
+Content: The specific transaction nodes that PSS involves are HLR, VLR, AuC, web servers and media servers, so these nodes are listed in table 5.
+Title Path: Mapping between ESQoS and SQoS > MBMS
+Content: The specific transaction nodes that MBMS involves are BM-SC, CBC, Data Sources and Content Provider, so these nodes are listed in table 6.
+Title Path: Mapping between ESQoS and SQoS > Video telephony
+Content: The specific transaction nodes that Video Telephony involves are VLR and MGW, so these nodes are listed in table 7.
+Title Path: Mapping between ESQoS and SQoS > IMS
+Content: The specific transaction nodes that IMS involves are HLR, VLR, AuC, IP-CAN, P-CSCF, I-CSCF, S-CSCF, HSS, DHCP, DNS, MGW, MGCF, BGCF, AS, MRFC and MRFP, so these nodes are listed in table 8.

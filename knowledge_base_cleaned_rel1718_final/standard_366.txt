@@ -1,0 +1,72 @@
+Title Path: Scope
+Content: The present document is a technical report for 2B DL/1B UL Inter-band Carrier Aggregation under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address 2B DL/1B UL Inter-band Carrier Aggregation requirements for the Rel-17 band combinations in Table 1-1. This TR contains a band specific combination part. The actual requirements are added to the corresponding technical specifications.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 .
+Title Path: Background
+Content: The present document is a technical report for 2B DL/1B UL Inter-band Carrier Aggregation under Rel-17 timeframe. The document covers each band combination specific issues.
+Title Path: Background > TR Maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_48-53 > Co-existence studies
+Content: Table 5.1.2-1 summarizes frequency ranges where harmonics and/or harmonics mixing occur for CA _ 48-53.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_48-53 > $ $TIB and $ $RIB values
+Content: Relaxation values are re-used from CA_41-53 which is similar.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_48-53 > REFSENS
+Content: No additional REFSENS requirement is needed.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_7-25 > Co-existence studies
+Content: Table 5.2.2-1 summarizes frequency ranges where harmonics and/or harmonics mixing occur for CA_7-25. There is no harmonic or harmonic mixing issue for this band combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_7-25 > $ $TIB and $ $RIB values
+Content: Relaxation values for this band combination is based on the general framework for high high band combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_7-25 > REFSENS
+Content: REFSENS exceptions are not required for this band combination due to no harmonic or harmonic mixing issue.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_25-66 > Co-existence studies
+Content: Table 5.3.2-1/2 summarizes frequency ranges where harmonics and/or harmonics mixing occur for CA_25-66. There is no harmonic or harmonic mixing issue for this band combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_25-66 > $ $TIB and $ $RIB values
+Content: Relaxation values for this band combination is based on the similar combination, CA_2-4.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_25-66 > REFSENS
+Content: REFSENS exceptions are not required for this band combination due to no harmonic or harmonic mixing issue.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_2-8 > Co-existence studies
+Content: Table 5.4.2-1 and 5.4.2-2 summarize frequency ranges where harmonics and/or harmonics mixing occur for CA _ 2-8. The 2nd harmonic of band 8 Rx may fall into frequency range of band 2 Tx.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_2-8 > REFSENS
+Content: In LTE, we only consider the harmonic mixing relaxation of REFSENS for odd harmonics and not even harmonics referring to R4-1909937. Thus, there is no need to specify MSD for CA_2-8. The same principle is also used for DC_3_n78.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_46-53 > Co-existence studies
+Content: Table 5.5.2-1 summarizes frequency ranges where harmonics and/or harmonics mixing occur for CA _46-53. No harmonic issues identified.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_46-53 > $ $TIB and $ $RIB values
+Content: Relaxation values are re-used from CA_46-53 which is similar.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_46-53 > REFSENS
+Content: No additional REFSENS requirement is needed.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_3A-3A-38A > $ $T and $ $R values
+Content: For CA_3-3-38, the $ $T and $ $R values are shown in table 5.6.2-1 and table 5.6.2-2, respectively.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_3A-3A-38A > REFSENS
+Content: No additional MSD required for this combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_32A-38A > $ $T and $ $R values
+Content: For CA_32-38, the $ $T and $ $R values are shown in table 5.7.2-1 and table 5.7.2-2, respectively.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_32A-38A > REFSENS
+Content: No additional MSD required for this combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_38-66 > Co-existence studies
+Content: Table 5.8.2-1 and 5.8.2-2 summarize frequency ranges where harmonics and/or harmonics mixing occur for CA _ 38-66. There is no harmonic issues for this band combinations.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_38-66 > $ $TIB and $ $RIB values
+Content: Referring to DC_66_n38, the $ $TIB and $ $RIB values can be specified as below.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_38-66 > REFSENS
+Content: Referring to the DC_66_n38, the REFSENS exception for CA_38-66 can be specified as below.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_26-38 > Co-existence studies
+Content: Table 5.9.2-1 and 5.9.2-2 summarize frequency ranges where harmonics and/or harmonics mixing occur for CA _ 26-38. The 3rd harmonic of band 26 DL frequency is overlapping with the UL frequency of band 38.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_26-38 > $ $TIB and $ $RIB values
+Content: Referring to CA_5-38, the $ $TIB and $ $RIB values can be specified as below.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_26-38 > REFSENS
+Content: Referring to the DC_26_n41, the REFSENS exception due to harmonic mixing issue for CA_26-38 can be specified as below.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_2-38 > Co-existence studies
+Content: Table 5.10.2-1 and 5.10.2-2 summarize frequency ranges for harmonics and/or harmonics mixing. There is no harmonics or harmonics mixing relations for this band combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_2-38 > $ $TIB and $ $RIB values
+Content: The relaxations are for the high-high band combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_2-38 > REFSENS
+Content: No REFSENS exception is needed for this band combination.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_30-48 > Co-existence studies
+Content: Table 5.11.2-1 summarizes frequency ranges where harmonics and/or harmonics mixing occur for CA_30-48. No harmonic issues identified.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_30-48 > $ $TIB and $ $RIB values
+Content: Relaxation values are re-used from CA_41-48 which is similar.
+Title Path: 2 Bands DL with 1 Band UL Carrier Aggregation: Specific Band Combination Part > CA_30-48 > REFSENS
+Content: No additional REFSENS requirement is needed.

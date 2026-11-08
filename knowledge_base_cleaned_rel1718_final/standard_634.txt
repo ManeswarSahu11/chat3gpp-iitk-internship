@@ -1,0 +1,30 @@
+Title Path: Scope
+Content: The present document contains an electronic copy of the ANSI C code for the Fixed-point Enhanced aacPlus codec .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 26.401 , 3GPP TS 26.403 , 3GPP TS 26.404 , 3GPP TS 26.405 and 3GPP TS 26.402 apply.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Advanced Audio Coding Combination of MPEG-4 AAC and MPEG-4 Bandwidth extension (SBR) American National Standards Institute [Enhanced aacPlus]Combination of MPEG-4 AAC, MPEG-4 Bandwidth extension (SBR) and MPEG-4 Parametric Stereo Global System for Mobile communications [I/O]Input/Output Modified Discrete Cosine Transform Quadrature Mirror Filter Random Access Memory Read Only Memory Spectral Band Replication
+Title Path: Fixed point ANSI-C code structure
+Content: This clause gives an overview of the structure of the fixed point ANSI-C code and provides an overview of the contents and organization of the C code attached to the present document. The C code has been verified on the following systems: IBM PC/AT compatible computers with Windows XP, 2000 and Microsoft Visual C++ v.6.0 compiler. IBM PC/AT compatible computers with Linux OS and GCC v.3.3 compiler. ANSI C was selected as the programming language because portability was desirable.
+Title Path: Fixed point ANSI-C code structure > Contents of the fixed point ANSI-C source code
+Content: The C code distribution is organized in two directories for encoder and decoder and further into several subdirectories, reflecting the major building blocks of the Enhanced aacPlus codec. The file descriptions on root level as well as the directory structure is given as follows. The distributed files with suffix "c" contain the source code and the files with suffix "h" are the header files. Within the respective libraries, the RAM data is contained in "xxx_ram" files with suffix "c", the ROM data is contained in "xxx_rom" files with suffix "c". Makefiles are provided for the platforms in which the C code has been verified (listed above). A list of source code files is given below:
+Title Path: Fixed point ANSI-C code structure > Program execution
+Content: The Enhanced aacPlus codec is implemented in two programs: enhAacPlusEnc.exe. enhAacPlusDec.exe. The programs should be called like: enhAacPlusEnc.exe wav_file bitstream_file bitrate (m)ono/(s)tereo . enhAacPlusDec.exe bitstream_file wav_file mode [error_pattern_file]. The audio files contain 16-bit linear encoded PCM samples with wav header, the bitstream files are of 3GPP type an the error pattern file is a ASCII file, see clause 5. The encoder and decoder command line handling is also explained by running the applications without input arguments.
+Title Path: Fixed point ANSI-C code structure > Memory requirements
+Content: The data types of variables and tables used in the fixed-point implementation are defined by the ETSI operator data types, the following types are used: Word8. Word16. Word32. Flag.
+Title Path: Fixed point ANSI-C code structure > Memory requirements > Constants and tables
+Content: This clause contains a listing of all constants and tables contributing to the ROM requirements of the encoder and decoder. NOTE: All Parametric Stereo related coefficients which are marked as such in the table above are obsolete for mono only capable decoders.
+Title Path: Fixed point ANSI-C code structure > Memory requirements > Static memory
+Content: This clause contains a listing of all static buffers contributing to the RAM requirements of the encoder and decoder.
+Title Path: Fixed point ANSI-C code structure > Memory requirements > Dynamic memory
+Content: This clause contains a listing of all dynamic buffers contributing to the RAM requirements of the encoder and decoder. Dynamic memory can be re-used outside of the encoder or decoder application.
+Title Path: Fixed point ANSI-C code structure > Memory requirements > Maximum stack size
+Content: This clause contains tables for the encoder and the decoder which describe the call stack that results in the maximum stack size usage.
+Title Path: File formats
+Content: This clause describes the file formats used by the encoder and decoder programs.
+Title Path: File formats > Audio input file (encoder input/decoder output)
+Content: The audio input files read by the encoder and written by the decoder are 16-bit PCM wave files. For convenient handling of wave files a precompiled audio-file format library is used.
+Title Path: File formats > Bitstream file format (encoder output/decoder input)
+Content: The encoder program writes and the decoder program reads raw frames packetized in access units as described by 3GPP TS 26.244 . For packetization the ISO media library is used. A precompiled library is used.
+Title Path: File formats > Error pattern file (decoder input)
+Content: The decoder program can optionally process an additional input file which describes an error pattern. The format of the error pattern file is 1 character per line. Each line corresponds to one frame, where a "0" indicates that the respective frame has been transmitted without errors, while a "1" indicates that the corresponding frame has been lost and error concealment shall be applied by the decoder.

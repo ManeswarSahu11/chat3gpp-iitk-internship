@@ -1,0 +1,64 @@
+Title Path: Scope
+Content: The present document studie s the GBA_U based APIs.
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . 3rd Generation Partnership Project Advanced Encryption Standard Application Identifier Application Programming Interface Generic Bootstrapping Architecture [GBA_U]GBA with UICC-based enhancements Network Application Function ShangMi
+Title Path: Key Issues > Key Issues1: Support for GBA_U_APIs
+Content: Since the Ks_int_NAF is derived from the Long Term Key of the UICC, and the GBA mechanism is highly recognized, the APIs for Ks_int_NAF should be defined , so other applications could use the Ks_int_NAF for security purpose.
+Title Path: Key Issues > Key Issues2: Support for Access Control to GBA_U_APIs
+Content: When an application calls GBA_U_APIs, the Ks_int_NAF is required . Since Ks_int_NAF is associated with B-TID and NAF_ID , it is not allowed to use by all of applications. Therefore, access control should be supported to specify the AID that could call GBA_U_APIs with NAF_ID
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > General
+Content: The USIM GBA_U_APIs consist of the package uicc.usim. gba, which include cipher and signature two classes.
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > Class cipher > init
+Content: public void init(byte algorithm, byte[] nafID, short nafOff, short nafLen, byte theMode, byte[] bArray, short bOff, short bLen) Initializes the Cipher object with the appropriate Ks_int_NAF Key and algorithm specific parameters. Parameters: algorithm - see Table 5.1.1.2.1 nafID - the value of NAF ID nafOff - offset of NAF ID nafLen - length of NAF ID theMode - one of MODE_DECRYPT or MODE_ENCRYPT bArray - byte array containing algorithm specific initialization info bOff - offset within bArray where the algorithm specific data begins bLen - length of algorithm specific parameter data
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > Class cipher > update
+Content: public short update(byte[] inBuff, short inOffset, short inLength, byte[] outBuff, short outOffset) Generates encrypted/decrypted output from input data using Ks_int_NAF .This method is intended for multiple-part encryption/decryption operations. This method requires temporary storage of intermediate results. In addition, if the input data length is not block aligned (multiple of block size) then additional internal storage may be allocated at this time to store a partial input data block. This may result in additional resource consumption and/or slow performance. Parameters: inBuff - the input buffer of data to be encrypted/decrypted inOffset - the offset into the input buffer at which to begin encryption/decryption inLength - the byte length to be encrypted/decrypted outBuff - the output buffer, may be the same as the input buffer outOffset - the offset into the output buffer where the resulting ciphertext/plaintext begins Returns: number of bytes output in outBuff.
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > Class cipher > doFinal
+Content: public short doFinal(byte[] inBuff, short inOffset, short inLength, byte[] outBuff, short outOffset) Generates encrypted/decrypted output from all/last input data using Ks_int_NAF . This method must be invoked to complete a cipher operation. This method processes any remaining input data buffered by one or more calls to the update() method as well as input data supplied in the inBuff parameter. Parameters: inBuff - the input buffer of data to be encrypted/decrypted inOffset - the offset into the input buffer at which to begin encryption/decryption inLength - the byte length to be encrypted/decrypted outBuff - the output buffer, may be the same as the input buffer outOffset - the offset into the output buffer where the resulting output data begins Returns: number of bytes output in outBuff.
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > Class signature > init
+Content: public void init (byte algorithm, byte mode, byte[] nafID, short nafOff, short nafLen) Initializes the Signature object with the appropriate Ks_int_NAF Key and algorithm specific parameters. Parameters: algorithm - see Table 5.1.1.3.1 mode - one of MODE_SIGN or MODE_VERIFY nafID - the value of NAF ID nafOff - offset of NAF ID nafLen - length of NAF ID
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > Class signature > update
+Content: public void update(byte[] inBuff, short inOffset, short inLength) Accumulates a signature of the input data. This method requires temporary storage of intermediate results. Parameters: inBuff - the input buffer of data to be encrypted/decrypted inOffset - the offset into the input buffer at which to begin encryption/decryption inLength - the byte length to be encrypted/decrypted
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > Class signature > sign
+Content: public short sign(byte[] inBuff, short inOffset, short inLength, byte[] sigBuff, short sigOffset) Generates the signature of all/last input data using Ks_int_NAF. Parameters: inBuff - the input buffer of data to be signed inOffset - the offset into the input buffer at which to begin signature generation inLength - the byte length to sign sigBuff - the output buffer to store signature data sigOffset - the offset into sigBuff at which to begin signature data Returns: number of bytes of signature output in sigBuff.
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Description > Class signature > verify
+Content: public boolean verify (byte[] inBuff, short inOffset, short inLength, byte[] sigBuff, short sigOffset, short sigLength) Verifies the signature of all/last input data against the passed in signature using Ks_int_NAF. Parameters: inBuff - the input buffer of data to be verified inOffset - the offset into the input buffer at which to begin signature generation inLength - the byte length to sign sigBuff - the input buffer containing signature data sigOffset - the offset into sigBuff where signature data begins sigLength - the byte length of the signature data Returns: true if the signature verifies, false otherwise Note: if sigLength is inconsistent with this Signature algorithm, false is returned.
+Title Path: Solutions > Solution1: Classes and Interfaces of GBA_U_APIs > Solution Evaluation
+Content: This solution addresses the key issue 1. It defines APIs for Ks_int_NAF derived from GBA, which include cipher and signature methods, and the APIs could be used by the applications on the USIM.
+Title Path: Solutions > Solution2: Access Control to GBA_U_APIs > Description
+Content: This EF is available at the USIM ADF (Application DF) level. This EF contains the list of AID associated with NAF_ID , and it indicates the application which could uses the Ks_int_NAFcorresponding to NAF_ID. AID of NAF Key LV object
+Title Path: Solutions > Solution2: Access Control to GBA_U_APIs > Solution Evaluation
+Content: This solution addresses the key issue 2. It provide s a mechanism for access control to GBA_U_APIs, which defines an EF of USIM to store the list of AID associated with NAF_ID.
+Title Path: Solutions > Solution 3: Access Control to GBA_U_APIs through install parameters > Description
+Content: An alternative approach to Solution 2 for Access Control may be based on application installation parameters. Applications using APIs that require NAA provider or issuer provider like file system access are authorized to perform the intended operation by adding specific install parameters as specified in 3GPP TS 31.116 . According to 3GPP TS 31.116 , depending on issuer configuration, such install parameters may be protected with Remote Applet Management credentials that identify the off-card entity performing the Remote Applet Management operation and also with additional credentials (ETSI DAP key to protect Access and Toolkit install parameters) that can be used as an additional authentication according to the card issuer’s security policy. It is then proposed to add a new install parameter subject to additional authentication according to the card issuer’s security policy to authorize applications to use GBA_U_APIs. As an example of the install parameter structure a new access domain parameter as specified in ETSI TS 102 226 8.2.1.3.2.5.1 can be requested to be added as ``API Access mechanism'' (e.g. value ‘03’).
+Title Path: Solutions > Solution 3: Access Control to GBA_U_APIs through install parameters > Solution Evaluation
+Content: This solution addresses the key issue 2 in an alternative way than Solution 2. It provide s a mechanism for access control to GBA_U_APIs that is managed by the RAM off-card entity potentially in conjunction with ETSI DAP mechanism according to the card issuer’s security policy.
+Title Path: Overall Evaluation > E valuation criteria > Overview
+Content: In addition to the key issues described in the present document, the potential solutions also need to be evaluated against operational criteria when assessing their suitability. This clause details the evaluation criteria for the solutions.
+Title Path: Overall Evaluation > E valuation criteria > Key issues addressed
+Content: Each solution clearly identifies the key issues addressed by the solution. The evaluation assesses whether this key issue is met and any limitations on the way it is met (e.g. if the solution is only applicable to aspects of the key issue).
+Title Path: Overall Evaluation > E valuation criteria > Impact on USIM and ISIM
+Content: The evaluation should clearly identify the types of USIM/ISIM that the solution works with, whether modification of existing USIMs/ISIMs is required and describe the impacts on USIM/ISIM.
+Title Path: Overall Evaluation > E valuation criteria > Impact on UICC
+Content: The evaluation should clearly identify the UICC that the solution works with, whether modification of the existing UICC is required and describe the impacts on the UICC.
+Title Path: Overall Evaluation > E valuation criteria > Backward compatibility
+Content: The evaluation should clearly identify that the solution is backward compatible.
+Title Path: Overall Evaluation > E valuation criteria > Impact on core and RAN network s
+Content: The evaluation should clearly identify any changes required in the core network and/or RAN.
+Title Path: Overall Evaluation > Solutions evaluations > Overview
+Content: This Technical Report describes Classes and Interfaces and Access Control for GBA_U_APIs. In this document, 2 Key Issues are derived, and all of them are addressed by solutions.
+Title Path: Overall Evaluation > Solutions evaluations > Solution 1 > Impact on USIM and ISIM
+Content: The solution has no impact on the USIM neither on the ISIM.
+Title Path: Overall Evaluation > Solutions evaluations > Solution 1 > Impact on UICC
+Content: UICC is impacted with new API to be supported.
+Title Path: Overall Evaluation > Solutions evaluations > Solution 1 > Impact on core and RAN networks
+Content: Th is solution has no impact on the core network or RAN.
+Title Path: Overall Evaluation > Solutions evaluations > Solution 2 > Impact on USIM and ISIM
+Content: USIM is impacted with new file to be defined.
+Title Path: Overall Evaluation > Solutions evaluations > Solution 2 > Impact on core and RAN networks
+Content: Th is solution has no impact on the core network or RAN.
+Title Path: Overall Evaluation > Solutions evaluations > Solution 3 > Impact on UICC
+Content: A new install parameter needs to be defined at UICC level.
+Title Path: Overall Evaluation > Solutions evaluations > Solution 3 > Impact on core and RAN networks
+Content: Th is solution has no impact on the core network or RAN.
+Title Path: Conclusion
+Content: This technical report fulfills the objectives of the study on GBA_U Based APIs, all of the key issues have been addressed and the solutions have been evaluated, normative work in 3GPP CT6 WG should be based on solutions in the present document.

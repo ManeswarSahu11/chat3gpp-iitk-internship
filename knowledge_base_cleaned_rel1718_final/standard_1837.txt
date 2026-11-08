@@ -1,0 +1,48 @@
+Title Path: Scope
+Content: The present document describes Quality of Experience (QoE) measurement collection record content definition and management. It covers the Quality of Experience (QoE) measurement data content, their format and transfer across UMTS networks and LTE networks. The measurements that are collected are DASH and MTSI measurements.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . 3GPP file format [3GP-DASH]3GPP Dynamic Adaptive Streaming over HTTP Media Presentation Description Multimedia Telephony Service for IMS QoE Measurement Collection Quality of Experience
+Title Path: QoE record contents > General
+Content: The QoE record may contain QoE metrics for 3GP-DASH and MTSI.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Introduction
+Content: This clause provides the general QoE metric definitions and measurement framework. The semantics are defined using an abstract syntax. Items in this abstract syntax have one of the following primitive types (Integer, Real, Boolean, Enum, String) or one of the following compound types: Objects: an unordered sequence of (key, value) pairs, where the key always has string type and is unique within the sequence. List: an ordered list of items. Set: an unordered set of items. Additionally, there are two kinds of timestamp defined, i.e. real time (wall-clock time) and media time.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Representation Switch Events
+Content: Clause 10.2.3 in TS 26.247 defines the metrics for representation switch events.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Average Throughput
+Content: Clause 10.2.4 in TS 26.247 defines the metric for average throughput.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Initial Playout Delay
+Content: Clause 10.2.5 in TS 26.247 defines the metric for initial playout delay.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Buffer Level
+Content: Clause 10.2.6 in TS 26.247 defines the metrics for buffer level status events.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Play List
+Content: Clause 10.2.7 in TS 26.247 defines the metric for play list.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > MPD Information
+Content: Clause 10.2.8 in TS 26.247 defines the metric for MPD information.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Playout Delay for Media Start-up
+Content: Clause 10.2.9 in TS 26.247 defines the metric for playout delay for Media Start-up.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > QoE Metric Definitions > Device information
+Content: Clause 10.2.10 in TS 26.247 defines the metric for playout delay for device information.
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > Quality Metrics for Progressive Download
+Content: The following metrics shall be supported by progressive download clients supporting the QoE reporting feature: Average Throughput (Clause 4.2.1.3), Initial Playout Delay (Clause 4.2.1.4), Buffer Level (Clause 4.2.1.5), Play List (Clause 4.2.1.6), and Device information (Clause 4.2.1.9).
+Title Path: QoE record contents > QoE metrics for 3GP-DASH > Quality Metrics for DASH
+Content: The following metrics shall be supported by 3GP-DASH clients supporting the QoE reporting feature: List of Representation Switch Events (Clause 4.2.1.2). Average Throughput (Clause 4.2.1.3). Initial Playout Delay (Clause 4.2.1.4). Buffer Level (Clause 4.2.1.5). Play List (Clause 4.2.1.6). MPD Information (Clause 4.2.1.7). Device information (Clause 4.2.1.9). The @metrics attribute contains a list of quality metric keys listing all metrics that the DASH shall collect and report. The semantics of the attributes within the Metrics element are provided in Table 1. The XML-syntax of a Metrics element is provided in Table 2.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition
+Content: An MTSI client supporting the QoE metrics feature shall support the reporting of the metrics in this clause. The metrics are valid for speech, video and text media, and are calculated for each measurement resolution interval "Measure-Resolution". They are reported to the server according to the measurement reporting interval "Sending-Rate" and after the end of the session.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Corruption duration metric
+Content: Clause 16.2.1 in TS 26.114 defines the metric for corruption duration.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Successive loss of RTP packets
+Content: Clause 16.2.2 in TS 26.114 defines the metric for successive loss of RTP packets.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Frame rate
+Content: Clause 16.2.3 in TS 26.114 defines the metric for frame rate.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Jitter duration
+Content: Clause 16.2.4 in TS 26.114 defines the metric for jitter duration.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Sync loss duration
+Content: Clause 16.2.5 in TS 26.114 defines the metric for sync loss duration.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Round-trip time
+Content: Clause 16.2.6 in TS 26.114 defines the metric for round-trip time.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Average codec bitrate
+Content: Clause 16.2.7 in TS 26.114 defines the metric for average codec bitrate.
+Title Path: QoE record contents > QoE metrics for MTSI > Metrics Definition > Codec information
+Content: Clause 16.2.8 in TS 26.114 defines the metric for codec information.

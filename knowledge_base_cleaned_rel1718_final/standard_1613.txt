@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the Solution Set definitions for the control and monitoring of Power, Energy and Environmental (PEE) parameters Integration Reference Point (IRP). The Solution Set definitions are related to 3GPP TS 28.305 V15.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 .
+Title Path: Solution Set Definitions
+Content: The present document defines the following Solution Set definitions:

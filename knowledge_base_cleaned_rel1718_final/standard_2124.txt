@@ -1,0 +1,588 @@
+Title Path: Scope
+Content: The present document is a technical report for Dual Connectivity (DC) of 3 LTE bands (3DL/1UL) and 1 NR band (1DL/1UL) under Rel-17 time frame. The purpose is to gather the relevant background information and studies in order to address Dual Connectivity (DC) of 3 LTE band (3DL/1UL) and 1 NR band (1DL/1UL) for the Rel-17 band combinations. The co-existence analysis and RF front end requirements such as $ $R and $ $T are described based on the band combination basis since such information have no difference between the DC configurations consisting with the same E-UTRA band and the same NR band. The actual requirements are added to the corresponding technical specification.
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . example: text used to clarify abstract rules by applying them literally.
+Title Path: Definitions of terms, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . ABBREVIATION Expansion
+Title Path: Background
+Content: The present document is a technical report for Dual Connectivity (DC) of 3 bands LTE inter-band CA and 1 NR band under Rel-17 timeframe. The document covers each band combination specific issues (i.e. one sub-clause defined per band combination)
+Title Path: Background > TR maintenance
+Content: A single company is responsible for introducing all approved TPs in the current TR, i.e. TR editor. However, it is the responsibility of the contact person of each band combination to ensure that the TPs related to the band combination have been implemented.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part
+Content: Editor’s note: The requirements for specific band combinations shall be described according to the same manner as specified in TS38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3_(n)41 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-41_n28 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-7-28_n1 > Reference sensitivity exceptions
+Content: REFSENS exceptions needed due to band 28 uplink harmonic into band n1 is already specified for DC_28A_n1A.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-7-66_n66 > Reference sensitivity exceptions
+Content: MSD have been defined for lower order combinations. No further MSD is needed.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-19-42_n1 > $ $TIB and $ $RIB values
+Content: For DC_3-19-42_n1, the $ $T and $ $R values are reused from the LTE combination CA_1-3-19-42, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-19-42_n1 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-21-42_n1 > $ $TIB and $ $RIB values
+Content: For DC_3-21-42_n1, the $ $T and $ $R values are reused from the LTE combination CA_1-3-21-42, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-21-42_n1 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_19-21-42_n1 > $ $TIB and $ $RIB values
+Content: For DC_19-21-42_n1, the $ $T and $ $R values are reused from the LTE combination CA_1-19-21-42, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_19-21-42_n1 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-11_n3 > $ $T and $ $R values
+Content: For DC_1-8-11_n3, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-11_n3 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-8-11_n3 was covered by the studies for the fallback modes of DC_1-8_n3, DC_1-11_n3 and DC_8-11_n3. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-42_n28 > $ $T and $ $R values
+Content: For DC_1-8-42_n28, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-42_n28 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-8-42_n28 was covered by the studies for the fallback modes of DC_1-8_n28, DC_1-42_n28 and DC_8-42_n28. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-32_n28 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-32_n78 > Reference sensitivity exceptions
+Content: Exceptions for IMD hits on B32 are TBD .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-32_n28 > Reference sensitivity exceptions
+Content: Exceptions for the B1 IMD5 hit from the 20A_n28A UL are TBD.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-32_n78 > Reference sensitivity exceptions
+Content: Exceptions for IMD hits on B32 are TBD .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-7-32_n78 > Reference sensitivity exceptions
+Content: Exceptions for IMD hits on B32 have been solved by fallback band combinations DC_3A-32A_n 78A and DC_7A-32A_n 78A .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-20-32_n78 > Reference sensitivity exceptions
+Content: Exceptions for IMD hits on B32 are TBD .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-32_n1 > Reference sensitivity exceptions
+Content: Exceptions for IMD hits on B32 are TBD .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-32_n28 > Reference sensitivity exceptions
+Content: Compared to its fallback modes, there are no additional MSD requirements for this band combination.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-32_n3 > $ $TIB and $ $RIB values
+Content: For DC_1-20-32_n3, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-4-7_n28 > $ $TIB and $ $RIB values
+Content: For DC_2-4-7_n28, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-7_n66 > $ $TIB and $ $RIB values
+Content: For DC_2-5-7_n66, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-66_n7 > $ $TIB and $ $RIB values
+Content: For DC_2-5-66_n7, the $ $T and $ $R values are reused from the DC_2-7-13_n66, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-66_n66 > $ $TIB and $ $RIB values
+Content: For DC_2-5-66_n66, the $ $T and $ $R values are reused from the DC_2-5_n66, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-66_n28 > $ $TIB and $ $RIB values
+Content: For DC_2-7-66_n28, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-20-32_n1 > $ $TIB and $ $RIB values
+Content: For DC_3-20-32_n1, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-18_n3 > $ $TIB and $ $RIB values
+Content: For DC_1-3-18_n3 , the $ $T and $ $R values are given in the tables below. Numbers come from LTE CA_1A-3A-18A.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-18_n3 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-41_n3 > $ $TIB and $ $RIB values
+Content: For DC_1-3-41_n3 , the $ $T and $ $R values are given in the tables below. Numbers come from LTE CA_1A-3A-41A.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-41_n3 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-41_n41 > $ $TIB and $ $RIB values
+Content: For DC_1-3-41_n41 , the $ $T and $ $R values are given in the tables below. Numbers come from LTE CA_1A-3A-41A.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-41_n41 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-7_n66 and DC_2-5-7-7_n66 > $ $TIB and $ $RIB values
+Content: For DC_2-5-7_n66 and DC_2-5-7-7_n66 , the $ $T and $ $R values are given in the tables below. Numbers come from LTE CA_2A-5A-7A-66A.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-7_n66 and DC_2-5-7-7_n66 > REFSENS requirements
+Content: There are no additional MSD requirements for this band combination.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-11_n28 > $ $T and $ $R values
+Content: For DC_1-3-11_n28, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-11_n28 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-3-11_n28 was covered by the studies for the fallback modes of DC_1-3_n28, DC_1-11_n28 and DC_3-11_n28. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-11_n77 > $ $T and $ $R values
+Content: For DC_1-3-11_n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-11_n77 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-3-11_n77 was covered by the studies for the fallback modes of DC_1-3_n77, DC_1-11_n77 and DC_3-11_n77. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-11_n28 > $ $T and $ $R values
+Content: For DC_3-8-11_n28, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-11_n28 > Reference sensitivity exceptions
+Content: Co-existence study for DC_3-8-11_n28 was covered by the studies for the fallback modes of DC_3-8_n28, DC_3-11_n28 and DC_8-11_n28. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-11_n77 > $ $T and $ $R values
+Content: For DC_3-8-11_n77, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-11_n77 > Reference sensitivity exceptions
+Content: Co-existence study for DC_3-8-11_n77 was covered by the studies for the fallback modes of DC_3-8_n77, DC_3-11_n77 and DC_8-11_n77. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-11_n28 > $ $T and $ $R values
+Content: For DC_1-8-11_n28, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-11_n28 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-8-11_n28 was covered by the studies for the fallback modes of DC_1-8_n28, DC_1-11_n28 and DC_8-11_n28. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-18_n28 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-18_n41 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-66A-71A_n71A > Configurations for EN-DC
+Content: Note that DC_71_n71 is used as uplink configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-66A-71A_n71A > Reference sensitivity exceptions
+Content: REFSENS exceptions needed due to band 71 uplink harmonic into band 2 is already specified in Table 7.3B.2.3.1-1 of TS 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-66_n77A > Reference sensitivity exceptions
+Content: REFSENS exception have when needed been defined for lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-13-66_n77A > Reference sensitivity exceptions
+Content: REFSENS exception have when needed been defined for lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-48-66_n77A > Reference sensitivity exceptions
+Content: REFSENS exception have when needed been defined for lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-40_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-40_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-40_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-7-40_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-40_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-8-40_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-66_n77 > Configurations for EN-DC
+Content: Table 5.2B.4.4-1: Band combinations EN-DC (four bands)
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-40_n78 > $ $TIB and $ $RIB values
+Content: It is proposed to re-use relaxation values from DC_1-20_n41-n78 which is very similar.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-40_n78 > Reference sensitivity exceptions
+Content: MSD have been defined for lower order combinations. No further MSD is needed.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-42_n3 > $ $T and $ $R values
+Content: For DC_1-8-42_n3, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-42_n3 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-8-42_n3 was covered by the studies for the fallback modes of DC_1-8_n3, DC_1-42_n3 and DC_8-42_n3. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-42_n28 > $ $T and $ $R values
+Content: For DC_1-3-42_n28, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-42_n28 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-3-42_n28 was covered by the studies for the fallback modes of DC_1-3_n28, DC_1-42_n28 and DC_3-42_n28. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-66_n78 > $ $TIB and $ $RIB values
+Content: For DC_2A-29A-66A_n78A, the $ $T and $ $R values are reused from the LTE combination CA_2-13-48-66, and are given in the tables below
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-66_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-8-32_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-32_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-12A-66A_n41A > $ $T and $ $R values
+Content: For DC_ 2-12-66_n41 , the $ $T and $ $R values are given in the tables below based on values CA_2-7-12-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-12A-66A_n41A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-66A-71A_n41A > $ $T and $ $R values
+Content: For DC_ 2-66-71_n41 , the $ $T and $ $R values are given in the tables below, based on values for DC_2-66-n41_n71 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-66A-71A_n41A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A-12A_n66A > $ $T and $ $R values
+Content: For DC_2-7-12_n66, the $ $T and $ $R values are given in the tables below. Based on values for CA_2-7-12-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A-12A_n66A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A_2A-5A-7A_n66A > $ $T and $ $R values
+Content: For DC_2-5-7_n66, the $ $T and $ $R values are given in the tables below. Based on values for DC_2-7-13_n66 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A_2A-5A-7A_n66A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A-71A_n66A > $ $T and $ $R values
+Content: For DC_2-7-71_n66, the $ $T and $ $R values are given in the tables below, based on values for DC_2-7-66_n71 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A-71A_n66A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A-12A_n78A > $ $T and $ $R values
+Content: For DC_2A-7A-12A_n78A, the $ $T and $ $R values are given in the tables below based on values for DC_1-7-28_n78 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A-12A_n78A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-12A-66A_n78A > $ $T and $ $R values
+Content: For DC_ 2-12-66_n78 , the $ $T and $ $R values are given in the tables below based on values DC_2-48-66_n12 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-12A-66A_n78A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-12A-66A_n78A > $ $T and $ $R values
+Content: For DC_ 7-12-66_n78 , the $ $T and $ $R values are given in the tables below based on values for CA_3-28-41-42 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-12A-66A_n78A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-66A-71A_n78A > $ $T and $ $R values
+Content: For DC_ 7-66-71_n78 , the $ $T and $ $R values are given in the tables below based on values for DC_3-7-20_n78 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-66A-71A_n78A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -71A_n78A > $ $T and $ $R values
+Content: For DC_2- 7-71_n78 , the $ $T and $ $R values are given in the tables below based on values for DC_1-7-28_n78.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -71A_n78A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -66A_n2A > $ $T and $ $R values
+Content: For DC_2- 7-66_n2 , the $ $T and $ $R values are given in the tables below, based on values for CA_2-7-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -66A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-5A -7A_n2A > $ $T and $ $R values
+Content: For DC_2-5- 7_n2 , the $ $T and $ $R values are given in the tables below based on values for CA_2-5-7 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-5A -7A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5A-7A -66A_n2A > $ $T and $ $R values
+Content: For DC_5- 7-66_n2 , the $ $T and $ $R values are given in the tables below based on values for DC_2-7-13_n66 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5A-7A -66A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -71A_n2A > $ $T and $ $R values
+Content: For DC_2- 7-71_n2 , the $ $T and $ $R values are given in the tables below based on values for CA_2-7_n71 in 38.101-3.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -71A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-66A -71A_n2A > $ $T and $ $R values
+Content: For DC_2- 66-71_n2 , the $ $T and $ $R values are given in the tables below based on values for CA_2-66-71 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-66A -71A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -12A_n2A > $ $T and $ $R values
+Content: For DC_2- 7-12_n2 , the $ $T and $ $R values are given in the tables below based on values for CA_2-7_12 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2A-7A -12A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-66A-71A_n2A > $ $T and $ $R values
+Content: For DC_ 7-66-71_n2 , the $ $T and $ $R values are given in the tables below based on values for DC_2-7-66_n71.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-66A-71A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-12A-66A_n2A > $ $T and $ $R values
+Content: For DC_ 7-12-66_n2 , the $ $T and $ $R values are given in the tables below based on values for CA_2-4-7-12 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7A-12A-66A_n2A > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-28-40_n78 > $ $TIB and $ $RIB values
+Content: Proposed relaxations are same as for DC_1-28_n40-n78.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-28-40_n78 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this EN-DC configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-28-40_n78 > $ $TIB and $ $RIB values
+Content: Proposed relaxations are same as for DC_3-28_n40-n78.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-28-40_n78 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this EN-DC configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-11-18_n3 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 36.101 CA_1-3-11, CA_1-3-18, CA_3-11-18, CA_1-11-18 and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-11-18_n3 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-11-18_n28 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 36.101 CA_1-11-18, CA_1-11-28, CA_1-18-28 and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-11-18_n28 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-11-18_n41 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 36.101 CA_1-11-18, CA_1-18-41 and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-11-18_n41 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-66_n48 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 38.101-3 DC_2-5-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-66_n48 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-13-48_n77 > $ $TIB and $ $RIB values
+Content: T he $ $T and $ $R values are refer to TS 36.101 CA_2-13-48, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-13-48_n77 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-46-48_n2 > $ $TIB and $ $RIB values
+Content: T he $ $T and $ $R values are refer to TS 36.101 CA_2-46-48, and are given in the tables below
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-46-48_n2 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-48-66_n2 > $ $TIB and $ $RIB values
+Content: T he $ $T and $ $R values are refer to TS 36.101 CA_2-48-66, and are given in the tables below
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-48-66_n2 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-48-66_n66 > $ $TIB and $ $RIB values
+Content: T he $ $T and $ $R values are refer to TS 36.101 CA_2-48-66 and TS 38.101-3 DC_2-48_n66, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-48-66_n66 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_13-48-66_n77 > $ $TIB and $ $RIB values
+Content: T he $ $T and $ $R values are refer to TS 36.101 CA_13-48-66, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_13-48-66_n77 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-20_n7 > $ $T and $ $R values
+Content: For DC_1-3-20_n7, the same $ $T and $ $R values of DC_1-7-20_n3 are adopted and given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-20_n7 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-3-20_n7 was covered by the studies for the fallback modes. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-30_n2 > $ $T and $ $R values
+Content: For DC_2-5-30_n2, the $ $T and $ $R values are given in the tables below based on values for CA_2-5-30 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-30_n2 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-30_n66 > $ $T and $ $R values
+Content: For DC_2-5-30_n66, the $ $T and $ $R values are given in the tables below based on values for CA_2-5-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-30_n66 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-14-30_n2 > $ $T and $ $R values
+Content: For DC_2-14-30_n2, the $ $T and $ $R values are given in the tables below based on values for CA_2-14-30 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-14-30_n2 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-30_n66 > $ $T and $ $R values
+Content: For DC_2-29-30_n66, the $ $T and $ $R values are given in the tables below based on values for CA_2-29-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-30_n66 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-46-66_n5 > $ $T and $ $R values
+Content: For DC_2-46-66_n5, the $ $T and $ $R values are given in the tables below based on values for CA_2-5-46-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-46-66_n5 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-30-66_n2 > $ $T and $ $R values
+Content: For DC_5-3A-66_n2, the $ $T and $ $R values are given in the tables below based on values for CA_2-5-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-30-66_n2 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-30-66_n66 > $ $T and $ $R values
+Content: For DC_5-30-66_n66, the $ $T and $ $R values are given in the tables below based on values for CA_5-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-30-66_n66 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_14-30-66_n66 > $ $T and $ $R values
+Content: For DC_14-30-66_n66, the $ $T and $ $R values are given in the tables below based on values for CA_14-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_14-30-66_n66 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_14-30-66_n2 > $ $T and $ $R values
+Content: For DC_14-30-66_n2, the $ $T and $ $R values are given in the tables below based on values CA_2-14-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_14-30-66_n2 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-2-14-30_n66 > $ $T and $ $R values
+Content: For DC_2-2-14-30_n66, the $ $T and $ $R values are given in the tables below based on values CA_2-14-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-2-14-30_n66 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-7_n3 > $ $T and $ $R values
+Content: For DC_1-3-7_n3, the $ $T and $ $R values are given in the tables below based on values for CA_1-3-7 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-7_n3 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > 1-3-28_n3 > $ $T and $ $R values
+Content: For DC_1-3-28_n3, the $ $T and $ $R values are given in the tables below based on values for CA_1-3-28 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > 1-3-28_n3 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > 3-7-28_n3 > $ $T and $ $R values
+Content: For DC_3-7-28_n3, the $ $T and $ $R values are given in the tables below based on values for CA_3-7-28 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > 3-7-28_n3 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-66_n260 > $ $T and $ $R values
+Content: For DC_2-29-66_n260, the $ $T and $ $R values are given in the tables below based on values for CA_2-29-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-66_n260 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-46-66_n260 > $ $T and $ $R values
+Content: For DC_2-46-66_n260, the $ $T and $ $R values are given in the tables below based on values for CA_2-46-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-46-66_n260 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_29-30-66_n260 > $ $T and $ $R values
+Content: For DC_29-30-66_n260, the $ $T and $ $R values are given in the tables below based on values for CA_29-30-66 in 36.101.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_29-30-66_n260 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1A-3A-5A_n77 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 36.101 CA_1-3-5 and TS 38.101-3 DC_1-3_n77,DC_1-5_n78 and DC_3-5_n78.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1A-3A-5A_n77 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1A-3A-7A_n77 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 36.101 CA_1-3-7 and TS 38.101-3 DC_1-3_n77,DC_1-7_n78 and DC_3-7_n77.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1A-3A-7A_n77 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1A-5A-7A_n77 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 36.101 CA_1-5-7 and TS 38.101-3 DC_1-5_n78,DC_1-7_n78 and DC_5-7_n78.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1A-5A-7A_n77 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3A-5A-7A_n77 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are reused from TS 36.101 CA_3-5-7 and TS 38.101-3 DC_3-5_n78,DC_3-7_n77 and DC_5-7_n78.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3A-5A-7A_n77 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-38_n3 > $ $T and $ $R values
+Content: For DC_1-7-38_n3 , same $ $T and $ $R values as LTE CA_1-3-7-38 are reused and given in the tables below
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-38_n3 > Reference sensitivity exceptions
+Content: Co-existence study for DC_ 1-7-38_n3 was covered by the studies for the fallback modes. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-38_n3 > $ $T and $ $R values
+Content: For DC_1-20-38_n3 , same $ $T and $ $R values as LTE CA_1-3-20-38 are reused and given in the tables below
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-38_n3 > Reference sensitivity exceptions
+Content: Co-existence study for DC_ 1-20-38_n3 was covered by the studies for the fallback modes. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-38_n3 > $ $T and $ $R values
+Content: For DC_7-20-38_n3 , same $ $T and $ $R values as LTE CA_3-7-28-38 are reused and given in the tables below
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-38_n3 > Reference sensitivity exceptions
+Content: Co-existence study for DC_ 7-20-38_n3 was covered by the studies for the fallback modes. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-32_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-32_n8 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-38_n8 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-28_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-32_n8 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-28-32_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-7-32_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-20_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-8-20_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-8-20_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-28_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-32_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-32_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-32_n8 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-28-32_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_8-20-32_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_20-28-32_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_20-28-32_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_20-32-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-7-7-28_n1 > Reference sensitivity exceptions
+Content: REFSENS exceptions have already been specified for DC_3-7-28_n1.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-20_n28 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-30_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-5-30_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-5_n77, DC_2-30_n77, and DC_5-30_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-30_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-12-30_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-12-30_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-12_n77, DC_2-30_n77, and DC_12-30_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-12-30_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-12-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-12-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-12_n77, DC_2-66_n77, and DC_12-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-12-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-14-30_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-14-30_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-14_n77, DC_2-30_n77, and DC_14-30_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-14-30_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-14-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-14-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-14_n77, DC_2-66_n77, and DC_14-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-14-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-30_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-29-30_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-29_n77, DC_2-30_n77, and DC_29-30_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-30_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-29-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-29_n77, DC_2-66_n77, and DC_29-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-29-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-30-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_2-30-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_2-30_n77, DC_2-66_n77, and DC_30-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-30-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-30-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_5-30-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_5-30_n77, DC_5-66_n77, and DC_30-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-30-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_12-30-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_12-30-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_12-30_n77, DC_12-66_n77, and DC_30-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_12-30-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_14-30-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_14-30-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_14-30_n77, DC_14-66_n77, and DC_30-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_14-30-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_29-30-66_n77 > $ $TIB and $ $RIB values
+Content: For DC_29-30-66_n77, the $ $T and $ $R values are derived from the worst-case values from DC_29-30_n77, DC_29-66_n77, and DC_30-66_n77, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_29-30-66_n77 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-7_n38 > $ $T and $ $R values
+Content: For DC_1-3-7_n38 , same $ $T and $ $R values as LTE CA_1-3-7-38 are reused and given in the tables below
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-7_n38 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-20_n38 > $ $T and $ $R values
+Content: For DC_1-7-20_n38, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-20_n38 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-7-20_n38 > $ $T and $ $R values
+Content: For DC_3-7-20_n38, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-7-20_n38 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-38_n78 > $ $T and $ $R values
+Content: For DC_1-3-38_n78, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-3-38_n78 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-48_n77 > $ $TIB and $ $RIB values
+Content: Relaxation values are copied from CA_n2-n5-n77 and CA_n2-n5-n48.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-48_n77 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-48-66_n77 > $ $TIB and $ $RIB values
+Content: Relaxation values are copied from CA_n5-n66-n77 and CA_n5-n48-n77
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-48-66_n77 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-13-48_n77 > $ $TIB and $ $RIB values
+Content: Relaxation values are copied from DC_2-13_n77 and DC_2-48_n77
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-13-48_n77 > REFSENS requirements
+Content: No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-29_n78 > $ $TIB and $ $RIB values
+Content: The $ $TIB,c and $ $R values are defined as below tables.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-29_n78 > REFSENS requirements
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-28_n78 > $ $T and $ $R values
+Content: Relaxation values are copied from DC_2-7-28_n7
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_5-7-66_n78 > $ $T and $ $R values
+Content: Relaxation values are copied from DC_5-7-66_n7
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-38_n78 > $ $T and $ $R values
+Content: For DC_1-7-38_n78, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-7-38_n78 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-38_n78 > $ $T and $ $R values
+Content: For DC_7-20-38_n78, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-38_n78 > Reference sensitivity exceptions
+Content: There is no additional MSD requirement for this configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-7_n78 > $ $T and $ $R values
+Content: For DC_2-5-7_n78, the $ $T and $ $R values are given in the tables below based on values for CA_n3-n5-n7-n78 .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-7_n78 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-66_n78 > $ $T and $ $R values
+Content: For DC_2-5-66_n78, the $ $T and $ $R values are given in the tables below based on values for CA_n5-n25-n66-n78 .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-5-66_n78 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-13_n25 > $ $T and $ $R values
+Content: For DC_2-7-13_n25, the $ $T and $ $R values are given in the tables below based on values for DC_7-28_n2.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-13_n25 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-66_n25 > $ $T and $ $R values
+Content: For DC_2-7-66_n25, the $ $T and $ $R values are given in the tables below based on values for DC_2-7_n66.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-7-66_n25 > REFSENS requirements
+Content: MSD requirements are covered in lower order combinations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-20_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-28_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-28_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-32_n3 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-32_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-28_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-20-38_n8 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-28_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-11_n79 > $ $T and $ $R values
+Content: For DC_1-8-11_n79, the $ $T and $ $R values are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_1-8-11_n79 > Reference sensitivity exceptions
+Content: Co-existence study for DC_1-8-11_n79 was covered by the studies for the fallback modes of DC_1-8_n79, DC_1-11_n79 and DC_8-11_n79. No additional MSD requirement need to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-32_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-32_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-20-28_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-8-32_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-8-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-20-38_n8 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_7-28-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_8-20-28_n78 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_8-20-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_8-32-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_20-28-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_28-32-38_n1 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_n77_1-3_8 > $ $T and $ $R values
+Content: Similar to DC_1-3-8_n77 in section 5.1.27.3 of 37.716-31-11
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-30-(n)5 > $ $TIB and $ $RIB values
+Content: For DC_2-30-(n)5, the $ $T and $ $R values are derived from DC_2-30_n5 and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-30-(n)5 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_30-66-(n)5 > $ $TIB and $ $RIB values
+Content: For DC_30-66-(n)5, the $ $T and $ $R values are derived from DC_30-66_n5 and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_30-66-(n)5 > Reference sensitivity exceptions
+Content: There are no additional MSD requirements for this configuration. The MSD requirements are covered by the fallback configurations.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_2-13-66_n2 > Reference sensitivity exceptions
+Content: No additional IMD exceptions required compared to fallbacks .
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-32-38_n28 > Co-existence studies
+Content: Based on co-existence studies of Band 38 + Band n28 and Band 3 + Band n28, own Rx impact of the 4th band is the followings. - The 2 nd order harmonics generated by Band n28 may fall into own Rx of Band 32. - IMD5 may fall into Rx of band 32 when band 3 and n28 transmit.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-32-38_n28 > $ $T and $ $R values
+Content: For DC_3-32-38_n28, the $ $T and $ $R values are reused from the band combination DC_ 7-8-32_n1, and are given in the tables below.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-32-38_n28 > Reference sensitivity exceptions
+Content: No additional MSD requirement needs to be defined for this dual connectivity configuration.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-32_n28 > Co-existence studies
+Content: For UE coexistence study of Band 3 + Band n28, the 2nd, 3rd, 4th and 5th order harmonics and 2nd, 3rd, 4th and 5th order intermodulation products were calculated and presented in Table 5.1.209.2-1. As we can see from the above table: the 2 nd harmonic may fall into DL reception frequency of Band 32. the 5 th IMD may fall into DL reception frequency of Band 32. For UE coexistence study of Band 8 + Band n28, the 2nd, 3rd, 4th and 5th order harmonics and 2nd, 3rd, 4th and 5th order intermodulation products were calculated and presented in Table 5.1.209.2-2. As we can see from the above table: the 2 nd harmonic caused by UL transmission on Band 8 may fall into DL reception frequency of Band 3. the 2 nd harmonic caused by UL transmission on Band n28 may fall into DL reception frequency of Band 32.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-32_n28 > $ $TIB and $ $RIB values
+Content: For DC_3-8-32_n28, the $ $T and $ $R values are given in the following table.
+Title Path: DC of 3 LTE band (3DL/1UL) + 1 NR band: Specific Band Combination Part > Inter-band EN-DC > DC_3-8-32_n28 > Reference sensitivity exceptions
+Content: For UL band 3_n28, since there MSD requirements specified for band 32 due to UL harmonic caused by band n28, and IMD exception has already been covered by DC_3-8_n28, no additional MSD requirement need to be defined for this dual connectivity configuration. For UL band 8_n28, since there are MSD requirements specified for band 32 due to UL harmonic caused by band n28, and those specified for band 3 due to UL harmonic caused by band 8, they can be reused here. No additional MSD requirement need to be defined for this dual connectivity configuration. REFSENS exceptions are not needed.

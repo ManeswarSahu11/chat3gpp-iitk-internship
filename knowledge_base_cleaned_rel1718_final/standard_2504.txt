@@ -1,0 +1,40 @@
+Title Path: Scope
+Content: The present document defines User Equipment (UE) policies that are used to configure the UE for Proximity-based Services (ProSe) in 5G System (5GS) based on the architectural requirements defined in 3GPP TS 23.304 . The protocol aspects for 5G ProSe are described in 3GPP TS 24.554 .
+Title Path: Definitions of terms, symbols and abbreviations > Terms
+Content: For the purposes of the present document, the terms given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions of terms, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . [5G ProSe]5G Proximity-based Services [5G PKMF]5G ProSe Key Management Function Discovery User Confidentiality Key Discovery User Integrity Key Discovery User Scrambling Key Fully Qualified Domain Name 5G ProSe Policy Relay Service Code
+Title Path: Descriptions of UE policies for 5G ProSe > Overview
+Content: The ProSe policy in 5GS includes: [ a) ] UE policies for 5G ProSe direct discovery (see clause 4.2); UE policies for 5G ProSe direct communications (see clause 4.3); UE policies for 5G ProSe UE-to-network relay (see clause 4.4); UE policies for 5G ProSe usage information reporting (see clause 4.5); and UE policies for 5G ProSe UE-to-UE relay (see clause 4.6). The ProSe policy can be delivered from the PCF to the UE. The UE policy delivery procedure is specified in 3GPP TS 24.501 .
+Title Path: Descriptions of UE policies for 5G ProSe > UE policies for 5G ProSe direct discovery
+Content: The UE policies for 5G ProSe direct discovery are defined in clause 5.2.3 of 3GPP TS 24.554 . The generic description of the UE policies for 5G ProSe direct discovery is specified in 3GPP TS 23.304 .
+Title Path: Descriptions of UE policies for 5G ProSe > UE policies for 5G ProSe direct communications
+Content: The UE policies for 5G ProSe direct communications are defined in clause 5.2.4 of 3GPP TS 24.554 . The generic description of the UE policies for 5G ProSe direct communications is specified in 3GPP TS 23.304 .
+Title Path: Descriptions of UE policies for 5G ProSe > UE policies for 5G ProSe UE-to-network relay
+Content: The UE policies for 5G ProSe UE-to-network relay UE are defined in clause 5.2.5 of 3GPP TS 24.554 . The generic description of the UE policies for 5G ProSe UE-to-network relay is specified in 3GPP TS 23.304 . The UE policies for 5G ProSe remote UE are defined in clause 5.2.5 of 3GPP TS 24.554 . The generic description of the UE policies for 5G ProSe remote UE is specified in 3GPP TS 23.304 .
+Title Path: Descriptions of UE policies for 5G ProSe > UE policies for 5G ProSe usage information reporting
+Content: The UE policies for 5G ProSe usage information reporting are defined in clause 5.2.6 of 3GPP TS 24.554 . The generic description of the UE policies for 5G ProSe usage information reporting is specified in 3GPP TS 32.277 .
+Title Path: Descriptions of UE policies for 5G ProSe > UE policies for 5G ProSe UE-to-UE relay
+Content: The UE policies for 5G ProSe UE-to-UE relay UE are defined in clause 5.2.7 of 3GPP TS 24.554 . The generic description of the UE policies for 5G ProSe UE-to-UE relay UE is specified in 3GPP TS 23.304 . The UE policies for 5G ProSe end UE are defined in clause 5.2.7 of 3GPP TS 24.554 . The generic description of the UE policies for 5G ProSe end UE is specified in 3GPP TS 23.304 .
+Title Path: Encoding of UE policies for 5G ProSe > Overview
+Content: The UE policies for 5G ProSe are provided to the UE in a 5G ProSe policy (ProSeP) UE policy part using the UE policy delivery service as specified in 3GPP TS 24.501 annex D.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of 5G ProSe policy UE policy part
+Content: The purpose of the ProSeP is to indicate UE policies for 5G ProSe direct discovery, 5G ProSe direct communications, 5G ProSe UE-to-network relay UE, 5G ProSe remote UE, UE policies for 5G ProSe usage information reporting, UE policies for 5G ProSe UE-to-UE relay UE, and UE policies for 5G ProSe end UE. The ProSeP is encoded as shown in figures 5.2.1 to 5.2.3 and table 5.2.1 according to the UE policy part top level format (see annex D of 3GPP TS 24.501 ).
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe direct discovery > General
+Content: The UE policies for 5G ProSe direct discovery are coded as shown in figures 5.3.1.1 and table 5.3.1.1.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe direct communications > General
+Content: The UE policies for 5G ProSe direct communication are coded as shown in figures 5.4.1.1 and table 5.4.1.1.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe direct communications > Information elements coding
+Content: NOTE: The field is placed immediately after the last present preceding field. NOTE: The field is placed immediately after the last present preceding field. NOTE: The field is placed immediately after the last present preceding field. Figure 5.4.2.33:PC5 QoS profile
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe UE-to-network relay UE > General
+Content: The UE policies for 5G ProSe UE-to-network relay UE are coded as shown in figures 5.5.2.1 and table 5.5.2.1.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe remote UE > General
+Content: The UE policies for 5G ProSe remote UE are coded as shown in figures 5.6.2.1 and table 5.6.2.1.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe remote UE > Information elements coding
+Content: NOTE: The field is placed immediately after the last present preceding field.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe usage information reporting > General
+Content: The UE policies for 5G ProSe usage information reporting are coded as shown in figure 5.7.2.1 and table 5.7.2.1.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe UE-to-UE relay UE > General
+Content: The UE policies for 5G ProSe UE-to-UE relay UE are coded as shown in figures 5.8.2.1 and table 5.8.2.1.
+Title Path: Encoding of UE policies for 5G ProSe > Encoding of UE policies for 5G ProSe end UE > General
+Content: The UE policies for 5G ProSe end UE are coded as shown in figures 5.9.2.1 and table 5.9.2.1.

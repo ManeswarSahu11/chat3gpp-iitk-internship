@@ -1,0 +1,84 @@
+Title Path: Scope
+Content: The present document specifies the UTRAN Network Resource Model (NRM) that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks. The present document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the following definitions apply. For definitions and not found here, please refer to 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 28.622 and 3GPP TS 32.600 . Antenna: Within the present document an Antenna is the set of radiating elements involved in the transmission and reception of Radio Frequency energy to support the Uu interface of a UTRAN cell. See Annex A for more detail. Association: See definition in TS 28.622 . Managed Element (ME): See definition in TS 28.622 . Managed Object (MO): See definition in TS 28.622 . Management Information Model (MIM): See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 . Node B: A logical node responsible for radio transmission/reception in one or more cells to/from the User Equipment. It terminates the Iub interface towards the RNC. TMA: See TS 25.466 . Tower Mounted Amplifier: See TS 25.466 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Core Network Distinguished Name (see 3GPP TS 32.300 ) Frequency Division Duplex Information Object Class Integration Reference Point Interface between RNC and Node B Mega-chips per second Managed Element Management Information Model Managed Object Network Resource Model Packet Switched Relative Distinguished Name (see 3GPP TS 32.300 ) Remote control of Electrical Tilting (RET) antenna Radio Network Controller Time Division Duplex Tower Mounted Amplifier Unified Modelling Language Universal Terrestrial Radio Access Universal Terrestrial Radio Access Network
+Title Path: Model > Class diagrams
+Content: 4.2.1 Relationships This clause depicts the set of classes (e.g. IOCs) that encapsulates information relevant for this IRP. This subclause provides the overview of the relationships of relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes. The following figures show the containment/naming hierarchy and the associations of the information object classes defined in the present document. They are split in several figures only for a readability purpose. [NOTE 1:]The listed cardinality numbers, in particular the use of cardinality number zero, do not represent transient states. The transient state is considered an inherent property of all IOC instances and therefore there is no need to represent them by individual IOC cardinality numbers. [NOTE 2:]The AntennaFunction instances (referenced by a role-attribute of IOC CellReferences inherited by UTRANGenericCell) is required when supporting RET. For a description and clarification of RET, please refer to Annex A. [NOTE 3:]The AntennaFunction Instances can be associated with a particular NodeBFunction instance (via IubLink and UTRANGenericCell). These AntennaFunction instances and NodeBFunction instance must be contained by the same ManagedElement instance. [NOTE 4:]The TmaFunction Instances can be associated with a particular NodeBFunction instance (via IubLink and UTRANGenericCell). These TmaFunction Instances and NodeBFunction instance must be contained by the same ManagedElement instance. [NOTE 5:]Please see TS 28.662 for the definitions of the five associations between a) UtranGenericCell and AntennaFunction b) between UtranGenericCell and SectorEquipmentFunction c) between UtranGenericCell and TmaFunction d) between SectorEquipmentFunction and AntennaFunction and e) between SectorEquipmentFunction and TmaFunction. [NOTE 6:]The listed cardinality numbers, in particular the use of cardinality number zero, do not represent transient states. The transient state is considered an inherent property of all IOC instances and therefore there is no need to represent them by individual IOC cardinality numbers. [NOTE 7:]The relation between GSMRelation and GSMCell is optional. It may be present if both the UTRANGenericCell and the GSMCell are managed by the same management node. [NOTE 8:]The UtranRelation and GsmRelation can be name-contained under IOCs defined in other NRMs. [NOTE 9:]ExternalUTRANGenericCell is contained under SubNetwork or ExternalRncFunction. [NOTE 10:]The listed cardinality numbers, in particular the use of cardinality number zero, do not represent transient states. The transient state is considered an inherent property of all IOC instances and therefore there is no need to represent them by individual IOC cardinality numbers. [NOTE 11:]Each instance of the VsDataContainer shall only be contained under one IOC. The VsDataContainer can be contained under IOCs defined in other NRMs. [NOTE 1:]The ATMChannelTerminationPoint is name-contained under IOCs defined in the Transport Network NRM. [NOTE 2:]The group of ATMChannelTerminationPoints associated with an IubLink (the relation AssociatedWith1) represent the RNC end of the ATM Virtual Channel Connections (transport connection) between an RNC and a NodeB. [NOTE 3:]An ATMChannelTerminationPoint can be associated with more than one IubLink for the case of AAL2 multiplexing/switching, i.e. to allow an ATM Channel at the RNC to be connected to multiple NodeBs. The VsDataContainer is only used for the Bulk CM IRP. Each IOC instance is identified with a Distinguished Name (DN) according to 3GPP TS 32.300 that expresses its containment hierarchy. As an example, the DN of an IOC instance representing a cell could have a format like: SubNetwork=Sweden, MeContext=MEC-Gbg-1,ManagedElement=RNC-Gbg-1, RncFunction=RF-1,UtranCell=Gbg-1. 4.2.2 Inheritance This clause depicts the inheritance relationships that exist between IOCs. Figure 4.2.2.1 shows the inheritance hierarchy for the UTRAN NRM. Figure 4.2.2.1: UTRAN NRM Inheritance Hierarchy 4.3 Class definitions 4.3.1 RNCFunction
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents RNC functionality. For more information about the RNC, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.2 NodeBFunction
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents Node B functionality. For more information about the Node B, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.3 IubLink
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents the logical link to a Node B as seen from the RNC. For more information about the RNC, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.4 UtranRelation
+Title Path: Model > Class diagrams > Definition
+Content: The UtranRelation IOC contains radio network related parameters for the relation to the UTRANGenericCell or ExternalUTRANGenericCell IOC. The UTRANGenericCell and the ExternalUTRANGenericCell may be an FDD mode cell, a lcr (low chip rate) 1.28 Mcps TDD mode cell or a hcr (high chip rate) 3.84 (7.68) Mcps TDD mode cell. NOTE: In handover relation terms, the cell containing the UTRAN Relation object is the source cell for the handover. The cell referred to in the UTRAN relation object is the target cell for the handover. This defines a one-way handover relation where the direction is from source cell to target cell.
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions. 4.3.5 ExternalRncFunction
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents an RNC function controlled by another IRPAgent. For more information about the RNC, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions. 4.3.6 UtranGenericCell
+Title Path: Model > Class diagrams > Definition
+Content: This abstract IOC represents the common properties of radio cells of different types (FDD, TDD) controlled by an RNC. For more information about radio cells, see 3GPP TS 23.002 . The IOC UtranCellFDD and UtranCellTDD (1,28 Mcps TDD mode cell or a 3.84 (7.68) Mcps TDD mode cell) inherit from that abstract IOC.
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC. In addition, the following set of notification, defined in 3GPP TS 32.662 , is also valid. 4.3.7 ExternalUTRANGenericCell
+Title Path: Model > Class diagrams > Definition
+Content: This abstract IOC represents the properties of a radio cell controlled by another IRPAgent. This IOC contains necessary attributes for inter-system and intra-system handover. It also contains a subset of the attributes of related IOCs controlled by another IRPAgent. The way to maintain consistency between the attribute values of these IOCs is outside the scope of the present document.
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions. 4.3.8 UtranCellFDD
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents a FDD radio cell controlled by an RNC. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.9 UtranCellTDD
+Title Path: Model > Class diagrams > Definition
+Content: This IOC is an abstract class representing the common properties of TDD high chip rate (hcr) and TDD low chip rate (lcr) radio cells controlled by an RNC. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.10 UtranCellTDDLcr
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents a TDD low chip rate (lcr) radio cell controlled by an RNC. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.11 UtranCellTDDHcr
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents a TDD high chip rate (hcr) radio cell controlled by an RNC. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.12 ExternalUtranCellFDD
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents a FDD radio cell controlled by another IRP agent. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions. 4.3.13 ExternalUtranCellTDD
+Title Path: Model > Class diagrams > Definition
+Content: This IOC is an abstract class representing the common properties of TDD high chip rate (hcr) and TDD low chip rate (lcr) radio cells controlled by another IRP agent. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions. 4.3.14 ExternalUtranCellTDDHcr
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents a TDD high chip rate (hcr) radio cell controlled by another IRPagent. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions. 4.3.15 ExternalUtranCellTDDLcr
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents a TDD low chip rate (lcr) radio cell controlled by another IRPAgent. For more information about radio cells, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions. 4.3.16 EP_IuCS
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents an end point of the Iu-CS interface. For more information Iu-CS interface, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.17 EP_IuPS
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents an end point of the Iu-PS interface. For more information Iu-PS interface, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions. 4.3.18 EP_Iur
+Title Path: Model > Class diagrams > Definition
+Content: This IOC represents an end point of the Iur interface. For more information Iur interface, see 3GPP TS 23.002 .
+Title Path: Model > Class diagrams > Notifications
+Content: The common configuration notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Attribute definitions
+Content: 4.4.1 Attribute properties The following table defines the attributes that are present in several Information Object Classes (IOCs) of the present document. 4.4.2 Constraints None.
+Title Path: Model > Common notifications
+Content: 4.5.1 Alarm notifications This subclause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification. 4.5.2 Configuration notifications This subclause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.

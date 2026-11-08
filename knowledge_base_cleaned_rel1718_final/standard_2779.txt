@@ -1,0 +1,6 @@
+Title Path: Scope
+Content: The present document specifies the standards allowed to implement layer 1 on the E1 interface. The specification of transmission delay requirements and O\&M requirements are not in the scope of the present document. In the following, 'layer 1' and 'physical layer' are assumed to be synonymous.
+Title Path: Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TS 38.411 apply.
+Title Path: Introduction
+Content: The E1 Layer 1 shall comply with the requirements of clauses 4 through 6 in TS 38.411 .

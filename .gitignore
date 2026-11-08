@@ -1,0 +1,29 @@
+# Local tools, environments, and credentials
+.local/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+
+# Generated experiments and local model artifacts
+outputs/
+logs/
+*.log
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+.cache/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

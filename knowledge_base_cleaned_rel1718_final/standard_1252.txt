@@ -1,0 +1,54 @@
+Title Path: Scope
+Content: The present document specifies the stage 3 protocol and data model for the Nmnpf Service Based Interface. It provides stage 3 protocol definitions and message flows, and specifies the API for each service offered by the MNPF. The 5G System stage 2 architecture and procedures are specified in 3GPP TS 23.501 and 3GPP TS 23.502 . The Technical Realization of the Service Based Architecture and the Principles and Guidelines for Services Definition are specified in 3GPP TS 29.500 and 3GPP TS 29.501 . Stage 2 requirements for the Nmnpf services are specified in 3GPP TS 23.540 .
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 . Nmnpf: Service-based interface exhibited by the MNPF server
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: symbol Explanation
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . MNPF Mobile Number Portability Function
+Title Path: Overview > Introduction
+Content: Within the 5GC, the MNPF offers services to the SMS-GMSC, NRF and SCP via the Nmnpf service based interface (see 3GPP TS 23.501 , 3GPP TS 23.502 , and 3GPP TS 23.540 ). Figure 4.1-1 provides the reference model (in service based interface representation and in reference point representation), with focus on the MNPF. The functionalities supported by the MNPF are listed in clause 6.7 of 3GPP TS 23.540 .
+Title Path: Services offered by the MNPF > Introduction
+Content: The MNPF offers the following services via the Nmnpf interface: - Nmnpf_NPStatus Service Table 5.1-1 summarizes the corresponding APIs defined for this specification.
+Title Path: Services offered by the MNPF > Nmnpf_NPStatus Service > Service Operations > Introduction
+Content: For the Nmnpf_NPStatus service the following service operations are defined: - Get The Nmnpf_NPStatus Service is used by Consumer NFs (SMS-GMSC, NRF, SCP) to retrieve the UE's subscription network by means of the Get service operation.
+Title Path: Services offered by the MNPF > Nmnpf_NPStatus Service > Service Operations > Get > General
+Content: This clause provides a general description of the Get service operation.
+Title Path: Services offered by the MNPF > Nmnpf_NPStatus Service > Service Operations > Get > MNPF Status information retrieval
+Content: Figure 5.2.2.2.2-1 shows a scenario where the NF service consumer (e.g. SMS-GMSC, NRF, SCP) sends a request to the MNPF to receive the UE's Subscription Network (see also clause 5.1.7.2, clause 5.1.7.3 and clause 5.1.7.4 of 3GPP TS 23.540 . The request contains the UE's identity (/\ gpsi\ ). The NF service consumer (e.g. SMS-GMSC, NRF, SCP) sends a GET request to the resource representing the UE's number portability status. On success, the MNPF responds with "200 OK" with the message body containing the UE's Number Portability Status Information. If there is no valid information for the UE, HTTP status code "404 Not Found" shall be returned including additional error information in the response body (in the "ProblemDetails" element). On failure, the appropriate HTTP status code indicating the error shall be returned and appropriate additional error information should be returned in the GET response body.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Introduction
+Content: The Nmnpf_NPStatus service shall use the Nmnpf_NPStatus API. The API URI of the Nmnpf_NPStatus API shall be: \ apiRoot\ / apiName / apiVersion The request URIs used in HTTP requests from the NF service consumer towards the NF service producer shall have the Resource URI structure defined in clause 4.4.1 of 3GPP TS 29.501 , i.e.: \ apiRoot\ / apiName / apiVersion / apiSpecificResourceUriPart with the following components: The \ apiRoot\ shall be set as described in 3GPP TS 29.501 . The apiName shall be "nmnpf-npstatus". The apiVersion shall be "v1". The apiSpecificResourceUriPart shall be set as described in clause 6.1.3.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Usage of HTTP > General
+Content: HTTP/2, IETF RFC 9113 , shall be used as specified in clause 5 of 3GPP TS 29.500 . HTTP/2 shall be transported as specified in clause 5.3 of 3GPP TS 29.500 . The OpenAPI specification of HTTP messages and content bodies for the Nmnpf_NPStatus API is contained in Annex A.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Usage of HTTP > HTTP standard headers > General
+Content: See clause 5.2.2 of 3GPP TS 29.500 for the usage of HTTP standard headers.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Usage of HTTP > HTTP standard headers > Content type
+Content: JSON, IETF RFC 8259 , shall be used as content type of the HTTP bodies specified in the present specification as specified in clause 5.4 of 3GPP TS 29.500 . The use of the JSON format shall be signalled by the content type "application/json". "Problem Details" JSON object shall be used to indicate additional details of the error in a HTTP response body and shall be signalled by the content type "application/problem+json", as defined in IETF RFC 9457 .
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Usage of HTTP > HTTP custom headers
+Content: The mandatory HTTP custom header fields specified in clause 5.2.3.2 of 3GPP TS 29.500 shall be supported, and the optional HTTP custom header fields specified in clause 5.2.3.3 of 3GPP TS 29.500 may be supported.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Resources > Overview
+Content: This clause describes the structure for the Resource URIs and the resources and methods used for the service. Figure 6.1.3.1-1 depicts the resource URIs structure for the Nmnpf_NPStatus API. Table 6.1.3.1-1 provides an overview of the resources and applicable HTTP methods.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Resources > Resource: NPstatus > Description
+Content: This resource represents the Number Portability status for a GPSI.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Resources > Resource: NPstatus > Resource Definition
+Content: Resource URI: \ apiRoot\ /nmnpf-npstatus/ apiVersion /\ gpsi\ This resource shall support the resource URI variables defined in table 6.1.3.2.2-1.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Resources > Resource: NPstatus > Resource Standard Methods
+Content: 6.1.3.2.3.1 GET This method shall support the URI query parameters specified in table 6.1.3.2.3.1-1. This method shall support the request data structures specified in table 6.1.3.2.3.1-2 and the response data structures and response codes specified in table 6.1.3.2.3.1-3.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Data Model > General
+Content: This clause specifies the application data model supported by the API. Table 6.1.6.1-1 specifies the data types defined for the Nmnpf_NPStatus service based interface protocol. Table 6.1.6.1-2 specifies data types re-used by the Nmnpf_NPStatus service based interface protocol from other specifications, including a reference to their respective specifications and when needed, a short description of their use within the Nmnpf_NPStatus service based interface.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Data Model > Structured data types > Introduction
+Content: This clause defines the structures to be used in resource representations.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Data Model > Simple data types and enumerations > Introduction
+Content: This clause defines simple data types and enumerations that can be referenced from data structures defined in the previous clauses.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Data Model > Simple data types and enumerations > Simple data types
+Content: The simple data types defined in table 6.1.6.3.2-1 shall be supported.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Error Handling > General
+Content: For the Nmnpf_NPStatus API, HTTP error responses shall be supported as specified in clause 4.8 of 3GPP TS 29.501 . Protocol errors and application errors specified in table 5.2.7.2-1 of 3GPP TS 29.500 shall be supported for an HTTP method if the corresponding HTTP status codes are specified as mandatory for that HTTP method in table 5.2.7.1-1 of 3GPP TS 29.500 . In addition, the requirements in the following clauses are applicable for the Nmnpf_NPStatus API.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Error Handling > Protocol Errors
+Content: Protocol errors handling shall be supported as specified in clause 5.2.7 of 3GPP TS 29.500 .
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Error Handling > Application Errors
+Content: The application errors defined for the Nmnpf_NPStatus service are listed in Table 6.1.7.3-1.
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Feature negotiation
+Content: The optional features in table 6.1.8-1 are defined for the Nmnpf_NPStatus API. They shall be negotiated using the extensibility mechanism defined in clause 6.6 of 3GPP TS 29.500 .
+Title Path: API Definitions > Nmnpf_NPStatus Service API > Security
+Content: As indicated in 3GPP TS 33.501 and 3GPP TS 29.500 , the access to the Nmnpf_NPStatus API may be authorized by means of the OAuth2 protocol (see IETF RFC 6749 ), based on local configuration, using the "Client Credentials" authorization grant, where the NRF (see 3GPP TS 29.510 ) plays the role of the authorization server. If OAuth2 is used, an NF Service Consumer, prior to consuming services offered by the Nmnpf_NPStatus API, shall obtain a "token" from the authorization server, by invoking the Access Token Request service, as described in 3GPP TS 29.510 , clause 5.4.2.2. NOTE: When multiple NRFs are deployed in a network, the NRF used as authorization server is the same NRF that the NF Service Consumer used for discovering the Nmnpf_NPStatus service. The Nmnpf_NPStatus API defines a single scope "nmnpf-npstatus" for the entire service, and it does not define any additional scopes at resource or operation level.

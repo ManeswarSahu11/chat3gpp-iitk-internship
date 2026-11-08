@@ -1,0 +1,40 @@
+Title Path: Scope
+Content: The present document specifies the GERAN Network Resource Model (NRM) that can be communicated between an IRPAgent and IRPManagers for telecommunication network management purposes, including management of converged networks. This document specifies the semantics and behaviour of class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 and 3GPP TS 32.600 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 , 3GPP TS 32.101 , 3GPP TS 32.102 and 3GPP TS 32.600 . Association: See definition in TS 28.622 . Managed Element (ME): See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . Distinguished Name (see 3GPP TS 32.300 ) Information Object Class Integration Reference Point Managed Element Neighbour cell Relation Relative Distinguished Name (see 3GPP TS 32.300 )
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes that encapsulate information relevant for this service. This clause provides the overview of all classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes. The figures below show the containment/naming hierarchy and the associations of the GERAN NRM. [NOTE 1:]The listed cardinality numbers represent transient as well as steady-state numbers, and reflect all managed object creation and deletion scenarios. [NOTE 2:]The External Function is used in the Core Network NRM. Each Managed Object is identified with a Distinguished Name (DN) according to 3GPP TS 32.300 that expresses its containment hierarchy. As an example, the DN of an IOC representing a cell could have a format like: SubNetwork =Sweden, MeContext =MEC-Gbg-1, ManagedElement =RNC-Gbg-1, Function= 1. [NOTE 1:]The listed cardinality numbers represent transient as well as steady-state numbers, and reflect all managed object creation and deletion scenarios. [NOTE 2:]Each instance of the VsDataContainer shall only be contained under one IOC. The VsDataContainer can be contained under IOCs defined in other NRMs. The VsDataContainer is only used for the Bulk CM IRP.
+Title Path: Model > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships that exist between IOCs. Figure 4.2.2-1 shows the inheritance hierarchy for the GERAN NRM.
+Title Path: Model > Class definitions > Function > Definition
+Content: This IOC represents functionality. For more information about the , see Ref 3GPP TS 23.002 .
+Title Path: Model > Class definitions > Function > Notifications
+Content: The common notifications defined in subclause 4.5.1 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > BTSSiteMgr > Definition
+Content: This IOC contains site specific information for a BTS site.
+Title Path: Model > Class definitions > BTSSiteMgr > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC In addition, the following set of notification, defined in 3GPP TS 32.662 , is also valid.
+Title Path: Model > Class definitions > Cell > Definition
+Content: This IOC represents the GSM radio cell. The applicability of instantiation of this class is depending on the ME type. It may only be instantiated under ME of type BSC.
+Title Path: Model > Class definitions > Cell > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > GSMRelation > Definition
+Content: This IOC contains a Neighbour Cell Relation (NCR) from a source cell to a target cell, where the target cell is a GSMCell or ExternalGSMCell instance. NOTE: In handover relation terms, the cell containing the GSMRelation object is the source cell for the handover. The cell referred to in the GSMRelation object is the target cell for the handover. This defines a one-way handover relation where the direction is from source cell to target cell. The source cell can be a GSMCell instance. This is the case for an Intra-GERAN NCR. The source cell can be a GenericCell instance. This is the case for Inter-RAT NCR from UTRAN to GERAN. See 3GPP TS 28.652 . The source cell can be an EUTRANGenericCell instance. This is the case for Inter-RAT NCR from E-UTRAN to GERAN. See 3GPP TS 28.658 .
+Title Path: Model > Class definitions > GSMRelation > Notifications
+Content: The common notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalGSMCell > Definition
+Content: This IOC represents a radio cell controlled by another IRPAgent. This IOC has necessary attributes for inter-system handover. It contains a subset of the attributes of related IOCs controlled by another IRPAgent. To maintain the consistency between the attribute values of these two IOCs is outside the scope of this document.
+Title Path: Model > Class definitions > ExternalGSMCell > Notifications
+Content: The common notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > External Function > Definition
+Content: This IOC represents a Function controlled by another IRPAgent. It contains a subset of the attributes of related IOCs controlled by another IRPAgent. To maintain the consistency between the attribute values of these two IOCs is outside the scope of the present document.
+Title Path: Model > Class definitions > External Function > Notifications
+Content: The common notifications defined in subclause 4.5.2 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Attribute definitions > Attribute properties
+Content: The following table defines the properties of attributes specified in the present document.
+Title Path: Model > Common notifications > Alarm notifications
+Content: This clause presents a list of notifications, defined in 3GPP TS 32.111-2 , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in 3GPP TS 32.302 , would capture the DN of an instance of an IOC defined in this IRP specification.
+Title Path: Model > Common notifications > Configuration notifications
+Content: This clause presents a list of notifications, defined in 3GPP TS 32.662 , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in 3GPP TS 32.302 , would capture the DN of an instance of an IOC defined in this IRP specification.

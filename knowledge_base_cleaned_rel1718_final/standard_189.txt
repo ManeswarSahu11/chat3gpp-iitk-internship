@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document specifies the Solution Set definitions for the IRP whose semantics are specified in the Entry Point IRP: Information Service (3GPP TS 32.362 ). This Solution Set definitions specification is related to 3GPP TS 32.362 V14.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions defined in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.361 , 3GPP TS 32.331 , 3GPP TS 32.150 and the following apply: IRP document version number string (or "IRPVersion"): See 3GPP TS 32.311 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Common Object Request Broker Architecture Distinguished Name Element Manager Entry Point Entry Point IRP Integration Reference Point Information Object Class Information Service Network Element Notification Log Network Manager Solution Set Web Service Description Language eXtensible Markup Language
+Title Path: Solution Set definitions
+Content: This specification defines the following 3GPP EP IRP Solution Set definitions: 3GPP EP IRP CORBA SS (Annex A) 3GPP EP IRP XML definitions (Annex B) 3GPP EP IRP SOAP Solution Set (Annex C)

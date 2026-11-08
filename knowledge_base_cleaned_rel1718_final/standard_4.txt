@@ -1,0 +1,10 @@
+Title Path: Scope
+Content: The present document specifies the standards allowed to implement Layer 1 on the Xw interface. The specification of transmission delay requirements and O\&M requirements are not in the scope of the present document. In the following ‘Layer 1’ and ‘Physical Layer’ are assumed to be synonymous.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the definitions given in TS 36.411 apply.
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the symbols given in TS 36.411 apply.
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TS 36.411 apply.
+Title Path: Introduction
+Content: The Xw Layer 1 shall comply with the requirements of clauses 4 through 6 in TS 36.411 .

@@ -1,0 +1,18 @@
+Title Path: Scope
+Content: The present document specifies the standards for user data transport protocols over the E-UTRAN M1 interface.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TR 21.905 . M1: interface between an eNB and an EPC for MBMS data delivery, providing an interconnection point between the EUTRAN and the EPC. M1 is a user plane interface between E-UTRAN and EPC. It is also considered as a reference point.
+Title Path: Definitions, symbols and abbreviations > Symbols
+Content: For the purposes of the present document, the following symbols apply: Symbol format (EW) symbol Explanation
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 . Differentiated Service E-UTRAN Node B Evolved Packet Core [E-UTRA]Evolved UTRA [E-UTRAN]Evolved UTRAN GPRS Tunnelling Protocol Internet Protocol Multimedia Broadcast Multicast Service Transmission Control Protocol Tunnel Endpoint Identifier User Datagram Protocol
+Title Path: Data Link Layer
+Content: The support of any suitable data link Layer technique - like Ethernet, etc - techniques shall not be prevented.
+Title Path: M1 interface user plane protocol > General
+Content: The transport layer for MBMS data streams over M1 is an IP based Transport. The following figure shows the transport protocol stacks over M1. The GTP-U (TS 29.281 ) protocol over UDP over IP shall be supported as the transport for MBMS data streams on the M1 interface. The data link layer is as specified in clause 4. On IP multicast mode, the transport bearer is identified by the GTP-U TEID (TS 29.281 ) and the IP multicast address (source TEID, IP address of multicast source, IP multicast address).
+Title Path: M1 interface user plane protocol > GTP-U
+Content: The GTP-U (TS 29.281 ) protocol shall be used over the M1 interface toward the EPC.
+Title Path: M1 interface user plane protocol > UDP/IP
+Content: The path protocol used shall be UDP (IETF RFC 768 ). The UDP port number for GTP-U shall be as defined in TS 29.281 . eNB and EPC shall support fragmentation and assembly of GTP packets at the IP layer. The eNB and EPC shall support IPv6 (IETF RFC 2460 ) and/or IPv4 (IETF RFC 791 ). IP multicast (IETF RFC 3376 , IETF RFC3810 ) shall be supported for point-to-multipoint delivery of MBMS data streams for multi-cell transmission. The packet processing function in the EPC shall send MBMS data of a given MBMS bearer to the TNL IP multicast address associated to that particular MBMS bearer.
+Title Path: M1 interface user plane protocol > Diffserv code point marking
+Content: IP Differentiated Services code point marking (IETF RFC 2474 ) shall be supported. The mapping between traffic categories and Diffserv code points shall be configurable by O\&M based on QoS Class Identifier (QCI) Characteristics and other E-UTRAN traffic parameters. Traffic categories are implementation-specific and may be determined from the application parameters.

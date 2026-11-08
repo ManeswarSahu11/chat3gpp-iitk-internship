@@ -1,0 +1,126 @@
+Title Path: Scope
+Content: The present document specifies the E-UTRAN network resource information that can be communicated between an IRPAgent and an IRPManager for telecommunication network management purposes, including management of converged networks . This document specifies the semantics and behaviour of information object class attributes and relations visible across the reference point in a protocol and technology neutral way. It does not define their syntax and encoding. The E-UTRAN NRM IRP comprises a set of specifications defining Requirements, a protocol neutral Information Service and one or more Solution Set(s). The present document specifies the protocol neutral E-UTRAN NRM IRP: Information Service (IS). It reuses relevant parts of the Generic NRM IRP: IS in 3GPP TS 28.622 , either by direct reuse or sub-classing, and in addition to that defines E-UTRAN specific Information Object Classes. In order to access the information defined by this NRM, an Interface IRP such as the "Basic CM IRP" is needed (3GPP TS 32.602 ). However, which Interface IRP is applicable is outside the scope of the present document. The present document also specifies the ng-eNB network resource information that can be communicated among NG-RAN management system, including management of MR-DC operations which ng-eNB is involved in.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TS 32.150 , TS 32.101 , TS 32.102 and TS 21.905 and the following apply. Association: See definition in TS 28.622 . Network Resource Model (NRM): See definition in TS 28.622 . eNodeB: A logical node responsible for radio transmission/reception in one or more cells to/from the User Equipment. It terminates the S1 interface towards the EPC.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in TS 32.150 , TS 32.101 , TS 32.102 and TS 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TS 28.657 , TS 32.150 , TS 32.101 , TS 32.102 and TS 21.905 , in that order. Donor eNodeB Distinguished Name (see 3GPP TS 32.300 ) [E-UTRA]Evolved Universal Terrestrial Radio Access [E-UTRAN]Evolved Universal Terrestrial Radio Access Network Multimedia Broadcast multicast service Single Frequency Network Neighbour Cell Relation Performance Management Relative Distinguished Name (see 3GPP TS 32.300 ) Relay Node
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes (e.g. IOCs ) that encapsulates the information relevant for this IRP. This clause provides the overview of the relationships of relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes. NOTE A: The above NRM fragment uses SubNetwork to hold both NR and LTE external entities and frequencies. NOTE B: The above NRM fragment uses NRNetwork to hold NR external entities and frequency and using EUtraNetwork to hold LTE external entities and frequency. The NRNetwork and EUtraNetwork are subclasses of SubNetwork (defined in TS 28.622 ) with no additional attributes. The reason using NRNetwork and EUtraNetwork is for a clean separation of NR external entities and frequency and LTE external entities and frequency. [NOTE 1:] If an instance of the ServesRN association is present, then a corresponding instance of ServedByEGC must be present. In this case, the ENBFunction and RNFunction instances are under the management scope of the same IRPAgent. If an instance of the ServesExtRN association is present, then a corresponding instance of ServedByExtEGC must be present. In this case, the ENBFunction and RNFunction instances are under the management scope of two different IRPAgents. [NOTE 2:]The modelling of the DeNB capability as a separate IOC or as attributes of ENBFunction is FFS NOTE 1: This is E-UTRAN NRM containment/relationship Figure form view of MBMS when MCE and ENB belong to one Network Element. NOTE 2: This is E-UTRAN NRM containment/relationship Figure form view of MBMS when MCE and ENB belong to different Network Elements. Figure 4.2.1-6: SON related Attributes NRM IOCs (Containment Relationship) Figure 4.2.1-7: Non-collocated LWA NRM Figure 4.2.1-8: WLAN Mobility Set NRM for LWA and LWIP
+Title Path: Model > Class definitions > ENBFunction > Definition
+Content: This IOC represents eNB functionality defined in TS 36.300 or ng-eNB defined in TS 38.300 . For more information about the eNB, see 3GPP TS 23.002 . For more information about the ng-eNB, see 3GPP TS 38.300 .
+Title Path: Model > Class definitions > ENBFunction > Attribute constraints
+Content: NOTE 1: The above mentioned SON or MDT related conditions do not apply to ng-eNB.
+Title Path: Model > Class definitions > ENBFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalENBFunction > Definition
+Content: This IOC represents an external eNB functionality. For more information about the eNB, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > ExternalENBFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > EUtranGenericCell > Definition
+Content: This abstract IOC represents the common properties of an E-UTRAN generic cell provided by eNB function or an NG-RAN generic cell provided by ng-eNB function. For more information about E-UTRAN cells, see 3GPP TS 23.401 . For more information about NG-RAN cells, see 3GPP TS 38.300 .
+Title Path: Model > Class definitions > EUtranGenericCell > Attributes
+Content: Note 1: No state propagation is implied. Note 2: The attribute value change is conveyed by the notifyStateChange notification. [Note 3:]For NB-IoT, as indicated in the relevant subclauses in TS 36.300 , a number of E-UTRA protocol functions supported by all UEs are not used for NB-IoT and need not be supported by eNBs and UEs only using NB-IoT. The attributes cellLocalId, tac, pci, maximumTransmissionPower are Mandatory for NB-IoT cell, Whether other attributes are needed for NB-IoT cell are out of scope of this document. [Note 4:]The attribute PCI is writable when the NM-Centralized PCI assignment (see TS 32.500 clause 6.1.6) is supported. [Note 5:]The attribute maximumTransmissionPower iswritable when IOC SectorEquipmentFunction is not used.
+Title Path: Model > Class definitions > EUtranGenericCell > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC. In addition, the following set of notification, defined in 3GPP TS 32.662 , is also valid. .
+Title Path: Model > Class definitions > ExternalEUtranGenericCell > Definition
+Content: This abstract IOC represents the properties of an E-UTRAN generic cell controlled by another IRPAgent. This IOC contains necessary attributes for inter-system and intra-system handover. It also contains a subset of the attributes of related IOCs controlled by another IRPAgent. The way to maintain consistency between the attribute values of these IOCs is outside the scope of the present document.
+Title Path: Model > Class definitions > ExternalEUtranGenericCell > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > EUtranCellFDD > Definition
+Content: This IOC represents the properties of E-UTRAN FDD cell provided by eNB or NG-RAN FDD cell provided by ng-eNB..
+Title Path: Model > Class definitions > EUtranCellFDD > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalEUtranCellFDD > Definition
+Content: This IOC represents the common properties of external E-UTRAN FDD cell provided by eNB or NG-RAN FDD cell provided by ng-eNB.
+Title Path: Model > Class definitions > ExternalEUtranCellFDD > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > EUtranCellTDD > Definition
+Content: This IOC represents the properties of E-UTRAN cell TDD provided by eNB or NG-RAN TDD cell provided by ng-eNB.
+Title Path: Model > Class definitions > EUtranCellTDD > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalEUtranCellTDD > Definition
+Content: This IOC represents the common properties of external E-UTRAN cell TDD provided by eNB or NG-RAN TDD cell provided by ng-eNB.
+Title Path: Model > Class definitions > ExternalEUtranCellTDD > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > EUtranRelation > Definition
+Content: This IOC represents a NCR from a source cell to a target cell, where the target cell is a EUtranGenericCell or ExternalEUtranGenericCell instance. The source cell can be an EUtranGenericCell instance. This is the case for an Intra-E-UTRAN NCR. The source cell can be a UtranGenericCell instance. This is the case for Inter-RAT NCR from UTRAN to E-UTRAN. See 3GPP TS 28.652 . The source cell can be a GsmCell instance. This is the case for Inter-RAT NCR from GERAN to E-UTRAN. See 3GPP TS 32.652 . NCRs are unidirectional.
+Title Path: Model > Class definitions > EUtranRelation > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_ENB_ENB > Definition
+Content: This IOC represents the link between two ENBFunction.
+Title Path: Model > Class definitions > Link_ENB_ENB > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Cdma2000Relation > Definition
+Content: This IOC represents a NCR from one EUtranGenericCell to a CDMA2000 sector. NCRs are directional. See 3GPP2 TS S.S0028
+Title Path: Model > Class definitions > Cdma2000Relation > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MCEFunction > Definition
+Content: This IOC represents MCE functionality. For more information about the MCE, see 3GPP TS 36.300 .
+Title Path: Model > Class definitions > MCEFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MBSFNArea > Definition
+Content: This IOC represents MBSFN Area. For more information about MBSFN Area, see 3GPP TS 36.300 .
+Title Path: Model > Class definitions > Link_MCE_ENB > Definition
+Content: This IOC models the M2 reference point as defined in TS 36.300 .
+Title Path: Model > Class definitions > Link_MCE_ENB > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_MCE_MME > Definition
+Content: This IOC models the M3 reference point as defined in TS 36.300 .
+Title Path: Model > Class definitions > Link_MCE_MME > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > RNFunction > Definition
+Content: This IOC represents Relay Node (RN) functionality. For more information about RN, see 3GPP TS 36.300 .
+Title Path: Model > Class definitions > RNFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ExternalRNFunction > Definition
+Content: This IOC represents the properties of a Relay Node (RN) controlled by another IRPAgent. For more information about RN, see 3GPP TS 36.300 .
+Title Path: Model > Class definitions > ExternalRNFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > DeNBCapability > Definition
+Content: This IOC represents the capability for an eNodeB to act as a Donor eNodeB (DeNB) functionality. For more information about the DeNB, see 3GPP TS 36.300 .
+Title Path: Model > Class definitions > DeNBCapability > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CellOutageCompensationInformation > Definition
+Content: This IOC represents information relevant in case of a Cell Outage Compensation taking place.
+Title Path: Model > Class definitions > CellOutageCompensationInformation > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, with the addition that notifyAttributeValueChange shall be supported (Support Qualifier M).
+Title Path: Model > Class definitions > QciDscpMapping > Definition
+Content: This IOC represents a set of mapping between QCI and DSCP.
+Title Path: Model > Class definitions > EUtranCellNMCentralizedSON > Definition
+Content: This abstract IOC represents the properties of an E-UTRAN generic cell which relate to SON functions. Its purpose is to enable configuration and tuning of the cell behaviour by the operator for SON functions which are not (yet) implemented in the eNodeB. NMS level SON should consider when configuring and tuning the cell the correlation of different attributes to optimise the eNodeB and network performance. For more information about cells, see 3GPP TS 23.401 .
+Title Path: Model > Class definitions > EUtranCellNMCentralizedSON > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > WTFunction > Definition
+Content: This IOC represents WT functionality defined in TS 36.300 .
+Title Path: Model > Class definitions > WTFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > EP_Xw > Definition
+Content: This IOC represents the end point of Xw reference point defined in TS 36.300 .
+Title Path: Model > Class definitions > EP_Xw > Attributes
+Content: No additional attributes to the ones inherited from the IOC EP_RP defined in TS 28.622 .
+Title Path: Model > Class definitions > EP_Xw > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > WLANMobilitySet > Definition
+Content: This IOC represents the managed WLAN mobility set for LWA and LWIP. For more information about the WLAN mobility set, see 3GPP TS 36.300 .
+Title Path: Model > Class definitions > WLANMobilitySet > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MemberWLAN datatype > Definition
+Content: This datatype represents the information about a member WLAN of a WLAN mobility set.
+Title Path: Model > Class definitions > MemberWLAN datatype > Notifications
+Content: The subclause 4.5 of the IOC using this dataType as one of its attributes, shall be applicable.
+Title Path: Model > Class definitions > PLMNId dataType > Definition
+Content: This dataType represents the information of a PLMN identification.
+Title Path: Model > Class definitions > PLMNId dataType > Notifications
+Content: The subclause 4.5 of the IOC using this dataType as one of its attributes, shall be applicable.
+Title Path: Model > Class definitions > EUtranFreqRelation > Definition
+Content: This IOC, together with the target EUtranFrequency, represents the frequency properties applicable to the referencing cell relation.
+Title Path: Model > Class definitions > EUtranFreqRelation > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > EUtranFrequency > Definition
+Content: This IOC represents certain E-UTRAN frequency properties.
+Title Path: Model > Class definitions > EUtranFrequency > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Common notifications > Alarm notifications
+Content: This subclause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.
+Title Path: Model > Common notifications > Configuration notifications
+Content: This subclause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.

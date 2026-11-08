@@ -1,0 +1,60 @@
+Title Path: Scope
+Content: The present document gives the stage 2 description of the Multicall supplementary service.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TS 22.135 and the following apply. Speech Call: speech call means one of TS11 (Telephony), TS12 (Emergency call), TS61 (Alternate speech and facsimile group 3).
+Title Path: Definitions and abbreviations > Abbreviations
+Content: Abbreviations used in the present document are listed in TR 21.905.
+Title Path: Descriptions > Handling of Multicall > Registration
+Content: The information flow for registration is shown in figure 1. The registration process is shown in figure 2.
+Title Path: Descriptions > Handling of Multicall > Activation
+Content: The service provider shall provide an initial value for N _User when activating the service. No special signalling procedures apply.
+Title Path: Descriptions > Handling of Multicall > Interrogation
+Content: The information flow for interrogation is shown in figure 3. The interrogation process is shown in figure 4.
+Title Path: Descriptions > Call related procedures
+Content: The procedures for basic call handling are specified in 3GPP TS 23.018. These shall also be used for Multicall.
+Title Path: Descriptions > Call related procedures > MO call
+Content: Figure 5 shows the flow of information between network elements for an MO call:
+Title Path: Descriptions > Call related procedures > MT call
+Content: Figure 6 and Figure 7 show the flow of information between network elements for an MT call: Case 1: When the MS requests a new bearer in call confirmed. (Figure 6). Case 2: When the MS requests a new bearer in Connect. (Figure 7).
+Title Path: Descriptions > Messages and their contents
+Content: This clause contains the detailed description of the information flows used by Multicall. Each Information Element, IE, is marked as (M) Mandatory, (C) Conditional or (O) Optional. A mandatory information element shall always be present. A conditional information shall be present if certain conditions are fulfilled; if those conditions are not fulfilled it shall be absent. An optional information element may be present or absent, at the discretion of the application at the sending entity. This categorisation is a functional classification, i.e., stage 2 information and not a stage 3 classification to be used for the protocol. The stage 2 and stage 3 message and information element names are not necessarily identical.
+Title Path: Descriptions > Messages and their contents > Messages between MS and MSC
+Content: Table 1 indicates messages between the MS and the MSC for mobile originating calls and mobile terminating calls. (Refer to TS 24.008). The MS shall indicate the maximum number of bearers supported by the MS in the CC capabilities IE. The MS shall also indicate the maximum number of simultaneous speech bearers supported by the MS for future compatibility. For Release 99, the maximum number of simultaneous speech bearers is 1. If the MS does not indicate the maximum number of bearers the network shall assume it does not support Multicall. The network supporting Multicall shall indicate the capability in the NW CC capabilities IE. If the NW CC capabilities IE is not sent from the network, the MS supporting Multicall shall assume that the network doesn't support Multicall. If an MS initiating an emergency call is located in a network that does not support Multicall, the MS shall release one or more existing call to ensure that the emergency call can be established.
+Title Path: Descriptions > Messages and their contents > Messages on B interface (MSC-VLR) > Search For MS ack
+Content: This message is specified in 3GPP TS 23.018.
+Title Path: Network entity functions
+Content: The following SDL diagrams describe the procedures within individual network entities for handling Multicall.
+Title Path: Network entity functions > General
+Content: The MSC shall check whether the maximum number of bearers has been reached for both MO and MT call. In counting of the current number of bearers for the target subscriber, the following situations are counted as an active bearer. Call in set-up. Established call. Call on hold. Call on hold and established call on the same bearer. Call on hold and MO call in Setup on the same bearer.
+Title Path: Network entity functions > MO call > Functional requirements of serving MSC
+Content: Figure 8: Procedure Check_OG_Multicall_MSC. This procedure is called when the MSC receives a Setup message from the MS. After handover procedure completion to another MSC, N _SN as defined for the target MSC shall overwrite the previous N _SN.
+Title Path: Network entity functions > MO call > Functional requirements of VLR
+Content: Figure 9: Procedure Check_OG_Multicall_VLR. This procedure is called when the VLR receives a Send Info For Outgoing Call message from the MSC.
+Title Path: Network entity functions > MT call > Functional requirements of serving MSC
+Content: Figure 10: Procedure Check_MT_Multicall_MSC. This procedure is called when the MSC receives a Page MS message or a Search For MS message from the VLR. The maximum number of bearers (N ) indicates the minimum value of N _User, N _SN and N _UE. After handover to another MSC is completed, N _SN, as defined for the target MSC, shall overwrite the previous N _SN. "Call in Setup" means that the MS is engaged in at least one call that has not reached the established phase (called party answer). The test "Call waiting" takes the "Yes" exit if a waiting call has been offered to the subscriber but the outcome of offering the call has not been determined. Figure 11: Procedure Establish_Terminating_TCH_Multicall. This procedure is called when the MSC receives a Call Confirmed or a Connect message from the MS. If the MS indicates "No bearer" as the value of the Stream Identifier in the Call Confirmed message the test "Bearer allocation pending" takes the "Yes" exit. Figure 12: Procedure MC_TCH_Check This procedure is called when the MSC needs to establish a terminating TCH.
+Title Path: Network entity functions > MT call > Functional requirements of VLR
+Content: Figure 13: Procedure Get_CW_Subscription_Info_Multicall_VLR. This procedure is called when the VLR receives a Page MS negative response message or a Search For MS negative response message with the negative response IE set to "Busy (More Calls Possible)".
+Title Path: Interaction with telecommunication services > Speech
+Content: The Multicall supplementary service does not provide multiple traffic channels for speech calls. Refer to Procedure Check_OG_Multicall_MSC and Procedure Check_MT_Multicall_MSC. If N _UE is greater than N _SN, the mobile station may initiate an Emergency call even if N _SN has been reached. When the network receives an Emergency call Setup message from the mobile station: if N _SN has not been reached, the network shall accept it regardless of N _SB or N _User; if N _SN has been reached, the network shall reject the emergency call setup attempt. The MS shall release one or more existing calls and it shall re-initiate an Emergency call. The MS shall ensure that an emergency call Setup request is acceptable to a serving network which does not support multicall, if necessary by releasing one or more existing calls.
+Title Path: Interaction with telecommunication services > Facsimile service
+Content: The Multicall supplementary service provides multiple traffic channels for facsimile service except for alternate speech and facsimile group 3.
+Title Path: Interaction with telecommunication services > Data circuit asynchronous
+Content: The Multicall supplementary service provides multiple traffic channels for data circuit asynchronous.
+Title Path: Interaction with telecommunication services > Data circuit synchronous
+Content: The Multicall supplementary service provides multiple traffic channels for data circuit synchronous.
+Title Path: Interaction with other supplementary services > Call forward on busy (CFB)
+Content: The condition NDUB occurs in accordance with the definition for multicall. (See TS 22.135).
+Title Path: Interaction with other supplementary services > Call Waiting (CW)
+Content: Call Waiting SS will be invoked under the conditions described in TS 22.135.
+Title Path: Interaction with other supplementary services > Completion of calls to busy subscriber (CCBS)
+Content: The NDUB condition occurs in accordance with the definition for multicall. (See 3GPP TS 22.135). A subscriber provisioned with multicall is in the idle state when the subscriber has no ongoing (active or held) calls. CCBS requests in the destination B CCBS queue shall be processed if destination B is idle.
+Title Path: Information stored in the HLR
+Content: The HLR shall store: The state of Multicall (which shall be one of the valid states listed above) per subscriber. The subscription option "maximum number of bearers N _SB" per subscriber: This subscription option takes a value in the range (2 7). The subscription option "maximum number of bearers N _User" per subscriber: This subscription option takes a value in the range (1 N _SB).
+Title Path: State transition model
+Content: Figure 14 shows the successful cases of transition between the applicable logical states of Multicall. The state changes are caused by actions of the service provider. Note that error cases are not shown in the diagram, as they normally do not cause a state change. Additionally, some successful requests may not cause a state change. Hence they are not shown in the diagram.
+Title Path: Transfer of information from HLR to VLR
+Content: If the provisioning state for Multicall is "Provisioned" then when the subscriber registers on a VLR the HLR shall send that VLR information about the logical state of Multicall, N _User and N _SB. If the logical state of Multicall, the subscription options N _SB or N _User are changed while a subscriber is registered on a VLR then the HLR shall inform the VLR of the new logical state of Multicall, the new N _User or the new N _SB.
+Title Path: Information stored in VLR
+Content: The VLR shall store the service state information, N _SB and N _User as received from the HLR.
+Title Path: Handover
+Content: In the case that the network supports Multicall, it shall be possible to handover multiple bearers (See TS 23.009).

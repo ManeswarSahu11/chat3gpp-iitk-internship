@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document contains the Solution Sets for the IRP whose semantics is specified in Notification IRP: Information Service (TS 32.302 ). These Solution Set specifications are related to 3GPP TS 32.302 V14.0.X .
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.301 , 3GPP TS 32.302 , and 3GPP TS 32.331 apply. IRP document version number string (or "IRPVersion"): See 3GPP TS 32.311
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: Configuration Management Common Object Request Broker Architecture Event channel (OMG) Element Manager Interface Definition Language (OMG) Interoperable Object Reference Integration Reference Point Information Service Managed Object Class Managed Object Instance Notification Channel (OMG) Network Element Notification Log Network Resource Model Name and Value pair Object Management Group Quality of Service Solution Set Telecommunications Management Network Unified Modelling Language Web Service Description Language [WS-I ]Web Services Interoperability Organization eXtensible Markup Language
+Title Path: Solution Set Definitions
+Content: This specification defines the following 3GPP Notification IRP Solution Set Definitions:

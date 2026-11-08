@@ -1,0 +1,8 @@
+Title Path: Scope
+Content: The present document identifies the 3GPP system specifications for Release 16. The specifications and reports of this Release have a major version number 16 (i.e. 16.x.y). The listed Specifications are required to build a system based on UTRAN radio technology.
+Title Path: Abbreviations
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 21.905 apply.
+Title Path: General
+Content: The numbering scheme for specifications is described in 3GPP TR 21.900 .
+Title Path: Specifications and Reports
+Content: The list of Technical Specifications and Technical Reports can be found at [NOTE 1:]The padlock icon on the right of each row indicates whether or not the documents are intended for adoption by the partner Standards Development Organizations as their own publications. Those with a padlock icon are internal working documents of the 3GPP TSGs. [NOTE 2:]Some of the algorithm specifications in the 35. series are available only under licence. [NOTE 3:]"Type" indicates Technical Specification (TS) or Technical Report (TR).

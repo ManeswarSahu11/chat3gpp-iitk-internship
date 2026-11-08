@@ -1,0 +1,168 @@
+Title Path: Scope
+Content: The present document is part of an Integration Reference Point (IRP) named "Core Network NRM IRP", through which an 'IRPAgent' (typically an Element Manager or Network Element) can communicate Configuration Management information to one or several 'IRPManagers' (typically Network Managers) concerning CN resources. The present document specifies the protocol neutral Core Network NRM IRP; Information Service. It reuses relevant parts of the generic NRM in 3GPP TS 28.622 , either by direct reuse or sub-classing, and in addition to that defines CN specific Information Object Classes. Finally, in order to access the information defined by this NRM, an Interface IRP is needed, such as the Basic CM IRP 3GPP TS 32.602 . However, which Interface IRP that is applicable is outside the scope of the present document.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 32.101 , 3GPP TS 32.102 , 3GPP TS 32.600 and the following apply: Association: See definition in TS 28.622 . Managed Element (ME): See definition in TS 28.622 . Managed Object (MO): See definition in TS 28.622 . Management Information Model (MIM): also referred to as NRM - see the definition below. Network Resource Model (NRM): See definition in TS 28.622 . Node B: a logical node responsible for radio transmission/reception in one or more cells to/from the User Equipment It terminates the Iub interface towards the RNC.
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: AUthentication Centre Application Server Border Gateway Breakout Gateway Control Function Billing System Cell Broadcast Center Charging Gateway Functionality Core Network Distinguished Name (see 3GPP TS 32.300 ) Equipment Identity Register Element Manager Fault Management Flexible Number Register Guidelines for the Definition of Managed Objects Gateway GPRS Support Node Gateway Mobile Location Center [GMSC Server]Gateway MSC Server Gateway MSC General Packet Radio System [HNB GW]Home NodeB Gateway Interrogating Call Session Control Function Interface Definition Language IP Multimedia Subsystem Information Object Class Integration Reference Point International Standards Organization InterWorking Function Managed Element Media Gateway Control Function Media GateWay Management Information Model [MNP-SRF]Mobile Number Portability-Signalling Relay Function Managed Object Managed Object Instance Multimedia Resource Function Controller Call Session Control Function Processor [MSC Server]Mobile Services Switching Centre Server Mobile Services Switching Centre Network Element Network Manager Number Portability DataBase Network Resource Network Resource Model Open Systems Interconnection Proxy Call Session Control Function Performance Management Relative Distinguished Name (see 3GPP TS 32.300 ) Service Control Function Serving Call Session Control Function Serving GPRS Support Node Signalling GateWay Subscription Locator Function Serving Mobile Location Center Short Message Service [SMS-GMSC]SMS Gateway MSC [SMS-IWMSC]SMS InterWorking MSC Specialized Resource Function Service Switching Function Telecommunications Management Network Unified Modelling Language Universal Mobile Telecommunications System Universal Terrestrial Radio Access Network Visitor Location Register
+Title Path: Model > Class diagram > Relationships
+Content: This clause depicts the set of classes (e.g. IOCs ) that encapsulates the information relevant for this IRP. This clause provides an overview of the relationships between relevant classes in UML. Subsequent clauses provide more detailed specification of various aspects of these classes. NOTE: The association between MscServerFunction and CsMgwFunction is optional and is only mandatory when they belong to different ManagedElements. [] [NOTE 1:]The association between MscServerFunction and CsMgwFunction is optional and is only mandatory when they belong to different ManagedElements. [NOTE 2:]The association between MscServerFunction and GsmCell, and SgsnFunction and GsmCell are optional. It may be valid if both the MscServerFunction and GsmCell, or SgsnFunction and GsmCell are managed by the same management node. Each IOC is identified with a Distinguished Name (DN) according to 3GPP TS 32.300 that expresses its containment hierarchy. As an example, the DN of an IOC representing a cell could have a format like: SubNetwork=Sweden, MeContext =MEC-Gbg-1, ManagedElement =MSC-Gbg-1, MscServerFunction=MSC-1.
+Title Path: Model > Class diagram > Inheritance
+Content: This clause depicts the inheritance relationships that exist between IOCs. The figures below show the inheritance hierarchy for the CN NRM.
+Title Path: Model > Class definitions > MscServerFunction > Definitions
+Content: This IOC represents MSCserver functionality. For more information about the MSC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > MscServerFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > HlrFunction > Definitions
+Content: This IOC represents HLR functionality. For more information about the HLR, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > HlrFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > VlrFunction > Definitions
+Content: This IOC represents VLR functionality. For more information about the VLR, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > VlrFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > AucFunction > Definitions
+Content: This IOC represents AUC functionality. For more information about the AUC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > AucFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > EirFunction > Definitions
+Content: This IOC represents EIR functionality. For more information about the EIR, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > EirFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SmsIwmscFunction > Definitions
+Content: This IOC represents SMS-IWMSC functionality. For more information about the SMS-IWMSC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SmsIwmscFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SmsGmscFunction > Definitions
+Content: This IOC represents SMS-GMSC functionality. For more information about the SMS-GMSC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SmsGmscFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > GmscFunction > Definitions
+Content: This IOC represents GMSC functionality. For more information about the GMSC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > GmscFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SgsnFunction > Definitions
+Content: This IOC represents SGSN functionality. For more information about the SGSN, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SgsnFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC. In addition, the following set of notification, defined in 3GPP TS 32.662 , is also valid.
+Title Path: Model > Class definitions > GgsnFunction > Definitions
+Content: This IOC represents GGSN functionality. For more information about the GGSN, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > GgsnFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC. In addition, the following set of notification, defined in 3GPP TS 32.662 , is also valid.
+Title Path: Model > Class definitions > BgFunction > Definitions
+Content: This IOC represents BG functionality. For more information about the BG, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > BgFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SmlcFunction > Definitions
+Content: This IOC represents SMLC functionality. For more information about the SMLC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SmlcFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > GmlcFunction > Definitions
+Content: This IOC represents GMLC functionality. For more information about the GMLC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > GmlcFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ScfFunction > Definitions
+Content: This IOC represents SCF functionality (also referred to as gsmSCF). For more information about the SCF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > ScfFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SrfFunction > Definitions
+Content: This IOC represents SRF functionality (also referred to as gsmSRF). For more information about the SRF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SrfFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CbcFunction > Definitions
+Content: This IOC represents CBC functionality. For more information about the CBC, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > CbcFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CgfFunction > Definitions
+Content: This IOC represents CGF functionality. For more information about the CGF, see 3GPP TS 23.060 .
+Title Path: Model > Class definitions > CgfFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > GmscServerFunction > Definitions
+Content: This IOC represents GMSCServer functionality. For more information about GMSCServer, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > GmscServerFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > IwfFunction > Definitions
+Content: This IOC represents IWF functionality. For more information about IWF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > IwfFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MnpSrfFunction > Definitions
+Content: This IOC represents MNP-SRF functionality (also known as FNR). For more information about MNP-SRF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > MnpSrfFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > NpdbFunction > Definitions
+Content: This IOC represents NPDB functionality. For more information about NPDB, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > NpdbFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SgwFunction > Definitions
+Content: This IOC represents SGW functionality. For more information about SGW, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SgwFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SsfFunction > Definitions
+Content: This IOC represents SSF functionality. For more information about SSF, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > SsfFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > BsFunction > Definitions
+Content: This IOC represents BS functionality. For more information about BS, see 3GPP TS 23.060 .
+Title Path: Model > Class definitions > BsFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > IucsLink > Definitions
+Content: This IOC represents an Iu-cs interface link connecting an MSCserver to the RNC, BSC and HNB GW. For more information about the Iu interface, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > IucsLink > Attribute constraints
+Content: Note: The attributes connectedRnc, connectedBss and connectedHNBGW are mutually exclusive.
+Title Path: Model > Class definitions > IucsLink > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > IupsLink > Definitions
+Content: This IOC represents an Iu-ps interface link connecting a SGSN to the RNC, BSC and HNB GW. For more information about the Iu interface, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > IupsLink > Attribute constraints
+Content: Note: The attributes connectedRnc, connectedBss and connectedHNBGW are mutually exclusive.
+Title Path: Model > Class definitions > IupsLink > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > IubcLink > Definitions
+Content: This IOC represents an Iu-bc interface link connecting a CBC to the RNC and HNB GW. For more information about the Iu interface, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > IubcLink > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > ALink > Definitions
+Content: This IOC represents the A interface link connecting a MSC to the GERAN. For more information about the GERAN, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > ALink > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > GbLink > Definitions
+Content: This IOC represents the Gb interface link connecting a SGSN to the GERAN. For more information about the GERAN, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > GbLink > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CsMgwFunction > Definitions
+Content: This IOC represents CS-MGW functionality. For more information about CS-MGW, see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > CsMgwFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > BmScFunction > Definitions
+Content: This IOC represents BM-SC functionality. For more information about BM-SC see 3GPP TS 23.002 .
+Title Path: Model > Class definitions > BmScFunction > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_BmSc_Ggsn > Definitions
+Content: This IOC models the Gmb and Gi reference points as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_BmSc_Ggsn > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > Link_Ggsn_Sgsn > Definitions
+Content: This IOC models the Gn and Gp reference points as defined in TS 23.002 .
+Title Path: Model > Class definitions > Link_Ggsn_Sgsn > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > CircuitEndPointSubgroup > Definitions
+Content: This IOC represents the Circuit End Point Subgroup, relating to definitions in ITU-T M.3100 (see ). A Circuit End Point Subgroup is a set of circuit end points that directly interconnect one network element with another (e.g. MSC, BSC). It is derived from Top.
+Title Path: Model > Class definitions > MscPool > Definitions
+Content: This IOC represents the MSC server pool. For more information about the MSC server pool, see 3GPP TS 23.002
+Title Path: Model > Class definitions > MscPool > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > MscPoolArea > Definitions
+Content: concepts related to MSC Pool Area are: An MSC Pool Area is defined as an area within which an UE may be served without the need to change the serving MSC. It is a collection of complete Location Areas (LAs). A particular LA can be a member of one or more MSC Pool Areas. In the latter case, the MSC Pool Areas involved are called " overlapping MSC Pool Areas".
+Title Path: Model > Class definitions > MscPoolArea > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SgsnPool > Definitions
+Content: This IOC represents the SGSN pool. For more information about the SGSN pool, see 3GPP TS 23.002
+Title Path: Model > Class definitions > SgsnPool > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Class definitions > SgsnPoolArea > Definitions
+Content: This IOC represents SGSN Pool Area. For more information about the SGSN Pool Area, see 3GPP TS 23.002 . Key concept related to SGSN Pool Area is: An SGSN Pool Area is defined as an area within which an UE may be served without the need to change the serving SGSN. It is a collection of complete Routing Areas (RAs).
+Title Path: Model > Class definitions > SgsnPoolArea > Notifications
+Content: The common notifications defined in subclause 4.5 are valid for this IOC, without exceptions or additions.
+Title Path: Model > Common notifications > Alarm notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.
+Title Path: Model > Common notifications > Configuration notifications
+Content: This clause presents a list of notifications, defined in , that IRPManager can receive. The notification header attribute objectClass/objectInstance, defined in , would capture the DN of an instance of an IOC defined in this IRP specification.

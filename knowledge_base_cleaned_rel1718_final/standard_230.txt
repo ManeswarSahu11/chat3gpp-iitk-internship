@@ -1,0 +1,6 @@
+Title Path: Scope
+Content: The present document specifies the standards allowed to implement Layer 1 on the Iupc interface. The specification of transmission delay requirements and O\&M requirements is not in the scope of the present document. In the following "Layer 1" and "Physical Layer" are assumed to be synonymous.
+Title Path: Definitions, symbols and abbreviations
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TS 25.411 apply.
+Title Path: Iupc Layer 1
+Content: The Iupc Layer 1 shall comply with the requirements of clause 4 in TS 25.411 .

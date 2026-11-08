@@ -1,0 +1,4 @@
+Title Path: Scope
+Content: The present document provides a reference to an independent security assessment of the Tuak algorithm set carried out by the University of Waterloo, Canada.
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in TS 35.231 apply. A term defined in the present document takes precedence over the definition of the same term, if any, in TS 35.231 .

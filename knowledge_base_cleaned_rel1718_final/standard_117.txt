@@ -1,0 +1,24 @@
+Title Path: Scope
+Content: The present document contains an electronic copy of the ANSI C code for the Floating-point Extended Adaptive Multi-Rate Wideband codec. Alternatively, fixed-point ANSI-C code is specified in 3GPP TS 26.273 . The floating-point codec/encoder/decoder specified in this document or the fixed-point codec/encoder/decoder specified in may be used depending on if the implementation platform is better suited for a floating-point or a fixed-point implementation. It has been verified that the fixed-point and floating-point codecs interoperate with each other without any artifacts. The floating-point ANSI C code in the present document defines, besides the fixed-point c-code specified in , one valid reference implementation of the Extended Adaptive Multi-Rate Wideband transcoder (3GPP TS 26.290 ). Standard conformance is enforced by meeting the conformance criteria defined in .
+Title Path: Definitions, symbols and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions are given in TS 26.290 .
+Title Path: Definitions, symbols and abbreviations > Abbreviations
+Content: For the purposes of the present document, the following abbreviations apply: [AMR-WB+]Extended Adaptive Multi-Rate WideBand American National Standards Institute Global System for Mobile communications [I/O]Input/Output Random Access Memory Read Only Memory
+Title Path: C code structure
+Content: This clause gives an overview of the structure of the C code and provides an overview of the contents and organization of the C code attached to the present document. The C code has been verified on the following systems: - IBM PC/AT compatible computers with Windows 2000 SP4 and Microsoft Visual C++ v.6.0 compiler. ANSI C was selected as the programming language because portability was desirable.
+Title Path: C code structure > Contents of the C source code
+Content: The C code distribution has the files divided in five different directories, all present in the directory c-code. The directories are: common, decoder, encoder, lib_amr and include. The distributed files with suffix "c" contain the source code and the files with suffix "h" are the header files. Project and workspace files are provided in the directory MSVC.
+Title Path: C code structure > Program execution
+Content: The Extended Adaptive Multi-Rate Wideband codec is implemented in two programs: (encoder) audio encoder; (decoder) audio decoder. The programs should be called like: encoder [encoder options] audio input file -of parameter file ; decoder [decoder options] parameter file -of audio output file . The input files contain one or two channels of 16-bit linear encoded PCM audio samples stored in the wav file format and the parameter files contain encoded audio data and some additional flags. The encoder and decoder options will be explained by running the applications without input arguments. See the file readme.txt for more information on how to run the encoder and decoder programs.
+Title Path: C code structure > Code hierarchy
+Content: Tables 1 and 2 are call graphs that show the functions used in the audio codec. Each column represents a call level and each cell a function. The functions contain calls to the functions in rightwards neighbouring cells. The time order in the call graphs is from the top downwards as the processing of a frame advances. All standard C functions: memcpy(), fwrite(), etc. have been omitted. The initialization of the static RAM (i.e. calling the _init functions) is also omitted.
+Title Path: C code structure > Variables, constants and tables > Description of fixed tables used in the C-code
+Content: This clause contains a listing of all fixed tables declared in tables_plus.c and tables_stereo.c files.
+Title Path: C code structure > Variables, constants and tables > Static variables used in the C-code
+Content: In this clause two tables that specify the static variables for the encoder and decoder respectively are shown. All static variables are declared within a C struct.
+Title Path: File formats
+Content: This clause describes the file formats used by the encoder and decoder programs.
+Title Path: File formats > Audio file (encoder input/decoder output)
+Content: Audio files read by the encoder must be formatted as 16 bits PCM wave (*.wav) files. The decoder output is written as a 16 bit PCM wave file (*.wav). Note that the decoder, with proper command line switch, can produce a mono file from a stereo bit-stream.
+Title Path: File formats > Parameter bitstream file (encoder output/decoder input)
+Content: For AMR-WB+ operation, the files produced by the audio encoder/expected by the audio decoder are either according to the raw format defined in Reference Section 8.2, or according to the 3GP file format , whereby the storage sample definition is found in Reference Section 8.3.

@@ -1,0 +1,42 @@
+Title Path: Scope
+Content: The present document defines Management Object (MO) that is used to configure the UE with parameters related to Application specific Congestion control for Data Communication (ACDC) functionality. The MO is compatible with the OMA Device Management (DM) protocol specifications, version 1.2 and upwards, and is defined using the OMA DM Device Description Framework (DDF) as described in the Enabler Release Definition OMA-ERELD-DM-V1_2 . The MO consists of relevant parameters for provisioning of ACDC at a UE.
+Title Path: Definitions and abbreviations > Definitions
+Content: For the purposes of the present document, the terms and definitions given in 3GPP TR 21.905 and the following apply. A term defined in the present document takes precedence over the definition of the same term, if any, in 3GPP TR 21.905 .
+Title Path: Definitions and abbreviations > Abbreviations
+Content: For the purposes of the present document, the abbreviations given in 3GPP TR 21.905 and the following apply. An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in 3GPP TR 21.905 . ACDC Application specific Congestion control for Data Communication
+Title Path: ACDC MO
+Content: The ACDC MO is used to manage configuration parameters related to ACDC functionality for a UE supporting provisioning of such information. The presence and format of the ACDC configuration file on the USIM is specified in 3GPP TS 31.102 . The MO identifier is: urn:oma:mo:ext-3gpp-ACDC-config:1.0. The OMA DM Access Control List (ACL) property mechanism (see OMA-ERELD-DM-V1_2 ) may be used to grant or deny access rights to OMA DM servers in order to modify nodes and leaf objects of the ACDC MO. The following nodes and leaf objects are possible in the ACDC MO as described in figure 4.1.1 through figure 4.1.2:
+Title Path: ACDC MO parameters > General
+Content: This clause describes the parameters for the ACDC MO.
+Title Path: ACDC MO parameters > Node: X
+Content: This interior node acts as a placeholder for zero or one accounts for a fixed node. Occurrence: ZeroOrOne Format: node Access Types: Get Values: N/A
+Title Path: ACDC MO parameters > X /Name
+Content: The Name leaf is a name for the ACDC MO settings. Occurrence: ZeroOrOne Format: chr Access Types: Get Values: User displayable name The User displayable name shall be represented by Unicode characters encoded as UTF-8 as specified in IETF RFC 3629 and formatted using Normalization Form KC (NFKC) as specified in Unicode Standard Annex \#15; Unicode Normalization Forms .
+Title Path: ACDC MO parameters > ACDC > X /ACDC
+Content: The ACDC node acts as a placeholder for ACDC information. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X
+Content: This interior node acts as a placeholder for one or more ACDC policies. Occurrence: OneOrMore Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf
+Content: The ACDCConf node indicates a particular ACDC configuration parameter. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X
+Content: This interior node acts as a placeholder for one or more ACDC configuration parameter. Occurrence: OneOrMore Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo
+Content: The ApplicationInfo node indicates a particular application information. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo/ X
+Content: This interior node acts as a placeholder for one or more ApplicationInfo. Occurrence: OneOrMore Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo/ X /App-ID
+Content: This interior node acts as a placeholder for an ApplicationInfo based on an applicationID. Occurrence: ZeroOrOne Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo/ X /App-ID/ X
+Content: This interior node acts as a placeholder for one or more combinations of OSId and OSAppId values. Occurrence: OneOrMore Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo/ X /App-ID/ X /OSId
+Content: The OSId leaf indicates an operating system identifier. Occurrence: One Format: chr Access Types: Get, Replace Values: operating system identifier The format of the operating system identifier is a U niversally Unique IDentifier (UUID) as specified in IETF RFC 4122 .
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo/ X /App-ID/ X /OSApps
+Content: This interior node acts as a placeholder for the list of OS specific application identifiers. Occurrence: One Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo/ X /App-ID/ X /OSApps/ X
+Content: This interior node acts as a placeholder for an OS specific application identifiers. Occurrence: OneOrMore Format: node Access Types: Get, Replace Values: N/A
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ApplicationInfo/ X /App-ID/ X /OSApps/ X /OSAppId
+Content: The OSAppId leaf indicates an OS specific application identifier. Occurrence: One Format: chr Access Types: Get, Replace Values: OS specific application identifier Further definition of the format of the OS specific application identifier is beyond the scope of this specification.
+Title Path: ACDC MO parameters > ACDC > X /ACDC/ X /ACDCConf/ X /ACDCCategory
+Content: The ACDCCategory leaf represents indicates the ACDC category for which applications matching the ApplicationInfo belongs. Occurrence: One Format: int Access Types: Get, Replace Values: ACDC category The ACDC category indicates the category to which the identified application belongs. Table 5.4.13 gives the decode of the ACDC category. The highest ranked ACDC category means the ACDC category with the lowest value and a UE treats applications assigned to the highest ranked ACDC category as the least restriction to access attempts. The lowest ranked ACDC category means the ACDC category with the highest value and a UE treats applications assigned to the lowest ranked ACDC category as the most restriction to access attempts.
+Title Path: ACDC MO parameters > X /Ext
+Content: The Ext is an interior node for where the vendor specific information about the NAS configuration MO is being placed (vendor meaning application vendor, device vendor etc.). Usually the vendor extension is identified by vendor specific name under the ext node. The tree structure under the vendor identifier is not defined and can therefore include one or more un-standardized sub-trees. Occurrence: ZeroOrOne Format: node Access Types: Get Values: N/A
